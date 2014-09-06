@@ -1,0 +1,16 @@
+# mount point	fstype		device
+
+/sdcard		vfat		/dev/block/platform/sdhci-pxav3.0/by-num/p1
+/system		ext4		/dev/block/platform/sdhci-pxav3.2/by-name/system
+/cache		ext4		/dev/block/platform/sdhci-pxav3.2/by-name/cache
+/data		ext4		/dev/block/platform/sdhci-pxav3.2/by-name/userdata
+/misc 		emmc 		/dev/block/platform/sdhci-pxav3.2/by-name/misc
+/boot		emmc		/dev/block/platform/sdhci-pxav3.2/by-name/boot
+/recovery	emmc		/dev/block/platform/sdhci-pxav3.2/by-name/recovery
+/mrd		emmc		/dev/block/platform/sdhci-pxav3.2/by-name/MRD
+/mrd1		emmc		/dev/block/platform/sdhci-pxav3.2/by-name/MRD1
+/dtim		emmc		/dev/block/platform/sdhci-pxav3.2/by-name/DTIM
+/nvm		ext4		/dev/block/platform/sdhci-pxav3.2/by-name/NVM
+/autobak	ext4		/dev/block/platform/sdhci-pxav3.2/by-name/autobak
+/bootloader	emmc		/dev/block/platform/sdhci-pxav3.2/by-name/bootloader
+/radio		emmc		/dev/block/platform/sdhci-pxav3.2/by-name/radio
