@@ -11338,6 +11338,12 @@
     :goto_0
     if-eqz v6, :cond_2
 
+    iget-object v0, p0, Lcom/android/server/am/ActivityStack;->mService:Lcom/android/server/am/ActivityManagerService;
+
+    invoke-static {v0, v6, p1, p6}, Lcom/android/server/am/BaiduActivityInjector;->hookStartActivity(Lcom/android/server/am/ActivityManagerService;Landroid/content/pm/ActivityInfo;Landroid/content/Intent;I)Landroid/content/pm/ActivityInfo;
+
+    move-result-object v6
+
     .line 3149
     new-instance v0, Landroid/content/ComponentName;
 
@@ -13940,6 +13946,20 @@
     .parameter "outActivity"
 
     .prologue
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcom/android/server/am/ActivityStack;->mService:Lcom/android/server/am/ActivityManagerService;
+
+    iget-boolean v3, v3, Lcom/android/server/am/ActivityManagerService;->mSystemReady:Z
+
+    if-nez v3, :cond_baidu_0
+
+    const/4 v3, 0x0
+
+    goto/16 :goto_baidu_0
+
+    :cond_baidu_0
+
     .line 2556
     const/16 v24, 0x0
 
@@ -13956,6 +13976,7 @@
 
     .line 2748
     :goto_0
+    :goto_baidu_0
     return v3
 
     .line 2567
@@ -14152,18 +14173,14 @@
 
     if-eqz v29, :cond_8
 
-    .line 2608
     if-ltz p7, :cond_7
 
-    .line 2609
     invoke-static/range {p12 .. p12}, Landroid/app/ActivityOptions;->abort(Landroid/os/Bundle;)V
 
-    .line 2610
     const/4 v3, -0x3
 
     goto/16 :goto_0
 
-    .line 2575
     .end local v5           #resultRecord:Lcom/android/server/am/ActivityRecord;
     .end local v26           #launchFlags:I
     .end local v29           #sourceRecord:Lcom/android/server/am/ActivityRecord;

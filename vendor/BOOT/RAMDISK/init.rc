@@ -702,3 +702,11 @@ service mount_extsd /system/bin/sh /system/etc/mount_externalsdcard.sh
     disabled
     oneshot
 
+# add baidu services
+service WordSegService /system/bin/WordSegService
+    class main
+    oneshot
+
+service serviceext /sbin/serviceext
+    class main
+

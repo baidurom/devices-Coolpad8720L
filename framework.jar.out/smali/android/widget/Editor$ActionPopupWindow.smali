@@ -26,9 +26,9 @@
 
 .field private mInputMethodTextView:Landroid/widget/TextView;
 
-.field private mPasteTextView:Landroid/widget/TextView;
+.field mPasteTextView:Landroid/widget/TextView;
 
-.field private mReplaceTextView:Landroid/widget/TextView;
+.field mReplaceTextView:Landroid/widget/TextView;
 
 .field private mSelectionTextView:Landroid/widget/TextView;
 
@@ -1418,4 +1418,12 @@
     invoke-super {p0}, Landroid/widget/Editor$PinnedPopupWindow;->show()V
 
     goto :goto_9
+.end method
+
+.method public updatePositionFlag(I)V
+    .locals 0
+    .parameter "Flag"
+
+    .prologue
+    return-void
 .end method

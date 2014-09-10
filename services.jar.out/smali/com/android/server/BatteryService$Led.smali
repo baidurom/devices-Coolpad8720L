@@ -13,6 +13,12 @@
     name = "Led"
 .end annotation
 
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/android/server/BatteryService$Led$SettingsObserver;
+    }
+.end annotation
+
 
 # instance fields
 .field private final mBatteryChargingARGB:I
@@ -28,6 +34,8 @@
 .field private final mBatteryLowARGB:I
 
 .field private final mBatteryMediumARGB:I
+
+.field private mObserver:Lcom/android/server/BatteryService$Led$SettingsObserver;
 
 .field final synthetic this$0:Lcom/android/server/BatteryService;
 
@@ -137,6 +145,8 @@
 
     iput v0, p0, Lcom/android/server/BatteryService$Led;->mBatteryLedOff:I
 
+    invoke-direct {p0}, Lcom/android/server/BatteryService$Led;->createSettingsObserver()V
+
     .line 900
     return-void
 .end method
@@ -147,6 +157,16 @@
     .locals 8
 
     .prologue
+    invoke-direct {p0}, Lcom/android/server/BatteryService$Led;->updateLightsLockedHook()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_baidu_0
+
+    goto :goto_baidu_0
+
+    :cond_baidu_0
+
     const/4 v3, 0x1
 
     .line 908
@@ -227,6 +247,7 @@
 
     .line 990
     :goto_1
+    :goto_baidu_0
     return-void
 
     .line 910
@@ -442,4 +463,65 @@
     invoke-virtual {v3}, Lcom/android/server/LightsService$Light;->turnOff()V
 
     goto/16 :goto_1
+.end method
+
+.method static synthetic access$iget-mBatteryLight-61288f(Lcom/android/server/BatteryService$Led;)Lcom/android/server/LightsService$Light;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/BatteryService$Led;->mBatteryLight:Lcom/android/server/LightsService$Light;
+
+    return-object v0
+.end method
+
+.method static synthetic access$iget-mBatteryLedOn-1d5160(Lcom/android/server/BatteryService$Led;)I
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    iget v0, p0, Lcom/android/server/BatteryService$Led;->mBatteryLedOn:I
+
+    return v0
+.end method
+
+.method static synthetic access$iget-mBatteryLedOff-cc2be1(Lcom/android/server/BatteryService$Led;)I
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    iget v0, p0, Lcom/android/server/BatteryService$Led;->mBatteryLedOff:I
+
+    return v0
+.end method
+
+.method private createSettingsObserver()V
+    .locals 1
+
+    .prologue
+    new-instance v0, Lcom/android/server/BatteryService$Led$SettingsObserver;
+
+    invoke-direct {v0, p0}, Lcom/android/server/BatteryService$Led$SettingsObserver;-><init>(Lcom/android/server/BatteryService$Led;)V
+
+    iput-object v0, p0, Lcom/android/server/BatteryService$Led;->mObserver:Lcom/android/server/BatteryService$Led$SettingsObserver;
+
+    iget-object v0, p0, Lcom/android/server/BatteryService$Led;->mObserver:Lcom/android/server/BatteryService$Led$SettingsObserver;
+
+    invoke-virtual {v0}, Lcom/android/server/BatteryService$Led$SettingsObserver;->observe()V
+
+    return-void
+.end method
+
+.method private updateLightsLockedHook()Z
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/BatteryService$Led;->mObserver:Lcom/android/server/BatteryService$Led$SettingsObserver;
+
+    #calls: Lcom/android/server/BatteryService$Led$SettingsObserver;->updateLightPulse()Z
+    invoke-static {v0}, Lcom/android/server/BatteryService$Led$SettingsObserver;->access$invoke-updateLightPulse-fe2949(Lcom/android/server/BatteryService$Led$SettingsObserver;)Z
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

@@ -105,7 +105,7 @@
     iput-object v0, p0, Lcom/android/internal/telephony/PhoneProxy;->mIccPhoneBookInterfaceManagerProxy:Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
 
     .line 73
-    new-instance v0, Lcom/android/internal/telephony/PhoneSubInfoProxy;
+    new-instance v0, Lcom/android/internal/telephony/BaiduExtPhoneSubInfo;
 
     invoke-interface {p1}, Lcom/android/internal/telephony/Phone;->getPhoneSubInfo()Lcom/android/internal/telephony/PhoneSubInfo;
 
@@ -115,7 +115,7 @@
 
     move-result v2
 
-    invoke-direct {v0, v1, v2}, Lcom/android/internal/telephony/PhoneSubInfoProxy;-><init>(Lcom/android/internal/telephony/PhoneSubInfo;I)V
+    invoke-direct {v0, v1, v2}, Lcom/android/internal/telephony/BaiduExtPhoneSubInfo;-><init>(Lcom/android/internal/telephony/PhoneSubInfo;I)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/PhoneProxy;->mPhoneSubInfoProxy:Lcom/android/internal/telephony/PhoneSubInfoProxy;
 
@@ -4989,3 +4989,4 @@
 
     return v0
 .end method
+

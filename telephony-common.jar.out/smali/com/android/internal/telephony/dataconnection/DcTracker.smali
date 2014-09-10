@@ -3254,6 +3254,9 @@
     .line 1217
     .local v3, mvnoMatchData:Ljava/lang/String;
     :cond_0
+
+    goto/16 :goto_baidu_0
+
     const-string v7, "mvno_type"
 
     invoke-interface {p1, v7}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
@@ -3292,6 +3295,8 @@
     move-result v7
 
     if-eqz v7, :cond_1
+
+    :goto_baidu_0
 
     .line 1224
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcTracker;->makeApnSetting(Landroid/database/Cursor;)Lcom/android/internal/telephony/dataconnection/ApnSetting;

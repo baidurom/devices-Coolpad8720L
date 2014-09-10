@@ -68,7 +68,7 @@ vendor_modify_images := boot
 ##############################################################################
 # Vendor apks you want to use
 #-----------------------------------------------------------------------------
-#vendor_saved_apps := Bluetooth Nfc
+vendor_saved_apps := Bluetooth CP_BluetoothSetting CP_BtPbapClient CP_FMRadio
 
 ##############################################################################
 # Apks build from current project root directory
@@ -153,6 +153,9 @@ override_property += \
 # Becareful about the initial number of index, some devices start from 0, while others start from 1.
 override_property += \
     phone_book_index_supported=false
+
+override_property += \
+    ro.build.version.release=4.3
 
 ##############################################################################
 # remove_property: this property will remove from the build.prop

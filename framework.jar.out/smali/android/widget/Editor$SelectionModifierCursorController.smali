@@ -356,6 +356,8 @@
     .locals 1
 
     .prologue
+    invoke-static {}, Landroid/widget/Editor$BaiduEditorInjector;->dismiss()V
+
     .line 4192
     iget-object v0, p0, Landroid/widget/Editor$SelectionModifierCursorController;->mStartHandle:Landroid/widget/Editor$SelectionStartHandleView;
 

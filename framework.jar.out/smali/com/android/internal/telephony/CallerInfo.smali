@@ -3,6 +3,14 @@
 .source "CallerInfo.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/android/internal/telephony/CallerInfo$BaiduInjector;
+    }
+.end annotation
+
+
 # static fields
 .field public static final ADSCRIPTION_CARDNAME:Ljava/lang/String; = "card_name"
 
@@ -66,6 +74,8 @@
 
 .field public contactRingtoneUri:Landroid/net/Uri;
 
+.field public count:I
+
 .field public geoDescription:Ljava/lang/String;
 
 .field public isCachedPhotoCurrent:Z
@@ -76,6 +86,8 @@
 
 .field public mContactorTitle:Ljava/lang/String;
 
+.field public label:Ljava/lang/String;
+
 .field private mIsEmergency:Z
 
 .field private mIsVoiceMail:Z
@@ -83,6 +95,14 @@
 .field public mNetType:I
 
 .field public mOperName:Ljava/lang/StringBuffer;
+
+.field public mPhotoHeight:I
+
+.field public mPhotoID:I
+
+.field public mPhotoWidth:I
+
+.field public mViewMode:I
 
 .field public name:Ljava/lang/String;
 
@@ -766,6 +786,11 @@
     const/4 v2, 0x1
 
     iput-boolean v2, v14, Lcom/android/internal/telephony/CallerInfo;->contactExists:Z
+
+    move-object/from16 v2, p2
+
+    invoke-static {v14, v2}, Lcom/android/internal/telephony/CallerInfo$BaiduInjector;->initCallerInfoExt(Lcom/android/internal/telephony/CallerInfo;Landroid/database/Cursor;)V
+
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -5091,4 +5116,24 @@
     iget-object v0, p0, Lcom/android/internal/telephony/CallerInfo;->phoneNumber:Ljava/lang/String;
 
     goto :goto_0
+.end method
+
+.method static synthetic access$sget-VDBG-988cc2()Z
+    .locals 1
+
+    .prologue
+    sget-boolean v0, Lcom/android/internal/telephony/CallerInfo;->VDBG:Z
+
+    return v0
+.end method
+
+.method public updateGeoDescriptionAndLabel(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 0
+    .parameter "context"
+    .parameter "fallbackNumber"
+
+    .prologue
+    invoke-static {p0, p1, p2}, Lcom/android/internal/telephony/CallerInfo$BaiduInjector;->updateGeoDescriptionAndLabel(Lcom/android/internal/telephony/CallerInfo;Landroid/content/Context;Ljava/lang/String;)V
+
+    return-void
 .end method

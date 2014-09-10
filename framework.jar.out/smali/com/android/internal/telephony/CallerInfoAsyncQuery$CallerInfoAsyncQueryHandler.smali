@@ -308,6 +308,14 @@
     :goto_2
     iget-object v3, p0, Lcom/android/internal/telephony/CallerInfoAsyncQuery$CallerInfoAsyncQueryHandler;->mCallerInfo:Lcom/android/internal/telephony/CallerInfo;
 
+    iget-object v4, p0, Lcom/android/internal/telephony/CallerInfoAsyncQuery$CallerInfoAsyncQueryHandler;->mQueryContext:Landroid/content/Context;
+
+    iget-object v5, v0, Lcom/android/internal/telephony/CallerInfoAsyncQuery$CookieWrapper;->number:Ljava/lang/String;
+
+    invoke-virtual {v3, v4, v5}, Lcom/android/internal/telephony/CallerInfo;->updateGeoDescriptionAndLabel(Landroid/content/Context;Ljava/lang/String;)V
+
+    iget-object v3, p0, Lcom/android/internal/telephony/CallerInfoAsyncQuery$CallerInfoAsyncQueryHandler;->mCallerInfo:Lcom/android/internal/telephony/CallerInfo;
+
     iput-boolean v7, v3, Lcom/android/internal/telephony/CallerInfo;->queryComplete:Z
 
     .line 308
@@ -592,4 +600,14 @@
 
     .line 136
     return-void
+.end method
+
+.method private isEmptyHook(Ljava/lang/CharSequence;)Z
+    .locals 1
+    .parameter "str"
+
+    .prologue
+    const/4 v0, 0x1
+
+    return v0
 .end method

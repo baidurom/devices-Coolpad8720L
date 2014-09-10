@@ -26,7 +26,7 @@
 .field private static final ID_OTHER:I = 0x1000004
 
 #the value of this static final field might be set in the static constructor
-.field private static final LAYOUT_DIR_CONFIG:I = 0x0
+.field static final LAYOUT_DIR_CONFIG:I = 0x0
 
 .field static final TAG:Ljava/lang/String; = "Resources"
 
@@ -278,7 +278,7 @@
     return-void
 .end method
 
-.method private constructor <init>()V
+.method constructor <init>()V
     .locals 3
 
     .prologue
@@ -832,7 +832,7 @@
     throw v2
 .end method
 
-.method private getCachedDrawable(Landroid/util/LongSparseArray;J)Landroid/graphics/drawable/Drawable;
+.method getCachedDrawable(Landroid/util/LongSparseArray;J)Landroid/graphics/drawable/Drawable;
     .locals 4
     .parameter
     .parameter "key"
@@ -1140,10 +1140,10 @@
     if-nez v0, :cond_0
 
     .line 227
-    new-instance v0, Landroid/content/res/Resources;
+    new-instance v0, Landroid/content/res/BaiduResources;
 
     .end local v0           #ret:Landroid/content/res/Resources;
-    invoke-direct {v0}, Landroid/content/res/Resources;-><init>()V
+    invoke-direct {v0}, Landroid/content/res/BaiduResources;-><init>()V
 
     .line 228
     .restart local v0       #ret:Landroid/content/res/Resources;
@@ -2095,7 +2095,7 @@
     return-void
 .end method
 
-.method private verifyPreloadConfig(IIILjava/lang/String;)Z
+.method verifyPreloadConfig(IIILjava/lang/String;)Z
     .locals 5
     .parameter "changingConfigurations"
     .parameter "allowVarying"
@@ -6005,26 +6005,22 @@
 
     if-gt v13, v14, :cond_8
 
-    .line 2346
     move-object/from16 v0, p0
 
     invoke-direct {v0, v8, v9}, Landroid/content/res/Resources;->getCachedColorStateList(J)Landroid/content/res/ColorStateList;
 
     move-result-object v3
 
-    .line 2347
     .local v3, csl:Landroid/content/res/ColorStateList;
     if-eqz v3, :cond_3
 
     move-object v4, v3
 
-    .line 2443
     .end local v3           #csl:Landroid/content/res/ColorStateList;
     .local v4, csl:Landroid/content/res/ColorStateList;
     :goto_1
     return-object v4
 
-    .line 2335
     .end local v4           #csl:Landroid/content/res/ColorStateList;
     .end local v8           #key:J
     :cond_1
@@ -6129,7 +6125,7 @@
 
     move-object/from16 v1, v16
 
-    invoke-direct {v0, v13, v14, v15, v1}, Landroid/content/res/Resources;->verifyPreloadConfig(IIILjava/lang/String;)Z
+    invoke-virtual {v0, v13, v14, v15, v1}, Landroid/content/res/Resources;->verifyPreloadConfig(IIILjava/lang/String;)Z
 
     move-result v13
 
@@ -6365,7 +6361,7 @@
 
     move-object/from16 v1, v16
 
-    invoke-direct {v0, v13, v14, v15, v1}, Landroid/content/res/Resources;->verifyPreloadConfig(IIILjava/lang/String;)Z
+    invoke-virtual {v0, v13, v14, v15, v1}, Landroid/content/res/Resources;->verifyPreloadConfig(IIILjava/lang/String;)Z
 
     move-result v13
 
@@ -6617,7 +6613,7 @@
 
     move-object/from16 v1, v17
 
-    invoke-direct {v0, v1, v12, v13}, Landroid/content/res/Resources;->getCachedDrawable(Landroid/util/LongSparseArray;J)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, v1, v12, v13}, Landroid/content/res/Resources;->getCachedDrawable(Landroid/util/LongSparseArray;J)Landroid/graphics/drawable/Drawable;
 
     move-result-object v6
 
@@ -6782,7 +6778,7 @@
 
     move-object/from16 v3, v19
 
-    invoke-direct {v0, v4, v1, v2, v3}, Landroid/content/res/Resources;->verifyPreloadConfig(IIILjava/lang/String;)Z
+    invoke-virtual {v0, v4, v1, v2, v3}, Landroid/content/res/Resources;->verifyPreloadConfig(IIILjava/lang/String;)Z
 
     move-result v17
 
@@ -7258,7 +7254,7 @@
 
     move-object/from16 v3, v19
 
-    invoke-direct {v0, v4, v1, v2, v3}, Landroid/content/res/Resources;->verifyPreloadConfig(IIILjava/lang/String;)Z
+    invoke-virtual {v0, v4, v1, v2, v3}, Landroid/content/res/Resources;->verifyPreloadConfig(IIILjava/lang/String;)Z
 
     move-result v17
 
@@ -10503,4 +10499,189 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     throw v2
+.end method
+
+.method static getSpreloadedcolordrawables()Landroid/util/LongSparseArray;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroid/util/LongSparseArray",
+            "<",
+            "Landroid/graphics/drawable/Drawable$ConstantState;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    sget-object v0, Landroid/content/res/Resources;->sPreloadedColorDrawables:Landroid/util/LongSparseArray;
+
+    return-object v0
+.end method
+
+.method static getSpreloadedcolorstatelists()Landroid/util/LongSparseArray;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroid/util/LongSparseArray",
+            "<",
+            "Landroid/content/res/ColorStateList;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    sget-object v0, Landroid/content/res/Resources;->sPreloadedColorStateLists:Landroid/util/LongSparseArray;
+
+    return-object v0
+.end method
+
+.method getCachedColorStateListBaidu(J)Landroid/content/res/ColorStateList;
+    .locals 1
+    .parameter "key"
+
+    .prologue
+    invoke-direct {p0, p1, p2}, Landroid/content/res/Resources;->getCachedColorStateList(J)Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method getCachedDrawableBaidu(Landroid/util/LongSparseArray;J)Landroid/graphics/drawable/Drawable;
+    .locals 1
+    .parameter
+    .parameter "key"
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/util/LongSparseArray",
+            "<",
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Landroid/graphics/drawable/Drawable$ConstantState;",
+            ">;>;J)",
+            "Landroid/graphics/drawable/Drawable;"
+        }
+    .end annotation
+
+    .prologue
+    .local p1, drawableCache:Landroid/util/LongSparseArray;,"Landroid/util/LongSparseArray<Ljava/lang/ref/WeakReference<Landroid/graphics/drawable/Drawable$ConstantState;>;>;"
+    invoke-virtual {p0, p1, p2, p3}, Landroid/content/res/Resources;->getCachedDrawable(Landroid/util/LongSparseArray;J)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getIconDrawable(I)Landroid/graphics/drawable/Drawable;
+    .locals 1
+    .parameter "id"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/content/res/Resources$NotFoundException;
+        }
+    .end annotation
+
+    .prologue
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method getmColorDrawableCache()Landroid/util/LongSparseArray;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroid/util/LongSparseArray",
+            "<",
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Landroid/graphics/drawable/Drawable$ConstantState;",
+            ">;>;"
+        }
+    .end annotation
+
+    .prologue
+    iget-object v0, p0, Landroid/content/res/Resources;->mColorDrawableCache:Landroid/util/LongSparseArray;
+
+    return-object v0
+.end method
+
+.method getmColorStateListCache()Landroid/util/LongSparseArray;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroid/util/LongSparseArray",
+            "<",
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Landroid/content/res/ColorStateList;",
+            ">;>;"
+        }
+    .end annotation
+
+    .prologue
+    iget-object v0, p0, Landroid/content/res/Resources;->mColorStateListCache:Landroid/util/LongSparseArray;
+
+    return-object v0
+.end method
+
+.method getmConfiguration()Landroid/content/res/Configuration;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/content/res/Resources;->mConfiguration:Landroid/content/res/Configuration;
+
+    return-object v0
+.end method
+
+.method getmDrawableCache()Landroid/util/LongSparseArray;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroid/util/LongSparseArray",
+            "<",
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Landroid/graphics/drawable/Drawable$ConstantState;",
+            ">;>;"
+        }
+    .end annotation
+
+    .prologue
+    iget-object v0, p0, Landroid/content/res/Resources;->mDrawableCache:Landroid/util/LongSparseArray;
+
+    return-object v0
+.end method
+
+.method getsPreloadedDrawables()[Landroid/util/LongSparseArray;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()[",
+            "Landroid/util/LongSparseArray",
+            "<",
+            "Landroid/graphics/drawable/Drawable$ConstantState;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    sget-object v0, Landroid/content/res/Resources;->sPreloadedDrawables:[Landroid/util/LongSparseArray;
+
+    return-object v0
+.end method
+
+.method ismPreloading()Z
+    .locals 1
+
+    .prologue
+    iget-boolean v0, p0, Landroid/content/res/Resources;->mPreloading:Z
+
+    return v0
 .end method

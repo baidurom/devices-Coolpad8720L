@@ -46,3 +46,6 @@
 
 .method public abstract switchKeyboardLayout(II)V
 .end method
+
+.method public abstract reboot(Z)V
+.end method

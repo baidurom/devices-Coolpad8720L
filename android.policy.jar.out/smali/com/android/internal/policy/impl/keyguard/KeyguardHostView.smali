@@ -7,6 +7,7 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$13;,
+	Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$BaiduInjector;,
         Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$SavedState;,
         Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$OnDismissAction;,
         Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$UserSwitcherCallback;,
@@ -55,6 +56,8 @@
 .field private mAppWidgetManager:Landroid/appwidget/AppWidgetManager;
 
 .field private mAppWidgetToShow:I
+
+.field private mBaiduKeyguardContainer:Landroid/widget/FrameLayout;
 
 .field private mCallback:Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityCallback;
 
@@ -193,7 +196,7 @@
     iput v6, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;->MAX_WIDGETS:I
 
     .line 103
-    sget-object v6, Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityModel$SecurityMode;->Invalid:Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityModel$SecurityMode;
+    sget-object v6, Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityModel$SecurityMode;->None:Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityModel$SecurityMode;
 
     iput-object v6, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;->mCurrentSecuritySelection:Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityModel$SecurityMode;
 
@@ -2033,6 +2036,12 @@
 
     if-ne v3, v6, :cond_3
 
+    invoke-static {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$BaiduInjector;->hasDefaultStatusWidget(Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_baidu_0
+
     .line 1525
     const-string v3, "KeyguardHostView"
 
@@ -2074,6 +2083,7 @@
 
     .line 1531
     :cond_3
+    :cond_baidu_0
     aget v3, v2, v0
 
     const/4 v4, 0x1
@@ -2236,7 +2246,10 @@
     .locals 1
 
     .prologue
-    .line 508
+    const/4 v0, 0x1
+
+    goto :goto_baidu_0
+
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;->mCameraDisabled:Z
 
     if-nez v0, :cond_0
@@ -2251,6 +2264,7 @@
     const/4 v0, 0x1
 
     :goto_0
+    :goto_baidu_0
     return v0
 
     :cond_1
@@ -4604,6 +4618,16 @@
     .locals 3
 
     .prologue
+    invoke-static {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$BaiduInjector;->shouldUseBaiduKeyguard(Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_baidu_0
+
+    goto :goto_baidu_0
+
+    :cond_baidu_0
+
     .line 1740
     iget v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;->mTransportState:I
 
@@ -4622,6 +4646,7 @@
 
     invoke-virtual {v2, v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetPager;->setCurrentPage(I)V
 
+    :goto_baidu_0
     .line 1744
     return-void
 .end method
@@ -5112,6 +5137,8 @@
     .line 1042
     invoke-interface {v6}, Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityView;->onPause()V
 
+    invoke-static {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$BaiduInjector;->pauseBaiduKeyguard(Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;)V
+
     .line 1043
     iget-object v8, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;->mNullCallback:Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityCallback;
 
@@ -5122,6 +5149,8 @@
     const/4 v8, 0x2
 
     invoke-interface {v5, v8}, Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityView;->onResume(I)V
+
+    invoke-static {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$BaiduInjector;->resumeBaiduKeyguardViewRevealed(Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;)V
 
     .line 1046
     iget-object v8, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;->mCallback:Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityCallback;
@@ -5547,6 +5576,10 @@
     .locals 1
 
     .prologue
+    const/4 v0, 0x1
+
+    goto :goto_baidu_0
+
     .line 504
     iget v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;->mDisabledFeatures:I
 
@@ -5557,6 +5590,7 @@
     const/4 v0, 0x1
 
     :goto_0
+    :goto_baidu_0
     return v0
 
     :cond_0
@@ -5809,6 +5843,7 @@
 
     .line 1658
     :cond_0
+    :cond_baidu_0
     :goto_0
     return-void
 
@@ -5895,6 +5930,12 @@
     .end local v1           #appWidgetId:I
     :cond_3
     :goto_3
+    invoke-static {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$BaiduInjector;->hasDefaultStatusWidget(Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_baidu_0
+
     if-nez v0, :cond_4
 
     .line 1653
@@ -6560,6 +6601,16 @@
 
     .line 461
     :cond_2
+    invoke-static {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$BaiduInjector;->shouldUseBaiduKeyguard(Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_baidu_0
+
+    invoke-static {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$BaiduInjector;->processBaiduKeyguard(Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;)V
+
+    :cond_baidu_0
+
     invoke-direct {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;->addDefaultWidgets()V
 
     .line 463
@@ -6828,6 +6879,8 @@
 
     invoke-interface {v2}, Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityView;->onPause()V
 
+    invoke-static {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$BaiduInjector;->pauseBaiduKeyguard(Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;)V
+
     .line 1114
     invoke-direct {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;->findCameraPage()Lcom/android/internal/policy/impl/keyguard/CameraWidgetFrame;
 
@@ -6944,6 +6997,8 @@
 
     invoke-interface {v1, v2}, Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityView;->onResume(I)V
 
+    invoke-static {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$BaiduInjector;->resumeBaiduKeyguardScreenOn(Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;)V
+
     .line 1088
     invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
@@ -7010,6 +7065,18 @@
     .parameter "ev"
 
     .prologue
+    invoke-static {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$BaiduInjector;->shouldUseBaiduKeyguard(Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_baidu_0
+
+    const/4 v0, 0x1
+
+    goto :goto_baidu_0
+
+    :cond_baidu_0
+
     const/4 v1, 0x0
 
     .line 391
@@ -7079,6 +7146,7 @@
 
     invoke-virtual {p1, v1, v2}, Landroid/view/MotionEvent;->offsetLocation(FF)V
 
+    :goto_baidu_0
     .line 397
     return v0
 
@@ -7684,4 +7752,55 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
+.end method
+
+.method static synthetic access$iget-mSecurityModel-b360b8(Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;)Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityModel;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;->mSecurityModel:Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityModel;
+
+    return-object v0
+.end method
+
+.method static synthetic access$iget-mBaiduKeyguardContainer-224b04(Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;)Landroid/widget/FrameLayout;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;->mBaiduKeyguardContainer:Landroid/widget/FrameLayout;
+
+    return-object v0
+.end method
+
+.method static synthetic access$iput-mBaiduKeyguardContainer-b18b5a(Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;Landroid/widget/FrameLayout;)Landroid/widget/FrameLayout;
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;->mBaiduKeyguardContainer:Landroid/widget/FrameLayout;
+
+    return-object p1
+.end method
+
+.method static synthetic access$iget-mContext-e5950c(Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;)Landroid/content/Context;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;->mContext:Landroid/content/Context;
+
+    return-object v0
+.end method
+
+.method static synthetic access$iget-mSlidingChallengeLayout-3ce008(Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;)Lcom/android/internal/policy/impl/keyguard/SlidingChallengeLayout;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;->mSlidingChallengeLayout:Lcom/android/internal/policy/impl/keyguard/SlidingChallengeLayout;
+
+    return-object v0
 .end method

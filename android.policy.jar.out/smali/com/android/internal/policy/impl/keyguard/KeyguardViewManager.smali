@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$BaiduInjector;,
         Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$ViewManagerHost;,
         Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$ShowListener;
     }
@@ -669,6 +670,10 @@
 
     .line 279
     :cond_1
+    invoke-static {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$BaiduInjector;->addNoLimitsFlag(Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;)I
+
+    move-result v4
+
     iget-boolean v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;->mNeedsInput:Z
 
     if-nez v1, :cond_2
@@ -1405,6 +1410,10 @@
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;->mStateContainer:Landroid/util/SparseArray;
 
     invoke-virtual {v1}, Landroid/util/SparseArray;->clear()V
+
+    const/4 v0, 0x0
+
+    invoke-static {p0, v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$BaiduInjector;->sendBroadcast(Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;Z)V
 
     .line 663
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;->mKeyguardView:Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;
@@ -2283,6 +2292,10 @@
 
     .line 195
     :cond_1
+    const/4 v0, 0x0
+
+    invoke-static {p0, v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$BaiduInjector;->sendBroadcast(Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;Z)V
+
     monitor-exit p0
 
     return-void
@@ -2494,4 +2507,14 @@
 
     .line 718
     return-void
+.end method
+
+.method static synthetic access$iget-mContext-37d236(Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;)Landroid/content/Context;
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;->mContext:Landroid/content/Context;
+
+    return-object v0
 .end method
