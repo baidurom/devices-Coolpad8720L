@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<exp:Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exp="http://com.marvell.cpa"
+	xsi:schemaLocation="http://com.marvell.cpa target.xsd ">
+	<!-- Refer PJ1 Datasheet (MV-S105191-00 Rev.2.0) Chapter 4.21 -->
+	<!-- The zone of all pj1 EventSets is 0xE000000. The event id configured in saf is (zone | event id). The real hardware 
+		event id is ((1 << (0xFFFFF & configured event id)) + 1) -->
+	<EventSet name="PMN3" zone="0xE000000">
+		<Event id="0x1" name="Cycle count" type="occurrence">
+			<Description>Counts the number of clock cycles. Every clock cycle increments the counter</Description>
+		</Event>
+		<Event id="0x2" name="L1 D-Cache read miss" type="occurrence">
+			<Description>Counts the number of data-cache read misses (including non-cacheable and non-bufferable cache accesses)</Description>
+		</Event>
+		<Event id="0x3" name="L1 D-Cache write miss" type="occurrence">
+			<Description>Counts the number of data-cache write misses (including non-cacheable and non-bufferable misses)</Description>
+		</Event>
+		<Event id="0x4" name="TLB miss" type="occurrence">
+			<Description>Counts the number of instruction and data TLB misses</Description>
+		</Event>
+		<Event id="0x8" name="Branches taken" type="occurrence">
+			<Description>Counts the number of times branch prediction correctly prefetches the required branch</Description>
+		</Event>
+		<Event id="0x9" name="Write buffer full" type="duration">
+			<Description>Counts the number of cycles WB is full</Description>
+		</Event>
+		<Event id="0xB" name="L1 D-Cache read beat" type="occurrence">
+			<Description>Counts the number of times the bus returns data to the data cache during read requests</Description>
+		</Event>
+		<Event id="0xC" name="L1 D-Cache write beat" type="occurrence">
+			<Description>Counts the number of times the bus returns ready to the data cache during write requests</Description>
+		</Event>
+		<Event id="0x10" name="BIU any access" type="duration">
+			<Description>Counts the number of cycles the BIU is accessed by any unit</Description>
+		</Event>
+		<Event id="0x16" name="Data write access" type="occurrence" />
+		<Event id="0x18" name="WMMX2 hold write back stage" type="duration">
+			<Description>Counts the number of cycles the SIMD coprocessor holds in its writeback stage</Description>
+		</Event>
+		<Event id="0x19" name="WMMX2 finish FIFO full" type="duration">
+			<Description>Counts the number of cycles the SIMD coprocessor retire FIFO is full</Description>
+		</Event>
+		<Event id="0x1D" name="L2-Cache read hit" type="occurrence">
+			<Description>The number of read accesses served from the L2C</Description>
+		</Event>
+		<Event id="0x1E" name="L2-Cache read miss" type="occurrence">
+			<Description>The number of L2C read accesses that resulted in an external read request</Description>
+		</Event>
+	</EventSet>
+</exp:Configuration>

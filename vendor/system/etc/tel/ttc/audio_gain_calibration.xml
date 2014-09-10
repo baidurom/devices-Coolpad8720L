@@ -1,0 +1,205 @@
+<?xml version="1.0" ?>
+<MarvellAudioGainConfiguration>
+    <AudioPath identifier="VoiceRecordFromHsMic" component="ELBA">
+        <Gain name="MICPGA1_GAIN[4:0]">
+            <Value volume="100">0xd</Value>
+        </Gain>
+    </AudioPath>
+    <AudioPath identifier="VoiceRecordFromMic1" component="ELBA">
+        <Gain name="MICPGA1_GAIN[4:0]">
+            <Value volume="100">0xe</Value>
+        </Gain>
+    </AudioPath>
+    <AudioPath identifier="VoiceRecordFromMic1" component="MODEM">
+        <Gain name="DIGITAL_GAIN_NB">
+            <Value volume="100">0x2e</Value>
+        </Gain>
+    </AudioPath>
+    <AudioPath identifier="VoiceRecordFromMic1(Speaker Mode)" component="MODEM">
+        <Gain name="DIGITAL_GAIN_NB">
+            <Value volume="100">0x2c</Value>
+        </Gain>
+    </AudioPath>
+    <AudioPath identifier="VoiceRecordFromMic1(Speaker Mode)" component="ELBA">
+        <Gain name="MICPGA1_GAIN[4:0]">
+            <Value volume="100">0x12</Value>
+        </Gain>
+    </AudioPath>
+    <AudioPath identifier="VoicePlayToEarphone" component="MODEM">
+        <Gain name="DIGITAL_GAIN_NB">
+            <Value volume="0">0x21</Value>
+            <Value volume="20">0x23</Value>
+            <Value volume="40">0x25</Value>
+            <Value volume="60">0x27</Value>
+            <Value volume="80">0x29</Value>
+            <Value volume="100">0x2b</Value>
+        </Gain>
+    </AudioPath>
+    <AudioPath identifier="VoiceRecordFromHsMic" component="MODEM">
+        <Gain name="DIGITAL_GAIN_NB">
+            <Value volume="100">0x2f</Value>
+        </Gain>
+    </AudioPath>
+    <AudioPath identifier="VoicePlayToHP" component="MODEM">
+        <Gain name="DIGITAL_GAIN_NB">
+            <Value volume="0">0x1e</Value>
+            <Value volume="20">0x20</Value>
+            <Value volume="40">0x22</Value>
+            <Value volume="60">0x24</Value>
+            <Value volume="80">0x26</Value>
+            <Value volume="100">0x28</Value>
+        </Gain>
+    </AudioPath>
+    <AudioPath identifier="VoiceRecordFromBTMic(NREC Mode)" component="MODEM">
+        <Gain name="DIGITAL_GAIN_NB">
+            <Value volume="100">0x28</Value>
+        </Gain>
+    </AudioPath>
+    <AudioPath identifier="VoicePlayToBT(NREC Mode)" component="MODEM">
+        <Gain name="DIGITAL_GAIN_EXTRA">
+            <Value volume="10">0x24</Value>
+            <Value volume="20">0x25</Value>
+            <Value volume="30">0x26</Value>
+            <Value volume="40">0x27</Value>
+            <Value volume="50">0x28</Value>
+            <Value volume="60">0x29</Value>
+            <Value volume="70">0x2a</Value>
+            <Value volume="80">0x2b</Value>
+            <Value volume="90">0x2c</Value>
+            <Value volume="100">0x2d</Value>
+        </Gain>
+        <Gain name="DIGITAL_GAIN_NB">
+            <Value volume="10">0x21</Value>
+            <Value volume="20">0x22</Value>
+            <Value volume="30">0x23</Value>
+            <Value volume="40">0x24</Value>
+            <Value volume="50">0x25</Value>
+            <Value volume="60">0x26</Value>
+            <Value volume="70">0x27</Value>
+            <Value volume="80">0x28</Value>
+            <Value volume="90">0x29</Value>
+            <Value volume="100">0x2a</Value>
+        </Gain>
+    </AudioPath>
+    <AudioPath identifier="FMPlayToSPKRAnalog" component="ELBA">
+        <Gain name="VOL_SEL_3[7:0]">
+            <Value volume="0">0x1</Value>
+            <Value volume="7">0xbf</Value>
+            <Value volume="13">0xc1</Value>
+            <Value volume="20">0xc3</Value>
+            <Value volume="27">0xc5</Value>
+            <Value volume="34">0xc7</Value>
+            <Value volume="40">0xc9</Value>
+            <Value volume="47">0xcb</Value>
+            <Value volume="53">0xcd</Value>
+            <Value volume="60">0xcf</Value>
+            <Value volume="66">0xd1</Value>
+            <Value volume="73">0xd3</Value>
+            <Value volume="79">0xd5</Value>
+            <Value volume="86">0xd7</Value>
+            <Value volume="93">0xd9</Value>
+            <Value volume="100">0xdb</Value>
+        </Gain>
+    </AudioPath>
+    <AudioPath identifier="FMPlayToSPKRAnalog" component="PMIC">
+        <Gain name="DIG_GAIN">
+            <Value volume="100">0x3</Value>
+        </Gain>
+    </AudioPath>
+    <AudioPath identifier="FMPlayToHPAnalog" component="ELBA">
+        <Gain name="VOL_SEL_1[7:0]">
+            <Value volume="0">0x1</Value>
+            <Value volume="7">0x53</Value>
+            <Value volume="13">0x67</Value>
+            <Value volume="20">0x7b</Value>
+            <Value volume="27">0x85</Value>
+            <Value volume="34">0x8f</Value>
+            <Value volume="40">0x93</Value>
+            <Value volume="47">0x97</Value>
+            <Value volume="53">0x9b</Value>
+            <Value volume="60">0x9f</Value>
+            <Value volume="66">0xa3</Value>
+            <Value volume="73">0xa7</Value>
+            <Value volume="79">0xab</Value>
+            <Value volume="86">0xaf</Value>
+            <Value volume="93">0xb3</Value>
+            <Value volume="100">0xb7</Value>
+        </Gain>
+        <Gain name="VOL_SEL_2[7:0]">
+            <Value volume="0">0x1</Value>
+            <Value volume="7">0x53</Value>
+            <Value volume="13">0x67</Value>
+            <Value volume="20">0x7b</Value>
+            <Value volume="27">0x85</Value>
+            <Value volume="34">0x8f</Value>
+            <Value volume="40">0x93</Value>
+            <Value volume="47">0x97</Value>
+            <Value volume="53">0x9b</Value>
+            <Value volume="60">0x9f</Value>
+            <Value volume="66">0xa3</Value>
+            <Value volume="73">0xa7</Value>
+            <Value volume="79">0xab</Value>
+            <Value volume="86">0xaf</Value>
+            <Value volume="93">0xb3</Value>
+            <Value volume="100">0xb7</Value>
+        </Gain>
+    </AudioPath>
+    <AudioPath identifier="HiFiRecordFromMic1" component="ELBA">
+        <Gain name="MICPGA1_GAIN[4:0]">
+            <Value volume="100">0x8</Value>
+        </Gain>
+    </AudioPath>
+    <AudioPath identifier="HiFiPlayToHP" component="ELBA">
+        <Gain name="VOL_SEL_1[7:0]">
+            <Value volume="100">0xa1</Value>
+        </Gain>
+        <Gain name="VOL_SEL_2[7:0]">
+            <Value volume="100">0xa1</Value>
+        </Gain>
+    </AudioPath>
+    <AudioPath identifier="HiFiPlayToSPKRAndHP" component="ELBA">
+        <Gain name="VOL_SEL_1[7:0]">
+            <Value volume="0">0x7b</Value>
+            <Value volume="14">0x7f</Value>
+            <Value volume="29">0x81</Value>
+            <Value volume="43">0x83</Value>
+            <Value volume="57">0x85</Value>
+            <Value volume="71">0x89</Value>
+            <Value volume="86">0x8d</Value>
+            <Value volume="100">0x91</Value>
+        </Gain>
+        <Gain name="VOL_SEL_2[7:0]">
+            <Value volume="0">0x7b</Value>
+            <Value volume="14">0x7f</Value>
+            <Value volume="29">0x81</Value>
+            <Value volume="43">0x83</Value>
+            <Value volume="57">0x85</Value>
+            <Value volume="71">0x89</Value>
+            <Value volume="86">0x8d</Value>
+            <Value volume="100">0x91</Value>
+        </Gain>
+        <Gain name="VOL_SEL_3[7:0]">
+            <Value volume="0">0xaa</Value>
+            <Value volume="14">0xab</Value>
+            <Value volume="29">0xac</Value>
+            <Value volume="43">0xad</Value>
+            <Value volume="57">0xae</Value>
+            <Value volume="71">0xaf</Value>
+            <Value volume="86">0xb1</Value>
+            <Value volume="100">0xb3</Value>
+        </Gain>
+    </AudioPath>
+    <AudioPath identifier="HiFiPlayToSPKRAndHP" component="PMIC">
+        <Gain name="DIG_GAIN">
+            <Value volume="100">0x3</Value>
+        </Gain>
+        <Gain name="ANA_GAIN">
+            <Value volume="100">0x1</Value>
+        </Gain>
+    </AudioPath>
+    <AudioPath identifier="HiFiPlayToSPKR" component="ELBA">
+        <Gain name="VOL_SEL_3[7:0]">
+            <Value volume="100">0xb4</Value>
+        </Gain>
+    </AudioPath>
+</MarvellAudioGainConfiguration>

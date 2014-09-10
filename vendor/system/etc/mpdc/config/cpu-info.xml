@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CPUInfo>
+	<!-- The senior entry is used for mapping name to CPU id -->
+	<!-- Refer PXA3xx Developer Manual (MV-S301374-01 Rev.C) Chapter 2.16.6.1 -->
+	<CPU id="0x69056825" processor="PXA 3xx"></CPU>
+	<CPU id="0x69056826" processor="PXA 3xx"></CPU>
+	<CPU id="0x69056890" processor="PXA 3xx"></CPU>
+	<CPU id="0x69056891" processor="PXA 3xx"></CPU>
+	<CPU id="0x69056892" processor="PXA 3xx" senior="true" ></CPU>
+	<CPU id="0x69056880" processor="PXA 3xx"></CPU>
+	<CPU id="0x69056881" processor="PXA 3xx"></CPU>
+	<!-- Use subID to distinguish different processors with the same cpu id -->
+	<!-- Refer 88SV331x-v5 PJ1 Datasheet (MV-S105191-00 Rev.2.0) Chapter 4.3.1 -->
+	<CPU id="0x56158000" processor="PXA 91x"></CPU>
+	<CPU id="0x56158000" processor="PXA 92x"></CPU>
+	<!-- Refer PXA930 Developer Manual (MV-S104308-01 Rev.B) Chapter 4.3.2 -->
+	<CPU id="0x69056835" processor="PXA 93x"></CPU>
+	<CPU id="0x69056837" processor="PXA 93x"></CPU>
+	<CPU id="0x69056838" processor="PXA 93x" senior="true" ></CPU>
+	<!-- Refer PXA940 Developer Manual (MV-S104848-01 Rev.A) Chapter 4.3.2 -->
+	<CPU id="0x56056931" processor="PXA 940"></CPU>
+	<CPU id="0x56056936" processor="PXA 940" senior="true" ></CPU>
+	<CPU id="0x56056970" processor="PXA 950"></CPU>
+	<CPU id="0x560f5814" processor="PXA 955"></CPU>
+	<CPU id="0x56158400" processor="ARMADA 168"></CPU>
+	<CPU id="0x560f5812" processor="ARMADA 510"></CPU>
+	<!-- add the following item for MG2 with cpu id 0x560f5815 -->
+	<CPU id="0x560f5815" processor="PXA 968"></CPU>
+	<CPU id="0x560f5811" processor="ARMADA 610" senior="true"></CPU>
+	<CPU id="0x560f5815" processor="ARMADA 610"></CPU>
+	<CPU id="0x411fc090" processor="Tegra 2"></CPU>
+	<CPU id="0x561f5840" processor="Disco-SMP"></CPU>
+	<CPU id="0x562f5842" processor="ARMADAXP"></CPU>
+	<CPU id="0x562f5840" processor="MMP3"></CPU>
+	<CPU id="0x413fc081" processor="PJ4B-MP FPGA"></CPU>
+	<CPU id="0x410fc090" processor="PJ4B-MP FPGA"></CPU>
+	<CPU id="0x562f5841" processor="BG2"></CPU>
+	<CPU id="0x413fc090" processor="NEVO"></CPU>
+</CPUInfo>

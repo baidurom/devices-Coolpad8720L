@@ -1,0 +1,23 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<SQLite>
+  <db_list>
+    <db name="quadrant.db" config="wal"/>
+    <db name="rlbencmark.db" config="wal"/>
+    <db name="mmssms.db" config="wal"/>
+    <db name="example-db" config="custom1"/>
+  </db_list>
+  <db_config>
+    <wal>
+        <journal_mode value="WAL"/>
+        <synchronous value="NORMAL"/>
+        <wal_autocheckpoint value="1000"/>
+        <journal_size_limit value="838868"/>
+    </wal>
+    <custom1>
+        <journal_mode value="TRUNCATE"/>
+        <synchronous value="FULL"/>
+        <wal_autocheckpoint value="1000"/>
+        <journal_size_limit value="838868"/>
+    </custom1>
+  </db_config>
+</SQLite>

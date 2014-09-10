@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configinfo>
+
+<permissions>
+<item name="android.permission.SEND_SMS" contentType="信息" proType="costmoney" />
+<item name="android.permission.READ_SMS" contentType="信息" proType="data"/>
+<item name="android.permission.RECEIVE_SMS" contentType="信息" proType="data"/>
+<item name="android.permission.WRITE_SMS" contentType="信息" proType="data"/>
+<item name="android.permission.RECEIVE_MMS" contentType="信息" proType="data"/>
+<item name="android.permission.READ_CONTACTS" contentType="联系人" proType="data"/>
+<item name="android.permission.WRITE_CONTACTS" contentType="联系人" proType="data"/>
+<item name="android.permission.READ_CALL_LOG" contentType="通话记录" proType="data"/>
+<item name="android.permission.WRITE_CALL_LOG" contentType="通话记录" proType="data"/>
+<item name="android.permission.WRITE_CALENDAR" contentType="日程" proType="data"/>
+<item name="android.permission.READ_CALENDAR" contentType="日程" proType="data"/>
+<item name="android.permission.CALL_PHONE" contentType="电话" proType="costmoney"/>
+<item name="android.permission.PRIVILEGED" contentType="电话" proType="costmoney"/>
+<item name="android.permission.RECORD_AUDIO" contentType="录音" proType="stolenlisten"/>
+<item name="android.permission.ACCESS_FINE_LOCATION" contentType="跟踪" proType="pug"/>
+<item name="android.permission.ACCESS_COARSE_LOCATION" contentType="跟踪" proType="pug"/>
+</permissions>
+
+<foreignapps>
+<fapp>com.google.android.apps.plus</fapp>
+</foreignapps>
+
+<!--内置应用黑名单-->
+<systemapps>
+<app>com.quicinc.fmradio</app>
+<swapp>com.xxx.com</swapp>
+</systemapps>
+
+</configinfo>

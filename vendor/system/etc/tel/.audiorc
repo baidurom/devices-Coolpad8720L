@@ -1,0 +1,26 @@
+#
+# Define the client num on the Tavor EVB
+#
+[server]
+SOCKET_PATH_NAME=/tmp/sever_mainsock
+
+#
+# Configuration file for Tavor EvbII Platform
+# Define default hifi playback channel configuration
+#
+[client0]
+SOCKET_PATH_NAME=/tmp/socket4calibration
+
+#
+# Configuration file for Tavor EvbII Platform
+# Define voice playback&capture channel configuration
+#
+[client1]
+SOCKET_PATH_NAME=/tmp/socket4write
+
+#
+# Configuration file for Tavor EvbII Platform
+# Define phone voicecall channel configuration
+#
+[client2]
+SOCKET_PATH_NAME=/tmp/socket4read

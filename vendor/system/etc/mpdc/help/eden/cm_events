@@ -1,0 +1,42 @@
+Event Id	Proper Counters		Comments
+[1m0xffff[0m		Timer			Timer
+[1m0xff[0m		CCNT			Core clock tick
+[1m0xfe[0m		CCNT			Core clock tick (64 clock base)
+[1m0x0[0m		PMN0,PMN1,PMN2,PMN3	Instruction architecturally executed, condition check pass, Software increment
+[1m0x1[0m		PMN0,PMN1,PMN2,PMN3	Level 1 instruction cache refill
+[1m0x2[0m		PMN0,PMN1,PMN2,PMN3	Level 1 instruction TLB refill
+[1m0x3[0m		PMN0,PMN1,PMN2,PMN3	Level 1 data cache refill
+[1m0x4[0m		PMN0,PMN1,PMN2,PMN3	Level 1 data cache access
+[1m0x5[0m		PMN0,PMN1,PMN2,PMN3	Level 1 data TLB refill
+[1m0x6[0m		PMN0,PMN1,PMN2,PMN3	Instruction architecturally executed, condition check pass, Load
+[1m0x7[0m		PMN0,PMN1,PMN2,PMN3	Instruction architecturally executed, condition check pass, Store
+[1m0x9[0m		PMN0,PMN1,PMN2,PMN3	Exception taken
+[1m0xa[0m		PMN0,PMN1,PMN2,PMN3	Instruction architecturally executed, condition check pass, Exception return
+[1m0xb[0m		PMN0,PMN1,PMN2,PMN3	Instruction architecturally executed, condition check pass, Write to CONTEXTIDR
+[1m0xc[0m		PMN0,PMN1,PMN2,PMN3	Instruction architecturally executed, condition check pass, Software change of the PC
+[1m0xd[0m		PMN0,PMN1,PMN2,PMN3	Instruction architecturally executed - Immediate branch
+[1m0xf[0m		PMN0,PMN1,PMN2,PMN3	Instruction architecturally executed, condition check pass, Unaligned load or store
+[1m0x10[0m		PMN0,PMN1,PMN2,PMN3	Mispredicted or not predicted branch speculatively executed
+[1m0x11[0m		PMN0,PMN1,PMN2,PMN3	Cycle
+[1m0x12[0m		PMN0,PMN1,PMN2,PMN3	Predictable branch speculatively executed
+[1m0x8[0m		PMN0,PMN1,PMN2,PMN3	Instruction architecturally executed
+[1m0xe[0m		PMN0,PMN1,PMN2,PMN3	Instruction architecturally executed, condition code check pass, procedure return
+[1m0x13[0m		PMN0,PMN1,PMN2,PMN3	Data memory access
+[1m0x14[0m		PMN0,PMN1,PMN2,PMN3	Level 1 instruction cache access
+[1m0x15[0m		PMN0,PMN1,PMN2,PMN3	Level 1 data cache write-back
+[1m0x16[0m		PMN0,PMN1,PMN2,PMN3	Level 2 data cache access
+[1m0x17[0m		PMN0,PMN1,PMN2,PMN3	Level 2 data cache refill
+[1m0x18[0m		PMN0,PMN1,PMN2,PMN3	Level 2 data cache write-back
+[1m0x19[0m		PMN0,PMN1,PMN2,PMN3	Bus access
+[1m0x1D[0m		PMN0,PMN1,PMN2,PMN3	Bus cycle
+[1m0x60[0m		PMN0,PMN1,PMN2,PMN3	Bus access, read.
+[1m0x61[0m		PMN0,PMN1,PMN2,PMN3	Bus access, write.
+[1m0x86[0m		PMN0,PMN1,PMN2,PMN3	IRQ exception taken.
+[1m0xc0[0m		PMN0,PMN1,PMN2,PMN3	External memory request.
+[1m0xc1[0m		PMN0,PMN1,PMN2,PMN3	Non-cacheable external memory request.
+[1m0xc2[0m		PMN0,PMN1,PMN2,PMN3	Linefill because of prefetch.
+[1m0xc3[0m		PMN0,PMN1,PMN2,PMN3	Prefetch linefill dropped.
+[1m0xc4[0m		PMN0,PMN1,PMN2,PMN3	Entering read allocate mode.
+[1m0xc5[0m		PMN0,PMN1,PMN2,PMN3	Read allocate mode.
+[1m0xc9[0m		PMN0,PMN1,PMN2,PMN3	Data Write operation that stalls the pipeline because the store buffer is full.
+[1m0xca[0m		PMN0,PMN1,PMN2,PMN3	Data snooped from other processor.

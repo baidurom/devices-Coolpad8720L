@@ -1,0 +1,6 @@
+if [ "$#" == "0" ]; then
+    echo "Usage: ApduLoopback f3|f4 n=<number of iterations> [s=<number of bytes per iteration>] [p=<static pipe number>]"
+else
+	am start -a "$*" -n com.broadcom.apps.testframework/.SecElementTesterActivity
+fi
+

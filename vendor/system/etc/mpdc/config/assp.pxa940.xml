@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exp:Configuration xmlns:exp="http://com.marvell.cpa" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.marvell.cpa target.xsd ">
+	<!-- Refer PXA940 Developer Manual (MV-S104848-02 Rev.-) Table 165 -->
+	<EventSet name="ASSP" zone="0x10000000" location="peripheral">
+		<Event id="71" name="B2I Deblock FIFO full" />
+		<Event id="72" name="B2I Deblock FIFO empty" />
+		<Event id="73" name="B2I Decode FIFO full" />
+		<Event id="74" name="B2I Decode FIFO empty" />
+	</EventSet>
+</exp:Configuration>

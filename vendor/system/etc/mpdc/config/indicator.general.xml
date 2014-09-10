@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exp:Indicators xmlns:exp="http://com.marvell.cpa" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.marvell.cpa target.xsd ">
+	<Indicator name="Cycle Per Instruction (CPI)" type="numeric">
+		<Operator id="div" />
+		<Operand xsi:type="exp:EventExpression">
+			<Event name="Core clock tick" group="Core Clock"></Event>
+		</Operand>
+		<Operand xsi:type="exp:EventExpression">
+			<Event name="Instruction executed" />
+		</Operand>
+	</Indicator>
+	<CompositeIndicator name="Branch Execution" type="ratio">
+		<Indicator name="Mispredicted" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="Branch mispredicted" />
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="Branch retired" />
+			</Operand>
+		</Indicator>
+		<Indicator name="Predicted" type="ratio">
+			<Operator id="sub" />
+			<Operand xsi:type="exp:ConstantExpression">
+				<Constant value="1.0" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="div" />
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="Branch mispredicted" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="Branch retired" />
+				</Operand>
+			</Operand>
+		</Indicator>
+	</CompositeIndicator>
+</exp:Indicators>

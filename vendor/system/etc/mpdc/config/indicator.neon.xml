@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exp:Indicators xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exp="http://com.marvell.cpa"
+	xsi:schemaLocation="http://com.marvell.cpa target.xsd">
+	<CompositeIndicator name="Issue Stall Reason" type="ratio">
+		<Indicator name="ROB Full" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="NEON ROB full stall" group="NEON Issue Stall" />
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="NEON issue stall" group="NEON Issue Stall" />
+			</Operand>
+		</Indicator>
+		<Indicator name="Data Hazard" type="ratio">
+			<Operator id="div"></Operator>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="NEON data hazard stall" group="NEON Issue Stall" />
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="NEON issue stall" group="NEON Issue Stall" />
+			</Operand>
+		</Indicator>
+		<Indicator name="EU conflict" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="NEON EU conflict stall" group="NEON Issue Stall" />
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="NEON issue stall" group="NEON Issue Stall" />
+			</Operand>
+		</Indicator>
+	</CompositeIndicator>
+	<CompositeIndicator name="EU Conflict Reason" type="ratio">
+		<Indicator name="VFP Mac Inst." type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="NEON VFP MAC instruction conflict" group="NEON EU Conflict Stall" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="acc" />
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON VFP MAC instruction conflict" group="NEON EU Conflict Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON LDST EU conflict" group="NEON EU Conflict Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON divider conflict" group="NEON EU Conflict Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON VFP multiply conflict" group="NEON EU Conflict Stall"></Event>
+				</Operand>
+			</Operand>
+		</Indicator>
+		<Indicator name="LDST EU" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="NEON LDST EU conflict" group="NEON EU Conflict Stall" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="acc" />
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON VFP MAC instruction conflict" group="NEON EU Conflict Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON LDST EU conflict" group="NEON EU Conflict Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON divider conflict" group="NEON EU Conflict Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON VFP multiply conflict" group="NEON EU Conflict Stall"></Event>
+				</Operand>
+			</Operand>
+		</Indicator>
+		<Indicator name="Divider" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="NEON divider conflict" group="NEON EU Conflict Stall" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="acc" />
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON VFP MAC instruction conflict" group="NEON EU Conflict Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON LDST EU conflict" group="NEON EU Conflict Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON divider conflict" group="NEON EU Conflict Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON VFP multiply conflict" group="NEON EU Conflict Stall" />
+				</Operand>
+			</Operand>
+		</Indicator>
+		<Indicator name="VFP Multiply" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="NEON VFP multiply conflict" group="NEON EU Conflict Stall" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="acc" />
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON VFP MAC instruction conflict" group="NEON EU Conflict Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON LDST EU conflict" group="NEON EU Conflict Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON divider conflict" group="NEON EU Conflict Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON VFP multiply conflict" group="NEON EU Conflict Stall"></Event>
+				</Operand>
+			</Operand>
+		</Indicator>
+	</CompositeIndicator>
+	<CompositeIndicator name="Data Hazard Reason" type="ratio">
+		<Indicator name="R/W Register" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="NEON write/read system register stall" group="NEON Data Hazard Stall" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="acc" />
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON write/read system register stall" group="NEON Data Hazard Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON read NZCV flag stall" group="NEON Data Hazard Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON update system register stall" group="NEON Data Hazard Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON operand dependency hazard stall" group="NEON Data Hazard Stall" />
+				</Operand>
+			</Operand>
+		</Indicator>
+		<Indicator name="Read NZCV Flag" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="NEON read NZCV flag stall" group="NEON Data Hazard Stall" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="acc" />
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON write/read system register stall" group="NEON Data Hazard Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON read NZCV flag stall" group="NEON Data Hazard Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON update system register stall" group="NEON Data Hazard Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON operand dependency hazard stall" group="NEON Data Hazard Stall" />
+				</Operand>
+			</Operand>
+		</Indicator>
+		<Indicator name="Update Register" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="NEON update system register stall" group="NEON Data Hazard Stall" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="acc" />
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON write/read system register stall" group="NEON Data Hazard Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON read NZCV flag stall" group="NEON Data Hazard Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON update system register stall" group="NEON Data Hazard Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON operand dependency hazard stall" group="NEON Data Hazard Stall" />
+				</Operand>
+			</Operand>
+		</Indicator>
+		<Indicator name="Operand Dependency" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="NEON operand dependency hazard stall" group="NEON Data Hazard Stall" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="acc" />
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON write/read system register stall" group="NEON Data Hazard Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON read NZCV flag stall" group="NEON Data Hazard Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON update system register stall" group="NEON Data Hazard Stall" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="NEON operand dependency hazard stall" group="NEON Data Hazard Stall" />
+				</Operand>
+			</Operand>
+		</Indicator>
+	</CompositeIndicator>
+</exp:Indicators>

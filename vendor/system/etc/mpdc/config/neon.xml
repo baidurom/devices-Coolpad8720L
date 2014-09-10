@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exp:Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exp="http://com.marvell.cpa"
+	xsi:schemaLocation="http://com.marvell.cpa target.xsd">
+	<!-- Refer Email about NEON PMU -->
+	<EventSet name="NEON BP-CP Interface" zone="0xFF00000" exclusive="true" exclusiveDomain="0x1">
+		<!-- Attribute exclusive: Only one event set can be select at the same time, from all sets with exclusive is true -->
+		<Event name="NEON dual issue from BP" id="0xb0" type="occurrence"/>
+		<Event name="NEON single issue from BP" id="0xb1" type="occurrence"/>
+		<Event name="NEON instruction buffer full" id="0xb2" type="occurrence"/>
+		<Event name="NEON no issue from BP" id="0xb3" type="occurrence">
+		<Description>NEON no issue from BP, includes the idle cycle even if NEON is disabled</Description>
+		</Event>
+	</EventSet>
+	<EventSet name="NEON Issue Stage" zone="0xFE00000" exclusive="true" exclusiveDomain="0x1">
+		<!-- Attribute exclusive: Only one event set can be select at the same time, from all sets with exclusive is true -->
+		<Event name="NEON dual issue" id="0xb0" type="occurrence"/>
+		<Event name="NEON single issue" id="0xb1" type="occurrence"/>
+		<Event name="NEON issue stall" id="0xb2" type="occurrence"/>
+		<Event name="NEON nothing in issue" id="0xb3" type="occurrence"/>
+	</EventSet>
+	<EventSet name="NEON Issue Stall" zone="0xFD00000" exclusive="true" exclusiveDomain="0x1">
+		<!-- Attribute exclusive: Only one event set can be select at the same time, from all sets with exclusive is true -->
+		<Event name="NEON ROB full stall" id="0xb0" type="occurrence"/>
+		<Event name="NEON data hazard stall" id="0xb1" type="occurrence"/>
+		<Event name="NEON EU conflict stall" id="0xb2" type="occurrence"/>
+		<Event name="NEON issue stall" id="0xb3" type="occurrence"/>
+	</EventSet>
+	<EventSet name="NEON EU Conflict Stall" zone="0xFC00000" exclusive="true" exclusiveDomain="0x1">
+		<!-- Attribute exclusive: Only one event set can be select at the same time, from all sets with exclusive is true -->
+		<Event name="NEON VFP MAC instruction conflict" id="0xb0" type="occurrence"/>
+		<Event name="NEON LDST EU conflict" id="0xb1" type="occurrence"/>
+		<Event name="NEON divider conflict" id="0xb2" type="occurrence"/>
+		<Event name="NEON VFP multiply conflict" id="0xb3" type="occurrence"/>
+	</EventSet>
+	<EventSet name="NEON Data Hazard Stall" zone="0xFB00000" exclusive="true" exclusiveDomain="0x1">
+		<!-- Attribute exclusive: Only one event set can be select at the same time, from all sets with exclusive is true -->
+		<Event name="NEON write/read system register stall" id="0xb0" type="occurrence"/>
+		<Event name="NEON read NZCV flag stall" id="0xb1" type="occurrence"/>
+		<Event name="NEON update system register stall" id="0xb2" type="occurrence"/>
+		<Event name="NEON operand dependency hazard stall" id="0xb3" type="occurrence"/>
+	</EventSet>
+	<EventSet name="NEON ROB" zone="0xFA00000" exclusive="true" exclusiveDomain="0x1">
+		<!-- Attribute exclusive: Only one event set can be select at the same time, from all sets with exclusive is true -->
+		<Event name="NEON dual retire" id="0xb0" type="occurrence"/>
+		<Event name="NEON single retire" id="0xb1" type="occurrence"/>
+		<Event name="NEON no retire (ROB is not empty)" id="0xb2" type="occurrence"/>
+		<Event name="NEON VROB empty" id="0xb3" type="occurrence"/>
+	</EventSet>
+</exp:Configuration>

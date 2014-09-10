@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exp:Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exp="http://com.marvell.cpa"
+	xsi:schemaLocation="http://com.marvell.cpa target.xsd">
+	<!-- Refer DDI0464D_cortex_a7_mpcore_r0p3_trm.pdf. Ignored: 0x1a, 0x1b, 0x1c, 0xc7, 0xc8, 0x87, which not happened -->
+	<EventSet name="Branch">
+		<Event id="0x8" name="Instruction architecturally executed" type="occurrence">
+			<Description>Instruction architecturally executed.</Description>
+		</Event>
+		<Event id="0xe" name="Instruction architecturally executed, condition code check pass, procedure return" type="occurrence">
+			<Description>Instruction architecturally executed, condition code check pass, procedure return.</Description>
+		</Event>
+		<Event id="0x13" name="Data memory access" type="occurrence">
+			<Description>Data memory access.</Description>
+		</Event>
+		<Event id="0x14" name="Level 1 instruction cache access" type="occurrence">
+			<Description>Level 1 instruction cache access.</Description>
+		</Event>
+		<Event id="0x15" name="Level 1 data cache write-back" type="occurrence">
+			<Description>Level 1 data cache write-back.</Description>
+		</Event>
+		<Event id="0x16" name="Level 2 data cache access" type="occurrence">
+			<Description>Level 2 data cache access.</Description>
+		</Event>
+		<Event id="0x17" name="Level 2 data cache refill" type="occurrence">
+			<Description>Level 2 data cache refill.</Description>
+		</Event>
+		<Event id="0x18" name="Level 2 data cache write-back" type="occurrence">
+			<Description>Level 2 data cache write-back.</Description>
+		</Event>
+		<Event id="0x19" name="Bus access" type="occurrence">
+			<Description>Bus access.</Description>
+		</Event>
+		<Event id="0x1D" name="Bus cycle" type="occurrence">
+			<Description>Bus cycle.</Description>
+		</Event>
+		<Event id="0x60" name="Bus access, read." type="occurrence">
+			<Description>Bus access, read.</Description>
+		</Event>
+		<Event id="0x61" name="Bus access, write." type="occurrence">
+			<Description>Bus access, write.</Description>
+		</Event>
+		<Event id="0x86" name="IRQ exception taken." type="occurrence">
+			<Description>IRQ exception taken.</Description>
+		</Event>
+		<Event id="0xc0" name="External memory request." type="occurrence">
+			<Description>External memory request.</Description>
+		</Event>
+		<Event id="0xc1" name="Non-cacheable external memory request." type="occurrence">
+			<Description>Non-cacheable external memory request.</Description>
+		</Event>
+		<Event id="0xc2" name="Linefill because of prefetch." type="occurrence">
+			<Description>Linefill because of prefetch.</Description>
+		</Event>
+		<Event id="0xc3" name="Prefetch linefill dropped." type="occurrence">
+			<Description>Prefetch linefill dropped.</Description>
+		</Event>
+		<Event id="0xc4" name="Entering read allocate mode." type="occurrence">
+			<Description>Entering read allocate mode.</Description>
+		</Event>
+		<Event id="0xc5" name="Read allocate mode." type="occurrence">
+			<Description>Read allocate mode.</Description>
+		</Event>
+		<Event id="0xc9" name="Data Write operation that stalls the pipeline because the store buffer is full." type="occurrence">
+			<Description>Data Write operation that stalls the pipeline because the store buffer is full.</Description>
+		</Event>
+		<Event id="0xca" name="Data snooped from other processor." type="occurrence">
+			<Description>Data snooped from other processor. This event counts memory-read operations that read data from another processor within the local Cortex-A7 cluster, rather than accessing the L2 cache or issuing an external read. It increments on each transaction, rather than on each beat of data.</Description>
+		</Event>
+	</EventSet>
+</exp:Configuration>

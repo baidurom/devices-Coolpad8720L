@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exp:Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exp="http://com.marvell.cpa"
+	xsi:schemaLocation="http://com.marvell.cpa target.xsd">
+	<EventSet name="Timer">
+		<Event id="0xffff" name="Timer" type="occurrence">
+			<Description>OS Timer</Description>
+		</Event>
+	</EventSet>
+</exp:Configuration>

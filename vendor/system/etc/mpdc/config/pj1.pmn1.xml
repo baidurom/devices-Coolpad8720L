@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<exp:Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exp="http://com.marvell.cpa"
+	xsi:schemaLocation="http://com.marvell.cpa target.xsd ">
+	<!-- Refer PJ1 Datasheet (MV-S105191-00 Rev.2.0) Chapter 4.21 -->
+	<!-- The zone of all pj1 EventSets is 0xE000000. The event id configured in saf is (zone | event id). The real hardware 
+		event id is ((1 << (0xFFFFF & configured event id)) + 1) -->
+	<EventSet name="PMN1" zone="0xE000000">
+		<Event id="0x1" name="Cycle count" type="occurrence">
+			<Description>Counts the number of clock cycles. Every clock cycle increments the counter</Description>
+		</Event>
+		<Event id="0x2" name="L1 I-Cache read miss" type="occurrence">
+			<Description>Counts the number of instruction-cache read misses</Description>
+		</Event>
+		<Event id="0x3" name="L1 D-Cache read miss" type="occurrence">
+			<Description>Counts the number of data-cache read misses (including non-cacheable and non-bufferable cache accesses)</Description>
+		</Event>
+		<Event id="0x4" name="L1 D-Cache write miss" type="occurrence">
+			<Description>Counts the number of data-cache write misses (including non-cacheable and non-bufferable misses)</Description>
+		</Event>
+		<Event id="0x5" name="I-TLB miss" type="occurrence">
+			<Description>Counts the number of instruction TLB misses</Description>
+		</Event>
+		<Event id="0x6" name="Single issue" type="duration">
+			<Description>Counts the number of cycles the processor single-issues instructions</Description>
+		</Event>
+		<Event id="0x8" name="Branch retired" type="occurrence">
+			<Description>Counts the number of times one branch retires</Description>
+		</Event>
+		<Event id="0x9" name="ROB full" type="duration">
+			<Description>Counts the number of cycles the ROB is full</Description>
+		</Event>
+		<Event id="0xA" name="MMU read beat" type="occurrence">
+			<Description>Counts the number of times the bus returns RDY to the MMU, useful when determining bus efficiency. A user can use the signal that the MMU is requesting the bus and how long it takes on average for the data to return. (mmu_bus_req / mmu_read_count)</Description>
+		</Event>
+		<Event id="0xB" name="L1 I-Cache read beat" type="occurrence">
+			<Description>Counts the number of times the bus returns RDY to the instruction cache, useful to determine the cache’s average read latency (also known as read miss or read count)</Description>
+		</Event>
+		<Event id="0xF" name="Hold issue stage" type="duration">
+			<Description>Count the number of cycles the instruction issue is stalled</Description>
+		</Event>
+		<Event id="0xC" name="Write buffer write beat" type="occurrence">
+			<Description>Counts the number times the bus returns RDY to the write buffer, useful to determine the write buffer’s average write latency (WB Write Latency/WB Write Beat)</Description>
+		</Event>
+		<Event id="0x10" name="Data read access" type="occurrence" />
+		<Event id="0x18" name="WMMX2 instruction retired" type="occurrence" />
+		<Event id="0x19" name="WMMX2 store FIFO full" type="duration">
+			<Description>Counts the number of cycles the SIMD coprocessor store FIFO is full</Description>
+		</Event>
+		<Event id="0x1D" name="L2-Cache write hit" type="occurrence" />
+		<Event id="0x1E" name="L2-Cache write miss" type="occurrence" />
+		<Event id="0x1F" name="L2-Cache latency" type="duration">
+			<Description>The latency for the most recent L2C read from the external bus</Description>
+		</Event>
+	</EventSet>
+</exp:Configuration>

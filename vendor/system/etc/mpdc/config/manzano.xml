@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<exp:Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exp="http://com.marvell.cpa"
+	xsi:schemaLocation="http://com.marvell.cpa target.xsd ">
+	<!-- Refer Manzano Core EAS (MV-S104620-00 Rev.A) Chapter 11 
+		 Ignored: 0x17, use 0x1D instead
+	-->
+	<EventSet name="Core">
+		<Event id="0x0" name="L1 I-Cache miss" type="occurrence">
+			<Description>L1 Instruction cache miss requires fetch from external memory</Description>
+		</Event>
+		<Event id="0x1" name="L1 I-Cache can't deliver">
+			<Description>L1 Instruction cache cannot deliver an instruction. This could indicate an instruction cache or TLB miss. This event will occur every cycle in which the condition is present</Description>
+		</Event>
+		<Event id="0x2" name="Data dependency stall" type="duration"/>
+		<Event id="0x3" name="I-TLB miss" type="occurrence" />
+		<Event id="0x4" name="D-TLB miss" type="occurrence" />
+		<Event id="0x5" name="B and BL instruction retired" type="occurrence">
+			<Description>Branch instruction retired, branch may or may not have changed program flow. (Counts only B and BL instructions, in both ARM and Thumb mode)</Description>
+		</Event>
+		<Event id="0x6" name="Branch mispredicted" type="occurrence">
+			<Description>Branch mispredicted. (Counts only B and BL instructions, in both ARM and Thumb mode)</Description>
+		</Event>
+		<Event id="0x7" name="Instruction executed" type="occurrence">
+			<Description>Instruction retired. This event steps in a count of the number of executed instructions</Description>
+		</Event>
+		<Event id="0x8" name="L1 D-Cache buffer full stall (cycle)">
+			<Description>L1 Data cache buffer full stall. This event will occur every cycle in which the condition is present</Description>
+		</Event>
+		<Event id="0x9" name="L1 D-Cache buffer full stall (sequence)" type="occurrence">
+			<Description>L1 Data cache buffer full stall. This event occurs once for each contiguous sequence of this type of stall</Description>
+		</Event>
+		<Event id="0xa" name="L1 D-Cache access" type="occurrence">
+			<Description>L1 Data cache access, not including Cache Operations. All data accesses are treated as cacheable accesses and are counted here even if the cache is not enabled</Description>
+		</Event>
+		<Event id="0xb" name="L1 D-Cache miss" type="occurrence">
+			<Description>L1 Data cache miss, not including Cache Operations. All data accesses are treated as cacheable accesses and are counted as misses if the data cache is not enabled</Description>
+		</Event>
+		<Event id="0xc" name="L1 D-Cache write back" type="occurrence">
+			<Description>L1 Data cache write-back. This event occurs once for each line (32 bytes) that is written back from the cache</Description>
+		</Event>
+		<Event id="0xd" name="Software change of PC" type="occurrence">
+			<Description>Software changed the PC ('b', 'bx', 'bl', 'blx', 'and', 'eor', 'sub', 'rsb', 'add', 'adc', 'sbc', 'rsc', 'orr', 'mov', 'bic', 'mvn', 'ldm Rn, {..., pc}', 'ldr pc, [...]', pop {..., pc} will be counted). The count does not increment when an exception occurs and the PC changes to the exception address (e.g., IRQ, FIQ, SWI, ...)</Description>
+		</Event>
+		<Event id="0xe" name="Branch retired" type="occurrence">
+			<Description>Branch instruction retired. Branch may or may not have changed program flow. (Count ALL branch instructions, indirect as well as direct)</Description>
+		</Event>
+		<Event id="0xf" name="Hold issue stage">
+			<Description>Instruction issue cycle of retired instruction. This event is a count of the number of core cycles each instruction requires to issue</Description>
+		</Event>
+		<Event id="0x18" name="All changes to the PC" type="occurrence" />
+		<Event id="0x19" name="Pipeline flush" type="occurrence">
+			<Description>Pipeline flush due to branch mispredict or exception</Description>
+		</Event>
+		<Event id="0x1a" name="Instruction issue failed" type="duration">
+			<Description>The core could not issue an instruction due to a backend stall. This event will occur every cycle in which the condition is present</Description>
+		</Event>
+		<Event id="0x1b" name="Multiplier in use">
+			<Description>Multiplier in use. This event will occur every cycle in which the multiplier is active</Description>
+		</Event>
+		<Event id="0x1c" name="Multiplier stalled pipeline">
+			<Description>Multiplier stalled the instruction pipeline due to a resource stall. This event will occur every cycle in which the condition is present</Description>
+		</Event>
+		<Event id="0x1d" name="Coprocessor stalled pipeline">
+			<Description>Coprocessor stalled the instruction pipeline. This event will occur every cycle in which the condition is present</Description>
+		</Event>
+		<Event id="0x1e" name="D-Cache stalled pipeline">
+			<Description>Data Cache stalled the instruction pipeline. This event will occur every cycle in which the condition is present</Description>
+		</Event>
+		<Event id="0x1f" name="Snoop request stalled pipeline">
+			<Description>Snoop request stalled the instruction pipeline. This event will occur every cycle in which the condition is present</Description>
+		</Event>
+		<Event id="0x20" name="L2-Cache request" type="occurrence">
+			<Description>Unified L2 cache request, not including cache operations. This event includes table walks, data and instruction requests</Description>
+		</Event>
+		<Event id="0x21" name="L2-Cache data request" type="occurrence" />
+		<Event id="0x22" name="L2-Cache instruction request" type="occurrence" />
+		<Event id="0x23" name="L2-Cache miss" type="occurrence" />
+		<Event id="0x24" name="L2-Cache data miss" type="occurrence" />
+		<Event id="0x25" name="L2-Cache instruction fetch miss" type="occurrence" />
+		<Event id="0x26" name="L2-Cache read miss" type="occurrence" />
+		<Event id="0x27" name="L2-Cache data read request" type="occurrence" />
+		<Event id="0x28" name="L2-Cache write miss" type="occurrence" />
+		<Event id="0x29" name="L2-Cache data write request" type="occurrence" />
+		<Event id="0x2a" name="L2-Cache line writeback" type="occurrence" />
+		<Event id="0x2b" name="L2-Cache snoop or snoop confirm access" type="occurrence" />
+		<Event id="0x2c" name="L2-Cache snoop miss" type="occurrence" />
+		<Event id="0x2d" name="L2-Cache active" type="occurrence" />
+		<Event id="0x2e" name="L2-Cache push access" type="occurrence" />
+		<Event id="0x2f" name="L2-Cache access" type="occurrence" />
+		<Event id="0x40" name="Address bus transaction" type="duration" />
+		<Event id="0x41" name="Self initiated address bus transaction" type="duration" />
+		<Event id="0x42" name="Bus grant delay of self initiated address bus transaction">
+			<Description>Bus grant delay of self initiated address bus transaction. This event will occur every bus cycle in which the condition is present. (Bus cycle count from request to grant)</Description>
+		</Event>
+		<Event id="0x43" name="Bus clock" />
+		<Event id="0x44" name="Bus initiated data bus transaction" type="occurrence" />
+		<Event id="0x45" name="Bus grant delay of self initiated data bus transaction">
+			<Description>Bus grant delay of self initiated data bus transaction. This event will occur every bus cycle in which the condition is present. (Bus cycle count from request to grant)</Description>
+		</Event>
+		<Event id="0x47" name="Self initiated data bus transaction" />
+		<Event id="0x48" name="Data bus transaction" />
+		<Event id="0x49" name="Retired bus transaction" type="occurrence" />
+		<Event id="0x50" name="L2-Cache line allocation" type="occurrence" />
+		<Event id="0x51" name="L2-Cache line update" type="occurrence" />
+		<Event id="0x52" name="L2-Cache recirculated operation" type="occurrence" />
+		<Event id="0x53" name="L2-Cache snoop request" type="occurrence" />
+		<Event id="0x54" name="L2-Cache snoop confirm" type="occurrence" />
+		<Event id="0x55" name="L2-Cache push request" type="occurrence" />
+		<Event id="0x56" name="L2-Cache push update" type="occurrence" />
+		<Event id="0x57" name="L2-Cache push allocation" type="occurrence" />
+		<Event id="0x58" name="L2-Cache special operation" type="occurrence" />
+		<Event id="0x59" name="L2-Cache snoop hit on clean cache line" type="occurrence" />
+		<Event id="0x5a" name="L2-Cache snoop hit on dirty cache line" type="occurrence" />
+		<Event id="0x60" name="Address transaction retry" type="occurrence" />
+		<Event id="0x61" name="Snoop transaction retry" type="occurrence" />
+	</EventSet>
+</exp:Configuration>

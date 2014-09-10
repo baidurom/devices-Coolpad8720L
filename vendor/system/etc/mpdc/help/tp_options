@@ -1,0 +1,8 @@
+ Option                         Comment
+[1m-bs[0m, [1m-buf-size[0m <size>           size of the buffer used by profiler, in KB.
+[1m-d[0m, [1m-duration[0m <duration>        duration of the profiling period, in second
+[1m-soe[0m, [1m-stop-on-exit[0m <y|n>       stop sampling when launched application exits.
+[1m-app[0m, [1m-application[0m <app full path with params>
+                                launch this application when sampling started.
+[1m-wd[0m, [1m-workdir[0m <full path of working dir>
+                                set the working directory for the launched application.

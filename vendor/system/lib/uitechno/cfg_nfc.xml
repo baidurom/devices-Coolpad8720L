@@ -1,0 +1,38 @@
+<root>
+	<component name="common">
+	  <item key="networkType" value="SG"/>
+	</component>
+	<component name="launcher">
+    	<item key="widgetSort" value="com.yulong.android.weatherwidget.WeatherWidget;com.yulong.android.calendar.widget.CalendarMonthWidgetProvider;com.yulong.android.xtimewidget.AnalogAppWidgetProvider;com.coolpad.music.widget.MediaAppBigWidgetProvider;com.yulong.android.xtimewidget.WorldClockProvider;com.icoolme.android.weather_widget.rigo.Weather4DayWidget4x2Provider;com.icoolme.android.weather_widget.rigo.WeatherWidgetRigo4x2Provider;com.yulong.android.calendar.widget.CalendarAppWidgetProvider;com.yulong.android.memo.widget.MyWidgetProvider;com.yulong.android.showwidget.CoolShowWidget;com.yulong.android.network.widget.NetworkWidgetProvider;com.android.quicksearchbox.SearchWidgetProvider;com.yulong.android.picturewidget.PictureWidget;com.yulong.android.weibo.appwidget.FavoriteContactsWidgetProvider;com.android.email.provider.WidgetProvider;com.android.browser.widget.BookmarkThumbnailWidgetProvider;com.android.gallery3d.gadget.PhotoAppWidgetProvider;com.android.contacts.socialwidget.SocialWidgetProvider"/>
+		<item key="SNAP_DURATION" value="360"/>
+		<item key="SNAP_ROUND" value="480"/>
+		<item key="SHOW_MAINMENU_WALLPAPER" value="true"/>
+		<item key="DESKTOP_MAX_PAGE" value="6"/>
+		<item key="DEFAULT_SHOW_TTWINDOW" value="false"/>
+                <item key="ALLOW_DISABLE_EDIT_MODE" value="true"/>
+	</component>
+	<component name="systemUI">
+	  <item key="networkType" value="SG"/>
+          <!-- yulong begin lyg turn off the cbutton 2013.10.21 -->
+	  <item key="shortcut" value="0,17,18,9,2,10,7,3,1,13,16,11,12,22,19,21,5,4," />
+	  <item key="shortcutExclude" value="7" />
+	  <item key="cardName" value="usim"/>
+	  <item key="cbutton" value="off"/>
+	  <!-- yulong end -->
+	</component>
+	<component name="seccenter">
+    <item key="low_memo_less_600M" value="20"/>
+    <item key="low_memo_more_600M" value="80"/>
+  </component>
+  <component name="launcher"> 
+    <item key="ICON_SINGLE_LINE" value="false"/> 
+  </component> 
+
+    <component name="retailMode">
+           <item key="CONTENT_PATH" value="/storage/emulated/0/retail"/>
+    </component>
+
+    <component name="coolshow">
+           <item key="lockscreenText" value="领航4G"/>
+    </component>
+</root>

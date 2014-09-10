@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exp:Configuration xmlns:exp="http://com.marvell.cpa" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://com.marvell.cpa target.xsd ">
+ <!-- No reference from manual -->
+  <EventSet name="Snoop" location="core">
+    <Event id="0xA0" name="Total snoop requests" type="occurrence"></Event>
+    <Event id="0xA1" name="Total snoop requests which hit" type="occurrence"></Event>
+    <Event id="0xA2" name="Total snoop requests which hit a dirty line" type="occurrence"></Event>
+    <Event id="0xA3" name="Increments when there is a valid instruction in AG and the SCU presents a valid probe to the LSU" type="occurrence"></Event>
+    <Event id="0xA4" name="Snoop stalled because LD/ST cannot process" type="occurrence"></Event>
+    <Event id="0xA5" name="Snoop stalled due to WB hit" type="occurrence"></Event>  
+    <Event id="0xA6" name="Data return cannot be accepted because load-store is processing snoop" type="occurrence"></Event>
+    <Event id="0xA7" name="Snoop queue active" type="occurrence"></Event>  
+    <Event id="0xAA" name="Snoop response is read but can't be sent because a previous snoop response has not been set" type="occurrence"></Event>	
+  </EventSet>
+</exp:Configuration>

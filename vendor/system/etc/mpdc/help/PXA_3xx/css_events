@@ -1,0 +1,18 @@
+Event Id	Proper Counters		Comments
+[1m0xff[0m		CCNT			Core clock tick
+[1m0xfe[0m		CCNT			Core clock tick (64 clock base)
+[1m0x0[0m		PMN0,PMN1,PMN2,PMN3	L1 I-Cache miss
+[1m0x3[0m		PMN0,PMN1,PMN2,PMN3	I-TLB miss
+[1m0x4[0m		PMN0,PMN1,PMN2,PMN3	D-TLB miss
+[1m0x5[0m		PMN0,PMN1,PMN2,PMN3	B and BL instruction retired
+[1m0x6[0m		PMN0,PMN1,PMN2,PMN3	Branch mispredicted
+[1m0x7[0m		PMN0,PMN1,PMN2,PMN3	Instruction executed
+[1m0x9[0m		PMN0,PMN1,PMN2,PMN3	L1 D-Cache buffer full stall (sequence)
+[1m0xa[0m		PMN0,PMN1,PMN2,PMN3	L1 D-Cache access
+[1m0xb[0m		PMN0,PMN1,PMN2,PMN3	L1 D-Cache miss
+[1m0xc[0m		PMN0,PMN1,PMN2,PMN3	L1 D-Cache write back
+[1m0xd[0m		PMN0,PMN1,PMN2,PMN3	Software change of PC
+[1m0xe[0m		PMN0,PMN1,PMN2,PMN3	Branch retired
+[1m0x19[0m		PMN0,PMN1,PMN2,PMN3	Pipeline flush
+[1m0x20[0m		PMN0,PMN1,PMN2,PMN3	L2-Cache request
+[1m0x23[0m		PMN0,PMN1,PMN2,PMN3	L2-Cache miss

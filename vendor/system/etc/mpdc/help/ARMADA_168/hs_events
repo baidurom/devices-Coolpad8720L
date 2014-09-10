@@ -1,0 +1,36 @@
+Event Id	Proper Counters		Comments
+[1m0xe000001[0m	PMN0,PMN1,PMN2,PMN3	Cycle count
+[1m0xe000002[0m	PMN0			L1 D-Cache read hit
+[1m0xe000003[0m	PMN0,PMN1		L1 D-Cache read miss
+[1m0xe000004[0m	PMN0			L1 D-Cache write hit
+[1m0xe000005[0m	PMN0			L1 D-Cache write miss
+[1m0xe000006[0m	PMN0			Instruction executed
+[1m0xe000012[0m	PMN0			Data write access
+[1m0xe000013[0m	PMN0			Data read access
+[1m0xe000018[0m	PMN0			WMMX2 busy
+[1m0xe000019[0m	PMN0			Predicted branch count
+[1m0xe00001d[0m	PMN0,PMN1		L2-Cache write hit
+[1m0xe00001e[0m	PMN0,PMN1		L2-Cache write miss
+[1m0xe00001f[0m	PMN0			L2-Cache read count
+[1m0xe000002[0m	PMN1			L1 I-Cache read miss
+[1m0xe000004[0m	PMN1			L1 D-Cache write miss
+[1m0xe000005[0m	PMN1			I-TLB miss
+[1m0xe000008[0m	PMN1			Branch retired
+[1m0xe00000a[0m	PMN1			MMU read beat
+[1m0xe00000b[0m	PMN1			L1 I-Cache read beat
+[1m0xe00000c[0m	PMN1			Write buffer write beat
+[1m0xe000010[0m	PMN1			Data read access
+[1m0xe000018[0m	PMN1			WMMX2 instruction retired
+[1m0xe000003[0m	PMN2			L1 D-Cache access
+[1m0xe000004[0m	PMN2			D-TLB miss
+[1m0xe000008[0m	PMN2			Branch mispredicted
+[1m0xe000009[0m	PMN2			Write buffer write beat
+[1m0xe00001d[0m	PMN2,PMN3		L2-Cache read hit
+[1m0xe00001e[0m	PMN2,PMN3		L2-Cache read miss
+[1m0xe000002[0m	PMN3			L1 D-Cache read miss
+[1m0xe000003[0m	PMN3			L1 D-Cache write miss
+[1m0xe000004[0m	PMN3			TLB miss
+[1m0xe000008[0m	PMN3			Branches taken
+[1m0xe00000b[0m	PMN3			L1 D-Cache read beat
+[1m0xe00000c[0m	PMN3			L1 D-Cache write beat
+[1m0xe000016[0m	PMN3			Data write access

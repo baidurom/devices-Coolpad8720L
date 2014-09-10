@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<AudioEffectConfiguration>
+    <AudioEffect name="EQ" on="true" device="AUDIO_DEVICE_OUT_SPEAKER" sampleRate="44100">
+        <band desc="band8" on="true">
+            <Parameter>15705</Parameter>
+            <Parameter>-31411</Parameter>
+            <Parameter>15705</Parameter>
+            <Parameter>14</Parameter>
+            <Parameter>-31397</Parameter>
+            <Parameter>15041</Parameter>
+        </band>
+        <band desc="band7" on="true">
+            <Parameter>15705</Parameter>
+            <Parameter>-31411</Parameter>
+            <Parameter>15705</Parameter>
+            <Parameter>14</Parameter>
+            <Parameter>-31397</Parameter>
+            <Parameter>15041</Parameter>
+        </band>
+    </AudioEffect>
+    <AudioEffect name="DRC" device="AUDIO_DEVICE_OUT_SPEAKER" on="true">
+        <Gain offset="2137256" threshold="-6553600" compress="0" ratio="87818" />
+        <Gain offset="1638400" threshold="-4587520" compress="0" ratio="87818" />
+        <Gain offset="956825" threshold="-1900544" compress="0" ratio="87818" />
+        <Gain offset="760217" threshold="-1114112" compress="0" ratio="294912" />
+        <AttackTime>5</AttackTime>
+        <ReleaseTime>150</ReleaseTime>
+    </AudioEffect>
+</AudioEffectConfiguration>

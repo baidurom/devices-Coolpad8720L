@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exp:Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exp="http://com.marvell.cpa"
+	xsi:schemaLocation="http://com.marvell.cpa target.xsd">
+	<!-- Refer PXA955 Developer Manual Table 78 Should combined with PJ4 events. -->
+	<EventSet name="Cache">
+		<Event id="0xf0" name="L0 I-Cache line fill" type="occurrence">
+			<Description>L0IC line fill</Description>
+		</Event>
+		<Event id="0xf1" name="L0 I-Cache hit prefetch buffer" type="occurrence">
+			<Description>L0IC hit prefetch buffer</Description>
+		</Event>
+	</EventSet>
+</exp:Configuration>

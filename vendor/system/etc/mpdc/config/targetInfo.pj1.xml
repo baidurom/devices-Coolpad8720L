@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:TargetInfo xmlns:ti="http://com.marvell.cpa/targetInfo"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.marvell.cpa/targetInfo targetInfo.xsd ">
+	<Category name="Core">
+		<Atom name="id" valueType="number">
+			<DataPosition index="1" length="32" offset="0" />
+		</Atom>
+		<Atom name="Online" valueType="string">
+			<DataPosition index="2" length="32" offset="0"></DataPosition>
+			<ValidValues>
+				<ValidValue description="Yes" value="1" />
+				<ValidValue description="No" value="0" />
+			</ValidValues>
+		</Atom>
+		<Atom name="CPU ID" valueType="number" base="hex">
+			<DataPosition index="0" length="32" offset="0" />
+		</Atom>
+		<Atom name="Architecture" valueType="string">
+			<DataPosition index="0" length="4" offset="16" />
+			<ValidValues>
+				<ValidValue description="v5TE" value="0x5" />
+			</ValidValues>
+		</Atom>
+		<Atom name="Manufactor" valueType="string">
+			<DataPosition index="0" length="8" offset="24" />
+			<ValidValues>
+				<ValidValue description="Marvell" value="0x56" />
+			</ValidValues>
+		</Atom>
+		<Atom name="Frequency" valueType="number" base="dec" unit="Hz"
+			convertbase="1000">
+			<DataPosition index="23" length="32" offset="0" />
+		</Atom>
+		<Category name="Revision">
+			<Atom name="Major Revision" valueType="number">
+				<DataPosition index="0" length="4" offset="20"></DataPosition>
+			</Atom>
+			<Atom name="Minor Revision Number" valueType="number">
+				<DataPosition index="0" length="4" offset="0" />
+			</Atom>
+		</Category>
+		<Category name="L1 I-Cache">
+			<Atom name="Enabled" valueType="string">
+				<DataPosition index="3" length="1" offset="12" />
+				<ValidValues>
+					<ValidValue description="No" value="0" />
+					<ValidValue description="Yes" value="1" />
+				</ValidValues>
+			</Atom>
+			<Atom name="Size" valueType="number" unit="B" base="dec"
+				convertbase="1024">
+				<DataPosition index="9" length="32" offset="0" />
+			</Atom>
+			<Atom name="Set Number" valueType="number">
+				<DataPosition index="10" length="32" offset="0" />
+			</Atom>
+			<Atom name="Associativity" valueType="number" unit="ways">
+				<DataPosition index="11" length="32" offset="0" />
+			</Atom>
+			<Atom name="Line Size" valueType="number" unit="words">
+				<DataPosition index="12" length="32" offset="0" />
+			</Atom>
+		</Category>
+		<Category name="L1 D-Cache">
+			<Atom name="Enabled" valueType="string">
+				<DataPosition index="3" length="1" offset="2" />
+				<ValidValues>
+					<ValidValue description="No" value="0" />
+					<ValidValue description="Yes" value="1" />
+				</ValidValues>
+			</Atom>
+			<Atom name="Size" valueType="number" unit="B" base="dec"
+				convertbase="1024">
+				<DataPosition index="5" length="32" offset="0" />
+			</Atom>
+			<Atom name="Set Number" valueType="number">
+				<DataPosition index="6" length="32" offset="0" />
+			</Atom>
+			<Atom name="Associativity" valueType="number" unit="ways">
+				<DataPosition index="7" length="32" offset="0" />
+			</Atom>
+			<Atom name="Line Size" valueType="number" unit="words">
+				<DataPosition index="8" length="32" offset="0" />
+			</Atom>
+		</Category>
+	</Category>
+	<Category name="L2 Cache">
+		<Atom name="Enabled" valueType="string">
+			<DataPosition index="3" length="1" offset="26" />
+			<ValidValues>
+				<ValidValue description="No" value="0" />
+				<ValidValue description="Yes" value="1" />
+			</ValidValues>
+		</Atom>
+		<Atom name="Clock Frequency" valueType="number" base="dec"
+			convertbase="1000" unit="Hz">
+			<DataPosition index="21" length="32" offset="0" />
+		</Atom>
+		<Atom name="Unified" valueType="string">
+			<DataPosition index="13" length="1" offset="24" />
+			<ValidValues>
+				<ValidValue description="Yes" value="0x0" />
+				<ValidValue description="No" value="0x1" />
+			</ValidValues>
+		</Atom>
+	 	<Atom name="Size" valueType="number" base="dec" convertbase="1024"
+			unit="B">
+			<DataPosition index="14" length="32" offset="0" />
+		</Atom>
+		<Atom name="Set Number" valueType="number">
+			<DataPosition index="15" length="32" offset="0" />
+			</Atom>
+		<Atom name="Associativity" valueType="number" unit="ways">
+			<DataPosition index="16" length="32" offset="0" />
+		</Atom>
+		<Atom name="Line Size" valueType="number" unit="words">
+			<DataPosition index="17" length="32" offset="0" />
+		</Atom>
+	</Category>
+	<Category name="Memory">
+		<Atom name="SDRAM Type" valueType="string">
+			<DataPosition index="18" length="32" offset="0" />
+			<ValidValues>
+				<ValidValue description="Unkown" value="-1"></ValidValue>
+				<ValidValue description="DDR1" value="0" />
+				<ValidValue description="Mobile DDR1" value="1" />
+				<ValidValue description="LPDDR2" value="5" />
+			</ValidValues>
+		</Atom>
+		<Atom name="Configuration Memory Size" valueType="number" base="dec"
+			convertbase="1024" unit="B">
+			<DataPosition index="19" length="32" offset="0" />
+		</Atom>
+		<Atom name="Clock Frequency" valueType="number" base="dec"
+			convertbase="1000" unit="Hz">
+			<DataPosition index="20" length="32" offset="0" />
+		</Atom>
+	</Category>
+	<Category name="AXI Bus">
+		<Atom name="Clock Frequency" valueType="number" base="dec"
+			convertbase="1000" unit="Hz">
+			<DataPosition index="22" length="32" offset="0" />
+		</Atom>
+	</Category>
+</ti:TargetInfo>

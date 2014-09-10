@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exp:Configuration xmlns:exp="http://com.marvell.cpa" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://com.marvell.cpa target.xsd ">
+  <EventSet name="Cache">
+  	<Event id="0x75" name="L1 D-Cache read latency" type="duration">
+  		<Description>Counts the number of cycles the Data cache requests the bus for a read. Counts cycles</Description>
+  	</Event>
+	<Event id="0x76" name="L1 D-Cache write latency" type="duration">
+		<Description>Counts the number of cycles the Data cache requests the bus for a write. Counts cycles</Description>
+	</Event>
+  </EventSet>
+</exp:Configuration>

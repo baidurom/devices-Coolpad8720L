@@ -1,0 +1,52 @@
+Event Id	Proper Counters		Comments
+[1m0xff[0m		CCNT			Core clock tick
+[1m0xfe[0m		CCNT			Core clock tick (64 clock base)
+[1m0xc[0m		PMN0,PMN1,PMN2,PMN3	Software change of PC
+[1m0xd[0m		PMN0,PMN1,PMN2,PMN3	Branch executed
+[1m0xe[0m		PMN0,PMN1,PMN2,PMN3	Procedure return executed
+[1m0x10[0m		PMN0,PMN1,PMN2,PMN3	Branch mispredicted or not predicted
+[1m0x12[0m		PMN0,PMN1,PMN2,PMN3	Predictable branches
+[1m0x63[0m		PMN0,PMN1,PMN2,PMN3	Branch retired
+[1m0x72[0m		PMN0,PMN1,PMN2,PMN3	Branch mispredicted
+[1m0x81[0m		PMN0,PMN1,PMN2,PMN3	Branches taken
+[1m0x1[0m		PMN0,PMN1,PMN2,PMN3	L1 I-Cache miss
+[1m0x3[0m		PMN0,PMN1,PMN2,PMN3	L1 D-Cache miss
+[1m0x4[0m		PMN0,PMN1,PMN2,PMN3	L1 D-Cache access
+[1m0x40[0m		PMN0,PMN1,PMN2,PMN3	L1 D-Cache read hit
+[1m0x41[0m		PMN0,PMN1,PMN2,PMN3	L1 D-Cache read miss
+[1m0x42[0m		PMN0,PMN1,PMN2,PMN3	L1 D-Cache write hit
+[1m0x43[0m		PMN0,PMN1,PMN2,PMN3	L1 D-Cache write miss
+[1m0x4f[0m		PMN0,PMN1,PMN2,PMN3	L2-Cache write hit
+[1m0x50[0m		PMN0,PMN1,PMN2,PMN3	L2-Cache write miss
+[1m0x51[0m		PMN0,PMN1,PMN2,PMN3	L2-Cache read count
+[1m0x60[0m		PMN0,PMN1,PMN2,PMN3	L1 I-Cache read miss
+[1m0x70[0m		PMN0,PMN1,PMN2,PMN3	L1 D-Cache access, including non-cacheable requests
+[1m0x79[0m		PMN0,PMN1,PMN2,PMN3	L2-Cache read hit
+[1m0x7a[0m		PMN0,PMN1,PMN2,PMN3	L2-Cache read miss
+[1m0x7b[0m		PMN0,PMN1,PMN2,PMN3	L2-Cache eviction
+[1m0x83[0m		PMN0,PMN1,PMN2,PMN3	L1 D-Cache read beat
+[1m0x84[0m		PMN0,PMN1,PMN2,PMN3	L1 D-Cache write beat
+[1m0x8a[0m		PMN0,PMN1,PMN2,PMN3	L1 I-Cache read beat
+[1m0x2[0m		PMN0,PMN1,PMN2,PMN3	I-TLB miss
+[1m0x5[0m		PMN0,PMN1,PMN2,PMN3	D-TLB miss
+[1m0x6[0m		PMN0,PMN1,PMN2,PMN3	Data read executed
+[1m0x7[0m		PMN0,PMN1,PMN2,PMN3	Data write executed
+[1m0x4c[0m		PMN0,PMN1,PMN2,PMN3	Data write access
+[1m0x4d[0m		PMN0,PMN1,PMN2,PMN3	Data read access
+[1m0x61[0m		PMN0,PMN1,PMN2,PMN3	I-TLB main MMU miss
+[1m0x65[0m		PMN0,PMN1,PMN2,PMN3	MMU read beat
+[1m0x71[0m		PMN0,PMN1,PMN2,PMN3	D-TLB main MMU miss
+[1m0x80[0m		PMN0,PMN1,PMN2,PMN3	TLB miss
+[1m0x88[0m		PMN0,PMN1,PMN2,PMN3	Main TLB miss caused by I-Cache
+[1m0x89[0m		PMN0,PMN1,PMN2,PMN3	Main TLB miss caused by D-Cache
+[1m0x8[0m		PMN0,PMN1,PMN2,PMN3	Instruction executed
+[1m0x9[0m		PMN0,PMN1,PMN2,PMN3	Exception taken
+[1m0xa[0m		PMN0,PMN1,PMN2,PMN3	Exception return
+[1m0xb[0m		PMN0,PMN1,PMN2,PMN3	Writes context ID register
+[1m0xf[0m		PMN0,PMN1,PMN2,PMN3	Unaligned access
+[1m0x11[0m		PMN0,PMN1,PMN2,PMN3	Cycle count
+[1m0x66[0m		PMN0,PMN1,PMN2,PMN3	Write buffer write beat
+[1m0xc3[0m		PMN0,PMN1,PMN2,PMN3	WMMX2 instruction retired
+[1m0x8b[0m		PMN0,PMN1,PMN2,PMN3	Predicted branch count
+[1m0xf0[0m		PMN0,PMN1,PMN2,PMN3	L0 I-Cache line fill
+[1m0xf1[0m		PMN0,PMN1,PMN2,PMN3	L0 I-Cache hit prefetch buffer

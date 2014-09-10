@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<exp:Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exp="http://com.marvell.cpa"
+	xsi:schemaLocation="http://com.marvell.cpa target.xsd ">
+	<!-- Refer PXA940 Developer Manual (MV-S104848-02 Rev.-) Table 166 Difference with Manzano: Reserved: 0x17 0x18 0x1F 0x20 
+		0x21-2F 0x42-45 0x49-61 Added: 0x71, 0x72, 0x73, 0x74 -->
+	<EventSet name="Core">
+		<Event id="0x0" name="L1 I-Cache miss" type="occurrence">
+			<Description>L1 Instruction cache miss requires fetch from external memory</Description>
+		</Event>
+		<Event id="0x1" name="L1 I-Cache can't deliver" type="duration">
+			<Description>L1 Instruction cache cannot deliver an instruction. This could indicate an instruction cache or TLB miss. This event will occur every cycle in which the condition is present</Description>
+		</Event>
+		<Event id="0x2" name="Data dependency stall" type="duration"/>
+		<Event id="0x3" name="I-TLB miss" type="occurrence" />
+		<Event id="0x4" name="D-TLB miss" type="occurrence" />
+		<Event id="0x5" name="B and BL instruction retired" type="occurrence">
+			<Description>Branch instruction retired, branch may or may not have changed program flow. (Counts only B and BL instructions, in both ARM and Thumb mode)</Description>
+		</Event>
+		<Event id="0x6" name="Branch mispredicted" type="occurrence">
+			<Description>Branch mispredicted. (Counts only B and BL instructions, in both ARM and Thumb mode)</Description>
+		</Event>
+		<Event id="0x7" name="Instruction executed" type="occurrence">
+			<Description>Instruction retired. This event steps in a count of the number of executed instructions</Description>
+		</Event>
+		<Event id="0x8" name="L1 D-Cache buffer full stall (cycle)" type="duration">
+			<Description>L1 Data cache buffer full stall. This event will occur every cycle in which the condition is present</Description>
+		</Event>
+		<Event id="0x9" name="L1 D-Cache buffer full stall (sequence)" type="occurrence">
+			<Description>L1 Data cache buffer full stall. This event occurs once for each contiguous sequence of this type of stall</Description>
+		</Event>
+		<Event id="0xa" name="L1 D-Cache access" type="occurrence">
+			<Description>L1 Data cache access, not including Cache Operations. All data accesses are treated as cacheable accesses and are counted here even if the cache is not enabled</Description>
+		</Event>
+		<Event id="0xb" name="L1 D-Cache miss" type="occurrence">
+			<Description>L1 Data cache miss, not including Cache Operations. All data accesses are treated as cacheable accesses and are counted as misses if the data cache is not enabled</Description>
+		</Event>
+		<Event id="0xc" name="L1 D-Cache write back" type="occurrence">
+			<Description>L1 Data cache write-back. This event occurs once for each line (32 bytes) that is written back from the cache</Description>
+		</Event>
+		<Event id="0xd" name="Software change of PC" type="occurrence">
+			<Description>Software changed the PC ('b', 'bx', 'bl', 'blx', 'and', 'eor', 'sub', 'rsb', 'add', 'adc', 'sbc', 'rsc', 'orr', 'mov',	'bic', 'mvn', 'ldm Rn, {..., pc}', 'ldr pc, [...]', pop {..., pc} will be counted). The count does not increment when an exception occurs and the PC changes to the exception address (e.g., IRQ, FIQ, SWI, ...)</Description>
+		</Event>
+		<Event id="0xe" name="Branch retired" type="occurrence">
+			<Description>Branch instruction retired. Branch may or may not have changed program flow. (Count ALL branch instructions, indirect as well as direct)</Description>
+		</Event>
+		<Event id="0xf" name="Hold issue stage" type="duration">
+			<Description>Instruction issue cycle of retired instruction. This event is a count of the number of core cycles each instruction requires to issue</Description>
+		</Event>
+		<Event id="0x19" name="Pipeline flush" type="occurrence">
+			<Description>Pipeline flush due to branch mispredict or exception</Description>
+		</Event>
+		<Event id="0x1a" name="Instruction issue failed" type="duration">
+			<Description>The core could not issue an instruction due to a backend stall. This event will occur every cycle in which the condition is present</Description>
+		</Event>
+		<Event id="0x1b" name="Multiplier in use" type="duration">
+			<Description>Multiplier in use. This event will occur every cycle in which the multiplier is active</Description>
+		</Event>
+		<Event id="0x1c" name="Multiplier stalled pipeline" type="duration">
+			<Description>Multiplier stalled the instruction pipeline due to a resource stall. This event will occur every cycle in which the condition is present</Description>
+		</Event>
+		<Event id="0x1d" name="Coprocessor stalled pipeline" type="duration">
+			<Description>Coprocessor stalled the instruction pipeline. This event will occur every cycle in which the condition is present</Description>
+		</Event>
+		<Event id="0x1e" name="D-Cache stalled pipeline" type="duration">
+			<Description>Data Cache stalled the instruction pipeline. This event will occur every cycle in which the condition is present</Description>
+		</Event>
+		<Event id="0x40" name="Address bus transaction" type="duration" />
+		<Event id="0x41" name="Self initiated address bus transaction" type="duration" />
+		<Event id="0x47" name="Self initiated data bus transaction" type="duration"/>
+		<Event id="0x48" name="Data bus transaction" type="duration"/>
+	</EventSet>
+</exp:Configuration>

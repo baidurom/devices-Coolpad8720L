@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wfd>
+    <!-- Source only -->
+    <rtspPort>7236</rtspPort>
+
+    <!-- Sink only -->
+    <sinkType>0</sinkType>
+
+    <!-- Sink only -->
+    <rtpPort>1028</rtpPort>
+
+    <audio>
+        <lpcm>
+            <format id="lpcm_0" enabled="1" frequency="48000" channels="2" bit_width="16" latency="0" />
+            <format id="lpcm_1" enabled="1" frequency="44100" channels="2" bit_width="16" latency="0" />
+        </lpcm>
+
+        <aac>
+            <format id="aac_0" enabled="1" frequency="48000" channels="2" bit_width="16" latency="0" />
+            <format id="aac_1" enabled="0" frequency="48000" channels="4" bit_width="16" latency="0" />
+            <format id="aac_2" enabled="0" frequency="48000" channels="6" bit_width="16" latency="0" />
+            <format id="aac_3" enabled="0" frequency="48000" channels="8" bit_width="16" latency="0" />
+        </aac>
+
+        <ac3>
+            <format id="ac3_0" enabled="0" frequency="48000" channels="2" bit_width="16" latency="0" />
+            <format id="ac3_1" enabled="0" frequency="48000" channels="4" bit_width="16" latency="0" />
+            <format id="ac3_2" enabled="0" frequency="48000" channels="6" bit_width="16" latency="0" />
+        </ac3>
+
+        <!-- Sink Only -->
+        <rendering>
+            <enabled>1</enabled>
+        </rendering>
+        <!-- Source only -->
+        <transmiting>
+            <enabled>1</enabled>
+        </transmiting>
+    </audio>
+
+    <video>
+        <bitRateInKbps>3000</bitRateInKbps>
+        <!-- CEA -->
+        <cea>
+            <format id="cea_0"  width="640"  height="480"  fps="60" scan="p" />
+            <format id="cea_1"  width="720"  height="480"  fps="60" scan="p" />
+            <format id="cea_2"  width="720"  height="480"  fps="60" scan="i" />
+            <format id="cea_3"  width="720"  height="576"  fps="50" scan="p" />
+            <format id="cea_4"  width="720"  height="576"  fps="50" scan="i" />
+            <format id="cea_5"  width="1280" height="720"  fps="30" scan="p" />
+            <format id="cea_6"  width="1280" height="720"  fps="60" scan="p" />
+            <format id="cea_7"  width="1920" height="1080" fps="30" scan="p" />
+            <format id="cea_8"  width="1920" height="1080" fps="60" scan="p" />
+            <format id="cea_9"  width="1920" height="1080" fps="60" scan="i" />
+            <format id="cea_10" width="1280" height="720"  fps="25" scan="p" />
+            <format id="cea_11" width="1280" height="720"  fps="50" scan="p" />
+            <format id="cea_12" width="1920" height="1080" fps="25" scan="p" />
+            <format id="cea_13" width="1920" height="1080" fps="50" scan="p" />
+            <format id="cea_14" width="1920" height="1080" fps="50" scan="i" />
+            <format id="cea_15" width="1280" height="720"  fps="24" scan="p" />
+            <format id="cea_16" width="1920" height="1080" fps="24" scan="p" />
+        </cea>
+
+        <!-- VESA -->
+        <vesa>
+            <format id="vesa_0"  width="800"  height="600"  fps="30" scan="p" />
+            <format id="vesa_1"  width="800"  height="600"  fps="60" scan="p" />
+            <format id="vesa_2"  width="1024" height="768"  fps="30" scan="p" />
+            <format id="vesa_3"  width="1024" height="768"  fps="60" scan="p" />
+            <format id="vesa_4"  width="1152" height="864"  fps="30" scan="p" />
+            <format id="vesa_5"  width="1152" height="864"  fps="60" scan="p" />
+            <format id="vesa_6"  width="1280" height="768"  fps="30" scan="p" />
+            <format id="vesa_7"  width="1280" height="768"  fps="60" scan="p" />
+            <format id="vesa_8"  width="1280" height="800"  fps="30" scan="p" />
+            <format id="vesa_9"  width="1280" height="800"  fps="60" scan="p" />
+            <format id="vesa_10" width="1360" height="768"  fps="30" scan="p" />
+            <format id="vesa_11" width="1360" height="768"  fps="60" scan="p" />
+            <format id="vesa_12" width="1366" height="768"  fps="30" scan="p" />
+            <format id="vesa_13" width="1366" height="768"  fps="60" scan="p" />
+            <format id="vesa_14" width="1280" height="1024" fps="30" scan="p" />
+            <format id="vesa_15" width="1280" height="1024" fps="60" scan="p" />
+            <format id="vesa_16" width="1400" height="1050" fps="30" scan="p" />
+            <format id="vesa_17" width="1400" height="1050" fps="60" scan="p" />
+            <format id="vesa_18" width="1440" height="900"  fps="30" scan="p" />
+            <format id="vesa_19" width="1400" height="900"  fps="60" scan="p" />
+            <format id="vesa_20" width="1600" height="900"  fps="30" scan="p" />
+            <format id="vesa_21" width="1600" height="900"  fps="60" scan="p" />
+            <format id="vesa_22" width="1600" height="1200" fps="30" scan="p" />
+            <format id="vesa_23" width="1600" height="1200" fps="60" scan="p" />
+            <format id="vesa_24" width="1680" height="1024" fps="30" scan="p" />
+            <format id="vesa_25" width="1680" height="1024" fps="60" scan="p" />
+            <format id="vesa_26" width="1680" height="1050" fps="30" scan="p" />
+            <format id="vesa_27" width="1680" height="1050" fps="60" scan="p" />
+            <format id="vesa_28" width="1920" height="1200" fps="30" scan="p" />
+            <format id="vesa_29" width="1920" height="1200" fps="60" scan="p" />
+        </vesa>
+
+        <!-- HH -->
+        <hh>
+            <format id="hh_0"  width="800" height="480" fps="30" scan="p" />
+            <format id="hh_1"  width="800" height="480" fps="60" scan="p" />
+            <format id="hh_2"  width="854" height="480" fps="30" scan="p" />
+            <format id="hh_3"  width="854" height="480" fps="60" scan="p" />
+            <format id="hh_4"  width="864" height="480" fps="30" scan="p" />
+            <format id="hh_5"  width="864" height="480" fps="60" scan="p" />
+            <format id="hh_6"  width="640" height="360" fps="30" scan="p" />
+            <format id="hh_7"  width="640" height="360" fps="60" scan="p" />
+            <format id="hh_8"  width="960" height="540" fps="30" scan="p" />
+            <format id="hh_9"  width="960" height="540" fps="60" scan="p" />
+            <format id="hh_10" width="848" height="480" fps="30" scan="p" />
+            <format id="hh_11" width="848" height="480" fps="60" scan="p" />
+        </hh>
+
+        <h264codeclist>
+            <codec profile="cbp" level="3.1" enabled="1"
+                   latency="0"
+                   min_slice_size="0"
+                   slice_enc_params="0"
+                   frame_rate_control_support="0"
+                   max_hres="0"
+                   max_vres="0"
+                   cea_format_index_list="cea_0,cea_5,cea_10,cea_15"
+                   vesa_format_index_list=""
+                   hh_format_index_list="" >
+            </codec>
+            <codec profile="chp" level="3.1" enabled="0"
+                   latency="0"
+                   min_slice_size="0"
+                   slice_enc_params="0"
+                   frame_rate_control_support="0"
+                   max_hres="0"
+                   max_vres="0"
+                   cea_format_index_list="cea_0,cea_5,cea_10,cea_15"
+                   vesa_format_index_list=""
+                   hh_format_index_list="" >
+            </codec>
+        </h264codeclist>
+
+        <!-- Native -->
+        <native>cea_5</native>
+
+        <h264Profiles>
+            <cbp>1</cbp>
+            <chp>0</chp>
+        </h264Profiles>
+
+        <h264Levels>
+            <Level3.1>1</Level3.1>
+            <Level3.2>1</Level3.2>
+            <Level4>1</Level4>
+            <Level4.1>1</Level4.1>
+            <Level4.2>1</Level4.2>
+        </h264Levels>
+
+        <multipleSlices>
+            <enabled>0</enabled>
+            <maxSliceSizeRation>0</maxSliceSizeRation>
+        </multipleSlices>
+
+        <!-- Sink only -->
+        <frameSkipping>
+            <enabled>0</enabled>
+            <maxSkipInterval>0</maxSkipInterval>
+        </frameSkipping>
+
+        <frameRateChanging>
+            <enabled>0</enabled>
+        </frameRateChanging>
+
+        <refreshRateChanging>
+            <enabled>0</enabled>
+        </refreshRateChanging>
+
+        <!-- Sink only -->
+        <rendering>
+            <enabled>1</enabled>
+        </rendering>
+
+        <!-- Source only -->
+        <transmiting>
+            <enabled>1</enabled>
+        </transmiting>
+    </video>
+
+    <stereoscopic3DVideo>
+        <enabled>0</enabled>
+        <format>
+            <enabled>0</enabled>
+            <width>1920</width>
+            <height1>540</height1>
+            <height2>540</height2>
+            <scan>progressive</scan>
+            <bps>60</bps>
+            <!-- TODO: add all other 3d video formats here if 3d video is enabled -->
+        </format>
+    </stereoscopic3DVideo>
+    <!-- the color format value must be defined in system/core/include/graphics.h -->
+    <!--
+    HAL_PIXEL_FORMAT_YCbCr_422_SP       = 0x10, // NV16
+    HAL_PIXEL_FORMAT_YCrCb_420_SP       = 0x11, // NV21
+    HAL_PIXEL_FORMAT_YCbCr_420_P        = 0x13, // YUV420 (19)
+    HAL_PIXEL_FORMAT_YCbCr_422_I        = 0x14, // YUY2
+    HAL_PIXEL_FORMAT_YCbCr_420_I        = 0x15,
+    HAL_PIXEL_FORMAT_CbYCrY_422_I       = 0x16, // UYVY
+    HAL_PIXEL_FORMAT_YCbCr_420_SP_MRVL  = 0x2A, // NV12   (42)
+    -->
+    <encoderInputFormat>42</encoderInputFormat>
+    <coupledSink>
+        <enabled>0</enabled>
+    </coupledSink>
+
+    <!-- wfd-content-protection -->
+    <hdcp>
+        <enabled>0</enabled>
+        <version>2.0</version>
+    </hdcp>
+
+    <i2c>
+        <enabled>0</enabled>
+        <port>0</port>
+    </i2c>
+
+    <uibc>
+        <enabled>1</enabled>
+        <tcpPort>3333</tcpPort>
+
+        <generic>
+            <Keyboard       enabled="1" />
+            <Mouse          enabled="1" />
+            <SingleTouch    enabled="1" />
+            <MultiTouch     enabled="0" />
+            <Joystick       enabled="0" />
+            <Camera         enabled="0" />
+            <Gesture        enabled="0" />
+            <RemoteControl  enabled="0" />
+        </generic>
+
+        <hidc>
+            <Keyboard       enabled="0" path="*" />
+            <Mouse          enabled="0" path="*" />
+            <SingleTouch    enabled="0" path="*" />
+            <MultiTouch     enabled="0" path="*" />
+            <Joystick       enabled="0" path="*" />
+            <Camera         enabled="0" path="*" />
+            <Gesture        enabled="0" path="*" />
+            <RemoteControl  enabled="0" path="*" />
+        </hidc>
+
+    </uibc>
+
+    <preferredDisplayMode>
+        <enabled>0</enabled>
+    </preferredDisplayMode>
+
+    <standby>
+        <enabled>1</enabled>
+    </standby>
+
+    <debug>
+        <profile>
+            <enabled>1</enabled>
+            <dumpFile>/data/wfd/wfd_src_profile.txt</dumpFile>
+            <maxFrames>9000</maxFrames>
+            <watchPoint>
+                <screenUpdated>1</screenUpdated>
+                <colorConverted>1</colorConverted>
+                <cscEncodeDone>1</cscEncodeDone>
+                <frameEncodeDone>1</frameEncodeDone>
+                <pesDone>1</pesDone>
+                <encryptDone>1</encryptDone>
+                <accessUnitSent>1</accessUnitSent>
+                <totoalPipelineDelay>1</totoalPipelineDelay>
+            </watchPoint>
+        </profile>
+        <dataFlow>
+            <raw>
+            </raw>
+            <es>
+                <audio>
+                </audio>
+                <video>
+                    <fakeData>
+                        <!-- Replace real data with fake data read from es file -->
+                        <enabled>0</enabled>
+                        <dataFile>/data/wfd/wfd_fake_video.es</dataFile>
+                        <!-- lengthInfoFile track all es packet length of above dataFile -->
+                        <infoFile>/data/wfd/wfd_fake_video.es.inf</infoFile>
+                    </fakeData>
+                    <dump>
+                        <enabled>0</enabled>
+                        <dumpFile>/data/wfd/wfd_video.es</dumpFile>
+                        <infoFile>/data/wfd/wfd_video.es.inf</infoFile>
+                    </dump>
+                </video>
+            </es>
+            <pes>
+                <video>
+                    <dump>
+                        <enabled>0</enabled>
+                        <dumpFile>/data/wfd/wfd_video.pes</dumpFile>
+                    </dump>
+                    <!-- Source only, indicate whether video content need protection -->
+                    <forceProtection>0</forceProtection>
+                </video>
+                <audio>
+                    <!-- Source only, indicate whether audio content need protection-->
+                    <forceProtection>0</forceProtection>
+                </audio>
+            </pes>
+            <ts>
+                <dump>
+                    <enabled>0</enabled>
+                    <dumpFile>/data/wfd/wfd_av.ts</dumpFile>
+                </dump>
+            </ts>
+        </dataFlow>
+        <hdcp>
+            <useHdcpLibInCore>0</useHdcpLibInCore>
+        </hdcp>
+        <streamFile></streamFile>
+        <live555>
+            <logFile></logFile>
+        </live555>
+        <pcm>
+            <dumpFile></dumpFile>
+        </pcm>
+        <forceVideo>
+            <enabled>0</enabled>
+            <width>480</width>
+            <height>320</height>
+            <frameRate>30</frameRate>
+            <encoderBitrate>2048000</encoderBitrate>
+        </forceVideo>
+        <!-- 3.1.1 Source may choose to transmit TS that contains only audio or
+            video elementary -->
+        <timeSync>0</timeSync>
+        <avSync>0</avSync>
+    </debug>
+</wfd>

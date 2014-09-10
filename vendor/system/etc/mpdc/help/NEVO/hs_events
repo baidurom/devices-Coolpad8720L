@@ -1,0 +1,33 @@
+Event Id	Proper Counters		Comments
+[1m0xff[0m		CCNT			Core clock tick
+[1m0xfe[0m		CCNT			Core clock tick (64 clock base)
+[1m0x0[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Instruction architecturally executed, condition check pass, Software increment
+[1m0x1[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Level 1 instruction cache refill
+[1m0x2[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Level 1 instruction TLB refill
+[1m0x3[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Level 1 data cache refill
+[1m0x4[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Level 1 data cache access
+[1m0x5[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Level 1 data TLB refill
+[1m0x6[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Instruction architecturally executed, condition check pass, Load
+[1m0x7[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Instruction architecturally executed, condition check pass, Store
+[1m0x9[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Exception taken
+[1m0xa[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Instruction architecturally executed, condition check pass, Exception return
+[1m0xb[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Instruction architecturally executed, condition check pass, Write to CONTEXTIDR
+[1m0xc[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Instruction architecturally executed, condition check pass, Software change of the PC
+[1m0xd[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Instruction architecturally executed - Immediate branch
+[1m0xf[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Instruction architecturally executed, condition check pass, Unaligned load or store
+[1m0x10[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Mispredicted or not predicted branch speculatively executed
+[1m0x11[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Cycle
+[1m0x12[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Predictable branch speculatively executed
+[1m0x63[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	STREX passed
+[1m0x64[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	STREX failed
+[1m0x65[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Data eviction
+[1m0x68[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Instructions coming out of the core renaming stage
+[1m0x6e[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Predictable function returns
+[1m0x70[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Main execution unit instructions
+[1m0x71[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Second execution unit instructions
+[1m0x72[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Load/Store Instructions
+[1m0x73[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Floating-point instructions
+[1m0x74[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON instructions
+[1m0x90[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	ISB instructions
+[1m0x91[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	DSB instructions
+[1m0x93[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	External interrupts

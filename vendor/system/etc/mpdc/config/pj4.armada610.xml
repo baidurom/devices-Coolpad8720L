@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<exp:Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exp="http://com.marvell.cpa"
+	xsi:schemaLocation="http://com.marvell.cpa target.xsd">
+	<!-- Refer PXA688 Registers (MV-S105844-00) Table 223 Should combined with PJ4 events. -->
+	<EventSet name="Branch">
+		<Event id="0x8b" name="Predicted branch count" type="occurrence">
+			<Description>Counts the number of times a branch is predicted successfully.</Description>
+		</Event>
+	</EventSet>
+</exp:Configuration>

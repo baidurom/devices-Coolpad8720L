@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<exp:Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exp="http://com.marvell.cpa"
+	xsi:schemaLocation="http://com.marvell.cpa target.xsd ">
+	<!-- Refer Manzano Core EAS (MV-S104620-00 Rev.A) Chapter 11 -->
+	<!-- Refer PXA3xx Developer Manual (MV-S301374-01 Rev.C) Chapter 12.4.1 -->
+	<EventSet name="ASSP" zone="0x10000000" location="peripheral">
+		<Event id="0" name="New instruction fetch performing" />
+		<Event id="1" name="New data fetch performing" />
+		<Event id="2" name="Core read request count" />
+		<Event id="9" name="System Bus 1 utilization">
+			<Description>Number of cycles during which System Bus 1 bus is occupied</Description>
+		</Event>
+		<Event id="10" name="System Bus 2 utilization">
+			<Description>Number of cycles during which System Bus 2 is occupied</Description>
+		</Event>
+		<Event id="14" name="Dynamic memory queue occupied">
+			<Description>Number of cycles when the dynamic memory controller queue is not empty</Description>
+		</Event>
+		<Event id="15" name="Dynamic memory queue occupied by more than 1 request">
+			<Description>Number of cycles when the dynamic memory controller queue has 2 or more requests</Description>
+		</Event>
+		<Event id="16" name="Dynamic memory queue occupied by more than 2 requests">
+			<Description>Number of cycles when the dynamic memory controller queue has 3 or more reuests</Description>
+		</Event>
+		<Event id="17" name="Dynamic memory queue occupied by more than 3 requests">
+			<Description>Number of cycles when the dynamic memory controller queue is full</Description>
+		</Event>
+		<Event id="18" name="Static memory queue occupied">
+			<Description>Number of cycles when the static memory controler queue is not empty</Description>
+		</Event>
+		<Event id="19" name="Static memory queue occupied by more than 1 request">
+			<Description>Number of cycles when the static memory controller queue has 2 or more requests</Description>
+		</Event>
+		<Event id="20" name="Static memory queue occupied by more than 2 requests">
+			<Description>Number of cycles when the static memory controller queue has 3 or more requests</Description>
+		</Event>
+		<Event id="21" name="Static memory queue occupied by more than 3 requests">
+			<Description>Number of cycles when the static memory controller queue is full</Description>
+		</Event>
+		<Event id="26" name="Internal SRAM memory queue occupied">
+			<Description>Number of cycles when the internal memory controller queue is not empty</Description>
+		</Event>
+		<Event id="27" name="Internal SRAM memory queue occupied by more than 1 request">
+			<Description>Number of cycles when the internal memory controller queue has two or more requests</Description>
+		</Event>
+		<Event id="28" name="Internal SRAM memory queue occupied by more than 2 requests">
+			<Description>Number of cycles when the internal memory controller queue 3 or more requests</Description>
+		</Event>
+		<Event id="29" name="Internal SRAM memory queue occupied by more than 3 requests">
+			<Description>Number of cycles when the internal memory controller queue is full</Description>
+		</Event>
+		<Event id="30" name="External memory controller bus is occupied" />
+		<Event id="31" name="External data flash bus is occupied" />
+		<Event id="36" name="Core write access count" />
+		<Event id="42" name="System bus 1 bus request">
+			<Description>Length of time that at least one bus request is asserted on System Bus 1</Description>
+		</Event>
+		<Event id="43" name="System bus 2 bus request">
+			<Description>Length of time that at least one bus request is asserted on System Bus 2</Description>
+		</Event>
+		<Event id="44" name="System bus 1 bus retries" />
+		<Event id="45" name="System bus 2 bus retries" />
+		<Event id="46" name="Temperature level 1">
+			<Description>Temperature level 1 (time the PXA930 processor has spent in temperature range 1). The PSR register shows the current temperature range of operation (TSS field)</Description>
+		</Event>
+		<Event id="47" name="Temperature level 2">
+			<Description>Temperature level 2 (time the PXA930 processor has spent in temperature range 2). The PSR register shows the current temperature range of operation (TSS field)</Description>
+		</Event>
+		<Event id="48" name="Temperature level 3">
+			<Description>Temperature level 3 (time the PXA930 processor has spent in temperature range 3). The PSR register shows the current temperature range of operation (TSS field)</Description>
+		</Event>
+		<Event id="49" name="Temperature level 4">
+			<Description>Temperature level 4 (time the PXA930 processor has spent in temperature range 4). The PSR register shows the current temperature range of operation (TSS field)</Description>
+		</Event>
+		<Event id="50" name="Core read/write latency measurement 1">
+			<Description>Amount of time when core has more than 1 read/write requests outstanding</Description>
+		</Event>
+		<Event id="51" name="Core read/write latency measurement 2">
+			<Description>Amount of time when core has more than 2 read/write requests outstanding</Description>
+		</Event>
+		<Event id="52" name="Core read/write latency measurement 3">
+			<Description>Amount of time when core has more than 3 read/write requests outstanding</Description>
+		</Event>
+		<Event id="53" name="Core read/write latency measurement 4">
+			<Description>Amount of time when core has more than 4 read/write requests outstanding</Description>
+		</Event>
+		<Event id="54" name="System bus 1 to internal memory read/write latency measurement">
+			<Description>Amount of time when System Bus 1 to internal memory has more than 1 read/write requests outstanding</Description>
+		</Event>
+		<Event id="55" name="System bus 1 to internal memory read/write latency measurement 2">
+			<Description>Amount of time when System Bus 1 to internal memory has more than 2 read/write requests outstanding</Description>
+		</Event>
+		<Event id="56" name="System bus 1 to internal memory read/write latency measurement 3">
+			<Description>Amount of time when System Bus 1 to internal memory has more than 3 read/write requests outstanding</Description>
+		</Event>
+		<Event id="57" name="System bus 1 to internal memory read/write latency measurement 4">
+			<Description>Amount of time when System Bus 1 to internal memory has more than 4 read/write requests outstanding</Description>
+		</Event>
+		<Event id="58" name="System bus 1 to dynamic/static memory read/write latency measurement">
+			<Description>Amount of time when System Bus 1 to dynamic/static memory has more than 1 read/write requests outstanding</Description>
+		</Event>
+		<Event id="59" name="System bus 1 to dynamic/static memory read/write latency measurement 2">
+			<Description>Amount of time when System Bus 1 to dynamic/static memory has more than 2 read/write requests outstanding</Description>
+		</Event>
+		<Event id="60" name="System bus 1 to dynamic/static memory read/write latency measurement 3">
+			<Description>Amount of time when System Bus 1 to dynamic/static memory has more than 3 read/write requests outstanding</Description>
+		</Event>
+		<Event id="61" name="System bus 1 to dynamic/static memory read/write latency measurement 4">
+			<Description>Amount of time when System Bus 1 to dynamic/static memory has more than 4 read/write requests outstanding</Description>
+		</Event>
+		<Event id="62" name="System bus 2 to internal memory read/write latency measurement">
+			<Description>Amount of time when System Bus 2 to internal memory has more than 1 read/write requests outstanding</Description>
+		</Event>
+		<Event id="63" name="System bus 2 to internal memory read/write latency measurement 2">
+			<Description>Amount of time when System Bus 2 to internal memory has more than 2 read/write requests outstanding</Description>
+		</Event>
+		<Event id="64" name="System bus 2 to internal memory read/write latency measurement 3">
+			<Description>Amount of time when System Bus 2 to internal memory has more than 3 read/write requests outstanding</Description>
+		</Event>
+		<Event id="65" name="System bus 2 to internal memory read/write latency measurement 4">
+			<Description>Amount of time when System Bus 2 to internal memory has more than 4 read/write requests outstanding</Description>
+		</Event>
+		<Event id="66" name="System bus 2 to dynamic/static memory read/write latency measurement">
+			<Description>Amount of time when System Bus 2 to dynamic/static memory has more than 1 read/write requests outstanding</Description>
+		</Event>
+		<Event id="67" name="System bus 2 to dynamic/static memory read/write latency measurement 2">
+			<Description>Amount of time when System Bus 2 to dynamic/static memory has more than 2 read/write requests outstanding</Description>
+		</Event>
+		<Event id="68" name="System bus 2 to dynamic/static memory read/write latency measurement 3">
+			<Description>Amount of time when System Bus 2 to dynamic/static memory has more than 3 read/write requests outstanding</Description>
+		</Event>
+		<Event id="69" name="System bus 2 to dynamic/static memory read/write latency measurement 4">
+			<Description>Amount of time when System Bus 2 to dynamic/static memory has more than 4 read/write requests outstanding</Description>
+		</Event>
+	</EventSet>
+</exp:Configuration>

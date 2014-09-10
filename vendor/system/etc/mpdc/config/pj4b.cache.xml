@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exp:Configuration xmlns:exp="http://com.marvell.cpa" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://com.marvell.cpa target.xsd ">
+  <EventSet name="Cache">
+  	<Event id="0x75" name="L0D read hit" type="occurrence">
+  		<Description>L0D read hit</Description>
+  	</Event>
+	<Event id="0x76" name="L0D write hit" type="occurrence">
+		<Description>L0D write hit</Description>
+	</Event>
+	<Event id="0x14" name="L1 I-Cache access">
+  		<Description>The counter counts instruction memory access that access at least the Level 1 instruction or unified cache. Each access to other level 1 instruction memory structures, such as refill buffers, is also counted.</Description>
+  	</Event>
+  </EventSet>
+  <EventSet name="Memory">
+  	<Event id="0x13" name="Data memory access" type="occurrence">
+  		<Description>This counter counts memory-read or memory-write operations that the processor made. The counter increments whether the access results in an access to a Level1 data or unified cache, a Level2 data or unified cache, or neither of these.</Description>
+  	</Event>
+  </EventSet>
+</exp:Configuration>

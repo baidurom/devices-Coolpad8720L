@@ -1,0 +1,741 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<exp:Products xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:exp="http://com.marvell.cpa" xsi:schemaLocation="http://com.marvell.cpa target.xsd">
+	<Product name="Tegra 2">
+		<Counter name="Timer" id="0" location="peripheral">
+			<OptionalEvents>timer.xml</OptionalEvents>
+		</Counter>
+		<Counter name="CCNT" id="1">
+			<OptionalEvents>ccnt.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN0" id="2">
+			<OptionalEvents>armv7.xml</OptionalEvents>
+			<OptionalEvents>arm.cortex.a9.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN1" id="3">
+			<OptionalEvents>armv7.xml</OptionalEvents>
+			<OptionalEvents>arm.cortex.a9.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN2" id="4">
+			<OptionalEvents>armv7.xml</OptionalEvents>
+			<OptionalEvents>arm.cortex.a9.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN3" id="5">
+			<OptionalEvents>armv7.xml</OptionalEvents>
+			<OptionalEvents>arm.cortex.a9.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN4" id="6">
+			<OptionalEvents>armv7.xml</OptionalEvents>
+			<OptionalEvents>arm.cortex.a9.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN5" id="7">
+			<OptionalEvents>armv7.xml</OptionalEvents>
+			<OptionalEvents>arm.cortex.a9.xml</OptionalEvents>
+		</Counter>
+		<Indicator>indicator.tegra2.xml</Indicator>
+	</Product>
+	
+	<Product name="Disco-SMP">
+		<!-- Refer PJ4B-MP Datasheet (MV-S107478-00 Rev.-(07)) Chapter 5.53 -->
+		<Counter name="Timer" id="0" location="peripheral">
+			<OptionalEvents>timer.xml</OptionalEvents>
+		</Counter>
+		<Counter name="CCNT" id="1">
+			<OptionalEvents>ccnt.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN0" id="2">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN1" id="3">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN2" id="4">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN3" id="5">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN4" id="6">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN5" id="7">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Indicator>indicator.general.xml</Indicator>
+		<Indicator>indicator.core.xml</Indicator>
+		<Indicator>indicator.pj4-b.xml</Indicator>
+		<Indicator>indicator.neon.xml</Indicator>
+	</Product>
+	
+	<Product name="ARMADAXP">
+		<!-- Refer PJ4B-MP Datasheet (MV-S107478-00 Rev.-(07)) Chapter 5.53 -->
+		<Counter name="Timer" id="0" location="peripheral">
+			<OptionalEvents>timer.xml</OptionalEvents>
+		</Counter>
+		<Counter name="CCNT" id="1">
+			<OptionalEvents>ccnt.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN0" id="2">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN1" id="3">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN2" id="4">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN3" id="5">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN4" id="6">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN5" id="7">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Indicator>indicator.general.xml</Indicator>
+		<Indicator>indicator.core.xml</Indicator>
+		<Indicator>indicator.pj4-b.xml</Indicator>
+		<Indicator>indicator.neon.xml</Indicator>
+	</Product>
+
+	<Product name="BG2">
+		<!-- Refer PJ4B-MP Datasheet (MV-S107478-00 Rev.-(07)) Chapter 5.53 -->
+		<Counter name="Timer" id="0" location="peripheral">
+			<OptionalEvents>timer.xml</OptionalEvents>
+		</Counter>
+		<Counter name="CCNT" id="1">
+			<OptionalEvents>ccnt.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN0" id="2">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN1" id="3">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN2" id="4">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN3" id="5">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN4" id="6">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN5" id="7">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Indicator>indicator.general.xml</Indicator>
+		<Indicator>indicator.core.xml</Indicator>
+		<Indicator>indicator.pj4-b.xml</Indicator>
+		<Indicator>indicator.neon.xml</Indicator>
+		<TargetInfo>targetInfo.pj4b.bg2.xml</TargetInfo>
+	</Product>
+	
+	<Product name="MMP3">
+		<!-- Refer PJ4B-MP Datasheet (MV-S107478-00 Rev.-(07)) Chapter 5.53 -->
+		<Counter name="Timer" id="0" location="peripheral">
+			<OptionalEvents>timer.xml</OptionalEvents>
+		</Counter>
+		<Counter name="CCNT" id="1">
+			<OptionalEvents>ccnt.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN0" id="2">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN1" id="3">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN2" id="4">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN3" id="5">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN4" id="6">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN5" id="7">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4b.cache.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+			<OptionalEvents>pj4b.snoop.xml</OptionalEvents>
+			<OptionalEvents>neon.xml</OptionalEvents>
+		</Counter>
+		<Indicator>indicator.general.xml</Indicator>
+		<Indicator>indicator.core.xml</Indicator>
+		<Indicator>indicator.pj4-b.xml</Indicator>
+		<Indicator>indicator.neon.xml</Indicator>
+		<TargetInfo>targetInfo.pj4b.mmp3.xml</TargetInfo>
+	</Product>
+
+	<Product name="ARMADA 610">
+		<Counter name="Timer" id="0" location="peripheral">
+			<OptionalEvents>timer.xml</OptionalEvents>
+		</Counter>
+		<!-- Refer ARMADA610 Registers (MV-S105844-00) Table 216 -->
+		<Counter name="CCNT" id="1">
+			<OptionalEvents>ccnt.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN0" id="2">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.armada610.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN1" id="3">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.armada610.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN2" id="4">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.armada610.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN3" id="5">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.armada610.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+		</Counter>
+		<!-- Refer ARMADA610 Registers (MV-S105844-00) Chapter 3.3.2.60 -->
+		<Counter name="MC0" id="6" location="peripheral">
+			<OptionalEvents>mc.xml</OptionalEvents>
+		</Counter>
+		<Counter name="MC1" id="7" location="peripheral">
+			<OptionalEvents>mc.xml</OptionalEvents>
+		</Counter>
+		<Counter name="MC2" id="8" location="peripheral">
+			<OptionalEvents>mc.xml</OptionalEvents>
+		</Counter>
+		<Counter name="MC3" id="9" location="peripheral">
+			<OptionalEvents>mc.xml</OptionalEvents>
+		</Counter>
+		<Indicator>indicator.general.xml</Indicator>
+		<Indicator>indicator.core.xml</Indicator>
+		<TargetInfo>targetInfo.armada610.xml</TargetInfo>
+	</Product>
+
+	<Product name="ARMADA 510">
+		<Counter name="Timer" id="0" location="peripheral">
+			<OptionalEvents>timer.xml</OptionalEvents>
+		</Counter>
+		<!-- Refer ARMADA610 Registers (MV-S105844-00) Table 216 -->
+		<Counter name="CCNT" id="1">
+			<OptionalEvents>ccnt.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN0" id="2">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4.cache.xml</OptionalEvents>
+			<OptionalEvents>pj4.armada610.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN1" id="3">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4.cache.xml</OptionalEvents>
+			<OptionalEvents>pj4.armada610.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN2" id="4">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.armada610.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN3" id="5">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.armada610.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+		</Counter>
+		<!-- Refer ARMADA510 Registers (MV-S105844-00) Chapter 3.3.2.63 -->
+		<Counter name="MC0" id="6" location="peripheral">
+			<OptionalEvents>mc.xml</OptionalEvents>
+		</Counter>
+		<Counter name="MC1" id="7" location="peripheral">
+			<OptionalEvents>mc.xml</OptionalEvents>
+		</Counter>
+		<Counter name="MC2" id="8" location="peripheral">
+			<OptionalEvents>mc.xml</OptionalEvents>
+		</Counter>
+		<Counter name="MC3" id="9" location="peripheral">
+			<OptionalEvents>mc.xml</OptionalEvents>
+		</Counter>
+		<Indicator>indicator.general.xml</Indicator>
+		<Indicator>indicator.core.xml</Indicator>
+	</Product>
+
+	<Product name="ARMADA 168">
+		<Counter name="Timer" id="0" location="peripheral">
+			<OptionalEvents>timer.xml</OptionalEvents>
+		</Counter>
+		<!-- Refer PXA128 PXA16x Software Manual (MV-S301544-00 Rev.B) Appendix 
+			A.16 -->
+		<Counter name="PMN0" id="1">
+			<OptionalEvents>pj1.pmn0.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN1" id="2">
+			<OptionalEvents>pj1.pmn1.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN2" id="3">
+			<OptionalEvents>pj1.pmn2.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN3" id="4">
+			<OptionalEvents>pj1.pmn3.xml</OptionalEvents>
+		</Counter>
+		<Indicator>indicator.pj1.xml</Indicator>
+		<TargetInfo>targetInfo.pj1.xml</TargetInfo>
+	</Product>
+
+	<Product name="PXA 968">
+		<Counter name="Timer" id="0" location="peripheral">
+			<OptionalEvents>timer.xml</OptionalEvents>
+		</Counter>
+		<!-- Refer ARMADA610 Registers (MV-S105844-00) Table 216 -->
+		<Counter name="CCNT" id="1">
+			<OptionalEvents>ccnt.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN0" id="2">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4.armada610.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN1" id="3">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4.armada610.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN2" id="4">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4.armada610.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN3" id="5">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4.armada610.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+		</Counter>
+		<Indicator>indicator.general.xml</Indicator>
+		<Indicator>indicator.core.xml</Indicator>
+	</Product>
+
+	<Product name="PXA 955">
+		<Counter name="Timer" id="0" location="peripheral">
+			<OptionalEvents>timer.xml</OptionalEvents>
+		</Counter>
+		<!-- Refer PXA955 Developer Manual (MV-S106470-02) 7.61 -->
+		<Counter name="CCNT" id="1">
+			<OptionalEvents>ccnt.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN0" id="2">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4.cache.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN1" id="3">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4.cache.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN2" id="4">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4.cache.xml</OptionalEvents>			
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN3" id="5">
+			<OptionalEvents>pj4.xml</OptionalEvents>
+			<OptionalEvents>pj4.cache.xml</OptionalEvents>
+			<OptionalEvents>pj4.L0ICache.xml</OptionalEvents>
+		</Counter>
+		<Indicator>indicator.general.xml</Indicator>
+		<Indicator>indicator.core.xml</Indicator>
+	</Product>
+
+	<Product name="PXA 950">
+		<Counter name="Timer" id="0" location="peripheral">
+			<OptionalEvents>timer.xml</OptionalEvents>
+		</Counter>
+		<!-- Refer Manzano Core EAS (MV-S104620-00 Rev.A) Chapter 11 -->
+		<!-- Refer PXA940 Developer Manual (MV-S104848-02 Rev.-) Chapter 15.4 -->
+		<Counter name="CCNT" id="1">
+			<OptionalEvents>ccnt.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN0" id="2">
+			<OptionalEvents>manzano.pxa940.xml</OptionalEvents>
+			<OptionalEvents>assp.xml</OptionalEvents>
+			<OptionalEvents>assp.pxa940.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN1" id="3">
+			<OptionalEvents>manzano.pxa940.xml</OptionalEvents>
+			<OptionalEvents>assp.xml</OptionalEvents>
+			<OptionalEvents>assp.pxa940.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN2" id="4">
+			<OptionalEvents>manzano.pxa940.xml</OptionalEvents>
+			<OptionalEvents>assp.xml</OptionalEvents>
+			<OptionalEvents>assp.pxa940.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN3" id="5">
+			<OptionalEvents>manzano.pxa940.xml</OptionalEvents>
+			<OptionalEvents>assp.xml</OptionalEvents>
+			<OptionalEvents>assp.pxa940.xml</OptionalEvents>
+		</Counter>
+		<Indicator>indicator.general.xml</Indicator>
+	</Product>
+
+	<Product name="PXA 940">
+		<Counter name="Timer" id="0" location="peripheral">
+			<OptionalEvents>timer.xml</OptionalEvents>
+		</Counter>
+		<!-- Refer Manzano Core EAS (MV-S104620-00 Rev.A) Chapter 11 -->
+		<!-- Refer PXA940 Developer Manual (MV-S104848-02 Rev.-) Chapter 15.4 -->
+		<Counter name="CCNT" id="1">
+			<OptionalEvents>ccnt.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN0" id="2">
+			<OptionalEvents>manzano.pxa940.xml</OptionalEvents>
+			<OptionalEvents>assp.xml</OptionalEvents>
+			<OptionalEvents>assp.pxa940.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN1" id="3">
+			<OptionalEvents>manzano.pxa940.xml</OptionalEvents>
+			<OptionalEvents>assp.xml</OptionalEvents>
+			<OptionalEvents>assp.pxa940.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN2" id="4">
+			<OptionalEvents>manzano.pxa940.xml</OptionalEvents>
+			<OptionalEvents>assp.xml</OptionalEvents>
+			<OptionalEvents>assp.pxa940.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN3" id="5">
+			<OptionalEvents>manzano.pxa940.xml</OptionalEvents>
+			<OptionalEvents>assp.xml</OptionalEvents>
+			<OptionalEvents>assp.pxa940.xml</OptionalEvents>
+		</Counter>
+		<Indicator>indicator.general.xml</Indicator>
+	</Product>
+
+	<Product name="PXA 93x">
+		<Counter name="Timer" id="0" location="peripheral">
+			<OptionalEvents>timer.xml</OptionalEvents>
+		</Counter>
+		<!-- Refer PXA930 Developer Manual (MV-S104308-00 Rev.A) Chapter 11 -->
+		<Counter name="CCNT" id="1">
+			<OptionalEvents>ccnt.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN0" id="2">
+			<OptionalEvents>manzano.xml</OptionalEvents>
+			<OptionalEvents>assp.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN1" id="3">
+			<OptionalEvents>manzano.xml</OptionalEvents>
+			<OptionalEvents>assp.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN2" id="4">
+			<OptionalEvents>manzano.xml</OptionalEvents>
+			<OptionalEvents>assp.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN3" id="5">
+			<OptionalEvents>manzano.xml</OptionalEvents>
+			<OptionalEvents>assp.xml</OptionalEvents>
+		</Counter>
+		<Indicator>indicator.general.xml</Indicator>
+	</Product>
+
+	<Product name="PXA 92x">
+		<Counter name="Timer" id="0" location="peripheral">
+			<OptionalEvents>timer.xml</OptionalEvents>
+		</Counter>
+		<!-- Refer PJ1 Datasheet (MV-S105191-00 Rev.2.0) Chapter 4.3.1 -->
+		<Counter name="PMN0" id="1">
+			<OptionalEvents>pj1.pmn0.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN1" id="2">
+			<OptionalEvents>pj1.pmn1.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN2" id="3">
+			<OptionalEvents>pj1.pmn2.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN3" id="4">
+			<OptionalEvents>pj1.pmn3.xml</OptionalEvents>
+		</Counter>
+		<Indicator>indicator.pj1.xml</Indicator>
+	</Product>
+
+	<Product name="PXA 91x">
+		<Counter name="Timer" id="0" location="peripheral">
+			<OptionalEvents>timer.xml</OptionalEvents>
+		</Counter>
+		<!-- Refer PJ1 Datasheet (MV-S105191-00 Rev.2.0) Chapter 4.3.1 -->
+		<Counter name="PMN0" id="1">
+			<OptionalEvents>pj1.pmn0.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN1" id="2">
+			<OptionalEvents>pj1.pmn1.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN2" id="3">
+			<OptionalEvents>pj1.pmn2.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN3" id="4">
+			<OptionalEvents>pj1.pmn3.xml</OptionalEvents>
+		</Counter>
+		<Indicator>indicator.pj1.xml</Indicator>
+	</Product>
+	<Product name="AVANTA">
+		<Counter name="Timer" id="0" location="peripheral">
+			<OptionalEvents>timer.xml</OptionalEvents>
+		</Counter>
+		<!-- Refer PJ1 Datasheet (MV-S105191-00 Rev.2.0) Chapter 4.3.1 -->
+		<Counter name="PMN0" id="1">
+			<OptionalEvents>pj1.pmn0.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN1" id="2">
+			<OptionalEvents>pj1.pmn1.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN2" id="3">
+			<OptionalEvents>pj1.pmn2.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN3" id="4">
+			<OptionalEvents>pj1.pmn3.xml</OptionalEvents>
+		</Counter>
+		<Indicator>indicator.pj1.xml</Indicator>
+	</Product>
+	<Product name="PXA 3xx">
+		<Counter name="Timer" id="0" location="peripheral">
+			<OptionalEvents>timer.xml</OptionalEvents>
+		</Counter>
+		<!-- Refer Manzano Core EAS (MV-S104620-00 Rev.A) Chapter 11 -->
+		<Counter name="CCNT" id="1">
+			<OptionalEvents>ccnt.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN0" id="2">
+			<OptionalEvents>manzano.pxa3xx.xml</OptionalEvents>
+			<OptionalEvents>assp.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN1" id="3">
+			<OptionalEvents>manzano.pxa3xx.xml</OptionalEvents>
+			<OptionalEvents>assp.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN2" id="4">
+			<OptionalEvents>manzano.pxa3xx.xml</OptionalEvents>
+			<OptionalEvents>assp.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN3" id="5">
+			<OptionalEvents>manzano.pxa3xx.xml</OptionalEvents>
+			<OptionalEvents>assp.xml</OptionalEvents>
+		</Counter>
+		<Indicator>indicator.general.xml</Indicator>
+	</Product>
+	<Product name="NEVO">
+		<Counter name="Timer" id="0" location="peripheral">
+			<OptionalEvents>timer.xml</OptionalEvents>
+		</Counter>
+		<Counter name="CCNT" id="1">
+			<OptionalEvents>ccnt.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN0" id="2">
+			<OptionalEvents>armv7.xml</OptionalEvents>
+			<OptionalEvents>arm.cortex.a9.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN1" id="3">
+			<OptionalEvents>armv7.xml</OptionalEvents>
+			<OptionalEvents>arm.cortex.a9.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN2" id="4">
+			<OptionalEvents>armv7.xml</OptionalEvents>
+			<OptionalEvents>arm.cortex.a9.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN3" id="5">
+			<OptionalEvents>armv7.xml</OptionalEvents>
+			<OptionalEvents>arm.cortex.a9.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN4" id="6">
+			<OptionalEvents>armv7.xml</OptionalEvents>
+			<OptionalEvents>arm.cortex.a9.xml</OptionalEvents>
+		</Counter>
+		<Counter name="PMN5" id="7">
+			<OptionalEvents>armv7.xml</OptionalEvents>
+			<OptionalEvents>arm.cortex.a9.xml</OptionalEvents>
+		</Counter>
+		<Indicator>indicator.nevo.xml</Indicator>
+	</Product>
+	<Product name="PXA988">
+                <Counter name="Timer" id="0" location="peripheral">
+                        <OptionalEvents>timer.xml</OptionalEvents>
+                </Counter>
+                <Counter name="CCNT" id="1">
+                        <OptionalEvents>ccnt.xml</OptionalEvents>
+                </Counter>
+                <Counter name="PMN0" id="2">
+                        <OptionalEvents>armv7.xml</OptionalEvents>
+                        <OptionalEvents>arm.cortex.a9.xml</OptionalEvents>
+                </Counter>
+                <Counter name="PMN1" id="3">
+                        <OptionalEvents>armv7.xml</OptionalEvents>
+                        <OptionalEvents>arm.cortex.a9.xml</OptionalEvents>
+                </Counter>
+                <Counter name="PMN2" id="4">
+                        <OptionalEvents>armv7.xml</OptionalEvents>
+                        <OptionalEvents>arm.cortex.a9.xml</OptionalEvents>
+                </Counter>
+                <Counter name="PMN3" id="5">
+                        <OptionalEvents>armv7.xml</OptionalEvents>
+                        <OptionalEvents>arm.cortex.a9.xml</OptionalEvents>
+                </Counter>
+                <Counter name="PMN4" id="6">
+                        <OptionalEvents>armv7.xml</OptionalEvents>
+                        <OptionalEvents>arm.cortex.a9.xml</OptionalEvents>
+                </Counter>
+                <Counter name="PMN5" id="7">
+                        <OptionalEvents>armv7.xml</OptionalEvents>
+                        <OptionalEvents>arm.cortex.a9.xml</OptionalEvents>
+                </Counter>
+                <Indicator>indicator.nevo.xml</Indicator>
+        </Product>
+		<Product name="PXA1088">
+                <Counter name="Timer" id="0" location="peripheral">
+                        <OptionalEvents>timer.xml</OptionalEvents>
+                </Counter>
+                <Counter name="CCNT" id="1">
+                        <OptionalEvents>ccnt.xml</OptionalEvents>
+                </Counter>
+                <Counter name="PMN0" id="2">
+                        <OptionalEvents>armv7.xml</OptionalEvents>
+                        <OptionalEvents>arm.cortex.a7.xml</OptionalEvents>
+                </Counter>
+                <Counter name="PMN1" id="3">
+                        <OptionalEvents>armv7.xml</OptionalEvents>
+                        <OptionalEvents>arm.cortex.a7.xml</OptionalEvents>
+                </Counter>
+                <Counter name="PMN2" id="4">
+                        <OptionalEvents>armv7.xml</OptionalEvents>
+                        <OptionalEvents>arm.cortex.a7.xml</OptionalEvents>
+                </Counter>
+                <Counter name="PMN3" id="5">
+                        <OptionalEvents>armv7.xml</OptionalEvents>
+                        <OptionalEvents>arm.cortex.a7.xml</OptionalEvents>
+                </Counter>
+                <Indicator>indicator.1088.xml</Indicator>
+        </Product>
+        		<Product name="eden">
+                <Counter name="Timer" id="0" location="peripheral">
+                        <OptionalEvents>timer.xml</OptionalEvents>
+                </Counter>
+                <Counter name="CCNT" id="1">
+                        <OptionalEvents>ccnt.xml</OptionalEvents>
+                </Counter>
+                <Counter name="PMN0" id="2">
+                        <OptionalEvents>armv7.xml</OptionalEvents>
+                        <OptionalEvents>arm.cortex.a7.xml</OptionalEvents>
+                </Counter>
+                <Counter name="PMN1" id="3">
+                        <OptionalEvents>armv7.xml</OptionalEvents>
+                        <OptionalEvents>arm.cortex.a7.xml</OptionalEvents>
+                </Counter>
+                <Counter name="PMN2" id="4">
+                        <OptionalEvents>armv7.xml</OptionalEvents>
+                        <OptionalEvents>arm.cortex.a7.xml</OptionalEvents>
+                </Counter>
+                <Counter name="PMN3" id="5">
+                        <OptionalEvents>armv7.xml</OptionalEvents>
+                        <OptionalEvents>arm.cortex.a7.xml</OptionalEvents>
+                </Counter>
+                <Indicator>indicator.1088.xml</Indicator>
+        </Product>
+</exp:Products>
+

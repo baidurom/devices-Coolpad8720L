@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SOCInfo>
+  <CoreNumber number="1">
+    <!-- Refer PXA3xx Developer Manual (MV-S301374-01 Rev.C) Chapter 2.16.6.1 -->
+    <SOC processor="PXA 3xx">
+      <CORE index="0" id="0x69056825"></CORE>
+    </SOC>
+    <SOC processor="PXA 3xx">
+      <CORE index="0" id="0x69056826"></CORE>
+    </SOC>
+    <SOC processor="PXA 3xx">
+      <CORE index ="0" id="0x69056890"></CORE>
+    </SOC>
+    <SOC processor="PXA 3xx">
+      <CORE index="0" id="0x69056891"></CORE>
+    </SOC>
+    <SOC processor="PXA 3xx">
+      <CORE index="0" id="0x69056892"></CORE>
+    </SOC>
+    <SOC processor="PXA 3xx">
+      <CORE index="0" id="0x69056880"></CORE>
+    </SOC>
+    <SOC processor="PXA 3xx">
+      <CORE index="0" id="0x69056881"></CORE>
+    </SOC>
+    <!-- Use subID to distinguish different processors with the same SOC id -->
+    <!-- Refer 88SV331x-v5 PJ1 Datasheet (MV-S105191-00 Rev.2.0) Chapter 4.3.1 -->
+    <SOC processor="PXA 91x">
+      <CORE index="0" id="0x56158000"></CORE>
+    </SOC>
+    <!--  Add the item for avanta-->
+    <SOC processor="AVANTA">
+      <CORE index="0" id="0x56251311"></CORE>
+    </SOC>
+    <SOC processor="PXA 92x">
+      <CORE index="0" id="0x56158000"></CORE>
+    </SOC>
+    <!-- Refer PXA930 Developer Manual (MV-S104308-01 Rev.B) Chapter 4.3.2 -->
+    <SOC processor="PXA 93x">
+      <CORE index="0" id="0x69056835"></CORE>
+    </SOC>
+    <SOC processor="PXA 93x">
+      <CORE index="0" id="0x69056837"></CORE>
+    </SOC>
+    <SOC processor="PXA 93x">
+      <CORE index="0" id="0x69056838"></CORE>
+    </SOC>
+    <!-- Refer PXA940 Developer Manual (MV-S104848-01 Rev.A) Chapter 4.3.2 -->
+    <SOC processor="PXA 940">
+      <CORE index="0" id="0x56056931"></CORE>
+    </SOC>
+    <SOC processor="PXA 940">
+      <CORE index="0" id="0x56056936"></CORE>
+    </SOC>
+    <SOC processor="PXA 950">
+      <CORE index="0" id="0x56056970"></CORE>
+    </SOC>
+    <!-- add the following item for mg2 with cpu id 0x560f5815 -->
+    <SOC processor="PXA 968">
+      <CORE index="0" id="0x560f5815"></CORE>
+    </SOC>
+    <SOC processor="PXA 955">
+      <CORE index="0" id="0x560f5814"></CORE>
+    </SOC>
+    <SOC processor="ARMADA 168">
+      <CORE index="0" id="0x56158400"></CORE>
+    </SOC>
+    <SOC processor="ARMADA 510">
+      <CORE index="0" id="0x560f5812"></CORE>
+    </SOC>
+    <SOC processor="ARMADA 610">
+      <CORE index="0" id="0x560f5811"></CORE>
+    </SOC>
+    <SOC processor="ARMADA 610">
+      <CORE index="0" id="0x560f5815"></CORE>
+    </SOC>
+    <!-- the following setting is for multicore temp usage, because target info has not been implemented on these targets -->
+    <SOC processor="Tegra 2">
+      <CORE index="0" id="0x411fc090"></CORE>
+    </SOC>
+    <SOC processor="Disco-SMP">
+      <CORE index="0" id="0x561f5840"></CORE>
+    </SOC>
+    <SOC processor="ARMADAXP">
+      <CORE index="0" id="0x562f5842"></CORE>
+    </SOC>
+    <SOC processor="MMP3">
+      <CORE index="0" id="0x562f5840"></CORE>
+    </SOC>
+    <SOC processor="PJ4B-MP FPGA">
+      <CORE index="0" id="0x413fc081"></CORE>
+    </SOC>
+    <SOC processor="PJ4B-MP FPGA">
+      <CORE index="0" id="0x410fc090"></CORE>
+    </SOC>
+    <SOC processor="BG2">
+      <CORE index="0" id="0x562f5841"></CORE>
+    </SOC>
+    <!-- NEVO with the same cpu id 0x413fc090 -->
+	<SOC processor="PXA988">
+      <CORE index="0" id="0x413fc090"></CORE>
+    </SOC>
+    <!-- PXA1088 and eden owns the same A7 core(cpu id) and core number, so replace the following 'PXA1088' with 'eden' when pixiu is used for eden -->
+    <SOC processor="PXA1088">
+      <CORE index="0" id="0x410fc073"></CORE>
+    </SOC>
+  </CoreNumber>
+  <!-- after target info has been implemented on these targets,use the following real setting -->
+  <CoreNumber number="2">
+    <SOC processor="Tegra 2">
+      <CORE index="0" id="0x411fc090"></CORE>
+      <CORE index="1" id="0x411fc090"></CORE>
+    </SOC>
+    <SOC processor="BG2">
+      <CORE index="0" id="0x562f5841"></CORE>
+      <CORE index="1" id="0x562f5841"></CORE>
+    </SOC>
+  </CoreNumber>
+  <CoreNumber number="3">
+    <SOC processor="Disco-SMP">
+      <CORE index="0" id="0x561f5840"></CORE>
+      <CORE index="1" id="0x561f5840"></CORE>
+      <CORE index="2" id="0x561f5840"></CORE>
+    </SOC>
+    <SOC processor="MMP3">
+      <CORE index="0" id="0x562f5840"></CORE>
+      <CORE index="1" id="0x562f5840"></CORE>
+      <CORE index="2" id="0x562f5840"></CORE>
+    </SOC>
+    <SOC processor="PJ4B-MP FPGA">
+      <CORE index="0" id="0x413fc081"></CORE>
+      <CORE index="1" id="0x413fc081"></CORE>
+      <CORE index="2" id="0x413fc081"></CORE>
+    </SOC>
+    <SOC processor="PJ4B-MP FPGA">
+      <CORE index="0" id="0x410fc090"></CORE>
+      <CORE index="1" id="0x410fc090"></CORE>
+      <CORE index="2" id="0x410fc090"></CORE>
+    </SOC>
+  </CoreNumber>
+</SOCInfo>

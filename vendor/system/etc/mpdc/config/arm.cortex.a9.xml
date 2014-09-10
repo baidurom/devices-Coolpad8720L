@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exp:Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exp="http://com.marvell.cpa"
+	xsi:schemaLocation="http://com.marvell.cpa target.xsd">
+	<!-- Refer DDI0388G_cortex_a9_r3p0_trm.pdf-->
+	<EventSet name="General">
+		<Event id="0x60" name="Instruction cache dependent stall cycles" type="duration">
+			<Description>Counts the number of cycles where the processor is ready to accept new instructions, but does not receive any because of the instruction side not being able to provide any and the instruction cache is currently performing at least one linefill.</Description>
+		</Event>
+		<Event id="0x61" name="Data cache dependent stall cycles" type="duration">
+			<Description>Counts the number of cycles where the core has some instructions that it cannot issue to any pipeline, and the Load Store unit has at least one pending linefill request, and no pending TLB requests.</Description>
+		</Event>
+		<Event id="0x62" name="Main TLB miss stall cycles" type="duration">
+			<Description>Counts the number of cycles where the processor is stalled waiting for the completion of translation table walks from the main TLB. The processor stalls can be because of the instruction side not being able to provide the instructions, or to the data side not being able to provide the necessary data, because of them waiting for the main TLB translation table walk to complete. </Description>
+		</Event>
+		<Event id="0x63" name="STREX passed" type="occurrence">
+			<Description>Counts the number of STREX instructions architecturally executed and passed.</Description>
+		</Event>
+		<Event id="0x64" name="STREX failed" type="occurrence">
+			<Description>Counts the number of STREX instructions architecturally executed and failed.</Description>
+		</Event>
+		<Event id="0x65" name="Data eviction" type="occurrence">
+			<Description>Counts the number of eviction requests because of a linefill in the data cache.</Description>
+		</Event>
+		<Event id="0x66" name="Issue does not dispatch any instruction" type="duration">
+			<Description>Counts the number of cycles where the issue stage does not dispatch any instruction because it is empty or cannot dispatch any instructions.</Description>
+		</Event>
+		<Event id="0x67" name="Issue is empty" type="duration">
+			<Description>Counts the number of cycles where the issue stage is empty.</Description>
+		</Event>
+		<Event id="0x68" name="Instructions coming out of the core renaming stage" type="occurrence">
+			<Description>Counts the number of instructions going through the Register Renaming stage. This number is an approximate number of the total number of instructions speculatively executed, and even more approximate of the total number of instructions architecturally executed. The approximation depends mainly on the branch misprediction rate.</Description>
+		</Event>
+		<Event id="0x6e" name="Predictable function returns" type="occurrence">
+			<Description>Counts the number of procedure returns whose condition codes do not fail, excluding all returns from exception. This count includes procedure returns which are flushed because of a previous load/store which aborts late.</Description>
+		</Event>
+		<Event id="0x70" name="Main execution unit instructions" type="occurrence">
+			<Description>Counts the number of instructions being executed in the main execution pipeline of the processor, the multiply pipeline and arithmetic logic unit pipeline. The counted instructions are still speculative.</Description>
+		</Event>
+		<Event id="0x71" name="Second execution unit instructions" type="occurrence">
+			<Description>Counts the number of instructions being executed in the processor second execution pipeline (ALU). The counted instructions are still speculative.</Description>
+		</Event>
+		<Event id="0x72" name="Load/Store Instructions" type="occurrence">
+			<Description>Counts the number of instructions being executed in the Load/Store unit. The counted instructions are still speculative.</Description>
+		</Event>
+		<Event id="0x73" name="Floating-point instructions" type="occurrence">
+			<Description>Counts the number of Floating-point instructions going through the Register Rename stage. Instructions are still speculative in this stage.</Description>
+		</Event>
+		<Event id="0x74" name="NEON instructions" type="occurrence">
+			<Description>Counts the number of NEON instructions going through the Register Rename stage. Instructions are still speculative in this stage.</Description>
+		</Event>
+		<Event id="0x80" name="Processor stalls because of PLDs" type="duration">
+			<Description>Counts the number of cycles where the processor is stalled because PLD slots are all full.</Description>
+		</Event>
+		<Event id="0x81" name="Processor stalled because of a write to memory" type="duration">
+			<Description>Counts the number of cycles when the processor is stalled and the data side is stalled too because it is full and executing writes to the external memory.</Description>
+		</Event>
+		<Event id="0x82" name="Processor stalled because of instruction side main TLB miss" type="duration">
+			<Description>Counts the number of stall cycles because of main TLB misses on requests issued by the instruction side.</Description>
+		</Event>
+		<Event id="0x83" name="Processor stalled because of data side main TLB miss" type="duration">
+			<Description>Counts the number of stall cycles because of main TLB misses on requests issued by the data side.</Description>
+		</Event>
+		<Event id="0x84" name="Processor stalled because of instruction micro TLB miss" type="duration">
+			<Description>Counts the number of stall cycles because of micro TLB misses on the instruction side. This event does not include main TLB miss stall cycles that are already counted in the corresponding main TLB event.</Description>
+		</Event>
+		<Event id="0x85" name="Processor stalled because of data micro TLB miss" type="duration">
+			<Description>Counts the number of stall cycles because of micro TLB misses on the data side. This event does not include main TLB miss stall cycles that are already counted in the corresponding main TLB event.</Description>
+		</Event>
+		<Event id="0x8a" name="Integer clock enabled" type="duration">
+			<Description>Counts the number of cycles during which the integer core clock is enabled.</Description>
+		</Event>
+		<Event id="0x8b" name="Data Engine clock enabled" type="duration">
+			<Description>Counts the number of cycles during which the Data Engine clock is enabled.</Description>
+		</Event>
+		<Event id="0x90" name="ISB instructions" type="occurrence">
+			<Description>Counts the number of ISB instructions architecturally executed.</Description>
+		</Event>
+		<Event id="0x91" name="DSB instructions" type="occurrence">
+			<Description>Counts the number of DSB instructions architecturally executed.</Description>
+		</Event>
+		<Event id="0x93" name="External interrupts" type="occurrence">
+			<Description>Counts the number of external interrupts executed by the processor.</Description>
+		</Event>
+	</EventSet>
+
+</exp:Configuration>

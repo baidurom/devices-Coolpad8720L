@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<exp:Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exp="http://com.marvell.cpa"
+	xsi:schemaLocation="http://com.marvell.cpa target.xsd">
+	<!-- Refer PXA688 Registers (MV-S105844-00) Table 380 -->
+	<EventSet name="Memory Controller" location="peripheral">
+		<Event id="0x1D" name="Auto-refresh (non-idle)" />
+		<Event id="0x1C" name="Auto-refresh (all)" />
+		<Event id="0x1A" name="Write request" />
+		<Event id="0x19" name="Read request" />
+		<Event id="0x18" name="All data request" />
+		<Event id="0x16" name="Write command" />
+		<Event id="0x15" name="Read command" />
+		<Event id="0x14" name="Read + Write command" />
+		<Event id="0x10" name="ACTIVE command" />
+		<Event id="0xe" name="PRECHARGE command (non-data)" />
+		<Event id="0xd" name="PRECHARGE command (data)" />
+		<Event id="0xc" name="PRECHARGE command (all)" />
+		<Event id="0x4" name="Non-idle cycles with no data bus utilization" />
+		<Event id="0x3" name="(reserved) Non-idle cycles waiting for tWTR" />
+		<Event id="0x2" name="Non-idle cycles when waiting for tRFC" />
+		<Event id="0x1" name="Idle cycles (Memory Controller pipeline empty)" />
+		<Event id="0x0" name="Clock" />
+	</EventSet>
+</exp:Configuration>

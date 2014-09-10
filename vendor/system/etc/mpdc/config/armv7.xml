@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exp:Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exp="http://com.marvell.cpa"
+	xsi:schemaLocation="http://com.marvell.cpa target.xsd">
+	<!-- Refer DDI0406B_arm_architecture_refrence_manual_v7_AM.pdf -->
+	<EventSet name="Branch">
+		<Event id="0x0" name="Instruction architecturally executed, condition check pass, Software increment" type="occurrence">
+			<Description>The counter increments on writes to the PMSWINC register.</Description>
+		</Event>
+		<Event id="0x1" name="Level 1 instruction cache refill" type="occurrence">
+			<Description>The counter counts instruction memory accesses that cause a TLB refill of at least the Level 1 instruction TLB. This includes each instruction memory access that causes an access to a level of memory system due to a translation table walk or an access to another level of TLB caching.</Description>
+		</Event>
+		<Event id="0x2" name="Level 1 instruction TLB refill" type="occurrence">
+			<Description>The counter counts each instruction memory access that causes an access to a level of the memory system due to a translation table walk or an access to another level of TLB caching. CP15 TLB maintenance operations do not count as events.</Description>
+		</Event>
+		<Event id="0x3" name="Level 1 data cache refill" type="occurrence">
+			<Description>The counter counts each memory-read operation or memory-write operation that causes a refill of at least the Level 1 data or unified cache. Accesses that do not cause a new cache refill, but are satisfied from refilling data of a previous miss, are not counted. Each access to a cache line that causes a new linefill is counted, including the multiple accesses of load or store multiples. Accesses to a cache line that generate a memory access but not a new linefill, such as Write-through writes that hit in the cache, are not counted.</Description>
+		</Event>
+		<Event id="0x4" name="Level 1 data cache access" type="occurrence">
+			<Description>The counter counts each memory-read operation or memory-write operation that causes a cache access to at least the Level 1 data or unified cache. Each access to a cache line is counted including the multiple accesses of instructions such as LDM or STM. Each access to other Level 1 data or unified memory structures, for example refill buffers, write buffers and write-back buffers, is also counted.</Description>
+		</Event>
+		<Event id="0x5" name="Level 1 data TLB refill" type="occurrence">
+			<Description>The counter counts each memory-read or memory-write operation that causes a TLB refill of at least the Level 1 data or unified TLB. Each read or write that causes a refill, in the form of a translation table walk or an access to another level of TLB caching is counted.</Description>
+		</Event>
+		<Event id="0x6" name="Instruction architecturally executed, condition check pass, Load" type="occurrence">
+			<Description>The counter increments for every executed instruction that explicitly reads data, including SWP.</Description>
+		</Event>
+		<Event id="0x7" name="Instruction architecturally executed, condition check pass, Store" type="occurrence">
+			<Description>The counter increments for every executed instruction that explicitly writes data, including SWP.</Description>
+		</Event>
+		<Event id="0x9" name="Exception taken" type="occurrence">
+			<Description>The counter increments for each exception taken.</Description>
+		</Event>
+		<Event id="0xa" name="Instruction architecturally executed, condition check pass, Exception return" type="occurrence">
+			<Description>The counter increments for each executed exception return instruction.</Description>
+		</Event>
+		<Event id="0xb" name="Instruction architecturally executed, condition check pass, Write to CONTEXTIDR" type="occurrence">
+			<Description>The counter increments for every write to the CONTEXTIDR</Description>
+		</Event>
+		<Event id="0xc" name="Instruction architecturally executed, condition check pass, Software change of the PC" type="occurrence">
+			<Description>The counter increments for every software change of the PC.</Description>
+		</Event>
+		<Event id="0xd" name="Instruction architecturally executed - Immediate branch" type="occurrence">
+			<Description>The counter counts all immediate branch instructions that are architecturally executed.</Description>
+		</Event>
+		<Event id="0xf" name="Instruction architecturally executed, condition check pass, Unaligned load or store" type="occurrence">
+			<Description>The counter counts each instruction that accesses an unaligned address</Description>
+		</Event>
+		<Event id="0x10" name="Mispredicted or not predicted branch speculatively executed" type="occurrence">
+			<Description>The counter counts for each correction to the predicted program flow that occurs because of a misprediction from, or no prediction from, the branch prediction resources and that relates to instructions that the branch prediction resources are capable of predicting.</Description>
+		</Event>
+		<Event id="0x11" name="Cycle" type="occurrence">
+			<Description>The counter increments on every cycle.</Description>
+		</Event>
+		<Event id="0x12" name="Predictable branch speculatively executed" type="occurrence">
+			<Description>The counter counts every branch or other change in the program flow that the branch prediction resources are capable of predicting.</Description>
+		</Event>
+	</EventSet>
+
+</exp:Configuration>

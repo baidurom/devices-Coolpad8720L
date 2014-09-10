@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:TargetInfo xmlns:ti="http://com.marvell.cpa/targetInfo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.marvell.cpa/targetInfo targetInfo.xsd ">
+	<Category name="Core">
+		<Atom name="id" valueType="number">
+			<DataPosition index="1" length="32" offset="0" />
+		</Atom>
+		<Atom name="Online" valueType="string">
+			<DataPosition index="29" length="32" offset="0"></DataPosition>
+			<ValidValues>
+				<ValidValue description="Yes" value="1" />
+				<ValidValue description="No" value="0" />
+			</ValidValues>
+		</Atom>
+		<Atom name="CPU ID" valueType="number" base="hex">
+			<DataPosition index="0" length="32" offset="0" />
+		</Atom>
+		<Atom name="Architecture" valueType="string">
+			<DataPosition index="0" length="4" offset="16" />
+			<ValidValues>
+				<ValidValue description="ARM v7" value="0xF" />
+			</ValidValues>
+		</Atom>
+		<Atom name="Manufactor" valueType="string">
+			<DataPosition index="0" length="8" offset="24" />
+			<ValidValues>
+				<ValidValue description="Marvell" value="0x56" />
+			</ValidValues>
+		</Atom>
+		<Atom name="Frequency" valueType="number" base="dec" unit="Hz" convertbase="1000">
+			<DataPosition index="2" length="32" offset="0" />
+		</Atom>
+		<Category name="Revision">
+			<Atom name="Product Revision" valueType="number">
+				<DataPosition index="0" length="4" offset="0" />
+			</Atom>
+			<Atom name="Major Revision" valueType="number">
+				<DataPosition index="0" length="4" offset="20"></DataPosition>
+			</Atom>
+		</Category>
+		<Category name="TLB">
+			<Atom name="Unified" valueType="string">
+				<DataPosition index="5" length="1" offset="0" />
+				<ValidValues>
+					<ValidValue description="Yes" value="0x0" />
+					<ValidValue description="No" value="0x1" />
+				</ValidValues>
+			</Atom>
+			<Atom name="Data Lockable Size" valueType="number" base="dec" unit="entries">
+				<DataPosition index="5" length="8" offset="8" />
+			</Atom>
+			<Atom name="Instruction Lockable Size" valueType="number" base="dec" unit="entries">
+				<DataPosition index="5" length="8" offset="16" />
+			</Atom>
+		</Category>
+		<Category name="Instruction Set">
+			<Atom name="ARM Instruction" valueType="string">
+				<DataPosition index="3" length="4" offset="0" />
+				<ValidValues>
+					<ValidValue description="Supported" value="0x1" />
+				</ValidValues>
+			</Atom>
+			<Atom name="Thumb-2 Encoding" valueType="string">
+				<DataPosition index="3" length="4" offset="4" />
+				<ValidValues>
+					<ValidValue description="Supported" value="0x3" />
+				</ValidValues>
+			</Atom>
+			<Atom name="Jazelle Extension" valueType="string">
+				<DataPosition index="3" length="4" offset="8" />
+				<ValidValues>
+					<ValidValue description="Not Supported" value="0x0" />
+					<ValidValue description="Supported" value="0x1" />
+				</ValidValues>
+			</Atom>
+			<Atom name="ThumbEE" valueType="string">
+				<DataPosition index="3" length="4" offset="12" />
+				<ValidValues>
+					<ValidValue description="Not Supported" value="0x0" />
+					<ValidValue description="Supported" value="0x1" />
+				</ValidValues>
+			</Atom>
+		</Category>
+		<Category name="Programming Mode">
+			<Atom name="Standard ARMv4" valueType="string">
+				<DataPosition index="4" length="4" offset="0" />
+				<ValidValues>
+					<ValidValue description="Supported" value="0x1" />
+				</ValidValues>
+			</Atom>
+		</Category>
+		<Category name="Memory Model">
+			<Atom name="VMSA" valueType="string">
+				<DataPosition index="6" length="4" offset="0" />
+				<ValidValues>
+					<ValidValue description="Support v7, including cache and TLB type register" value="0x3" />
+				</ValidValues>
+			</Atom>
+			<Atom name="PMSA" valueType="string">
+				<DataPosition index="6" length="4" offset="4" />
+				<ValidValues>
+					<ValidValue description="Not Supported" value="0x0" />
+				</ValidValues>
+			</Atom>
+			<Atom name="Cache Coherence" valueType="string">
+				<DataPosition index="6" length="4" offset="8" />
+				<ValidValues>
+					<ValidValue description="Not Supported" value="0x0" />
+				</ValidValues>
+			</Atom>
+			<Atom name="TCM" valueType="string">
+				<DataPosition index="6" length="4" offset="16" />
+				<ValidValues>
+					<ValidValue description="Not Supported" value="0x0" />
+				</ValidValues>
+			</Atom>
+		</Category>
+		<Category name="L1 ICache">
+			<Atom name="Enabled" valueType="string">
+				<DataPosition index="22" length="1" offset="12" />
+				<ValidValues>
+					<ValidValue description="No" value="0" />
+					<ValidValue description="Yes" value="1" />
+				</ValidValues>
+			</Atom>
+			<Atom name="Size" valueType="number" unit="B" base="dec" convertbase="1024">
+				<DataPosition index="13" length="32" offset="0" />
+			</Atom>
+			<Atom name="Set Number" valueType="number">
+				<DataPosition index="14" length="32" offset="0" />
+			</Atom>
+			<Atom name="Associativity" valueType="number" unit="ways">
+				<DataPosition index="15" length="32" offset="0" />
+			</Atom>
+			<Atom name="Line Size" valueType="number" unit="words">
+				<DataPosition index="16" length="32" offset="0" />
+			</Atom>
+			<Atom name="Write Allocation" valueType="string">
+				<DataPosition index="12" length="1" offset="28" />
+				<ValidValues>
+					<ValidValue description="Yes" value="0x1" />
+					<ValidValue description="No" value="0x0" />
+				</ValidValues>
+			</Atom>
+			<Atom name="Read Allocation" valueType="string">
+				<DataPosition index="12" length="1" offset="29" />
+				<ValidValues>
+					<ValidValue description="Yes" value="0x1" />
+					<ValidValue description="No" value="0x0" />
+				</ValidValues>
+			</Atom>
+			<Atom name="Write-back" valueType="string">
+				<DataPosition index="12" length="1" offset="30" />
+				<ValidValues>
+					<ValidValue description="Yes" value="0x1" />
+					<ValidValue description="No" value="0x0" />
+				</ValidValues>
+			</Atom>
+			<Atom name="Write-through" valueType="string">
+				<DataPosition index="12" length="1" offset="31" />
+				<ValidValues>
+					<ValidValue description="Yes" value="0x1" />
+					<ValidValue description="No" value="0x0" />
+				</ValidValues>
+			</Atom>
+		</Category>
+		<Category name="L1 DCache">
+			<Atom name="Enabled" valueType="string">
+				<DataPosition index="22" length="1" offset="2" />
+				<ValidValues>
+					<ValidValue description="Yes" value="1" />
+					<ValidValue description="No" value="0" />
+				</ValidValues>
+			</Atom>
+			<Atom name="Size" valueType="number" unit="B" base="dec" convertbase="1024">
+				<DataPosition index="8" length="32" offset="0" />
+			</Atom>
+			<Atom name="Set Number" valueType="number">
+				<DataPosition index="9" length="32" offset="0" />
+			</Atom>
+			<Atom name="Associativity" valueType="number" unit="ways">
+				<DataPosition index="10" length="32" offset="0" />
+			</Atom>
+			<Atom name="Line Size" valueType="number" unit="words">
+				<DataPosition index="11" length="32" offset="0" />
+			</Atom>
+			<Atom name="Write Allocation" valueType="string">
+				<DataPosition index="7" length="1" offset="28" />
+				<ValidValues>
+					<ValidValue description="Yes" value="0x1" />
+					<ValidValue description="No" value="0x0" />
+				</ValidValues>
+			</Atom>
+			<Atom name="Read Allocation" valueType="string">
+				<DataPosition index="7" length="1" offset="29" />
+				<ValidValues>
+					<ValidValue description="No" value="0x0" />
+					<ValidValue description="Yes" value="0x1" />
+				</ValidValues>
+			</Atom>
+			<Atom name="Write-back" valueType="string">
+				<DataPosition index="7" length="1" offset="30" />
+				<ValidValues>
+					<ValidValue description="No" value="0x0" />
+					<ValidValue description="Yes" value="0x1" />
+				</ValidValues>
+			</Atom>
+			<Atom name="Write-through" valueType="string">
+				<DataPosition index="7" length="1" offset="31" />
+				<ValidValues>
+					<ValidValue description="No" value="0x0" />
+					<ValidValue description="Yes" value="0x1" />
+				</ValidValues>
+			</Atom>
+		</Category>
+		<Category name="VFP">
+			<Atom name="VFP Architecture Version" valueType="string">
+				<DataPosition index="30" length="7" offset="16" />
+				<ValidValues>
+					<ValidValue description="VFPv1 architecture with an implementation defined subarchitecture" value="0" />
+					<ValidValue description="VFPv2 architecture with common VFP subarchitecture v1" value="1" />
+					<ValidValue description="VFPv3 architecture or later with common VFP subarchitecture v2" value="2" />
+					<ValidValue description="VFPv3  architecture or later with null subarchitecture" value="3" />
+					<ValidValue description="VFPv3  architecture or later with common VFP subarchitecture v3" value="4" />
+				</ValidValues>
+			</Atom>
+			<Atom name="Flush-to-Zero" valueType="string">
+				<DataPosition index="31" length="1" offset="24" />
+				<ValidValues>
+					<ValidValue description="Disabled" value="0"></ValidValue>
+					<ValidValue description="Enabled" value="1" />
+				</ValidValues>
+			</Atom>
+			<Atom name="Rounding Mode" valueType="string">
+				<DataPosition index="31" length="2" offset="22" />
+				<ValidValues>
+					<ValidValue description="Round to nearest (RN)" value="0"></ValidValue>
+					<ValidValue description="Round towards plus infinity (RP)" value="1" />
+					<ValidValue description="Round towards minus infinity (RM)" value="2" />
+					<ValidValue description="Round towards zero (RZ)" value="3" />
+				</ValidValues>
+			</Atom>
+			<Atom name="Advanced SIMD and VFP Extensions" valueType="string">
+				<DataPosition index="32" length="1" offset="30"></DataPosition>
+				<ValidValues>
+					<ValidValue description="Disabled" value="0" />
+					<ValidValue description="Enabled" value="1" />
+				</ValidValues>
+			</Atom>
+		</Category>
+	</Category>
+	<Category name="L2 Cache">
+		<Atom name="Enabled" valueType="string">
+			<DataPosition index="23" length="32" offset="0" />
+			<ValidValues>
+				<ValidValue description="Yes" value="1" />
+				<ValidValue description="No" value="0" />
+			</ValidValues>
+		</Atom>
+		<Atom name="Clock Frequency" valueType="number" base="dec" convertbase="1000" unit="Hz">
+			<DataPosition index="27" length="32" offset="0" />
+		</Atom>
+		<Atom name="Size" valueType="number" base="dec" convertbase="1024" unit="B">
+			<DataPosition index="18" length="32" offset="0" />
+		</Atom>
+		<Atom name="Set Number" valueType="number">
+			<DataPosition index="19" length="32" offset="0" />
+		</Atom>
+		<Atom name="Associativity" valueType="number" unit="ways">
+			<DataPosition index="20" length="32" offset="0" />
+		</Atom>
+		<Atom name="Line Size" valueType="number" unit="words">
+			<DataPosition index="21" length="32" offset="0" />
+		</Atom>
+		<Atom name="Write Allocation" valueType="string">
+			<DataPosition index="17" length="1" offset="28" />
+			<ValidValues>
+				<ValidValue description="No" value="0x0" />
+				<ValidValue description="Yes" value="0x1" />
+			</ValidValues>
+		</Atom>
+		<Atom name="Read Allocation" valueType="string">
+			<DataPosition index="17" length="1" offset="29" />
+			<ValidValues>
+				<ValidValue description="No" value="0x0" />
+				<ValidValue description="Yes" value="0x1" />
+			</ValidValues>
+		</Atom>
+		<Atom name="Write-back" valueType="string">
+			<DataPosition index="17" length="1" offset="30" />
+			<ValidValues>
+				<ValidValue description="No" value="0x0" />
+				<ValidValue description="Yes" value="0x1" />
+			</ValidValues>
+		</Atom>
+		<Atom name="Write-through" valueType="string">
+			<DataPosition index="17" length="1" offset="31" />
+			<ValidValues>
+				<ValidValue description="No" value="0x0" />
+				<ValidValue description="Yes" value="0x1" />
+			</ValidValues>
+		</Atom>
+	</Category>
+	<Category name="Memory">
+		<Atom name="SDRAM Type" valueType="string">
+			<DataPosition index="24" length="32" offset="0" />
+			<ValidValues>
+				<ValidValue description="UNKNOWN" value="-1" />
+				<ValidValue description="DDR1" value="0" />
+				<ValidValue description="DDR2" value="1" />
+				<ValidValue description="DDR3" value="2" />
+				<ValidValue description="LPDDR1" value="3" />
+				<ValidValue description="LPDDR2_S2" value="4" />
+				<ValidValue description="LPDDR2_S4" value="5" />
+			</ValidValues>
+		</Atom>
+		<Atom name="Configuration Memory Size" valueType="number" base="dec" convertbase="1024" unit="B">
+			<DataPosition index="25" length="32" offset="0" />
+		</Atom>
+		<Atom name="DDR Clock Frequency" valueType="number" base="dec" convertbase="1000" unit="Hz">
+			<DataPosition index="26" length="32" offset="0" />
+		</Atom>
+	</Category>
+	<Category name="AXI Bus">
+		<Atom name="Clock Frequency" valueType="number" base="dec" convertbase="1000" unit="Hz">
+			<DataPosition index="28" length="32" offset="0" />
+		</Atom>
+	</Category>
+</ti:TargetInfo>

@@ -1,0 +1,117 @@
+Event Id	Proper Counters		Comments
+[1m0xffff[0m		Timer			Timer
+[1m0xff[0m		CCNT			Core clock tick
+[1m0xfe[0m		CCNT			Core clock tick (64 clock base)
+[1m0xc[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Software change of PC
+[1m0xd[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Branch executed
+[1m0xe[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Procedure return executed
+[1m0x10[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Branch mispredicted or not predicted
+[1m0x12[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Predictable branches
+[1m0x63[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Branch retired
+[1m0x72[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Branch mispredicted
+[1m0x81[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Branches taken
+[1m0x1[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L1 I-Cache miss
+[1m0x3[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L1 D-Cache miss
+[1m0x4[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L1 D-Cache access
+[1m0x40[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L1 D-Cache read hit
+[1m0x41[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L1 D-Cache read miss
+[1m0x42[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L1 D-Cache write hit
+[1m0x43[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L1 D-Cache write miss
+[1m0x45[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L1 I-Cache bus request
+[1m0x4f[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L2-Cache write hit
+[1m0x50[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L2-Cache write miss
+[1m0x51[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L2-Cache read count
+[1m0x60[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L1 I-Cache read miss
+[1m0x6a[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L2-Cache latency
+[1m0x70[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L1 D-Cache access, including non-cacheable requests
+[1m0x79[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L2-Cache read hit
+[1m0x7a[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L2-Cache read miss
+[1m0x7b[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L2-Cache eviction
+[1m0x83[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L1 D-Cache read beat
+[1m0x84[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L1 D-Cache write beat
+[1m0x8a[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L1 I-Cache read beat
+[1m0x2[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	I-TLB miss
+[1m0x5[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	D-TLB miss
+[1m0x6[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Data read executed
+[1m0x7[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Data write executed
+[1m0x44[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	MMU bus request
+[1m0x4c[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Data write access
+[1m0x4d[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Data read access
+[1m0x61[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	I-TLB main MMU miss
+[1m0x65[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	MMU read beat
+[1m0x71[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	D-TLB main MMU miss
+[1m0x78[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	BIU simultaneous access
+[1m0x80[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	TLB miss
+[1m0x87[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	BIU any access
+[1m0x88[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Main TLB miss caused by I-Cache
+[1m0x89[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Main TLB miss caused by D-Cache
+[1m0x8[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Instruction executed
+[1m0x9[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Exception taken
+[1m0xa[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Exception return
+[1m0xb[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Writes context ID register
+[1m0xf[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Unaligned access
+[1m0x11[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Cycle count
+[1m0x46[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Write buffer write latency
+[1m0x47[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Hold LDM/STM
+[1m0x48[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	No dual cflag
+[1m0x49[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	No dual register plus
+[1m0x4a[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Load/store ROB0 on hold
+[1m0x4b[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Load/store ROB1 on hold
+[1m0x4e[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	A2 stage stall
+[1m0x62[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Single issue
+[1m0x64[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	ROB full
+[1m0x66[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Write buffer write beat
+[1m0x67[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Dual issue
+[1m0x68[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	No dual raw
+[1m0x69[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Hold issue stage
+[1m0x74[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	A1 stage stall
+[1m0x77[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	No dual register file
+[1m0x82[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Write buffer full
+[1m0x85[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	No dual hardward
+[1m0x86[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	No dual multiple
+[1m0xc0[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	WMMX2 store FIFO full
+[1m0xc1[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	WMMX2 finish FIFO full
+[1m0xc2[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	WMMX2 instruction FIFO full
+[1m0xc3[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	WMMX2 instruction retired
+[1m0xc4[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	WMMX2 busy
+[1m0xc5[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	WMMX2 hold issue stage
+[1m0xc6[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	WMMX2 hold write back stage
+[1m0x75[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L0D read hit
+[1m0x76[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L0D write hit
+[1m0x14[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L1 I-Cache access
+[1m0x13[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Data memory access
+[1m0xf0[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L0 I-Cache line fill
+[1m0xf1[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	L0 I-Cache hit prefetch buffer
+[1m0xA0[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Total snoop requests
+[1m0xA1[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Total snoop requests which hit
+[1m0xA2[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Total snoop requests which hit a dirty line
+[1m0xA3[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Increments when there is a valid instruction in AG and the SCU presents a valid probe to the LSU
+[1m0xA4[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Snoop stalled because LD/ST cannot process
+[1m0xA5[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Snoop stalled due to WB hit
+[1m0xA6[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Data return cannot be accepted because load-store is processing snoop
+[1m0xA7[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Snoop queue active
+[1m0xAA[0m		PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	Snoop response is read but can't be sent because a previous snoop response has not been set
+[1m0xff000b0[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON dual issue from BP
+[1m0xff000b1[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON single issue from BP
+[1m0xff000b2[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON instruction buffer full
+[1m0xff000b3[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON no issue from BP
+[1m0xfe000b0[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON dual issue
+[1m0xfe000b1[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON single issue
+[1m0xfe000b2[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON issue stall
+[1m0xfe000b3[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON nothing in issue
+[1m0xfd000b0[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON ROB full stall
+[1m0xfd000b1[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON data hazard stall
+[1m0xfd000b2[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON EU conflict stall
+[1m0xfd000b3[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON issue stall
+[1m0xfc000b0[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON VFP MAC instruction conflict
+[1m0xfc000b1[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON LDST EU conflict
+[1m0xfc000b2[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON divider conflict
+[1m0xfc000b3[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON VFP multiply conflict
+[1m0xfb000b0[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON write/read system register stall
+[1m0xfb000b1[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON read NZCV flag stall
+[1m0xfb000b2[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON update system register stall
+[1m0xfb000b3[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON operand dependency hazard stall
+[1m0xfa000b0[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON dual retire
+[1m0xfa000b1[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON single retire
+[1m0xfa000b2[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON no retire (ROB is not empty)
+[1m0xfa000b3[0m	PMN0,PMN1,PMN2,PMN3,PMN4,PMN5	NEON VROB empty

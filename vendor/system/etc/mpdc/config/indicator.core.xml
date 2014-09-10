@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exp:Indicators xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exp="http://com.marvell.cpa"
+	xsi:schemaLocation="http://com.marvell.cpa target.xsd">
+	<Indicator name="Pipeline Flush Rate" type="ratio">
+		<Operator id="div" />
+		<Operand xsi:type="exp:EventExpression">
+			<Event name="Branch mispredicted or not predicted" group="Branch" />
+		</Operand>
+		<Operand xsi:type="exp:EventExpression">
+			<Event name="Instruction executed"/>
+		</Operand>
+	</Indicator>
+	<CompositeIndicator name="Pipeline Hold Latency" type="ratio">
+		<Indicator name="Hold LDM/STM Latency" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="Hold LDM/STM" group="Pipeline" />
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="Core clock tick" group="Core Clock" />
+			</Operand>
+		</Indicator>
+		<Indicator name="Write Back Latency" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="Write buffer write latency" group="Pipeline" />
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="Core clock tick" group="Core Clock" />
+			</Operand>
+		</Indicator>
+	</CompositeIndicator>
+	<CompositeIndicator name="Instruction Type" type="ratio">
+		<Indicator name="Thumb Inst." type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="Unaligned access" group="Misc." />
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="Instruction executed"/>
+			</Operand>
+		</Indicator>
+		<Indicator name="ARM Inst." type="ratio">
+			<Operator id="sub" />
+			<Operand xsi:type="exp:ConstantExpression">
+				<Constant value="1" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="div" />
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="Unaligned access" group="Misc." />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="Instruction executed"/>
+				</Operand>
+			</Operand>
+		</Indicator>
+	</CompositeIndicator>
+
+	<CompositeIndicator name="Issue Type Rate" type="ratio">
+		<Indicator name="Single issue" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="Single issue" group="Pipeline" />
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="Instruction executed"/>
+			</Operand>
+		</Indicator>
+		<Indicator name="Dual Issue" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="Dual issue" group="Pipeline" />
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="Instruction executed"/>
+			</Operand>
+		</Indicator>
+	</CompositeIndicator>
+	<CompositeIndicator name="Read/Write Instruction" type="ratio">
+		<Indicator name="Read Inst." type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="Data read executed" group="Memory" />
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="Instruction executed"/>
+			</Operand>
+		</Indicator>
+		<Indicator name="Write Inst." type="ratio">
+			<Operator id="div"></Operator>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="Data write executed" group="Memory" />
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="Instruction executed"/>
+			</Operand>
+		</Indicator>
+		<Indicator name="Other Inst." type="ratio">
+			<Operator id="sub" />
+			<Operand xsi:type="exp:ConstantExpression">
+				<Constant value="1.0" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="div" />
+				<Operand xsi:type="exp:CompositeExpression">
+					<Operator id="add" />
+					<Operand xsi:type="exp:EventExpression">
+						<Event name="Data read executed" group="Memory" />
+					</Operand>
+					<Operand xsi:type="exp:EventExpression">
+						<Event name="Data write executed" group="Memory" />
+					</Operand>
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="Instruction executed"/>
+				</Operand>
+			</Operand>
+		</Indicator>
+	</CompositeIndicator>
+	<CompositeIndicator name="ICache Access" type="ratio">
+		<Indicator name="I-Cache Miss" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="L1 I-Cache miss" group="Cache" />
+
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="Instruction executed"/>
+			</Operand>
+		</Indicator>
+		<Indicator name="I-Cache Hit" type="ratio">
+			<Operator id="sub" />
+			<Operand xsi:type="exp:ConstantExpression">
+				<Constant value="1.0" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="div" />
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="L1 I-Cache miss" group="Cache" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="Instruction executed"/>
+				</Operand>
+			</Operand>
+		</Indicator>
+	</CompositeIndicator>
+	<CompositeIndicator name="DCache Access" type="ratio">
+		<Indicator name="D-Cache Miss" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="L1 D-Cache miss" group="Cache" />
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="L1 D-Cache access" group="Cache" />
+			</Operand>
+		</Indicator>
+		<Indicator name="DCache Hit" type="ratio">
+			<Operator id="sub" />
+			<Operand xsi:type="exp:ConstantExpression">
+				<Constant value="1.0" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="div" />
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="L1 D-Cache miss" group="Cache" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="L1 D-Cache access" group="Cache" />
+				</Operand>
+			</Operand>
+		</Indicator>
+	</CompositeIndicator>
+	<CompositeIndicator name="L2 Cache Read" type="ratio">
+		<Indicator name="L2 Cache Read Miss" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="L2-Cache read miss" group="Cache" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="add" />
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="L2-Cache read miss" group="Cache" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="L2-Cache read hit" group="Cache" />
+				</Operand>
+			</Operand>
+		</Indicator>
+		<Indicator name="L2 Cache Read Hit" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="L2-Cache read hit" group="Cache" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="add" />
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="L2-Cache read miss" group="Cache" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="L2-Cache read hit" group="Cache" />
+				</Operand>
+			</Operand>
+		</Indicator>
+	</CompositeIndicator>
+	<CompositeIndicator name="L2 Cache Write" type="ratio">
+		<Indicator name="L2 Cache Write Miss" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="L2-Cache write miss" group="Cache" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="add" />
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="L2-Cache write hit" group="Cache"></Event>
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="L2-Cache write miss" group="Cache" />
+				</Operand>
+			</Operand>
+		</Indicator>
+		<Indicator name="L2 Cache Write Hit" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="L2-Cache write hit" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="add" />
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="L2-Cache write hit" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="L2-Cache write miss" />
+				</Operand>
+			</Operand>
+		</Indicator>
+	</CompositeIndicator>
+	<CompositeIndicator name="TLB Miss" type="ratio">
+		<Indicator name="I-TLB Miss" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="I-TLB miss" group="Memory" />
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="TLB miss" group="Memory" />
+			</Operand>
+		</Indicator>
+		<Indicator name="D-TLB Miss" type="ratio">
+			<Operator id="div"></Operator>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="D-TLB miss" group="Memory" />
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="TLB miss" group="Memory" />
+			</Operand>
+		</Indicator>
+	</CompositeIndicator>
+</exp:Indicators>

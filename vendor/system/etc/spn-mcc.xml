@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<spnOverrides version="1">
+    <spnOverride mcc="412"  spn="Afghanistan" idd="00" cc="93" />
+    <spnOverride mcc="603"  spn="Algeria" idd="00" cc="213" />
+    <spnOverride mcc="544"  spn="American Samoa" idd="011" cc="1" />
+    <spnOverride mcc="631"  spn="Angola" idd="00" cc="244" />
+    <spnOverride mcc="722"  spn="Argentina" idd="00" cc="54" />
+    <spnOverride mcc="283"  spn="Armenia" idd="00" cc="374" />
+    <spnOverride mcc="363"  spn="Aruba" idd="00" cc="297" />
+    <spnOverride mcc="505"  spn="Australia" idd="0011" cc="61" />
+    <spnOverride mcc="232"  spn="Austria" idd="00" cc="43" />
+    <spnOverride mcc="400"  spn="Azerbaijan" idd="00" cc="994" />
+    <spnOverride mcc="364"  spn="Bahamas" idd="011" cc="1" />
+    <spnOverride mcc="470"  spn="Bangladesh" idd="00" cc="880" />
+    <spnOverride mcc="342"  spn="Barbados" idd="011" cc="1" />
+    <spnOverride mcc="257"  spn="Belarus" idd="810" cc="375" />
+    <spnOverride mcc="702"  spn="Belize" idd="00" cc="501" />
+    <spnOverride mcc="616"  spn="Benin" idd="00" cc="229" />
+    <spnOverride mcc="350"  spn="Bermuda" idd="011" cc="1" />
+    <spnOverride mcc="652"  spn="Botswana" idd="00" cc="267" />
+    <spnOverride mcc="724"  spn="Brazil" idd="0015" cc="55" />
+    <spnOverride mcc="348"  spn="British Virgin Islands" idd="011" cc="1" />
+    <spnOverride mcc="284"  spn="Bulgaria" idd="00" cc="359" />
+    <spnOverride mcc="642"  spn="Burundi" idd="00" cc="257" />
+    <spnOverride mcc="456"  spn="Cambodia" idd="001" cc="855" />
+    <spnOverride mcc="624"  spn="Cameroon" idd="00" cc="237" />
+    <spnOverride mcc="302"  spn="Canada" idd="011" cc="1" />
+    <spnOverride mcc="346"  spn="Cayman Islands" idd="011" cc="1" />
+    <spnOverride mcc="730"  spn="Chile" idd="00" cc="56" />
+    <spnOverride mcc="460"  spn="China" idd="00" cc="86" />
+    <spnOverride mcc="732"  spn="Colombia" idd="009" cc="57" />
+    <spnOverride mcc="612"  spn="Cote D'Ivore" idd="00" cc="225" />
+    <spnOverride mcc="901"  spn="Cruise Ship-MCP" idd="00" cc="875" />
+    <spnOverride mcc="274"  spn="Cruise Ship-On Waves" idd="00" cc="875" />
+    <spnOverride mcc="230"  spn="Czech republic" idd="00" cc="420" />
+    <spnOverride mcc="238"  spn="Demark" idd="00" cc="45" />
+    <spnOverride mcc="370"  spn="Dominica Republic" idd="011" cc="1" />
+    <spnOverride mcc="740"  spn="Ecuador" idd="00" cc="593" />
+    <spnOverride mcc="602"  spn="Egypt" idd="00" cc="20" />
+    <spnOverride mcc="706"  spn="El Salvador" idd="00" cc="503" />
+    <spnOverride mcc="248"  spn="Estonia" idd="00" cc="372" />
+    <spnOverride mcc="636"  spn="Ethiopia" idd="00" cc="251" />
+    <spnOverride mcc="542"  spn="Fiji" idd="00" cc="679" />
+    <spnOverride mcc="244"  spn="Finalnd" idd="00" cc="358" />
+    <spnOverride mcc="607"  spn="Gambia" idd="00" cc="220" />
+    <spnOverride mcc="282"  spn="Georgia" idd="810" cc="995" />
+    <spnOverride mcc="620"  spn="Ghana" idd="00" cc="233" />
+    <spnOverride mcc="535"  spn="Guam" idd="011" cc="1" />
+    <spnOverride mcc="704"  spn="Guatemala" idd="00" cc="502" />
+    <spnOverride mcc="372"  spn="Haiti" idd="00" cc="509" />
+    <spnOverride mcc="708"  spn="Honduras" idd="00" cc="504" />
+    <spnOverride mcc="454"  spn="Hong Kong" idd="001" cc="852" />
+    <spnOverride mcc="274"  spn="Iceland" idd="00" cc="354" />
+    <spnOverride mcc="404"  spn="India" idd="00" cc="91" />
+    <spnOverride mcc="510"  spn="Indonesia" idd="001" cc="62" />
+    <spnOverride mcc="418"  spn="Iraq" idd="00" cc="964" />
+    <spnOverride mcc="272"  spn="Ireland" idd="00" cc="353" />
+    <spnOverride mcc="425"  spn="Israel" idd="00" cc="972" />
+    <spnOverride mcc="338"  spn="Jamaica" idd="011" cc="1" />
+    <spnOverride mcc="440"  spn="Japan" idd="001" cc="81" />
+    <spnOverride mcc="401"  spn="Kazakhstan" idd="810" cc="7" />
+    <spnOverride mcc="639"  spn="Kenya" idd="000" cc="254" />
+    <spnOverride mcc="450"  spn="Korea" idd="001" cc="82" />
+    <spnOverride mcc="419"  spn="Kuwait" idd="00" cc="965" />
+    <spnOverride mcc="437"  spn="Kyrgyz Republic" idd="00" cc="996" />
+    <spnOverride mcc="457"  spn="Laos" idd="00" cc="856" />
+    <spnOverride mcc="247"  spn="Latvia" idd="00" cc="371" />
+    <spnOverride mcc="455"  spn="Macao" idd="00" cc="853" />
+    <spnOverride mcc="646"  spn="Madagascar" idd="00" cc="261" />
+    <spnOverride mcc="502"  spn="Malaysia" idd="00" cc="60" />
+    <spnOverride mcc="610"  spn="Mail Republic" idd="00" cc="223" />
+    <spnOverride mcc="609"  spn="Maruitania" idd="00" cc="222" />
+    <spnOverride mcc="617"  spn="Mauritius" idd="020" cc="230" />
+    <spnOverride mcc="334"  spn="Mexico" idd="00" cc="52" />
+    <spnOverride mcc="259"  spn="Moldova" idd="00" cc="373" />
+    <spnOverride mcc="428"  spn="Mongolia" idd="001" cc="976" />
+    <spnOverride mcc="604"  spn="Morocco" idd="00" cc="212" />
+    <spnOverride mcc="634"  spn="Mozambique" idd="00" cc="258" />
+    <spnOverride mcc="414"  spn="Myanmar" idd="00" cc="95" />
+    <spnOverride mcc="649"  spn="Namibia" idd="00" cc="264" />
+    <spnOverride mcc="429"  spn="Nepal" idd="00" cc="977" />
+    <spnOverride mcc="362"  spn="Netherlands Antilles" idd="00" cc="599" />
+    <spnOverride mcc="530"  spn="New Zealand" idd="00" cc="64" />
+    <spnOverride mcc="710"  spn="Nicaragua" idd="00" cc="505" />
+    <spnOverride mcc="614"  spn="Niger" idd="00" cc="227" />
+    <spnOverride mcc="621"  spn="Nigeria" idd="009" cc="234" />
+    <spnOverride mcc="534"  spn="Northern Marianas" idd="011" cc="1" />
+    <spnOverride mcc="242"  spn="Norway" idd="00" cc="47" />
+    <spnOverride mcc="422"  spn="Oman" idd="00" cc="968" />
+    <spnOverride mcc="410"  spn="Pakistan" idd="00" cc="92" />
+    <spnOverride mcc="714"  spn="Panama" idd="00" cc="507" />
+    <spnOverride mcc="716"  spn="Peru" idd="00" cc="51" />
+    <spnOverride mcc="515"  spn="Philippines" idd="00" cc="63" />
+    <spnOverride mcc="260"  spn="Poland" idd="00" cc="48" />
+    <spnOverride mcc="268"  spn="Portugal" idd="00" cc="351" />
+    <spnOverride mcc="330"  spn="Puerto Rico" idd="011" cc="1" />
+    <spnOverride mcc="226"  spn="Romania" idd="00" cc="40" />
+    <spnOverride mcc="250"  spn="Russia" idd="810" cc="7" />
+    <spnOverride mcc="635"  spn="Rwanda" idd="00" cc="250" />
+    <spnOverride mcc="420"  spn="Saudi Arabia" idd="00" cc="966" />
+    <spnOverride mcc="608"  spn="Senegal" idd="00" cc="221" />
+    <spnOverride mcc="619"  spn="Sierra Leone" idd="00" cc="232" />
+    <spnOverride mcc="655"  spn="South Africa" idd="00" cc="27" />
+    <spnOverride mcc="413"  spn="Sri Lanka" idd="00" cc="94" />
+    <spnOverride mcc="356"  spn="St. Kitts" idd="011" cc="1" />
+    <spnOverride mcc="358"  spn="St. Lucia" idd="011" cc="1" />
+    <spnOverride mcc="634"  spn="Sudan" idd="00" cc="249" />
+    <spnOverride mcc="746"  spn="Sriname" idd="00" cc="597" />
+    <spnOverride mcc="240"  spn="Sweden" idd="00" cc="46" />
+    <spnOverride mcc="466"  spn="Taiwan" idd="002" cc="886" />
+    <spnOverride mcc="436"  spn="Tajikistan" idd="810" cc="992" />
+    <spnOverride mcc="640"  spn="Tanzania" idd="000" cc="255" />
+    <spnOverride mcc="520"  spn="Thailand" idd="001" cc="66" />
+    <spnOverride mcc="615"  spn="Togolese Republic" idd="00" cc="228" />
+    <spnOverride mcc="374"  spn="Trinidad" idd="011" cc="1" />
+    <spnOverride mcc="376"  spn="Turk and Caicos" idd="011" cc="1" />
+    <spnOverride mcc="438"  spn="Turkmenistan" idd="810" cc="993" />
+    <spnOverride mcc="641"  spn="Uganda" idd="000" cc="256" />
+    <spnOverride mcc="255"  spn="Ukranie" idd="810" cc="380" />
+    <spnOverride mcc="748"  spn="Uruguay" idd="00" cc="598" />
+    <spnOverride mcc="332"  spn="USA Virgin Islands" idd="011" cc="1" />
+    <spnOverride mcc="310"  spn="USA" idd="011" cc="1" />
+    <spnOverride mcc="311"  spn="USA" idd="011" cc="1" />
+    <spnOverride mcc="312"  spn="USA" idd="011" cc="1" />
+    <spnOverride mcc="313"  spn="USA" idd="011" cc="1" />
+    <spnOverride mcc="314"  spn="USA" idd="011" cc="1" />
+    <spnOverride mcc="315"  spn="USA" idd="011" cc="1" />
+    <spnOverride mcc="316"  spn="USA" idd="011" cc="1" />
+    <spnOverride mcc="434"  spn="Uzbekistan" idd="810" cc="998" />
+    <spnOverride mcc="734"  spn="Venezuela" idd="00" cc="58" />
+    <spnOverride mcc="452"  spn="Vietnam" idd="00" cc="84" />
+    <spnOverride mcc="421"  spn="Yemen" idd="00" cc="967" />
+    <spnOverride mcc="630"  spn="Zaire" idd="00" cc="243" />
+    <spnOverride mcc="645"  spn="Zambia" idd="00" cc="260" />
+    <spnOverride mcc="648"  spn="Zambabwe" idd="00" cc="263" />  
+</spnOverrides>    

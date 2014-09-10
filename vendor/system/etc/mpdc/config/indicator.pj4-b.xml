@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exp:Indicators xmlns:exp="http://com.marvell.cpa" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.marvell.cpa target.xsd ">
+	<Indicator name="Instructions Per Cycle" type="numeric">
+		<Operator id="div" />
+		<Operand xsi:type="exp:EventExpression">
+			<Event name="Instruction executed" />
+		</Operand>
+		<Operand xsi:type="exp:EventExpression">
+			<Event name="Cycle count" group="Misc."></Event>
+		</Operand>
+	</Indicator>
+	<Indicator name="Branch Prediction Accuracy" type="ratio">
+		<Operator id="sub"/>
+			<Operand xsi:type="exp:ConstantExpression">
+				<Constant value="1.0"/>
+			</Operand>
+		<Operand xsi:type="exp:CompositeExpression">
+			<Operator id="div"/>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="Branch mispredicted or not predicted" group="Branch"/>
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="Branch executed"  group="Branch"/>
+			</Operand>
+		</Operand>
+	</Indicator>
+	<Indicator name="Instruction Mini-TLB Hit Rate" type="ratio">
+		<Operator id="sub"/>
+		<Operand xsi:type="exp:ConstantExpression">
+			<Constant value="1.0"/>
+		</Operand>
+		<Operand xsi:type="exp:CompositeExpression">
+			<Operator id="div"/>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="I-TLB miss"/>
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="L1 I-Cache access"/>
+			</Operand>
+		</Operand>
+	</Indicator>
+	<Indicator name="Data Mini-TLB Hit Rate" type="ratio">
+		<Operator id="sub"/>
+		<Operand xsi:type="exp:ConstantExpression">
+			<Constant value="1.0"/>
+		</Operand>
+		<Operand xsi:type="exp:CompositeExpression">
+			<Operator id="div"/>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="D-TLB miss"/>
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="Data memory access"/>
+			</Operand>
+		</Operand>
+	</Indicator>
+	<Indicator name="Main TLB Instruction Hit Rate" type="ratio">
+		<Operator id="sub"/>
+			<Operand xsi:type="exp:ConstantExpression">
+				<Constant value="1.0"/>
+			</Operand>
+		<Operand xsi:type="exp:CompositeExpression">
+			<Operator id="div"/>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="Main TLB miss caused by I-Cache" group="Memory"/>
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="I-TLB miss"  group="Memory"/>
+			</Operand>
+		</Operand>
+	</Indicator>
+	<Indicator name="Main TLB Data Hit Rate" type="ratio">
+		<Operator id="sub"/>
+			<Operand xsi:type="exp:ConstantExpression">
+				<Constant value="1.0"/>
+			</Operand>
+		<Operand xsi:type="exp:CompositeExpression">
+			<Operator id="div"/>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="Main TLB miss caused by D-Cache" group="Memory"/>
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="D-TLB miss"  group="Memory"/>
+			</Operand>
+		</Operand>
+	</Indicator>
+	<Indicator name="L0+L1 Instruction Cache Hit Rate" type="ratio">
+		<Operator id="sub"/>
+			<Operand xsi:type="exp:ConstantExpression">
+				<Constant value="1.0"/>
+			</Operand>
+		<Operand xsi:type="exp:CompositeExpression">
+			<Operator id="div"/>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="L1 I-Cache miss" group="Cache"/>
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="L1 I-Cache access"  group="Cache"/>
+			</Operand>
+		</Operand>
+	</Indicator>
+	<Indicator name="L0+L1 Data Cache Hit Rate" type="ratio">
+		<Operator id="sub"/>
+			<Operand xsi:type="exp:ConstantExpression">
+				<Constant value="1.0"/>
+			</Operand>
+		<Operand xsi:type="exp:CompositeExpression">
+			<Operator id="div"/>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="L1 D-Cache miss" group="Cache"/>
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="L1 D-Cache access"  group="Cache"/>
+			</Operand>
+		</Operand>
+	</Indicator>
+	<Indicator name="L0 Instruction Cache Hit Rate" type="ratio">
+		<Operator id="sub"/>
+			<Operand xsi:type="exp:ConstantExpression">
+				<Constant value="1.0"/>
+			</Operand>
+		<Operand xsi:type="exp:CompositeExpression">
+			<Operator id="div"/>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="L0 I-Cache line fill" group="Cache"/>
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="L1 I-Cache access"  group="Cache"/>
+			</Operand>
+		</Operand>
+	</Indicator>	
+	<Indicator name="L0 Data Cache Hit Rate" type="ratio">
+		<Operator id="div"/>
+		<Operand xsi:type="exp:CompositeExpression">
+			<Operator id="add"/>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="L0D read hit"/>
+			</Operand>
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="L0D write hit"/>
+			</Operand>
+		</Operand>
+		<Operand xsi:type="exp:EventExpression">
+			<Event name="L1 D-Cache access"/>
+		</Operand>
+	</Indicator>
+	<Indicator name="L0 Data Cache Read Hit Rate" type="ratio">
+		<Operator id="div" />
+		<Operand xsi:type="exp:EventExpression">
+			<Event name="L0D read hit" />
+		</Operand>
+		<Operand xsi:type="exp:EventExpression">
+			<Event name="Data read access"></Event>
+		</Operand>
+	</Indicator>
+	<Indicator name="L0 Data Cache Write Hit Rate" type="ratio">
+		<Operator id="div" />
+		<Operand xsi:type="exp:EventExpression">
+			<Event name="L0D write hit" />
+		</Operand>
+		<Operand xsi:type="exp:EventExpression">
+			<Event name="Data write access"></Event>
+		</Operand>
+	</Indicator>
+	<CompositeIndicator name="No Dual Issue Reason" type="ratio">
+		<Indicator name="By cflag" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="No dual cflag" group="Pipeline" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="acc" />
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual cflag" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual register plus" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual register file" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual hardward" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual multiple" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual raw" group="Pipeline" />
+				</Operand>
+			</Operand>
+		</Indicator>
+		<Indicator name="By Register Plus" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="No dual register plus" group="Pipeline" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="acc" />
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual cflag" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual register plus" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual register file" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual hardward" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual multiple" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual raw" group="Pipeline" />
+				</Operand>
+			</Operand>
+		</Indicator>
+		<Indicator name="By Register File" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="No dual register file" group="Pipeline" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="acc" />
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual cflag" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual register plus" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual register file" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual hardward" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual multiple" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual raw" group="Pipeline" />
+				</Operand>
+			</Operand>
+		</Indicator>
+		<Indicator name="By Hardward" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="No dual hardward" group="Pipeline" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="acc" />
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual cflag" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual register plus" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual register file" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual hardward" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual multiple" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual raw" group="Pipeline" />
+				</Operand>
+			</Operand>
+		</Indicator>
+		<Indicator name="By Multiple" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="No dual multiple" group="Pipeline" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="acc" />
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual cflag" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual register plus" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual register file" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual hardward" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual multiple" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual raw" group="Pipeline" />
+				</Operand>
+			</Operand>
+		</Indicator>
+		<Indicator name="By Raw" type="ratio">
+			<Operator id="div" />
+			<Operand xsi:type="exp:EventExpression">
+				<Event name="No dual raw" group="Pipeline" />
+			</Operand>
+			<Operand xsi:type="exp:CompositeExpression">
+				<Operator id="acc" />
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual cflag" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual register plus" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual register file" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual hardward" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual multiple" group="Pipeline" />
+				</Operand>
+				<Operand xsi:type="exp:EventExpression">
+					<Event name="No dual raw" group="Pipeline" />
+				</Operand>
+			</Operand>
+		</Indicator>
+	</CompositeIndicator>
+</exp:Indicators>
