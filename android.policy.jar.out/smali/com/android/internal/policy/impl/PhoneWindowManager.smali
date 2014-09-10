@@ -13689,8 +13689,10 @@
     .parameter "policyFlags"
 
     .prologue
+    .line 4521
     const/4 v1, 0x0
 
+    .line 4523
     .local v1, result:I
     and-int/lit8 v2, p1, 0x3
 
@@ -13698,10 +13700,12 @@
 
     const/4 v0, 0x1
 
+    .line 4525
     .local v0, isWakeMotion:Z
     :goto_0
     if-eqz v0, :cond_0
 
+    .line 4526
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mKeyguardMediator:Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;
 
     if-eqz v2, :cond_2
@@ -13714,20 +13718,24 @@
 
     if-eqz v2, :cond_2
 
+    .line 4528
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mKeyguardMediator:Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;
 
     invoke-virtual {v2}, Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;->onWakeMotionWhenKeyguardShowingTq()V
 
+    .line 4534
     :cond_0
     :goto_1
     return v1
 
+    .line 4523
     .end local v0           #isWakeMotion:Z
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
+    .line 4531
     .restart local v0       #isWakeMotion:Z
     :cond_2
     or-int/lit8 v1, v1, 0x2
@@ -13741,6 +13749,7 @@
     .prologue
     const/4 v0, 0x0
 
+    .line 986
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -13765,6 +13774,7 @@
     .locals 3
 
     .prologue
+    .line 3939
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
 
     const-string v2, "audio"
@@ -13775,17 +13785,21 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
+    .line 3940
     .local v0, am:Landroid/media/AudioManager;
     if-nez v0, :cond_0
 
+    .line 3941
     const-string v1, "PhoneWindowManager"
 
     const-string v2, "isFMActive: couldn\'t get AudioManager reference"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 3942
     const/4 v1, 0x0
 
+    .line 3944
     :goto_0
     return v1
 
@@ -13801,6 +13815,7 @@
     .locals 1
 
     .prologue
+    .line 4798
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->keyguardOn()Z
 
     move-result v0
@@ -13812,12 +13827,14 @@
     .locals 1
 
     .prologue
+    .line 4803
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mKeyguardMediator:Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
+    .line 4804
     :goto_0
     return v0
 
@@ -13835,6 +13852,7 @@
     .locals 3
 
     .prologue
+    .line 3927
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
 
     const-string v2, "audio"
@@ -16382,6 +16400,7 @@
 
     goto :goto_4
 
+    .line 4164
     .line 4164
     nop
 
