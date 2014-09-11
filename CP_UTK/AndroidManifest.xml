@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:sharedUserId="android.uid.phone" android:versionCode="401816" android:versionName="4.01.816_VER_2013.11.04_09:05:47" package="com.yulong.android.cp_utk"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <original-package android:name="com.yulong.android.cp_utk" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <application android:label="@string/app_usat" android:icon="@drawable/ic_launcher_sim" android:process="com.android.phone" android:clearTaskOnLaunch="true">
+        <activity android:theme="@style/Transparent" android:label="@string/app_usat" android:icon="@drawable/ic_launcher_sim" android:name="UtkLauncherActivity" android:enabled="true" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="UtkMenuActivity" android:launchMode="singleTop" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.PICK" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="UtkInputActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.EDIT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.Dialog" android:name="UtkDialogActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@*android:style/Theme.Dialog" android:name="ToneDialog" android:screenOrientation="portrait" />
+        <receiver android:name="com.yulong.android.cp_utk.UtkCmdReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.stk.command" />
+                <action android:name="android.intent.action.stk.session_end" />
+                <action android:name="android.intent.action.stk.browser_terminate_action" />
+                <action android:name="android.intent.action.stk.idle_screen" />
+                <action android:name="android.intent.action.stk.icc_status_change" />
+                <action android:name="android.intent.action.LOCALE_CHANGED" />
+                <action android:name="android.intent.action.stk.alpha_notify" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.yulong.android.cp_utk.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <service android:name="UtkAppService" />
+    </application>
+</manifest>

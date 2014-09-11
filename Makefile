@@ -58,17 +58,17 @@ vendor_modify_images := boot
 ##############################################################################
 # Directorys which you want to remove in vendor directory
 #-----------------------------------------------------------------------------
-#vendor_remove_dirs := app vendor/operator/app backup_apps media/video media/theme
+vendor_remove_dirs := app presetapp
 
 ##############################################################################
 # Files which you want to remove in vendor directory
 #-----------------------------------------------------------------------------
-#vendor_remove_files := bin/shutdownanimation
+vendor_remove_files := media/bootanimation-excepted.zip media/bootanimation-excepted1.zip media/audio/ui/off.mp3 media/audio/ui/on.mp3 media/audio/ui/on-off.mp3
 
 ##############################################################################
 # Vendor apks you want to use
 #-----------------------------------------------------------------------------
-vendor_saved_apps := Bluetooth CP_BluetoothSetting CP_BtPbapClient CP_FMRadio
+vendor_saved_apps := Bluetooth CP_BluetoothSetting
 
 ##############################################################################
 # Apks build from current project root directory
@@ -86,7 +86,7 @@ vendor_saved_apps := Bluetooth CP_BluetoothSetting CP_BtPbapClient CP_FMRadio
 # you need decode FMRadio.apk to the project directory (use apktool d FMRadio.apk) first
 # then you can make it by:   make FMRadio
 #-----------------------------------------------------------------------------
-#vendor_modify_apps := ZFM Gallery2
+vendor_modify_apps := CP_FMRadio
 
 ##############################################################################
 # Jars build from current project root directory

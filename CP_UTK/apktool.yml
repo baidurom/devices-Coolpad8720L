@@ -1,0 +1,12 @@
+version: 1.5.2
+apkFileName: CP_UTK.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: '10'
+packageInfo:
+  cur_package: com.yulong.android.cp_utk
+  orig_package: com.yulong.android.cp_utk
+compressionType: false

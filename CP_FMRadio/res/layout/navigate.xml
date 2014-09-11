@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/presets_upper_layout" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginBottom="1.0dip">
+        <Button android:textSize="16.0sp" android:gravity="center" android:id="@id/ch_1" android:background="@drawable/add_default" android:layout_width="194.0dip" android:layout_height="58.0dip" android:singleLine="true" android:layout_x="14.0dip" android:layout_y="758.0dip" android:layout_weight="1.0" />
+        <Button android:textSize="16.0sp" android:gravity="center" android:id="@id/ch_2" android:background="@drawable/add_default" android:layout_width="194.0dip" android:layout_height="58.0dip" android:singleLine="true" android:layout_x="165.0dip" android:layout_y="758.0dip" android:layout_weight="1.0" />
+        <Button android:textSize="16.0sp" android:gravity="center" android:id="@id/ch_3" android:background="@drawable/add_default" android:layout_width="194.0dip" android:layout_height="58.0dip" android:singleLine="true" android:layout_x="316.0dip" android:layout_y="758.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/presets_lower_layout" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginBottom="1.0dip">
+        <Button android:textSize="16.0sp" android:id="@id/ch_4" android:background="@drawable/add_default" android:layout_width="194.0dip" android:layout_height="58.0dip" android:singleLine="true" android:layout_x="14.0dip" android:layout_y="853.0dip" android:layout_weight="1.0" />
+        <Button android:textSize="16.0sp" android:id="@id/ch_5" android:background="@drawable/add_default" android:layout_width="194.0dip" android:layout_height="58.0dip" android:singleLine="true" android:layout_x="165.0dip" android:layout_y="853.0dip" android:layout_weight="1.0" />
+        <Button android:textSize="16.0sp" android:id="@id/ch_6" android:background="@drawable/add_default" android:layout_width="194.0dip" android:layout_height="58.0dip" android:singleLine="true" android:layout_x="316.0dip" android:layout_y="853.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+</merge>

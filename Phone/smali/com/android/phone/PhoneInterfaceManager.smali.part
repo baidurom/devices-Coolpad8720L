@@ -100,3 +100,1915 @@
 
     return v0
 .end method
+
+.method public answerDualRingingCall(I)V
+    .locals 0
+    .parameter "arg0"
+
+    .prologue
+    .line 1517
+    return-void
+.end method
+
+.method public callDual(Ljava/lang/String;Ljava/lang/String;I)V
+    .locals 0
+    .parameter "callingPackage"
+    .parameter "number"
+    .parameter "phoneId"
+
+    .prologue
+    
+    return-void
+.end method
+
+.method public cancelDualMissedCallsNotification(I)V
+    .locals 0
+    .parameter "arg0"
+
+    .prologue
+    .line 1589
+    return-void
+.end method
+
+.method public clearPrlOrPlmn(I)I
+    .locals 4
+    .parameter "itemType"
+
+    .prologue
+    .line 3277
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "clearPrlOrPlmn, itemType: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {p0, v1}, Lcom/android/phone/PhoneInterfaceManager;->log(Ljava/lang/String;)V
+
+    .line 3278
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 3279
+    .local v0, inData:Landroid/os/Bundle;
+    const-string v1, "IN_DATA1"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    .line 3280
+    iget-object v1, p0, Lcom/android/phone/PhoneInterfaceManager;->commInterface:Lcom/android/phone/PhoneInterfaceManager$CommInterface;
+
+    if-nez v1, :cond_0
+
+    .line 3281
+    new-instance v1, Lcom/android/phone/PhoneInterfaceManager$CommInterface;
+
+    invoke-direct {v1, p0}, Lcom/android/phone/PhoneInterfaceManager$CommInterface;-><init>(Lcom/android/phone/PhoneInterfaceManager;)V
+
+    iput-object v1, p0, Lcom/android/phone/PhoneInterfaceManager;->commInterface:Lcom/android/phone/PhoneInterfaceManager$CommInterface;
+
+    .line 3282
+    iget-object v1, p0, Lcom/android/phone/PhoneInterfaceManager;->commInterface:Lcom/android/phone/PhoneInterfaceManager$CommInterface;
+
+    invoke-virtual {v1}, Ljava/lang/Thread;->start()V
+
+    .line 3284
+    :cond_0
+    iget-object v1, p0, Lcom/android/phone/PhoneInterfaceManager;->commInterface:Lcom/android/phone/PhoneInterfaceManager$CommInterface;
+
+    const/16 v2, 0x35
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v0, v3}, Lcom/android/phone/PhoneInterfaceManager$CommInterface;->requestCommData(ILandroid/os/Bundle;Landroid/os/Bundle;)I
+
+    move-result v1
+
+    return v1
+.end method
+
+.method public closeIccLogicalChannel(I)Z
+    .locals 3
+    .parameter "channel"
+
+    .prologue
+    .line 3163
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "> closeIccLogicalChannel "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {p0, v1}, Lcom/android/phone/PhoneInterfaceManager;->log(Ljava/lang/String;)V
+
+    .line 3164
+    const/16 v1, 0x1f
+
+    new-instance v2, Ljava/lang/Integer;
+
+    invoke-direct {v2, p1}, Ljava/lang/Integer;-><init>(I)V
+
+    invoke-direct {p0, v1, v2}, Lcom/android/phone/PhoneInterfaceManager;->sendRequest(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    .line 3165
+    .local v0, err:Ljava/lang/Integer;
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "< closeIccLogicalChannel "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {p0, v1}, Lcom/android/phone/PhoneInterfaceManager;->log(Ljava/lang/String;)V
+
+    .line 3166
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 3167
+    const/4 v1, 0x1
+
+    .line 3168
+    :goto_0
+    return v1
+
+    :cond_0
+    const/4 v1, 0x0
+
+    goto :goto_0
+.end method
+
+.method public cwControl(ILjava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Z
+    .locals 7
+    .parameter "ioCode"
+    .parameter "inStr1"
+    .parameter "inStr2"
+    .parameter "outStr1"
+    .parameter "outStr2"
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 1609
+    const/4 v6, 0x1
+
+    .line 1610
+    .local v6, bRet:Z
+    packed-switch p1, :pswitch_data_0
+
+    .line 1639
+    .end local v6           #bRet:Z
+    :goto_0
+    return v6
+
+    .line 1612
+    .restart local v6       #bRet:Z
+    :pswitch_0
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getSubscriberId()Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, p4, v1
+
+    goto :goto_0
+
+    .line 1615
+    :pswitch_1
+    const/4 v0, 0x3
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, p4, v1
+
+    goto :goto_0
+
+    .line 1618
+    :pswitch_2
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getEsn()Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, p4, v1
+
+    .line 1619
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getCdmaUimId()Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, p5, v1
+
+    goto :goto_0
+
+    .line 1627
+    :pswitch_3
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "[commonRilRequestOp] commandId ="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/phone/PhoneInterfaceManager;->logDBG(Ljava/lang/String;)V
+
+    .line 1628
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->commInterface:Lcom/android/phone/PhoneInterfaceManager$CommInterface;
+
+    if-nez v0, :cond_0
+
+    .line 1629
+    new-instance v0, Lcom/android/phone/PhoneInterfaceManager$CommInterface;
+
+    invoke-direct {v0, p0}, Lcom/android/phone/PhoneInterfaceManager$CommInterface;-><init>(Lcom/android/phone/PhoneInterfaceManager;)V
+
+    iput-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->commInterface:Lcom/android/phone/PhoneInterfaceManager$CommInterface;
+
+    .line 1630
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->commInterface:Lcom/android/phone/PhoneInterfaceManager$CommInterface;
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+
+    .line 1632
+    :cond_0
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->commInterface:Lcom/android/phone/PhoneInterfaceManager$CommInterface;
+
+    move v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    move-object v5, p5
+
+    invoke-virtual/range {v0 .. v5}, Lcom/android/phone/PhoneInterfaceManager$CommInterface;->requestCPlusWComm(ILjava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Z
+
+    move-result v6
+
+    goto :goto_0
+
+    .line 1610
+    :pswitch_data_0
+    .packed-switch 0x64
+        :pswitch_0
+        :pswitch_1
+        :pswitch_3
+        :pswitch_3
+        :pswitch_3
+        :pswitch_2
+        :pswitch_3
+        :pswitch_3
+        :pswitch_3
+    .end packed-switch
+.end method
+
+.method private static logDBG(Ljava/lang/String;)V
+    .locals 1
+    .parameter "msg"
+
+    .prologue
+    .line 2943
+    const-string v0, "PhoneInterfaceManager"
+
+    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 2945
+    return-void
+.end method
+
+.method private loge(Ljava/lang/String;)V
+    .locals 3
+    .parameter "msg"
+
+    .prologue
+    .line 1407
+    const-string v0, "PhoneInterfaceManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "[PhoneIntfMgr] "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1408
+    return-void
+.end method
+
+.method public dialDual(Ljava/lang/String;I)V
+    .locals 0
+    .parameter "arg0"
+    .parameter "arg1"
+
+    .prologue
+    .line 1645
+    return-void
+.end method
+
+.method public disableDualApnType(Ljava/lang/String;I)I
+    .locals 1
+    .parameter "arg0"
+    .parameter "arg1"
+
+    .prologue
+    .line 1673
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public disableDualDataConnectivity(I)Z
+    .locals 1
+    .parameter "arg0"
+
+    .prologue
+    .line 1678
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public disableDualLocationUpdates(I)V
+    .locals 0
+    .parameter "arg0"
+
+    .prologue
+    .line 1684
+    return-void
+.end method
+
+.method public disableDualLocationUpdatesBySlotId(I)V
+    .locals 0
+    .parameter "arg0"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3291
+    return-void
+.end method
+
+.method public disableQos(I)I
+    .locals 1
+    .parameter "qosId"
+
+    .prologue
+    .line 1125
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0, p1}, Lcom/android/internal/telephony/Phone;->disableQos(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public enableDualApnType(Ljava/lang/String;I)I
+    .locals 1
+    .parameter "arg0"
+    .parameter "arg1"
+
+    .prologue
+    .line 1702
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public enableDualDataConnectivity(I)Z
+    .locals 1
+    .parameter "arg0"
+
+    .prologue
+    .line 1707
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public enableDualLocationUpdates(I)V
+    .locals 0
+    .parameter "arg0"
+
+    .prologue
+    .line 1713
+    return-void
+.end method
+
+.method public enableDualLocationUpdatesBySlotId(I)V
+    .locals 0
+    .parameter "arg0"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3297
+    return-void
+.end method
+
+.method public enableQos(Lcom/android/internal/telephony/QosSpec;Ljava/lang/String;)I
+    .locals 1
+    .parameter "qosSpec"
+    .parameter "type"
+
+    .prologue
+    .line 1121
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0, p1, p2}, Lcom/android/internal/telephony/Phone;->enableQos(Lcom/android/internal/telephony/QosSpec;Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public endDualCall(I)Z
+    .locals 1
+    .parameter "arg0"
+
+    .prologue
+    .line 1729
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public execRuimEsnOp(Z)Ljava/lang/String;
+    .locals 6
+    .parameter "arg0"
+
+    .prologue
+    .line 1734
+    new-instance v2, Ljava/lang/String;
+
+    const-string v3, ""
+
+    invoke-direct {v2, v3}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    .line 1736
+    .local v2, esn:Ljava/lang/String;
+    const/16 v3, 0x9
+
+    .line 1737
+    :try_start_0
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    .line 1736
+    invoke-direct {p0, v3, v4}, Lcom/android/phone/PhoneInterfaceManager;->sendRequest(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    move-object v0, v3
+
+    check-cast v0, Ljava/lang/String;
+
+    move-object v2, v0
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 1741
+    :goto_0
+    return-object v2
+
+    .line 1738
+    :catch_0
+    move-exception v1
+
+    .line 1739
+    .local v1, e:Ljava/lang/RuntimeException;
+    const-string v3, "CP_Phone"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "PhoneInterfaceManager:[execRuimEsnOp] "
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+.end method
+
+.method public getAtr()Ljava/lang/String;
+    .locals 3
+
+    .prologue
+    .line 3200
+    const-string v1, "> getAtr"
+
+    invoke-direct {p0, v1}, Lcom/android/phone/PhoneInterfaceManager;->log(Ljava/lang/String;)V
+
+    .line 3201
+    const/16 v1, 0x25
+
+    const/4 v2, 0x0
+
+    invoke-direct {p0, v1, v2}, Lcom/android/phone/PhoneInterfaceManager;->sendRequest(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    .line 3202
+    .local v0, atr:Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "< getAtr "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {p0, v1}, Lcom/android/phone/PhoneInterfaceManager;->log(Ljava/lang/String;)V
+
+    .line 3203
+    return-object v0
+.end method
+
+.method public getCdmaNeedsProvisioning()Z
+    .locals 4
+
+    .prologue
+    .line 1439
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->getActivePhoneType()I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    if-ne v2, v3, :cond_0
+
+    .line 1440
+    const/4 v1, 0x0
+
+    .line 1452
+    :goto_0
+    return v1
+
+    .line 1443
+    :cond_0
+    const/4 v1, 0x0
+
+    .line 1444
+    .local v1, needsProvisioning:Z
+    iget-object v2, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v2}, Lcom/android/internal/telephony/Phone;->getCdmaMin()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 1452
+    .local v0, cdmaMin:Ljava/lang/String;
+    goto :goto_0
+.end method
+
+.method public getDataNetworkType()I
+    .locals 1
+
+    .prologue
+    .line 1467
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getServiceState()Landroid/telephony/ServiceState;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/telephony/ServiceState;->getDataNetworkType()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getDualActivePhoneType(I)I
+    .locals 1
+    .parameter "mPhoneId"
+
+    .prologue
+    .line 2046
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getDualActivePhoneTypeBySlotId(I)I
+    .locals 1
+    .parameter "arg0"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3302
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getDualCallState(I)I
+    .locals 1
+    .parameter "arg0"
+
+    .prologue
+    .line 2055
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getDualCallStateBySlotId(I)I
+    .locals 1
+    .parameter "arg0"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3308
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getDualCellLocation(I)Landroid/os/Bundle;
+    .locals 1
+    .parameter "arg0"
+
+    .prologue
+    .line 2060
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getDualCellLocationBySlotId(I)Landroid/os/Bundle;
+    .locals 1
+    .parameter "arg0"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3314
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getDualDataActivity(I)I
+    .locals 1
+    .parameter "arg0"
+
+    .prologue
+    .line 2065
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getDualDataActivityBySlotId(I)I
+    .locals 1
+    .parameter "arg0"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3320
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getDualDataNetworkType(I)I
+    .locals 1
+    .parameter "arg0"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3375
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getDualDataNetworkTypeBySlotId(I)I
+    .locals 1
+    .parameter "arg0"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3381
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getDualDataState(I)I
+    .locals 1
+    .parameter "arg0"
+
+    .prologue
+    .line 2070
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getDualDataStateBySlotId(I)I
+    .locals 1
+    .parameter "arg0"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3326
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getDualNeighboringCellInfo(Ljava/lang/String;I)Ljava/util/List;
+    .locals 1
+    .parameter "arg0"
+    .parameter "arg1"
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "I)",
+            "Ljava/util/List",
+            "<",
+            "Landroid/telephony/NeighboringCellInfo;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 1289
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getDualNeighboringCellInfoBySlotId(Ljava/lang/String;I)Ljava/util/List;
+    .locals 1
+    .parameter "arg0"
+    .parameter "arg1"
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "I)",
+            "Ljava/util/List",
+            "<",
+            "Landroid/telephony/NeighboringCellInfo;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 1296
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getDualNetworkType(I)I
+    .locals 1
+    .parameter "arg0"
+
+    .prologue
+    .line 2075
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getDualNetworkTypeBySlotId(I)I
+    .locals 1
+    .parameter "arg0"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3332
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getDualPbTotalParamOnIcc(I)I
+    .locals 1
+    .parameter "arg0"
+
+    .prologue
+    .line 2080
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getDualPbTotalParamOnIccBySlotId(I)I
+    .locals 1
+    .parameter "arg0"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3338
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getDualSmsTotalParamOnIcc(I)I
+    .locals 1
+    .parameter "arg0"
+
+    .prologue
+    .line 2085
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getDualVoiceMessageCount(I)I
+    .locals 1
+    .parameter "arg0"
+
+    .prologue
+    .line 2090
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getDualVoiceMessageCountBySlotId(I)I
+    .locals 1
+    .parameter "arg0"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3344
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getDualVoiceNetworkType(I)I
+    .locals 1
+    .parameter "arg0"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3387
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getDualVoiceNetworkTypeBySlotId(I)I
+    .locals 1
+    .parameter "arg0"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3393
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getIccFdnEnabled(I)Z
+    .locals 1
+    .parameter "mPhoneId"
+
+    .prologue
+    .line 2952
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getIccCard()Lcom/android/internal/telephony/IccCard;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/IccCard;->getIccFdnEnabled()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getLastError()I
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getPbTotalParamOnIcc()I
+    .locals 1
+
+    .prologue
+    .line 2050
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getPbTotalParamOnIcc()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getPinPukValidCount(II)I
+    .locals 1
+    .parameter "pinType"
+    .parameter "phoneID"
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getQosStatus(I)I
+    .locals 1
+    .parameter "qosId"
+
+    .prologue
+    .line 1141
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0, p1}, Lcom/android/internal/telephony/Phone;->getQosStatus(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getSmsTotalParamOnIcc()I
+    .locals 1
+
+    .prologue
+    .line 2107
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getSmsTotalParamOnIcc()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getVoiceNetworkType()I
+    .locals 1
+
+    .prologue
+    .line 1482
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getServiceState()Landroid/telephony/ServiceState;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/telephony/ServiceState;->getVoiceNetworkType()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public handleDualPinMmi(Ljava/lang/String;I)Z
+    .locals 1
+    .parameter "arg0"
+    .parameter "arg1"
+
+    .prologue
+    .line 2112
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public hasDualIccCard(I)Z
+    .locals 1
+    .parameter "mPhoneId"
+
+    .prologue
+    .line 2116
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getIccCard()Lcom/android/internal/telephony/IccCard;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/IccCard;->hasIccCard()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public hasDualIccCardBySlotId(I)Z
+    .locals 1
+    .parameter "arg0"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3350
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public isDualDataConnectivityPossible(I)Z
+    .locals 1
+    .parameter "arg0"
+
+    .prologue
+    .line 2121
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public isDualIdle(I)Z
+    .locals 1
+    .parameter "arg0"
+
+    .prologue
+    .line 2126
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public isDualOffhook(I)Z
+    .locals 1
+    .parameter "arg0"
+
+    .prologue
+    .line 2131
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public isDualRadioOn(I)Z
+    .locals 1
+    .parameter "arg0"
+
+    .prologue
+    .line 2136
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public isDualRinging(I)Z
+    .locals 1
+    .parameter "arg0"
+
+    .prologue
+    .line 2141
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public isDualSimPinEnabled(I)Z
+    .locals 1
+    .parameter "arg0"
+
+    .prologue
+    .line 2146
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public isRadioOnOnSubscription(I)Z
+    .locals 2
+    .parameter "subscription"
+
+    .prologue
+    .line 1986
+    invoke-virtual {p0, p1}, Lcom/android/phone/PhoneInterfaceManager;->getPhone(I)Lcom/android/internal/telephony/Phone;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getServiceState()Landroid/telephony/ServiceState;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/telephony/ServiceState;->getState()I
+
+    move-result v0
+
+    const/4 v1, 0x3
+
+    if-eq v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public modifyQos(ILcom/android/internal/telephony/QosSpec;)I
+    .locals 1
+    .parameter "qosId"
+    .parameter "qosSpec"
+
+    .prologue
+    .line 1129
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0, p1, p2}, Lcom/android/internal/telephony/Phone;->modifyQos(ILcom/android/internal/telephony/QosSpec;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public openIccLogicalChannel(Ljava/lang/String;)I
+    .locals 3
+    .parameter "AID"
+
+    .prologue
+    .line 3139
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "> openIccLogicalChannel "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {p0, v1}, Lcom/android/phone/PhoneInterfaceManager;->log(Ljava/lang/String;)V
+
+    .line 3140
+    const/16 v1, 0x1d
+
+    invoke-direct {p0, v1, p1}, Lcom/android/phone/PhoneInterfaceManager;->sendRequest(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    .line 3141
+    .local v0, channel:Ljava/lang/Integer;
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "< openIccLogicalChannel "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {p0, v1}, Lcom/android/phone/PhoneInterfaceManager;->log(Ljava/lang/String;)V
+
+    .line 3142
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    return v1
+.end method
+
+.method public resumeQos(I)I
+    .locals 1
+    .parameter "qosId"
+
+    .prologue
+    .line 1137
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0, p1}, Lcom/android/internal/telephony/Phone;->resumeQos(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public sendCommandFromEngmode(ILjava/lang/String;)V
+    .locals 0
+    .parameter "PhoneId"
+    .parameter "strcmd"
+
+    .prologue
+    .line 3051
+    return-void
+.end method
+
+.method public sendCommandToRil(ILjava/lang/String;)V
+    .locals 0
+    .parameter "PhoneId"
+    .parameter "strcmd"
+
+    .prologue
+    .line 3043
+    return-void
+.end method
+
+.method public sendCommandToRilBySlotId(ILjava/lang/String;)V
+    .locals 0
+    .parameter "arg0"
+    .parameter "arg1"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3357
+    return-void
+.end method
+
+.method public sendOemRilRequestRaw([B[B)I
+    .locals 1
+    .parameter "arg0"
+    .parameter "arg1"
+
+    .prologue
+    .line 2155
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public setCellInfoListRate(I)V
+    .locals 1
+    .parameter "rateInMillis"
+
+    .prologue
+    .line 1322
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0, p1}, Lcom/android/internal/telephony/Phone;->setCellInfoListRate(I)V
+
+    .line 1323
+    return-void
+.end method
+
+.method public setDualCellInfoListRate(II)V
+    .locals 0
+    .parameter "arg0"
+    .parameter "arg1"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3401
+    return-void
+.end method
+
+.method public setDualRadio(ZI)Z
+    .locals 1
+    .parameter "arg0"
+    .parameter "arg1"
+
+    .prologue
+    .line 2160
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public setDualRadioPower(ZI)Z
+    .locals 1
+    .parameter "arg0"
+    .parameter "arg1"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3407
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public setGpsOne(I)V
+    .locals 2
+    .parameter "icmd"
+
+    .prologue
+    .line 2164
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "[PhoneInterfaceManager] setGpsOne strcmd: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/phone/PhoneInterfaceManager;->logDBG(Ljava/lang/String;)V
+
+    .line 2165
+    return-void
+.end method
+
+.method public setPreferredDataSubscription(I)Z
+    .locals 2
+    .parameter "subscription"
+
+    .prologue
+    .line 1930
+    const/16 v0, 0xf
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, v1}, Lcom/android/phone/PhoneInterfaceManager;->sendRequest(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public setRadioOnSubscription(ZI)Z
+    .locals 3
+    .parameter "turnOn"
+    .parameter "subscription"
+
+    .prologue
+    const/4 v1, 0x1
+
+    .line 1934
+    invoke-direct {p0}, Lcom/android/phone/PhoneInterfaceManager;->enforceModifyPermission()V
+
+    .line 1935
+    invoke-virtual {p0, p2}, Lcom/android/phone/PhoneInterfaceManager;->getPhone(I)Lcom/android/internal/telephony/Phone;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getServiceState()Landroid/telephony/ServiceState;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/telephony/ServiceState;->getState()I
+
+    move-result v0
+
+    const/4 v2, 0x3
+
+    if-eq v0, v2, :cond_1
+
+    move v0, v1
+
+    :goto_0
+    if-eq v0, p1, :cond_0
+
+    .line 1936
+    invoke-virtual {p0, p2}, Lcom/android/phone/PhoneInterfaceManager;->toggleRadioOnOffOnSubscription(I)V
+
+    .line 1938
+    :cond_0
+    return v1
+
+    .line 1935
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public toggleRadioOnOffOnSubscription(I)V
+    .locals 2
+    .parameter "subscription"
+
+    .prologue
+    .line 1955
+    invoke-direct {p0}, Lcom/android/phone/PhoneInterfaceManager;->enforceModifyPermission()V
+
+    .line 1956
+    invoke-virtual {p0, p1}, Lcom/android/phone/PhoneInterfaceManager;->getPhone(I)Lcom/android/internal/telephony/Phone;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->isRadioOn()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-interface {v1, v0}, Lcom/android/internal/telephony/Phone;->setRadioPower(Z)V
+
+    .line 1957
+    return-void
+
+    .line 1956
+    :cond_0
+    const/4 v0, 0x1
+
+    goto :goto_0
+.end method
+
+.method public getPhone(I)Lcom/android/internal/telephony/Phone;
+    .locals 1
+    .parameter "subscription"
+
+    .prologue
+    .line 1691
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    return-object v0
+.end method
+
+.method public setRasConnectFunction(II)Z
+    .locals 7
+    .parameter "phoneId"
+    .parameter "func"
+
+    .prologue
+    .line 2168
+    const/4 v4, 0x0
+
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    .line 2169
+    .local v3, ret:Ljava/lang/Boolean;
+    new-instance v2, Ljava/lang/Integer;
+
+    invoke-direct {v2, p2}, Ljava/lang/Integer;-><init>(I)V
+
+    .line 2171
+    .local v2, obj:Ljava/lang/Integer;
+    const/4 v4, 0x7
+
+    :try_start_0
+    invoke-direct {p0, v4, v2}, Lcom/android/phone/PhoneInterfaceManager;->sendRequest(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    move-object v0, v4
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    move-object v3, v0
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 2177
+    :goto_0
+    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v4
+
+    return v4
+
+    .line 2172
+    :catch_0
+    move-exception v1
+
+    .line 2173
+    .local v1, e:Ljava/lang/RuntimeException;
+    const-string v4, "CP_Phone"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string v6, "PhoneInterfaceManager:[setRasConnectFunction] "
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 2174
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 2173
+    invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+.end method
+
+.method public setRasConnectFunctionBySlotId(II)Z
+    .locals 1
+    .parameter "arg0"
+    .parameter "arg1"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3362
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public showDualCallScreen(I)Z
+    .locals 1
+    .parameter "arg0"
+
+    .prologue
+    .line 2187
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public showDualCallScreenWithDialpad(ZI)Z
+    .locals 1
+    .parameter "arg0"
+    .parameter "arg1"
+
+    .prologue
+    .line 2192
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public silenceDualRinger(I)V
+    .locals 0
+    .parameter "arg0"
+
+    .prologue
+    .line 2198
+    return-void
+.end method
+
+.method public spcpaReboot()V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3076
+    return-void
+.end method
+
+.method public spcpaSendCmd(ILjava/lang/String;)Ljava/lang/String;
+    .locals 1
+    .parameter "PhoneId"
+    .parameter "spcpacmd"
+
+    .prologue
+    .line 3036
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public supplyDualPin(Ljava/lang/String;I)Z
+    .locals 1
+    .parameter "arg0"
+    .parameter "arg1"
+
+    .prologue
+    .line 2202
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public suspendQos(I)I
+    .locals 1
+    .parameter "qosId"
+
+    .prologue
+    .line 1133
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0, p1}, Lcom/android/internal/telephony/Phone;->suspendQos(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public swapCall()V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3088
+    return-void
+.end method
+
+.method public switchNetModeFromEngmode(Ljava/lang/String;I)V
+    .locals 3
+    .parameter "strcmd"
+    .parameter "mCurrentNetworkModeChecked"
+
+    .prologue
+    .line 3055
+    packed-switch p2, :pswitch_data_0
+
+    .line 3071
+    :goto_0
+    return-void
+
+    .line 3057
+    :pswitch_0
+    invoke-static {}, Lcom/android/internal/telephony/PhoneFactory;->getCdmaPhone()Lcom/android/internal/telephony/Phone;
+
+    move-result-object v0
+
+    const/4 v1, 0x4
+
+    .line 3058
+    iget-object v2, p0, Lcom/android/phone/PhoneInterfaceManager;->mMainThreadHandler:Lcom/android/phone/PhoneInterfaceManager$MainThreadHandler;
+
+    invoke-virtual {v2}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
+
+    move-result-object v2
+
+    .line 3057
+    invoke-interface {v0, v1, v2}, Lcom/android/internal/telephony/Phone;->setPreferredNetworkType(ILandroid/os/Message;)V
+
+    goto :goto_0
+
+    .line 3062
+    :pswitch_1
+    invoke-static {}, Lcom/android/internal/telephony/PhoneFactory;->getCdmaPhone()Lcom/android/internal/telephony/Phone;
+
+    move-result-object v0
+
+    const/4 v1, 0x5
+
+    .line 3063
+    iget-object v2, p0, Lcom/android/phone/PhoneInterfaceManager;->mMainThreadHandler:Lcom/android/phone/PhoneInterfaceManager$MainThreadHandler;
+
+    invoke-virtual {v2}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
+
+    move-result-object v2
+
+    .line 3062
+    invoke-interface {v0, v1, v2}, Lcom/android/internal/telephony/Phone;->setPreferredNetworkType(ILandroid/os/Message;)V
+
+    goto :goto_0
+
+    .line 3067
+    :pswitch_2
+    invoke-static {}, Lcom/android/internal/telephony/PhoneFactory;->getCdmaPhone()Lcom/android/internal/telephony/Phone;
+
+    move-result-object v0
+
+    const/4 v1, 0x6
+
+    .line 3068
+    iget-object v2, p0, Lcom/android/phone/PhoneInterfaceManager;->mMainThreadHandler:Lcom/android/phone/PhoneInterfaceManager$MainThreadHandler;
+
+    invoke-virtual {v2}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
+
+    move-result-object v2
+
+    .line 3067
+    invoke-interface {v0, v1, v2}, Lcom/android/internal/telephony/Phone;->setPreferredNetworkType(ILandroid/os/Message;)V
+
+    goto :goto_0
+
+    .line 3055
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+    .end packed-switch
+.end method
+
+.method public telephonyDualIoControl(ILandroid/os/Bundle;Landroid/os/Bundle;I)Z
+    .locals 1
+    .parameter "arg0"
+    .parameter "arg1"
+    .parameter "arg2"
+    .parameter "arg3"
+
+    .prologue
+    .line 2216
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public telephonyDualIoControlBySlotId(ILandroid/os/Bundle;Landroid/os/Bundle;I)Z
+    .locals 1
+    .parameter "arg0"
+    .parameter "arg1"
+    .parameter "arg2"
+    .parameter "arg3"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3369
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public toggleDualRadioOnOff(I)V
+    .locals 0
+    .parameter "arg0"
+
+    .prologue
+    .line 2382
+    return-void
+.end method
+
+.method public updateDualServiceLocation(I)V
+    .locals 0
+    .parameter "arg0"
+
+    .prologue
+    .line 2939
+    return-void
+.end method

@@ -1,0 +1,12 @@
+version: 1.5.2
+apkFileName: CP_FMRadio.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: '14'
+packageInfo:
+  cur_package: com.marvell.fmradio
+  orig_package: com.marvell.fmradio
+compressionType: false

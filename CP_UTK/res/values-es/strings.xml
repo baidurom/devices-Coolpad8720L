@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aplicaciones de tarjeta UIM</string>
+    <string name="app_name2">Aplicaciones de tarjeta SIM</string>
+    <string name="app_usat">Aplicaciones de tarjeta USIM</string>
+    <string name="app_usim">Aplicaciones de tarjeta USIM</string>
+    <string name="app_title">Aplicaciones de tarjeta</string>
+    <string name="menu_end_session">Finalizar chat</string>
+    <string name="help">Ayuda</string>
+    <string name="menu_back">Regresar</string>
+    <string name="service_name">Nombre de servicio</string>
+    <string name="utk_no_service">Servicio no disponible</string>
+    <string name="button_ok">Aceptar</string>
+    <string name="button_cancel">Cancelar</string>
+    <string name="button_yes">Si</string>
+    <string name="button_no">No</string>
+    <string name="alphabet">Conteo de caracteres</string>
+    <string name="digits">Números (0-9, *, #, +)</string>
+    <string name="default_call_setup_msg">Llamando...</string>
+    <string name="default_setup_call_msg">¿Marcar?</string>
+    <string name="utk_app_state">Estado de las aplicaciones</string>
+    <string name="enable_app">Activado</string>
+    <string name="disable_app">Desactivado</string>
+    <string name="notify_prompt_open_c_module">Activar módulo.</string>
+    <string name="notify_prompt_open_g_module">La red no está lista</string>
+    <string name="notify_prompt_insert_uim_card">Inserte la tarjeta UIM.</string>
+    <string name="notify_prompt_insert_sim_card">Inserte la tarjeta SIM.</string>
+    <string name="notify_prompt_insert_usim_card">Inserte la tarjeta USIM.</string>
+    <string name="notify_prompt_not_obtain_usim_main_menu">No adquirió el menú de la tarjeta de aplicaciones.</string>
+    <string name="notify_prompt_not_obtain_main_menu">No adquirió el menú de la tarjeta de aplicaciones.</string>
+    <string name="notify_prompt_not_obtain_usat_main_menu">No adquirió el menú de la tarjeta de aplicaciones.</string>
+    <string name="notify_wait_for_back">Procesando, espere.</string>
+    <string name="notify_c_to_g_status">"Current is GSM net, don't show UTK menu"</string>
+</resources>

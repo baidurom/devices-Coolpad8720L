@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UIM 工具箱</string>
+    <string name="app_usat">USIM 工具箱</string>
+    <string name="app_usim">USIM 工具箱</string>
+    <string name="app_title">工具箱</string>
+    <string name="menu_end_session">結束</string>
+    <string name="help">說明</string>
+    <string name="menu_back">上一頁</string>
+    <string name="service_name">服務名稱</string>
+    <string name="utk_no_service">沒有服務</string>
+    <string name="button_ok">確定</string>
+    <string name="button_cancel">取消</string>
+    <string name="button_yes">是</string>
+    <string name="button_no">否</string>
+    <string name="alphabet">字數</string>
+    <string name="digits">數字與符號 (0-9、*、#、+)</string>
+    <string name="default_call_setup_msg">通話中...</string>
+    <string name="default_setup_call_msg">確認撥號?</string>
+    <string name="utk_app_state">應用程式狀態</string>
+    <string name="enable_app">已啟用</string>
+    <string name="disable_app">已停用</string>
+    <string name="notify_prompt_open_c_module">請打開CDMA模組</string>
+    <string name="notify_prompt_open_g_module">網路未就緒</string>
+    <string name="notify_prompt_insert_uim_card">請插入UIM卡</string>
+    <string name="notify_prompt_insert_sim_card">請插入SIM卡</string>
+    <string name="notify_prompt_insert_usim_card">請插入USIM卡</string>
+    <string name="notify_prompt_not_obtain_usim_main_menu">未獲取到卡應用的主菜單</string>
+    <string name="notify_prompt_not_obtain_main_menu">未獲取到卡應用的主菜單</string>
+    <string name="notify_prompt_not_obtain_usat_main_menu">未獲取到卡應用的主菜單</string>
+    <string name="notify_wait_for_back">正在處理，請稍候！</string>
+    <string name="notify_c_to_g_status">當前處於G網狀態，不顯示UTK卡應用菜單!</string>
+</resources>

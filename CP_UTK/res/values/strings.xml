@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UIM Toolkit</string>
+    <string name="app_name2">SIM Toolkit</string>
+    <string name="app_usat">USIM Toolkit</string>
+    <string name="app_usim">USIM Toolkit</string>
+    <string name="app_title">Toolkit</string>
+    <string name="menu_end_session">End session</string>
+    <string name="help">Help</string>
+    <string name="menu_back">Back</string>
+    <string name="service_name">Service name</string>
+    <string name="utk_no_service">No service available</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_yes">Yes</string>
+    <string name="button_no">No</string>
+    <string name="alphabet">Alphabets</string>
+    <string name="digits">Digits (0-9, *, #, +)</string>
+    <string name="default_call_setup_msg">Call in progress…</string>
+    <string name="default_setup_call_msg">Call being setup</string>
+    <string name="utk_app_state">Application state</string>
+    <string name="enable_app">Enabled</string>
+    <string name="disable_app">Disabled</string>
+    <string name="notify_prompt_open_c_module">Please open the CDMA module</string>
+    <string name="notify_prompt_open_g_module">Network not ready</string>
+    <string name="notify_prompt_insert_uim_card">Please insert UIM card</string>
+    <string name="notify_prompt_insert_sim_card">Please insert SIM card</string>
+    <string name="notify_prompt_insert_usim_card">Please insert USIM card</string>
+    <string name="notify_prompt_not_obtain_usim_main_menu">Did not obtain USIM Toolkit Menu</string>
+    <string name="notify_prompt_not_obtain_main_menu">Did not obtain UIM Toolkit Menu</string>
+    <string name="notify_prompt_not_obtain_usat_main_menu">Did not obtain USAT Toolkit Menu</string>
+    <string name="notify_wait_for_back">Please wait!</string>
+</resources>
