@@ -75,7 +75,7 @@
     iget-object v2, v2, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
 
     #getter for: Lcom/android/server/BatteryService;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcom/android/server/BatteryService;->access$iget-mContext-d41634(Lcom/android/server/BatteryService;)Landroid/content/Context;
+    invoke-static {v2}, Lcom/android/server/BatteryService;->access$700(Lcom/android/server/BatteryService;)Landroid/content/Context;
 
     move-result-object v2
 
@@ -90,7 +90,7 @@
     iget-object v2, v2, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
 
     #getter for: Lcom/android/server/BatteryService;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcom/android/server/BatteryService;->access$iget-mContext-d41634(Lcom/android/server/BatteryService;)Landroid/content/Context;
+    invoke-static {v2}, Lcom/android/server/BatteryService;->access$700(Lcom/android/server/BatteryService;)Landroid/content/Context;
 
     move-result-object v2
 
@@ -202,7 +202,7 @@
     iget-object v2, v2, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
 
     #getter for: Lcom/android/server/BatteryService;->mBatteryLevel:I
-    invoke-static {v2}, Lcom/android/server/BatteryService;->access$iget-mBatteryLevel-f367f5(Lcom/android/server/BatteryService;)I
+    invoke-static {v2}, Lcom/android/server/BatteryService;->access$100(Lcom/android/server/BatteryService;)I
 
     move-result v0
 
@@ -213,7 +213,7 @@
     iget-object v2, v2, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
 
     #getter for: Lcom/android/server/BatteryService;->mBatteryStatus:I
-    invoke-static {v2}, Lcom/android/server/BatteryService;->access$iget-mBatteryStatus-0f6a5b(Lcom/android/server/BatteryService;)I
+    invoke-static {v2}, Lcom/android/server/BatteryService;->access$1100(Lcom/android/server/BatteryService;)I
 
     move-result v1
 
@@ -244,7 +244,7 @@
     iget-object v2, v2, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
 
     #getter for: Lcom/android/server/BatteryService;->mLowBatteryWarningLevel:I
-    invoke-static {v2}, Lcom/android/server/BatteryService;->access$iget-mLowBatteryWarningLevel-5ee909(Lcom/android/server/BatteryService;)I
+    invoke-static {v2}, Lcom/android/server/BatteryService;->access$2300(Lcom/android/server/BatteryService;)I
 
     move-result v2
 
@@ -400,7 +400,7 @@
     iget-object v1, v1, Lcom/android/server/BatteryService$Led;->this$0:Lcom/android/server/BatteryService;
 
     #getter for: Lcom/android/server/BatteryService;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/server/BatteryService;->access$iget-mContext-d41634(Lcom/android/server/BatteryService;)Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/server/BatteryService;->access$700(Lcom/android/server/BatteryService;)Landroid/content/Context;
 
     move-result-object v1
 

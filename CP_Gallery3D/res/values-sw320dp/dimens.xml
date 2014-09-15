@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="dimen" name="setting_popup_right_margin">@dimen/setting_popup_right_margin_large</item>
+    <item type="dimen" name="setting_row_height">@dimen/setting_row_height_large</item>
+    <item type="dimen" name="setting_popup_window_width">@dimen/setting_popup_window_width_large</item>
+    <item type="dimen" name="setting_item_icon_width">@dimen/setting_item_icon_width_large</item>
+    <item type="dimen" name="onscreen_indicators_height">@dimen/onscreen_indicators_height_large</item>
+    <dimen name="shutter_offset">-33.0dip</dimen>
+    <dimen name="shutter_switcher_faceeffect_leftpadding">14.0dip</dimen>
+    <dimen name="shutter_switcher_faceeffect_bottompadding">14.0dip</dimen>
+    <dimen name="shutter_switcher_thumbnail_rightpadding">12.0dip</dimen>
+    <dimen name="shutter_switcher_faceeffect_toppadding">12.0dip</dimen>
+    <dimen name="shutter_switcher_videotakebtn_leftpadding">53.0dip</dimen>
+    <dimen name="shutter_switcher_videotakebtn_bottompadding">53.0dip</dimen>
+    <dimen name="basic_gridview_width_port">292.0dip</dimen>
+    <dimen name="basic_gridview_height_port">423.0dip</dimen>
+    <dimen name="basic_gridview_item_padding_port">15.0dip</dimen>
+    <dimen name="basic_gridview_item_width_port">94.0dip</dimen>
+    <dimen name="basic_gridview_item_vertical_space_port">30.0dip</dimen>
+    <dimen name="basic_gridview_item_horizon_space_port">4.0dip</dimen>
+    <dimen name="basic_gridview_width_land">416.0dip</dimen>
+    <dimen name="basic_gridview_height_land">302.0dip</dimen>
+    <dimen name="basic_gridview_item_padding_land">22.0dip</dimen>
+    <dimen name="basic_gridview_item_width_land">94.0dip</dimen>
+    <dimen name="basic_gridview_item_vertical_space_land">21.0dip</dimen>
+    <dimen name="basic_gridview_item_horizon_space_land">12.0dip</dimen>
+    <dimen name="basic_gridview_item_width">94.0dip</dimen>
+    <dimen name="basic_gridview_item_height">74.0dip</dimen>
+    <dimen name="basic_gridview_paddingtop">17.0dip</dimen>
+    <dimen name="setting_popup_height">280.0dip</dimen>
+    <dimen name="setting_popup_width">200.0dip</dimen>
+    <dimen name="effect_label_text_size">11.5sp</dimen>
+    <dimen name="effect_label_width">100.0dip</dimen>
+    <dimen name="effect_label_margin_top">3.0dip</dimen>
+    <dimen name="effect_icon_size">72.0dip</dimen>
+    <dimen name="effect_padding_horizontal">1.0dip</dimen>
+    <dimen name="effects_container_padding">8.0dip</dimen>
+    <dimen name="action_bar_arrow_margin_left">3.0dip</dimen>
+    <dimen name="action_bar_arrow_margin_right">-3.0dip</dimen>
+    <dimen name="action_bar_icon_padding_left">0.0dip</dimen>
+    <dimen name="action_bar_icon_padding_right">5.0dip</dimen>
+    <dimen name="action_button_padding_horizontal">13.0dip</dimen>
+    <dimen name="effects_menu_container_width">320.0dip</dimen>
+    <dimen name="effect_tool_panel_padding_top">3.0dip</dimen>
+    <dimen name="effect_tool_panel_padding_bottom">8.0dip</dimen>
+    <dimen name="seekbar_width">350.0dip</dimen>
+    <dimen name="seekbar_height">43.0dip</dimen>
+    <dimen name="seekbar_padding_horizontal">30.0dip</dimen>
+    <dimen name="seekbar_padding_vertical">8.0dip</dimen>
+    <dimen name="crop_indicator_size">35.0dip</dimen>
+</resources>

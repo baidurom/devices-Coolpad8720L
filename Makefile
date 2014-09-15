@@ -63,7 +63,7 @@ vendor_remove_dirs := app presetapp
 ##############################################################################
 # Files which you want to remove in vendor directory
 #-----------------------------------------------------------------------------
-vendor_remove_files := media/bootanimation-excepted.zip media/bootanimation-excepted1.zip media/audio/ui/off.mp3 media/audio/ui/on.mp3 media/audio/ui/on-off.mp3
+vendor_remove_files := media/bootanimation-excepted.zip media/bootanimation-excepted1.zip media/shutdownanimation.zip media/audio/ui/off.mp3 media/audio/ui/on.mp3 media/audio/ui/on-off.mp3
 
 ##############################################################################
 # Vendor apks you want to use
@@ -86,7 +86,7 @@ vendor_saved_apps := Bluetooth CP_BluetoothSetting
 # you need decode FMRadio.apk to the project directory (use apktool d FMRadio.apk) first
 # then you can make it by:   make FMRadio
 #-----------------------------------------------------------------------------
-vendor_modify_apps := CP_FMRadio
+vendor_modify_apps := CP_FMRadio CP_Gallery3D
 
 ##############################################################################
 # Jars build from current project root directory
@@ -120,13 +120,13 @@ vendor_modify_jars := framework services telephony-common pm android.policy
 ##############################################################################
 # baidu_remove_apps: those baidu apk you want remove 
 #-----------------------------------------------------------------------------
-# baidu_remove_apps := BaiduUserFeedback.apk
+baidu_remove_apps := Nfc Tag BaiduCamera
 
 ##############################################################################
 # baidu_modify_apps: which base the baidu's apk
 # just override the res, append *.smali.part
 #-----------------------------------------------------------------------------
-baidu_modify_apps := SystemUI Phone Settings
+baidu_modify_apps := SystemUI Phone Settings HomePro
 
 ##############################################################################
 # baidu_modify_jars: which base the baidu's jar

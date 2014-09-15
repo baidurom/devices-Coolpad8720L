@@ -1274,7 +1274,7 @@
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions;->mSinglePressRebootAction:Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;
 
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    #invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 515
     invoke-static {}, Lcom/android/internal/policy/impl/GlobalActions;->isBeiDaoMode()Z
@@ -1330,7 +1330,7 @@
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions;->mSinglePressScreenshotAction:Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;
 
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    #invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 564
     :cond_1
@@ -1367,7 +1367,7 @@
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions;->mSinglePressFlashlight:Lcom/android/internal/policy/impl/GlobalActions$ToggleAction;
 
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    #invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 602
     :cond_2

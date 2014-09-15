@@ -87,7 +87,7 @@
     iget-object v4, p0, Lcom/android/server/BackupManagerService$BaiduConnection;->mBaiduLocalTransport:Lcom/android/internal/backup/IBackupTransport;
 
     #calls: Lcom/android/server/BackupManagerService;->registerTransport(Ljava/lang/String;Lcom/android/internal/backup/IBackupTransport;)V
-    invoke-static {v2, v3, v4}, Lcom/android/server/BackupManagerService;->access$invoke-registerTransport-b82473(Lcom/android/server/BackupManagerService;Ljava/lang/String;Lcom/android/internal/backup/IBackupTransport;)V
+    invoke-static {v2, v3, v4}, Lcom/android/server/BackupManagerService;->access$500(Lcom/android/server/BackupManagerService;Ljava/lang/String;Lcom/android/internal/backup/IBackupTransport;)V
 
     .line 1442
     new-instance v1, Lcom/android/server/BackupManagerService$ObserveBaiduTransport;
@@ -169,7 +169,7 @@
     move-result-object v1
 
     #calls: Lcom/android/server/BackupManagerService;->registerTransport(Ljava/lang/String;Lcom/android/internal/backup/IBackupTransport;)V
-    invoke-static {v0, v1, v2}, Lcom/android/server/BackupManagerService;->access$invoke-registerTransport-b82473(Lcom/android/server/BackupManagerService;Ljava/lang/String;Lcom/android/internal/backup/IBackupTransport;)V
+    invoke-static {v0, v1, v2}, Lcom/android/server/BackupManagerService;->access$500(Lcom/android/server/BackupManagerService;Ljava/lang/String;Lcom/android/internal/backup/IBackupTransport;)V
 
     .line 1456
     return-void

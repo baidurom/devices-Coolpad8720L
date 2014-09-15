@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/review_module_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/review_image" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layerType="hardware" />
+    <com.android.camera.ui.RotateImageView android:layout_gravity="top|right|center" android:id="@id/btn_done" android:background="@drawable/bg_pressed" android:visibility="gone" android:src="@drawable/ic_menu_done_holo_light" android:contentDescription="@string/accessibility_review_ok" style="@style/ReviewControlIcon" />
+    <com.android.camera.ui.RotateImageView android:layout_gravity="right|center" android:id="@id/btn_retake" android:background="@drawable/bg_pressed" android:focusable="true" android:visibility="gone" android:src="@drawable/btn_ic_review_retake_photo" android:scaleType="center" android:contentDescription="@string/accessibility_review_retake" style="@style/ReviewControlIcon" />
+    <com.android.camera.ui.RotateImageView android:layout_gravity="bottom|right|center" android:id="@id/btn_cancel" android:background="@drawable/bg_pressed" android:visibility="gone" android:src="@drawable/ic_menu_cancel_holo_light" android:contentDescription="@string/accessibility_review_cancel" style="@style/ReviewControlIcon" />
+</FrameLayout>

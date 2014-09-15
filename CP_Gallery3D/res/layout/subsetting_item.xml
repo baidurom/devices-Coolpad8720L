@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/SettingRow"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/image1" android:layout_width="37.0dip" android:layout_height="37.0dip" android:layout_marginRight="17.0dip" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+    <TextView android:id="@id/text" style="@style/SettingItemTitle" />
+    <ImageView android:id="@id/image2" android:layout_width="30.0dip" android:layout_height="30.0dip" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_ptp_holo_light" android:id="@id/action_import" android:visible="false" android:title="@string/Import" android:showAsAction="always|withText" />
+    <item android:icon="@drawable/ic_menu_share_holo_light" android:id="@id/action_share_panorama" android:visible="false" android:title="@string/share_panorama" android:showAsAction="ifRoom" android:actionProviderClass="android.widget.ShareActionProvider" />
+    <item android:icon="@drawable/ic_menu_slideshow_holo_light" android:id="@id/action_slideshow" android:title="@string/slideshow" android:showAsAction="ifRoom" />
+</menu>

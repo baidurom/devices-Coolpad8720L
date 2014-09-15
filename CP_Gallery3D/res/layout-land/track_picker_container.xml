@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.camera.ui.TrackPickerContainer android:id="@id/track_picker_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.camera.ui.TrackPickerView android:id="@id/track_picker_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="bottom|center" android:id="@id/track_preview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:layout_gravity="right" android:id="@id/track_button_layout" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <com.android.camera.ShutterButton android:layout_gravity="top" android:id="@id/track_save_btn" android:focusable="true" android:visibility="invisible" android:clickable="true" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="6.0dip" android:src="@drawable/face_switch_complete_bg" android:scaleType="fitXY" android:contentDescription="@string/accessibility_shutter_button" />
+        <LinearLayout android:layout_gravity="right|center" android:orientation="vertical" android:id="@id/track_btn_layout" android:background="@drawable/btn_yl_switch_bg" android:layout_width="50.0dip" android:layout_height="150.0dip" android:layout_marginRight="14.0dip">
+            <com.android.camera.ShutterButton android:id="@id/track_stop_btn" android:background="@drawable/btn_yl_shutter_takepic_bg_land" android:focusable="true" android:visibility="invisible" android:clickable="true" android:layout_width="50.0dip" android:layout_height="100.0dip" android:src="@drawable/btn_pan_stop_shutters" android:contentDescription="@string/accessibility_shutter_button" />
+            <com.android.camera.ShutterButton android:id="@id/track_record_btn" android:background="@drawable/btn_yl_shutter_record_bg" android:visibility="invisible" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/btn_record_bg" android:contentDescription="@string/accessibility_shutter_button" />
+        </LinearLayout>
+        <com.android.camera.ShutterButton android:layout_gravity="bottom" android:id="@id/track_cancel_btn" android:focusable="true" android:visibility="invisible" android:clickable="true" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="6.0dip" android:src="@drawable/face_switch_cancel_bg" android:scaleType="fitXY" android:contentDescription="@string/accessibility_shutter_button" />
+    </FrameLayout>
+</com.android.camera.ui.TrackPickerContainer>

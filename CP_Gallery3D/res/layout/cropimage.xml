@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/gl_root_group" />
+    <LinearLayout android:layout_gravity="bottom" android:id="@id/zoom_type" android:background="@drawable/zoom_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="65.0dip">
+        <LinearLayout android:orientation="vertical" android:id="@id/proportion_zoom" android:background="@drawable/zoom_type_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:layout_weight="1.0"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageView android:layout_gravity="top|center" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:src="@drawable/proportion_zoom" android:scaleType="centerInside" />
+            <TextView android:textSize="@dimen/bottom_menu_textsize" android:layout_gravity="bottom|center" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/proportion_zoom" />
+        </LinearLayout>
+        <ImageView android:background="@drawable/zoom_divided" android:layout_width="2.0dip" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="2.0dip" android:layout_marginBottom="10.0dip" />
+        <LinearLayout android:orientation="vertical" android:id="@id/free_zoom" android:background="@drawable/zoom_type_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:layout_weight="1.0"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageView android:layout_gravity="top|center" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:src="@drawable/free_zoom" android:scaleType="centerInside" />
+            <TextView android:textSize="@dimen/bottom_menu_textsize" android:layout_gravity="bottom|center" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/free_zoom" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

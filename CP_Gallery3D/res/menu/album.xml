@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_camera_holo_light" android:id="@id/action_camera" android:title="@string/switch_to_camera" android:showAsAction="ifRoom" />
+    <item android:id="@id/action_paste_picture" android:visible="false" android:title="@string/paste_title" android:showAsAction="ifRoom|withText" />
+    <item android:icon="@drawable/ic_menu_slideshow_holo_light" android:id="@id/action_slideshow" android:title="@string/slideshow" android:showAsAction="ifRoom" />
+    <item android:id="@id/action_cancel_paste" android:visible="false" android:title="@string/cancel_paste_title" android:showAsAction="ifRoom|withText" />
+</menu>

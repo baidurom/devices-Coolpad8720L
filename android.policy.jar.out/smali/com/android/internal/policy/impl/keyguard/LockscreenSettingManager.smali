@@ -602,6 +602,8 @@
 
     move-result-object v8
 
+    if-eqz v8, :cond_baidu_0
+
     .line 108
     const-string v2, "text"
 
@@ -829,6 +831,7 @@
     .restart local v16       #textFontIndex:I
     .restart local v17       #textIndex:I
     :cond_1
+    :cond_baidu_0
     if-eqz v8, :cond_2
 
     .line 134

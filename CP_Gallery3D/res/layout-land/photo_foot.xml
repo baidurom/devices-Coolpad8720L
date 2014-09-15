@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/foot" android:background="@drawable/foot_menu_bg" android:layout_width="fill_parent" android:layout_height="@dimen/bottom_menu_height" android:layout_alignParentBottom="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_gravity="left" android:layout_width="@dimen/bottom_menu_leftright" android:layout_height="@dimen/bottom_menu_height" />
+    <LinearLayout android:id="@id/foot_camera_1" style="@style/BottomMenuButton"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/foot_camera" android:src="@drawable/foot_menu_switch_camera" style="@style/BottomMenuImageView" />
+        <TextView android:text="@string/camera_label" style="@style/BottomMenuTextView" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/foot_collect_1" style="@style/BottomMenuButton"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/foot_collect" android:src="@drawable/foot_menu_collection" style="@style/BottomMenuImageView" />
+        <TextView android:text="@string/collect" style="@style/BottomMenuTextView" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/foot_share_1" style="@style/BottomMenuButton"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/foot_share" android:src="@drawable/foot_menu_share" style="@style/BottomMenuImageView" />
+        <TextView android:text="@string/share" style="@style/BottomMenuTextView" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/foot_edit_1" style="@style/BottomMenuButton"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/foot_edit" android:src="@drawable/foot_menu_edit" style="@style/BottomMenuImageView" />
+        <TextView android:text="@string/edit" style="@style/BottomMenuTextView" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/foot_remove_securebox_1" android:visibility="gone" style="@style/BottomMenuButton"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/foot_remove_securebox" android:src="@drawable/more_menu_item_remove_securebox" style="@style/BottomMenuImageView" />
+        <TextView android:text="@string/remove_from_securebox" style="@style/BottomMenuTextView" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/foot_delete_1" style="@style/BottomMenuButton"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/foot_delete" android:src="@drawable/foot_menu_delete" style="@style/BottomMenuImageView" />
+        <TextView android:text="@string/delete" style="@style/BottomMenuTextView" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/foot_set_private_file_1" style="@style/BottomMenuButton"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/foot_set_private_file" android:src="@drawable/more_menu_item_set_private" style="@style/BottomMenuImageView" />
+        <TextView android:text="@string/private_mode_set" style="@style/BottomMenuTextView" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/foot_cancel_private_file_1" style="@style/BottomMenuButton"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/foot_private_mode_cancel" android:src="@drawable/more_menu_item_cancel_private" style="@style/BottomMenuImageView" />
+        <TextView android:text="@string/private_mode_cancel" style="@style/BottomMenuTextView" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/foot_more_1" style="@style/BottomMenuButton"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/foot_more" android:src="@drawable/foot_menu_more" style="@style/BottomMenuImageView" />
+        <TextView android:text="@string/more" style="@style/BottomMenuTextView" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/foot_set_as_1" android:visibility="gone" style="@style/BottomMenuButton"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/foot_set_as" android:src="@drawable/more_menu_item_set_as" style="@style/BottomMenuImageView" />
+        <TextView android:text="@string/set_as" style="@style/BottomMenuTextView" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/foot_details_1" android:visibility="gone" style="@style/BottomMenuButton"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/foot_details" android:src="@drawable/more_menu_item_details" style="@style/BottomMenuImageView" />
+        <TextView android:text="@string/details" style="@style/BottomMenuTextView" />
+    </LinearLayout>
+    <TextView android:layout_gravity="right" android:layout_width="@dimen/bottom_menu_leftright" android:layout_height="@dimen/bottom_menu_height" />
+</LinearLayout>

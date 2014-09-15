@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/camera_app_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/preview_module_frame" />
+    <FrameLayout android:layout_gravity="center" style="@style/CameraControls">
+        <include android:layout_marginBottom="2.0dip" layout="@layout/review_module_control" />
+        <SeekBar android:scrollbarSize="3.0dip" android:layout_gravity="bottom|center" android:id="@id/focus_seekBar" android:visibility="invisible" android:layout_width="200.0dip" android:layout_height="wrap_content" android:layout_marginBottom="108.0dip" android:progressDrawable="@drawable/foucs_progressbar_back" android:thumb="@drawable/focus_progressbar_thumb" />
+    </FrameLayout>
+</FrameLayout>

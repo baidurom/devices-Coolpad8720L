@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/SettingRow"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/text" style="@style/SettingItemTitle" />
+    <TextView android:gravity="right|center" android:id="@id/text2" style="@style/SettingItemTitle" />
+</LinearLayout>

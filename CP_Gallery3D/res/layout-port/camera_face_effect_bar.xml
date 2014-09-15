@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.camera.ui.CameraFaceEffectBar android:id="@id/control_face_effect_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:yl="http://schemas.android.com/apk/res/com.android.gallery3d">
+    <ImageView android:id="@id/btn_face_effect" android:background="@drawable/face_effect_photo_bg" android:focusable="false" android:clickable="true" android:layout_width="49.0dip" android:layout_height="49.0dip" android:layout_marginRight="11.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:onClick="onFaceEffectClick" yl:margin_right_dp="@dimen/face_effect_margin_right" yl:margin_bottom_dp="@dimen/face_effect_margin_bottom" />
+</com.android.camera.ui.CameraFaceEffectBar>

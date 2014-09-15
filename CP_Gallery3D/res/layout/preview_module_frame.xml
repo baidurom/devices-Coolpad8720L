@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/frame_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.camera.PreviewFrameLayout android:id="@id/frame" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+        <com.android.camera.ui.GridLine android:id="@id/camera_grid" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ViewStub android:id="@id/face_view_stub" android:visibility="gone" android:layout="@layout/face_view" android:inflatedId="@id/face_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <TextView android:textSize="180.0px" android:textColor="@color/delayTimeText" android:gravity="center" android:id="@id/delay_time" android:background="@drawable/yl_photo_timing" android:visibility="invisible" android:layout_width="260.0px" android:layout_height="260.0px" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_centerInParent="true" />
+    </com.android.camera.PreviewFrameLayout>
+    <ImageView android:id="@id/capture_anim_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layerType="hardware" />
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/control_sub_bar" android:layout_width="44.0dip" android:layout_height="116.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="97.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.camera.ui.MyPreferenceButton android:layout_gravity="bottom" android:id="@id/camera_picker" android:visibility="visible" android:clickable="true" android:layout_width="44.0dip" android:layout_height="44.0dip" android:src="@drawable/btn_switch_camera" android:onClick="onCameraPickerClicked" android:contentDescription="@string/accessibility_camerapicker_button" />
+    <com.android.camera.ui.MyPreferenceButton android:layout_gravity="top" android:id="@id/onscreen_flash_indicator" android:visibility="visible" android:clickable="true" android:layout_width="44.0dip" android:layout_height="44.0dip" android:src="@drawable/yl_indicators_flash_off" android:onClick="onFlashIndicatorClicked" android:contentDescription="@string/accessibility_flashmode_button" />
+</FrameLayout>

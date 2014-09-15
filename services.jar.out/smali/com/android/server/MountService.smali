@@ -5363,12 +5363,14 @@
 
     invoke-virtual {v11, v12}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
+    .line 976
     :cond_3
     :goto_1
     move-object/from16 v0, p2
 
     invoke-direct {p0, v8, v0}, Lcom/android/server/MountService;->updataStatusBar(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 983
     const-string v11, "mounted"
 
     move-object/from16 v0, p2
@@ -5451,7 +5453,7 @@
     .end local v9           #primaryIndex:I
     :cond_5
     :goto_2
-    invoke-direct {p0, p1, p2}, Lcom/android/server/MountService;->updateAsecVolumeStateBaidu(Landroid/os/storage/StorageVolume;Ljava/lang/String;)V
+    invoke-direct/range {p0 .. p2}, Lcom/android/server/MountService;->updateAsecVolumeStateBaidu(Landroid/os/storage/StorageVolume;Ljava/lang/String;)V
 
     iget-object v12, p0, Lcom/android/server/MountService;->mListeners:Ljava/util/ArrayList;
 

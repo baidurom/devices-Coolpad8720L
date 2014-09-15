@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="dimen" name="setting_popup_right_margin">@dimen/setting_popup_right_margin_large</item>
+    <item type="dimen" name="setting_row_height">@dimen/setting_row_height_large</item>
+    <item type="dimen" name="setting_popup_window_width">@dimen/setting_popup_window_width_large</item>
+    <item type="dimen" name="setting_item_icon_width">@dimen/setting_item_icon_width_large</item>
+    <item type="dimen" name="onscreen_indicators_height">@dimen/onscreen_indicators_height_large</item>
+    <dimen name="shutter_offset">-33.0dip</dimen>
+    <dimen name="shutter_switcher_faceeffect_leftpadding">27.0dip</dimen>
+    <dimen name="shutter_switcher_faceeffect_bottompadding">27.0dip</dimen>
+    <dimen name="shutter_switcher_thumbnail_rightpadding">23.0dip</dimen>
+    <dimen name="shutter_switcher_faceeffect_toppadding">23.0dip</dimen>
+    <dimen name="shutter_switcher_videotakebtn_leftpadding">93.0dip</dimen>
+    <dimen name="shutter_switcher_videotakebtn_bottompadding">93.0dip</dimen>
+    <dimen name="basic_gridview_width_port">326.0dip</dimen>
+    <dimen name="basic_gridview_height_port">476.0dip</dimen>
+    <dimen name="basic_gridview_item_padding_port">17.0dip</dimen>
+    <dimen name="basic_gridview_item_width_port">106.0dip</dimen>
+    <dimen name="basic_gridview_item_vertical_space_port">34.0dip</dimen>
+    <dimen name="basic_gridview_item_horizon_space_port">4.0dip</dimen>
+    <dimen name="basic_gridview_width_land">468.0dip</dimen>
+    <dimen name="basic_gridview_height_land">340.0dip</dimen>
+    <dimen name="basic_gridview_item_padding_land">25.0dip</dimen>
+    <dimen name="basic_gridview_item_width_land">106.0dip</dimen>
+    <dimen name="basic_gridview_item_vertical_space_land">24.0dip</dimen>
+    <dimen name="basic_gridview_item_horizon_space_land">14.0dip</dimen>
+    <dimen name="basic_gridview_item_width">106.0dip</dimen>
+    <dimen name="basic_gridview_item_height">84.0dip</dimen>
+    <dimen name="basic_gridview_paddingtop">25.0dip</dimen>
+    <dimen name="setting_popup_height">330.0dip</dimen>
+    <dimen name="setting_popup_length">200.0dip</dimen>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="camera_capture_mode_minientries_array">
+        <item>正常</item>
+        <item>美容</item>
+        <item>优选</item>
+        <item>移除</item>
+        <item>微笑</item>
+        <item>轨迹</item>
+        <item>自拍1</item>
+        <item>自拍2</item>
+        <item>夜景</item>
+        <item>HDR</item>
+        <item>全景</item>
+        <item>GIF</item>
+    </string-array>
+</resources>

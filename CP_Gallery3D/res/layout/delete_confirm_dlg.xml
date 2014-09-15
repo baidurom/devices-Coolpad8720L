@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:id="@id/delete_confirm_dlg" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/yl_btn_new_feature_introduct_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/new_album_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/dilog_title_textsize" android:textColor="@color/help_text_title_color" android:gravity="left|center" android:id="@id/delete_confirm_title" android:background="@drawable/yl_btn_new_feature_introduct_up_bg" android:paddingLeft="@dimen/help_page_land_title_padding" android:paddingRight="@dimen/help_page_land_title_padding" android:layout_width="fill_parent" android:layout_height="@dimen/dilog_height" android:text="@string/confirm" android:drawableLeft="@drawable/common_image_icon_normal" />
+            <TextView android:textSize="@dimen/dilog_textsize" android:textColor="#ff000000" android:id="@id/delete_confirm_tip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:cursorVisible="true" android:maxLength="80" android:layout_below="@id/delete_confirm_title" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:background="@drawable/yl_btn_new_feature_introduct_down_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/new_album_content">
+            <Button android:textColor="#ff000000" android:id="@id/delete_dlg_cancel" android:background="@drawable/yl_btn_new_feature_introduct_down" android:layout_width="wrap_content" android:layout_height="@dimen/dilog_height" android:text="@string/cancel" android:layout_weight="1.0" />
+            <Button android:textColor="#ff000000" android:id="@id/delete_dlg_ok" android:background="@drawable/yl_btn_new_feature_introduct_down" android:layout_width="wrap_content" android:layout_height="@dimen/dilog_height" android:text="@string/ok" android:layout_weight="1.0" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

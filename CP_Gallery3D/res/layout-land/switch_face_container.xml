@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.camera.ui.CameraSwitchFaceContainer android:id="@id/switch_face_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.camera.ui.CameraSwitchFaceView android:id="@id/switch_face_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.android.camera.ui.FaceSwitchImageContainer android:layout_gravity="center" android:id="@id/switch_image_container" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <FrameLayout android:layout_gravity="right" android:id="@id/switch_button_layout" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <com.android.camera.ShutterButton android:layout_gravity="top" android:id="@id/switch_save_btn" android:focusable="true" android:visibility="invisible" android:clickable="true" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="6.0dip" android:src="@drawable/face_switch_complete_bg" android:scaleType="fitXY" android:contentDescription="@string/accessibility_shutter_button" />
+        <com.android.camera.ShutterButton android:layout_gravity="bottom" android:id="@id/switch_cancel_btn" android:focusable="true" android:visibility="invisible" android:clickable="true" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="6.0dip" android:src="@drawable/face_switch_cancel_bg" android:scaleType="fitXY" android:contentDescription="@string/accessibility_shutter_button" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/progress_container" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.android.camera.ui.CameraSwitchFaceContainer>

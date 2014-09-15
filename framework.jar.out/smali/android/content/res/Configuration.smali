@@ -1039,9 +1039,9 @@
 
     sub-int v4, v5, v6
 
-    invoke-static {p0, p1, v2}, Landroid/content/res/Configuration$BaiduInjector;->compareTo(Landroid/content/res/Configuration;Landroid/content/res/Configuration;I)I
+    invoke-static {p0, p1, v4}, Landroid/content/res/Configuration$BaiduInjector;->compareTo(Landroid/content/res/Configuration;Landroid/content/res/Configuration;I)I
 
-    move-result v2
+    move-result v4
 
     .line 1300
     goto/16 :goto_0

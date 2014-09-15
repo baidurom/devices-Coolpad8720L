@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/yl_btn_new_feature_introduct_bg" android:layout_width="300.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/new_feature_introduct_up" android:layout_width="320.0dip" android:layout_height="180.0dip">
+        <TextView android:textSize="@dimen/help_page_title_textsize" android:textColor="@color/help_text_title_color" android:gravity="left|center" android:id="@id/new_feature_introduct_title" android:background="@drawable/yl_btn_new_feature_introduct_up_bg" android:paddingLeft="6.0dip" android:paddingRight="@dimen/help_page_port_title_padding" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/camera_dialog_title" android:drawableLeft="@drawable/common_image_icon_normal" android:drawablePadding="3.0dip" />
+        <TextView android:textSize="@dimen/help_page_body_textsize" android:textColor="@color/help_text_body_color" android:gravity="left" android:id="@id/new_feature_introduct_body" android:padding="@dimen/help_page_port_title_padding" android:paddingLeft="@dimen/help_page_port_title_padding" android:paddingRight="@dimen/help_page_port_title_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/camera_dialog_message" android:layout_below="@id/new_feature_introduct_title" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/buttonLayout" android:background="@drawable/yl_btn_new_feature_introduct_down_bg" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_below="@id/new_feature_introduct_up">
+        <Button android:textColor="#ff000000" android:gravity="center" android:id="@id/dialog_sure" android:background="@drawable/yl_btn_new_feature_introduct_down" android:padding="@dimen/help_page_port_button_padding" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/camera_dialog_button" />
+    </FrameLayout>
+</RelativeLayout>

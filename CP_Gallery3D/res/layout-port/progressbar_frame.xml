@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/progressbar_black" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="0.6" />
+    <RelativeLayout android:id="@id/progressbar_framelayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="0.4">
+        <com.android.camera.ui.GifProgressBar android:id="@id/progressbar_body" android:layout_width="240.0dip" android:layout_height="20.0dip" android:layout_centerInParent="true">
+            <View android:id="@id/progress_background" android:background="@drawable/progressbar_back" android:paddingLeft="0.0dip" android:paddingTop="0.0dip" android:visibility="visible" android:layout_width="200.0dip" android:layout_height="20.0dip" />
+            <View android:id="@id/progress_foreground" android:background="@drawable/progressbar" android:paddingLeft="0.0dip" android:paddingTop="0.0dip" android:visibility="visible" android:layout_width="20.0dip" android:layout_height="20.0dip" />
+            <TextView android:textSize="14.0dip" android:textColor="#ffffffff" android:id="@id/progressbar_text" android:paddingLeft="0.0dip" android:paddingTop="0.0dip" android:visibility="visible" android:layout_width="40.0dip" android:layout_height="20.0dip" android:layout_marginLeft="200.0dip" android:layout_marginTop="0.0dip" android:text="0%" android:shadowColor="#ff000000" android:shadowDx="0.0" android:shadowDy="0.0" android:shadowRadius="2.0" />
+        </com.android.camera.ui.GifProgressBar>
+    </RelativeLayout>
+</LinearLayout>

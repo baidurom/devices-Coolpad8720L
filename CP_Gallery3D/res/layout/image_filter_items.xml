@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.camera.ui.FilterImageView android:id="@id/filterItems" android:background="@color/red" android:focusable="false" android:clickable="false" android:layout_width="84.0dip" android:layout_height="84.0dip" android:adjustViewBounds="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

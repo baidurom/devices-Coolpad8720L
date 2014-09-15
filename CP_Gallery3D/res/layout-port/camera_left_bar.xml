@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.camera.ui.CameraLeftBar android:orientation="horizontal" android:id="@id/control_left_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.camera.ui.MyPreferenceButton android:id="@id/btnSettingMenu" android:clickable="true" android:layout_width="44.0dip" android:layout_height="44.0dip" android:layout_marginLeft="26.0dip" android:src="@drawable/btn_settingmenu" android:layout_alignParentLeft="true" android:onClick="onSettingClicked" android:contentDescription="@string/accessibility_setting_button" />
+    <com.android.camera.ui.MyPreferenceButton android:id="@id/camera_gps_locating" android:background="@drawable/yl_btn_gps_on" android:visibility="invisible" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginLeft="86.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:onClick="onCameraPickerClicked" android:contentDescription="@string/accessibility_camerapicker_button" />
+</com.android.camera.ui.CameraLeftBar>

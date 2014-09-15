@@ -32,7 +32,7 @@
     .prologue
     .line 2853
     #getter for: Lcom/android/server/power/PowerManagerService;->mContext:Landroid/content/Context;
-    invoke-static {p0}, Lcom/android/server/power/PowerManagerService;->access$iget-mContext-a60052(Lcom/android/server/power/PowerManagerService;)Landroid/content/Context;
+    invoke-static {p0}, Lcom/android/server/power/PowerManagerService;->access$1300(Lcom/android/server/power/PowerManagerService;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -72,7 +72,7 @@
 
     .line 2860
     #getter for: Lcom/android/server/power/PowerManagerService;->mContext:Landroid/content/Context;
-    invoke-static {p0}, Lcom/android/server/power/PowerManagerService;->access$iget-mContext-a60052(Lcom/android/server/power/PowerManagerService;)Landroid/content/Context;
+    invoke-static {p0}, Lcom/android/server/power/PowerManagerService;->access$1300(Lcom/android/server/power/PowerManagerService;)Landroid/content/Context;
 
     move-result-object v3
 

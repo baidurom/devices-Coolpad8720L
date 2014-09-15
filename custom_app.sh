@@ -11,5 +11,9 @@ elif [ "$apkBaseName" = "Phone" ];then
         echo ">>> in custom_app for $apkBaseName to add some permissions for android 4.3"
 	sed -i '/<original-package android:name="com.android.phone" \/>/a\<uses-permission android:name="android.permission.SEND_RESPOND_VIA_MESSAGE" \/>\n\<uses-permission android:name="android.permission.MANAGE_USERS" \/>\n\<uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS" \/>\n\<uses-permission android:name="android.permission.CONNECTIVITY_INTERNAL" \/>' $tempSmaliDir/AndroidManifest.xml
 
+elif [ "$apkBaseName" = "HomePro" ];then
+    echo ">>> in custom_app for $apkBaseName"
+    sed -i 's/className="com.baidu.camera.Camera" packageName="com.baidu.camera"/className="com.android.camera.Camera" packageName="com.android.gallery3d"/g' $tempSmaliDir/res/xml-xhdpi/default_workspace.xml
+
 fi
 

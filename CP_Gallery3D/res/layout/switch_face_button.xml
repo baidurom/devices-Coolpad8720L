@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/switch_complete" android:background="@drawable/face_first_complete" android:layout_width="40.0dip" android:layout_height="40.0dip" android:scaleType="center" />
+    <ImageButton android:id="@id/switch_cancel" android:background="@drawable/face_first_cancel" android:layout_width="40.0dip" android:layout_height="40.0dip" android:scaleType="center" />
+</FrameLayout>

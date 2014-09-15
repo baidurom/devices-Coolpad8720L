@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="listPreferredItemHeightSmall" format="dimension" />
+    <attr name="switchStyle" format="reference" />
+    <attr name="max_width" format="dimension" />
+    <attr name="type" format="string" />
+    <attr name="title" format="string" />
+    <attr name="visible" format="boolean" />
+    <attr name="persist" format="boolean" />
+    <attr name="key" format="string" />
+    <attr name="help_flag" format="reference|string" />
+    <attr name="defaultValue" format="reference|string" />
+    <attr name="entryValues" format="reference" />
+    <attr name="entries" format="reference" />
+    <attr name="icons" format="reference" />
+    <attr name="modes" format="reference" />
+    <attr name="singleIcon" format="reference" />
+    <attr name="mini_entries" format="reference" />
+    <attr name="help_body" format="reference" />
+    <attr name="largeIcons" format="reference" />
+    <attr name="images" format="reference" />
+    <attr name="popup_right" format="boolean" />
+    <attr name="popup_left" format="boolean" />
+    <attr name="grid_view_style" format="boolean" />
+    <attr name="margin_right_dp" format="dimension" />
+    <attr name="margin_top_dp" format="dimension" />
+    <attr name="margin_bottom_dp" format="dimension" />
+    <attr name="margin_left_dp" format="dimension" />
+    <attr name="handle" format="boolean" />
+    <attr name="direction" format="integer" />
+    <attr name="content" format="boolean" />
+    <attr name="bottomOffset" format="dimension" />
+    <attr name="topOffset" format="dimension" />
+    <attr name="allowSingleTap" format="dimension" />
+    <attr name="animateOnClick" format="dimension" />
+    <attr name="solid_color" format="color" />
+    <attr name="solid_width" format="dimension" />
+    <attr name="solid_height" format="dimension" />
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.camera.ui.RotateLayout android:layout_gravity="center" android:id="@id/rotate_toast" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/yl_btn_new_feature_introduct_bg" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/new_feature_introduct_up" android:layout_width="314.0dip" android:layout_height="wrap_content">
+            <TextView android:textSize="15.0sp" android:textColor="@*android:color/white" android:gravity="center" android:id="@id/new_feature_introduct_title" android:background="@drawable/yl_btn_new_feature_introduct_up_bg" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="314.0dip" android:layout_height="48.0dip" android:text="@string/new_feature_introduct_positive" />
+            <TextView android:textSize="15.0sp" android:textColor="@*android:color/white" android:gravity="center" android:id="@id/new_feature_introduct_body" android:padding="18.0dip" android:paddingLeft="18.0dip" android:paddingRight="18.0dip" android:layout_width="314.0dip" android:layout_height="180.0dip" android:text="@string/new_feature_introduct_positive" android:layout_below="@id/new_feature_introduct_title" />
+            <CheckBox android:id="@id/new_feature_introduct_checkbox" android:padding="18.0dip" android:layout_width="314.0dip" android:layout_height="wrap_content" android:checked="false" android:button="@drawable/yl_new_feature_checkstate" android:text="@string/new_feature_introduct_nomoredisplay" android:layout_below="@id/new_feature_introduct_body" />
+        </RelativeLayout>
+        <FrameLayout android:id="@id/buttonLayout" android:background="@drawable/yl_btn_new_feature_introduct_down_bg" android:layout_width="314.0dip" android:layout_height="48.0dip" android:layout_below="@id/new_feature_introduct_up">
+            <Button android:gravity="center" android:id="@id/new_feature_introduct_positive_button" android:background="@drawable/yl_btn_new_feature_introduct_down" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/new_feature_introduct_positive" />
+        </FrameLayout>
+    </RelativeLayout>
+</com.android.camera.ui.RotateLayout>

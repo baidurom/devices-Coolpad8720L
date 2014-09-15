@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:gravity="center" android:id="@id/face_effect_setting_title" android:background="@drawable/face_effect_title_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/popup_title_frame_min_height" style="@style/PopupTitleText1"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

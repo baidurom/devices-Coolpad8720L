@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.camera.ui.RotateLayout android:layout_gravity="center" android:id="@id/rotate_toast" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/help_root" android:background="@drawable/yl_btn_new_feature_introduct_bg" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/new_feature_introduct_up" android:layout_width="@dimen/help_page_port_width" android:layout_height="@dimen/help_page_port_up_height">
+            <TextView android:textSize="@dimen/help_page_title_textsize" android:textColor="@color/help_text_title_color" android:gravity="left|center" android:id="@id/new_feature_introduct_title" android:background="@drawable/yl_btn_new_feature_introduct_up_bg" android:paddingLeft="@dimen/help_page_port_title_padding" android:paddingRight="@dimen/help_page_port_title_padding" android:layout_width="fill_parent" android:layout_height="@dimen/help_page_port_title_height" android:text="@string/new_feature_introduct_positive" />
+            <ScrollView android:scrollbarAlwaysDrawHorizontalTrack="true" android:id="@id/new_feature_introduct_body_container" android:layout_width="fill_parent" android:layout_height="@dimen/help_page_port_body_height" android:layout_below="@id/new_feature_introduct_title" android:overScrollMode="never"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <TextView android:textSize="@dimen/help_page_body_textsize" android:textColor="@color/help_text_body_color" android:gravity="left" android:id="@id/new_feature_introduct_body" android:padding="@dimen/help_page_port_title_padding" android:paddingLeft="@dimen/help_page_port_title_padding" android:paddingRight="@dimen/help_page_port_title_padding" android:layout_width="wrap_content" android:layout_height="@dimen/help_page_port_body_height" android:text="@string/new_feature_introduct_positive" android:layout_below="@id/new_feature_introduct_title" />
+            </ScrollView>
+            <CheckBox android:id="@id/new_feature_introduct_checkbox" android:layout_width="@dimen/help_page_port_width" android:layout_height="@dimen/help_page_port_checkbox_height" android:layout_marginLeft="@dimen/help_page_port_checkbox_padding" android:layout_below="@id/new_feature_introduct_body_container" style="@style/IntroductionCheckBox" />
+        </RelativeLayout>
+        <FrameLayout android:id="@id/buttonLayout" android:background="@drawable/yl_btn_new_feature_introduct_down_bg" android:layout_width="@dimen/help_page_port_width" android:layout_height="@dimen/help_page_port_button_height" android:layout_below="@id/new_feature_introduct_up">
+            <Button android:textColor="#ff000000" android:gravity="center" android:id="@id/new_feature_introduct_positive_button" android:background="@drawable/yl_btn_new_feature_introduct_down_res" android:padding="@dimen/help_page_port_button_padding" android:layout_width="fill_parent" android:layout_height="@dimen/help_page_port_button_height" android:text="@string/new_feature_introduct_positive" />
+        </FrameLayout>
+    </RelativeLayout>
+</com.android.camera.ui.RotateLayout>

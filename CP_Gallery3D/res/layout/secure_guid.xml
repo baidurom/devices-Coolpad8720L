@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/mainPanel" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layerType="hardware">
+        <ImageView android:gravity="center_vertical" android:id="@id/gl_guid_cover" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/secure_guid" />
+    </RelativeLayout>
+</merge>

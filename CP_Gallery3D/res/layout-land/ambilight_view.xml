@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.camera.ui.AmbilightView android:id="@id/ambilight_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/ambilight_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.android.camera.ui.GuageIndicatorContainer android:id="@id/guage_indicator" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:layout_gravity="right" android:id="@id/ambilight_button_layout" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <com.android.camera.ShutterButton android:layout_gravity="top" android:id="@id/ambilight_save_btn" android:focusable="true" android:visibility="invisible" android:clickable="true" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="6.0dip" android:src="@drawable/face_switch_complete_bg" android:scaleType="fitXY" android:contentDescription="@string/accessibility_shutter_button" />
+        <com.android.camera.ShutterButton android:layout_gravity="bottom" android:id="@id/ambilight_cancel_btn" android:focusable="true" android:visibility="invisible" android:clickable="true" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="6.0dip" android:src="@drawable/face_switch_cancel_bg" android:scaleType="fitXY" android:contentDescription="@string/accessibility_shutter_button" />
+    </FrameLayout>
+</com.android.camera.ui.AmbilightView>

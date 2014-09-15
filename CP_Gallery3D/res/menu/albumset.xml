@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_camera_holo_light" android:id="@id/action_camera" android:title="@string/switch_to_camera" android:showAsAction="always" />
+    <item android:icon="@drawable/gps_pictures_mapview" android:id="@id/action_show_album_on_map" android:title="@string/show_album_on_map" android:showAsAction="always" />
+    <item android:id="@id/action_new_album" android:title="@string/new_album" android:showAsAction="never" />
+    <item android:id="@id/action_sync_picasa_albums" android:title="@string/sync_picasa_albums" android:showAsAction="never" />
+    <item android:id="@id/action_general_help" android:visible="false" android:title="@string/help" android:showAsAction="never" />
+    <item android:id="@id/action_paste_picture" android:visible="false" android:title="@string/paste_title" android:showAsAction="ifRoom|withText" />
+    <item android:id="@id/action_cancel_paste" android:visible="false" android:title="@string/cancel_paste_title" android:showAsAction="ifRoom|withText" />
+</menu>

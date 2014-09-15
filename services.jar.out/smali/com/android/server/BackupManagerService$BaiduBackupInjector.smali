@@ -61,7 +61,7 @@
     .local v0, componentName:Landroid/content/ComponentName;
     :try_start_0
     #getter for: Lcom/android/server/BackupManagerService;->mPackageManager:Landroid/content/pm/PackageManager;
-    invoke-static {p0}, Lcom/android/server/BackupManagerService;->access$iget-mPackageManager-abe961(Lcom/android/server/BackupManagerService;)Landroid/content/pm/PackageManager;
+    invoke-static {p0}, Lcom/android/server/BackupManagerService;->access$600(Lcom/android/server/BackupManagerService;)Landroid/content/pm/PackageManager;
 
     move-result-object v4
 
@@ -95,7 +95,7 @@
     .line 1422
     .local v2, intent:Landroid/content/Intent;
     #getter for: Lcom/android/server/BackupManagerService;->mContext:Landroid/content/Context;
-    invoke-static {p0}, Lcom/android/server/BackupManagerService;->access$iget-mContext-cee121(Lcom/android/server/BackupManagerService;)Landroid/content/Context;
+    invoke-static {p0}, Lcom/android/server/BackupManagerService;->access$900(Lcom/android/server/BackupManagerService;)Landroid/content/Context;
 
     move-result-object v4
 

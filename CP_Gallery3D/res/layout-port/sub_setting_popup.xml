@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="50.0dip" android:layout_marginTop="60.0dip" android:layout_marginRight="8.0dip" android:layout_alignParentRight="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.camera.ui.SubSettingPopup android:id="@id/subSetting" android:layout_width="fill_parent" android:layout_height="330.0dip" android:layout_marginTop="10.0dip" android:layout_alignParentRight="true">
+        <com.android.camera.ui.RotateImageView android:id="@id/list_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/yl_list_indicator" android:scaleType="center" />
+        <LinearLayout android:orientation="vertical" android:background="@drawable/yl_set_sort_bg" android:layout_width="222.0dip" android:layout_height="wrap_content">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/popup_title_frame_min_height">
+                <TextView android:id="@id/title" style="@style/PopupTitleText" />
+            </FrameLayout>
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ListView android:scrollbarThumbVertical="@drawable/list_scrollbar" android:id="@id/settingList" android:divider="@drawable/listdivider_line" android:choiceMode="singleChoice" style="@style/SettingItemList" />
+            </FrameLayout>
+        </LinearLayout>
+    </com.android.camera.ui.SubSettingPopup>
+</RelativeLayout>

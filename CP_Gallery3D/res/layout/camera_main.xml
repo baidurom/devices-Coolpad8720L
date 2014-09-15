@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/preview_surface_view" />
+    <FrameLayout android:id="@id/main_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.android.camera.ui.RotateImageView android:id="@id/thumbnail_slide_down_animation" android:focusable="false" android:visibility="invisible" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="center" />
+    <include layout="@layout/focus_indicator_container" />
+    <include layout="@layout/camera_left_bar" />
+    <include layout="@layout/camera_sub_bar" />
+    <include layout="@layout/list_menu_area" />
+    <include layout="@layout/camera_shutter_switcher" />
+    <include layout="@layout/guage_container" />
+    <include layout="@layout/faceeffect_gridview_area" />
+    <include layout="@layout/white_frame" />
+    <include layout="@layout/preview_effectfilter" />
+    <include layout="@layout/camera_boot_animation" />
+    <include layout="@layout/dynamic_root_view" />
+    <include layout="@layout/toast_view" />
+</RelativeLayout>
