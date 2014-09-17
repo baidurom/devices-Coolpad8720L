@@ -162,8 +162,7 @@ override_property += \
     persist.yulong.log.level=YVV7
 
 # Disable the odex temporary.
-override_property += \
-    WITH_DEXPREOPT=false
+WITH_DEXPREOPT := false
 
 ##############################################################################
 # remove_property: this property will remove from the build.prop
