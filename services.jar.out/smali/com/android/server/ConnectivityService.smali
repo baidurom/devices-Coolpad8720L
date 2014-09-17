@@ -17184,7 +17184,7 @@
     .line 5185
     const-string v2, "default_data_network"
 
-    invoke-static {v0, v2, v5}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {v0, v2, v5}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 5186
     const-string v2, "ConnectivityService"

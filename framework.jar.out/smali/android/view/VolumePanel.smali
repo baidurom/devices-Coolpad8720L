@@ -941,6 +941,8 @@
     .line 596
     iget-object v3, v1, Landroid/view/VolumePanel$StreamControl;->volTitle:Landroid/widget/TextView;
 
+    if-eqz v3, :cond_baidu_0
+
     iget-object v4, p0, Landroid/view/VolumePanel;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -965,6 +967,7 @@
     invoke-virtual {v3, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     .line 601
+    :cond_baidu_0
     iget-object v3, p0, Landroid/view/VolumePanel;->mSliderGroup:Landroid/view/ViewGroup;
 
     iget-object v4, v1, Landroid/view/VolumePanel$StreamControl;->group:Landroid/view/ViewGroup;
@@ -1049,13 +1052,19 @@
     .line 611
     iget-object v3, v1, Landroid/view/VolumePanel$StreamControl;->volTitle:Landroid/widget/TextView;
 
+    if-eqz v3, :cond_baidu_1
+
     invoke-virtual {v3, v6}, Landroid/view/View;->setVisibility(I)V
 
     .line 612
+    :cond_baidu_1
     iget-object v3, v1, Landroid/view/VolumePanel$StreamControl;->underDivider:Landroid/widget/ImageView;
+
+    if-eqz v3, :cond_baidu_2
 
     invoke-virtual {v3, v6}, Landroid/widget/ImageView;->setVisibility(I)V
 
+    :cond_baidu_2
     goto/16 :goto_1
 .end method
 
@@ -1110,14 +1119,20 @@
     .line 694
     iget-object v4, v3, Landroid/view/VolumePanel$StreamControl;->volTitle:Landroid/widget/TextView;
 
+    if-eqz v4, :cond_baidu_0
+
     invoke-virtual {v4, v8}, Landroid/view/View;->setVisibility(I)V
 
     .line 695
+    :cond_baidu_0
     iget-object v4, v3, Landroid/view/VolumePanel$StreamControl;->underDivider:Landroid/widget/ImageView;
+
+    if-eqz v4, :cond_baidu_1
 
     invoke-virtual {v4, v8}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 691
+    :cond_baidu_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
@@ -1319,6 +1334,8 @@
 
     move-result-object v7
 
+    if-eqz v7, :cond_baidu_0
+
     check-cast v7, Landroid/widget/TextView;
 
     iput-object v7, v4, Landroid/view/VolumePanel$StreamControl;->volTitle:Landroid/widget/TextView;
@@ -1340,6 +1357,7 @@
     invoke-virtual {v7, v4}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     .line 532
+    :cond_baidu_0
     iget-object v7, v4, Landroid/view/VolumePanel$StreamControl;->group:Landroid/view/ViewGroup;
 
     const v8, 0x10203f9
@@ -1347,6 +1365,8 @@
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v7
+
+    if-eqz v7, :cond_baidu_1
 
     check-cast v7, Landroid/widget/ImageView;
 
@@ -1358,6 +1378,7 @@
     invoke-virtual {v7, v4}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     .line 537
+    :cond_baidu_1
     iget-object v7, v4, Landroid/view/VolumePanel$StreamControl;->group:Landroid/view/ViewGroup;
 
     const v8, 0x102032b
@@ -1496,14 +1517,20 @@
     .line 669
     iget-object v4, v3, Landroid/view/VolumePanel$StreamControl;->volTitle:Landroid/widget/TextView;
 
+    if-eqz v4, :cond_baidu_0
+
     invoke-virtual {v4, v7}, Landroid/view/View;->setVisibility(I)V
 
     .line 670
+    :cond_baidu_0
     iget-object v4, v3, Landroid/view/VolumePanel$StreamControl;->underDivider:Landroid/widget/ImageView;
+
+    if-eqz v4, :cond_baidu_1
 
     invoke-virtual {v4, v7}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 666
+    :cond_baidu_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
@@ -2031,6 +2058,8 @@
     .local v2, localLayoutParams:Landroid/view/ViewGroup$LayoutParams;
     iget-object v4, v3, Landroid/view/VolumePanel$StreamControl;->volTitle:Landroid/widget/TextView;
 
+    if-eqz v4, :cond_baidu_0
+
     iget-object v5, p0, Landroid/view/VolumePanel;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2055,6 +2084,7 @@
     invoke-virtual {v4, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     .line 567
+    :cond_baidu_0
     iget-object v4, v3, Landroid/view/VolumePanel$StreamControl;->seekbarView:Landroid/widget/SeekBar;
 
     const/16 v5, 0x2d
@@ -2066,14 +2096,20 @@
     .line 568
     iget-object v4, v3, Landroid/view/VolumePanel$StreamControl;->volTitle:Landroid/widget/TextView;
 
+    if-eqz v4,  :cond_baidu_1
+
     invoke-virtual {v4, v8}, Landroid/view/View;->setVisibility(I)V
 
     .line 569
+    :cond_baidu_1
     iget-object v4, v3, Landroid/view/VolumePanel$StreamControl;->underDivider:Landroid/widget/ImageView;
+
+    if-eqz v4,  :cond_baidu_2
 
     invoke-virtual {v4, v8}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 562
+    :cond_baidu_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1

@@ -269,7 +269,7 @@
     sput-object v0, Lcom/android/internal/telephony/SMSDispatcher;->PDU_SEQUENCE_PORT_PROJECTION:[Ljava/lang/String;
 
     .line 244
-    const/16 v0, 0x8
+    const/16 v0, 0x7
 
     new-array v0, v0, [Ljava/lang/String;
 
@@ -305,9 +305,9 @@
 
     const-string v2, "network_type"
 
-    aput-object v2, v0, v1
+    #aput-object v2, v0, v1
 
-    const/4 v1, 0x7
+    const/4 v1, 0x6
 
     const-string v2, "destination_port"
 
@@ -2977,6 +2977,8 @@
 
     move-result-object v6
 
+    const/4 v6, 0x0
+
     const/4 v7, 0x0
 
     const-string v8, "date ASC"
@@ -3265,15 +3267,17 @@
 
     move-object/from16 v0, v16
 
-    invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    #invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
-    move-result v3
+    #move-result v3
 
-    move-object/from16 v0, v16
+    #move-object/from16 v0, v16
 
-    invoke-interface {v0, v3}, Landroid/database/Cursor;->getInt(I)I
+    #invoke-interface {v0, v3}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result v44
+    #move-result v44
+
+    const/16 v44, 0x0
 
     .line 2364
     .local v44, networkType:I
@@ -5094,7 +5098,7 @@
 
     move-object/from16 v0, v54
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    #invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 2512
     move-object/from16 v0, p0
@@ -5113,14 +5117,14 @@
 
     move-object/from16 v0, v54
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    #invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 2513
     const-string v3, " OR network_type="
 
     move-object/from16 v0, v54
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    #invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 2514
     move-object/from16 v0, p0
@@ -5141,10 +5145,10 @@
 
     move-object/from16 v0, v54
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    #invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 2515
-    const-string v3, ") AND address = ?"
+    const-string v3, " AND address = ?"
 
     move-object/from16 v0, v54
 
@@ -5473,6 +5477,8 @@
     invoke-virtual/range {v29 .. v29}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v5
+
+    const/4 v5, 0x0
 
     const/4 v6, 0x0
 
@@ -6155,13 +6161,15 @@
     .line 2601
     const-string v2, "network_type"
 
-    invoke-interface {v8, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    #invoke-interface {v8, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
-    move-result v2
+    #move-result v2
 
-    invoke-interface {v8, v2}, Landroid/database/Cursor;->getInt(I)I
+    #invoke-interface {v8, v2}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result v2
+    #move-result v2
+
+    const/4 v2, 0x0
 
     move-object/from16 v0, v26
 
@@ -6542,7 +6550,7 @@
 
     move-object/from16 v0, v31
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    #invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 2678
     move-object/from16 v0, p0
@@ -6561,14 +6569,14 @@
 
     move-object/from16 v0, v31
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    #invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 2679
     const-string v2, " OR network_type="
 
     move-object/from16 v0, v31
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    #invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 2680
     move-object/from16 v0, p0
@@ -6589,10 +6597,10 @@
 
     move-object/from16 v0, v31
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    #invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 2681
-    const-string v2, ") AND address = ?"
+    const-string v2, " AND address = ?"
 
     move-object/from16 v0, v31
 
@@ -9818,7 +9826,7 @@
 
     move-object/from16 v0, v39
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    #invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 2995
     const-string v2, " AND address = ?"
@@ -10301,7 +10309,7 @@
 
     move-object/from16 v0, v38
 
-    invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    #invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 3057
     if-eqz p3, :cond_9
@@ -11962,6 +11970,8 @@
 
     move-result-object v5
 
+    const/4 v5, 0x0
+
     const/4 v6, 0x0
 
     const-string v7, "date ASC"
@@ -12355,6 +12365,8 @@
     invoke-virtual/range {v42 .. v42}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v6
+
+    const/4 v6, 0x0
 
     const/4 v7, 0x0
 
@@ -13128,13 +13140,15 @@
     .line 2802
     const-string v3, "network_type"
 
-    invoke-interface {v15, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    #invoke-interface {v15, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
-    move-result v3
+    #move-result v3
 
-    invoke-interface {v15, v3}, Landroid/database/Cursor;->getInt(I)I
+    #invoke-interface {v15, v3}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result v3
+    #move-result v3
+
+    const/4 v3, 0x0
 
     move-object/from16 v0, v39
 
