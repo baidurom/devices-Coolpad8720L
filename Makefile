@@ -157,6 +157,9 @@ override_property += \
 override_property += \
     ro.build.version.release=4.3
 
+override_property += \
+    ro.build.description=Coolpad8720L-user 4.3 JSS15Q 4.3.079 release-keys
+
 # Enable the debug log in the Coolpad device.
 override_property += \
     persist.yulong.log.level=YVV7
