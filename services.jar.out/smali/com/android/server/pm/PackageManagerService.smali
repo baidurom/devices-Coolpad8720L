@@ -3583,7 +3583,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v2, p1, p2, v3}, Lcom/yulong/android/reflect/YLReflect;->BugReportTrigger_LaunchBugReportSystem(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
+    #invoke-static {v2, p1, p2, v3}, Lcom/yulong/android/reflect/YLReflect;->BugReportTrigger_LaunchBugReportSystem(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
 
     goto :goto_0
 .end method

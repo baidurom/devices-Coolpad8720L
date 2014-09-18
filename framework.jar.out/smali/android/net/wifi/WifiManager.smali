@@ -2268,9 +2268,11 @@
 
     .line 952
     :try_start_0
-    invoke-static {}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckWLAN()Z
+    #invoke-static {}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckWLAN()Z
 
-    move-result v2
+    #move-result v2
+
+    const/4 v2, 0x1
 
     if-nez v2, :cond_0
 

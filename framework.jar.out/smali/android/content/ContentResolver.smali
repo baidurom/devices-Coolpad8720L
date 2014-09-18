@@ -2278,9 +2278,11 @@
 
     .line 984
     .local v1, url:Landroid/net/Uri;
-    invoke-static {v1}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckUpdateProvider(Landroid/net/Uri;)Z
+    #invoke-static {v1}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckUpdateProvider(Landroid/net/Uri;)Z
 
-    move-result v2
+    #move-result v2
+
+    const/4 v2, 0x1
 
     if-nez v2, :cond_0
 
@@ -2412,9 +2414,11 @@
     const/4 v11, 0x0
 
     .line 1017
-    invoke-static {p1}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckUpdateProvider(Landroid/net/Uri;)Z
+    #invoke-static {p1}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckUpdateProvider(Landroid/net/Uri;)Z
 
-    move-result v0
+    #move-result v0
+
+    const/4 v0, 0x1
 
     if-nez v0, :cond_0
 
@@ -2718,9 +2722,11 @@
 
     .prologue
     .line 1058
-    invoke-static {p1}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckUpdateProvider(Landroid/net/Uri;)Z
+    #invoke-static {p1}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckUpdateProvider(Landroid/net/Uri;)Z
 
-    move-result v0
+    #move-result v0
+
+    const/4 v0, 0x1
 
     if-nez v0, :cond_0
 
@@ -3456,9 +3462,11 @@
     const/4 v11, 0x0
 
     .line 934
-    invoke-static {p1}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckUpdateProvider(Landroid/net/Uri;)Z
+    #invoke-static {p1}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckUpdateProvider(Landroid/net/Uri;)Z
 
-    move-result v0
+    #move-result v0
+
+    const/4 v0, 0x1
 
     if-nez v0, :cond_0
 
@@ -4798,9 +4806,11 @@
 
     .prologue
     .line 413
-    invoke-static/range {p1 .. p1}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckProvider(Landroid/net/Uri;)Z
+    #invoke-static/range {p1 .. p1}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckProvider(Landroid/net/Uri;)Z
 
-    move-result v4
+    #move-result v4
+
+    const/4 v4, 0x1
 
     if-nez v4, :cond_0
 
@@ -5443,9 +5453,11 @@
 
     .prologue
     .line 1102
-    invoke-static {p1}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckUpdateProvider(Landroid/net/Uri;)Z
+    #invoke-static {p1}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckUpdateProvider(Landroid/net/Uri;)Z
 
-    move-result v1
+    #move-result v1
+
+    const/4 v1, 0x1
 
     if-nez v1, :cond_0
 

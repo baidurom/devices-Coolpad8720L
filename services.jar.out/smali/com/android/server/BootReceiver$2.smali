@@ -102,7 +102,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v3, v2}, Lcom/yulong/android/reflect/YLReflect;->BugReportTrigger_LaunchBugReportSystem(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
+    #invoke-static {v0, v1, v3, v2}, Lcom/yulong/android/reflect/YLReflect;->BugReportTrigger_LaunchBugReportSystem(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 

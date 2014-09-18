@@ -590,9 +590,11 @@
     const/4 v3, 0x0
 
     .line 336
-    invoke-static {}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckCamera()Z
+    #invoke-static {}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckCamera()Z
 
-    move-result v4
+    #move-result v4
+
+    const/4 v4, 0x1
 
     if-nez v4, :cond_1
 
@@ -702,9 +704,11 @@
 
     .prologue
     .line 317
-    invoke-static {}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckCamera()Z
+    #invoke-static {}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckCamera()Z
 
-    move-result v0
+    #move-result v0
+
+    const/4 v0, 0x1
 
     if-nez v0, :cond_0
 

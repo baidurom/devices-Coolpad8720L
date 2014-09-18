@@ -32,7 +32,7 @@
     .prologue
     .line 126
     #getter for: Lcom/android/internal/app/ActionBarImpl;->mActionView:Lcom/android/internal/widget/ActionBarView;
-    invoke-static {p0}, Lcom/android/internal/app/ActionBarImpl;->access$iget-mActionView-987305(Lcom/android/internal/app/ActionBarImpl;)Lcom/android/internal/widget/ActionBarView;
+    invoke-static {p0}, Lcom/android/internal/app/ActionBarImpl;->access$1200(Lcom/android/internal/app/ActionBarImpl;)Lcom/android/internal/widget/ActionBarView;
 
     move-result-object v0
 

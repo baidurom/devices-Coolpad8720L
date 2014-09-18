@@ -1910,7 +1910,7 @@
 
     const/16 v22, 0x0
 
-    invoke-static/range {v19 .. v22}, Lcom/yulong/android/reflect/YLReflect;->BugReportTrigger_LaunchBugReportSystem(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
+    #invoke-static/range {v19 .. v22}, Lcom/yulong/android/reflect/YLReflect;->BugReportTrigger_LaunchBugReportSystem(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
 
     .line 596
     const-string v19, "Watchdog"

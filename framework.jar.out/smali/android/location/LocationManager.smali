@@ -406,9 +406,11 @@
 
     .prologue
     .line 836
-    invoke-static {}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckGPS()Z
+    #invoke-static {}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckGPS()Z
 
-    move-result v3
+    #move-result v3
+
+    const/4 v3, 0x1
 
     if-nez v3, :cond_0
 

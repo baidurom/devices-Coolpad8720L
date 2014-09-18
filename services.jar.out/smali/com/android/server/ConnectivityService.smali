@@ -2365,7 +2365,7 @@
     .local v10, cr:Landroid/content/ContentResolver;
     const-string v2, "default_data_network"
 
-    const/16 v3, 0x64
+    const/16 v3, 0x1
 
     invoke-static {v10, v2, v3}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -9598,7 +9598,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v9, v0, v1}, Lcom/yulong/android/internal/telephony/TelephonyCommFeature;->notifyToBugReport(Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
+    #invoke-static {v9, v0, v1}, Lcom/yulong/android/internal/telephony/TelephonyCommFeature;->notifyToBugReport(Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
 
     .line 1853
     const/4 v0, 0x0
@@ -9623,7 +9623,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v10, v0, v1}, Lcom/yulong/android/internal/telephony/TelephonyCommFeature;->notifyToBugReport(Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
+    #invoke-static {v10, v0, v1}, Lcom/yulong/android/internal/telephony/TelephonyCommFeature;->notifyToBugReport(Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
 
     .line 1859
     const-string v0, "Error modifying route - too much recursion"
@@ -9820,7 +9820,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v8, v0, v1}, Lcom/yulong/android/internal/telephony/TelephonyCommFeature;->notifyToBugReport(Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
+    #invoke-static {v8, v0, v1}, Lcom/yulong/android/internal/telephony/TelephonyCommFeature;->notifyToBugReport(Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
 
     .line 1897
     new-instance v0, Ljava/lang/StringBuilder;
@@ -17170,7 +17170,9 @@
     .local v0, cr:Landroid/content/ContentResolver;
     const-string v2, "default_data_network"
 
-    invoke-static {v0, v2, v4}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    const/4 v3, 0x1
+
+    invoke-static {v0, v2, v3}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v1
 

@@ -9385,9 +9385,11 @@
 
     .prologue
     .line 1976
-    invoke-static {p3}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckActivity(Landroid/content/Intent;)Z
+    #invoke-static {p3}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckActivity(Landroid/content/Intent;)Z
 
-    move-result v4
+    #move-result v4
+
+    const/4 v4, 0x1
 
     if-nez v4, :cond_0
 

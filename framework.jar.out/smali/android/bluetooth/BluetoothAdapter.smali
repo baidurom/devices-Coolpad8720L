@@ -855,9 +855,11 @@
     .line 529
     :cond_0
     :try_start_0
-    invoke-static {}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckBlueTooth()Z
+    #invoke-static {}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckBlueTooth()Z
 
-    move-result v1
+    #move-result v1
+
+    const/4 v1, 0x1
 
     if-nez v1, :cond_1
 

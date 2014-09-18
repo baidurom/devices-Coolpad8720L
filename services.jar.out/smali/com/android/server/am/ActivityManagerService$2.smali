@@ -327,6 +327,8 @@
 
     sget-boolean v3, Lcom/android/server/am/ActivityManagerService;->IS_USER_BUILD:Z
 
+    const/4 v3, 0x0
+
     if-eqz v3, :cond_6
 
     move-object/from16 v0, p0
@@ -339,6 +341,8 @@
     invoke-static {v3, v0}, Lcom/android/server/am/ActivityManagerService;->access$300(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/ProcessRecord;)Z
 
     move-result v3
+
+    const/4 v3, 0x0
 
     if-nez v3, :cond_8
 

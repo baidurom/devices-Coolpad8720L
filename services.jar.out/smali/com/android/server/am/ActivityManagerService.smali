@@ -32005,7 +32005,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static {v3, v4, v5, v6}, Lcom/yulong/android/reflect/YLReflect;->BugReportTrigger_LaunchBugReportSystem(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
+    #invoke-static {v3, v4, v5, v6}, Lcom/yulong/android/reflect/YLReflect;->BugReportTrigger_LaunchBugReportSystem(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
 
     .line 3814
     :goto_a
@@ -32137,7 +32137,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static {v3, v4, v5, v6}, Lcom/yulong/android/reflect/YLReflect;->BugReportTrigger_LaunchBugReportSystem(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
+    #invoke-static {v3, v4, v5, v6}, Lcom/yulong/android/reflect/YLReflect;->BugReportTrigger_LaunchBugReportSystem(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
 
     goto :goto_a
 
@@ -32155,7 +32155,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static {v3, v4, v5, v6}, Lcom/yulong/android/reflect/YLReflect;->BugReportTrigger_LaunchBugReportSystem(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
+    #invoke-static {v3, v4, v5, v6}, Lcom/yulong/android/reflect/YLReflect;->BugReportTrigger_LaunchBugReportSystem(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_2
 
@@ -54902,7 +54902,7 @@
     .line 8903
     const-string v0, "systemserver_crash"
 
-    invoke-static {v0, p3, v4, p4}, Lcom/yulong/android/reflect/YLReflect;->BugReportTrigger_LaunchBugReportSystem(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
+    #invoke-static {v0, p3, v4, p4}, Lcom/yulong/android/reflect/YLReflect;->BugReportTrigger_LaunchBugReportSystem(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
 
     .line 8912
     :goto_1
@@ -54923,7 +54923,7 @@
     :cond_1
     const-string v0, "app_crash"
 
-    invoke-static {v0, p3, v4, p4}, Lcom/yulong/android/reflect/YLReflect;->BugReportTrigger_LaunchBugReportSystem(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
+    #invoke-static {v0, p3, v4, p4}, Lcom/yulong/android/reflect/YLReflect;->BugReportTrigger_LaunchBugReportSystem(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
 
     goto :goto_1
 .end method
@@ -55311,7 +55311,7 @@
     .line 9117
     const-string v0, "wtf"
 
-    invoke-static {v0, v3, v4, p3}, Lcom/yulong/android/reflect/YLReflect;->BugReportTrigger_LaunchBugReportSystem(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
+    #invoke-static {v0, v3, v4, p3}, Lcom/yulong/android/reflect/YLReflect;->BugReportTrigger_LaunchBugReportSystem(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/ApplicationErrorReport$CrashInfo;)V
 
     .line 9121
     invoke-direct {p0, v2, p3}, Lcom/android/server/am/ActivityManagerService;->crashApplication(Lcom/android/server/am/ProcessRecord;Landroid/app/ApplicationErrorReport$CrashInfo;)V
@@ -58599,7 +58599,7 @@
 
     .line 6459
     :try_start_0
-    invoke-static {p0, p1, p2}, Lcom/android/server/am/BaiduActivityInjector;->hookMoveTaskToFront(Lcom/android/server/am/ActivityManagerService;II)Z
+    invoke-static/range {p0 .. p2}, Lcom/android/server/am/BaiduActivityInjector;->hookMoveTaskToFront(Lcom/android/server/am/ActivityManagerService;II)Z
 
     move-result v0
 
@@ -65501,7 +65501,7 @@
     .line 1566
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
 
-    invoke-direct {p0}, Lcom/android/server/am/ActivityManagerService;->yiServiceLoader()V
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/am/ActivityManagerService;->yiServiceLoader()V
 
     .line 1567
     return-void

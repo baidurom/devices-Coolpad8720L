@@ -875,9 +875,11 @@
 
     .line 554
     :try_start_0
-    invoke-static {}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckNFC()Z
+    #invoke-static {}, Lcom/yulong/android/cloudsecurity/server/CloudSecurityReflect;->CloudSecurity_csCheckNFC()Z
 
-    move-result v2
+    #move-result v2
+
+    const/4 v2, 0x1
 
     if-nez v2, :cond_0
 

@@ -2438,13 +2438,13 @@
     .line 820
     const-string v9, "bug_report"
 
-    invoke-static {v5}, Lcom/yulong/android/reflect/YLReflect;->BugReportService_init(Landroid/content/Context;)Ljava/lang/Object;
+    #invoke-static {v5}, Lcom/yulong/android/reflect/YLReflect;->BugReportService_init(Landroid/content/Context;)Ljava/lang/Object;
 
-    move-result-object v7
+    #move-result-object v7
 
-    check-cast v7, Landroid/os/IBinder;
+    #check-cast v7, Landroid/os/IBinder;
 
-    invoke-static {v9, v7}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
+    #invoke-static {v9, v7}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
     :try_end_50
     .catch Ljava/lang/Throwable; {:try_start_50 .. :try_end_50} :catch_2f
 
