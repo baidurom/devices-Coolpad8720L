@@ -9836,7 +9836,7 @@
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 2996
-    const/4 v2, 0x3
+    const/4 v2, 0x1
 
     new-array v6, v2, [Ljava/lang/String;
 
@@ -9852,7 +9852,7 @@
 
     move-result-object v3
 
-    aput-object v3, v6, v2
+    #aput-object v3, v6, v2
 
     const/4 v2, 0x1
 
@@ -9868,9 +9868,9 @@
 
     move-result-object v3
 
-    aput-object v3, v6, v2
+    #aput-object v3, v6, v2
 
-    const/4 v2, 0x2
+    const/4 v2, 0x0
 
     aput-object v9, v6, v2
 
