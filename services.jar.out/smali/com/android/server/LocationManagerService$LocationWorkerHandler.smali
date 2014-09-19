@@ -96,7 +96,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+    #invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
     goto :goto_0
 

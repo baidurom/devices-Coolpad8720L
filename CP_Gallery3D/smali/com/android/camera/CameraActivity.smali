@@ -1526,7 +1526,7 @@
 
     const-string v4, "com.android.gallery3d.app.Gallery"
 
-    invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    #invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 2020
     iget-object v3, p0, Lcom/android/camera/ActivityBase;->mLatestUri:Landroid/net/Uri;

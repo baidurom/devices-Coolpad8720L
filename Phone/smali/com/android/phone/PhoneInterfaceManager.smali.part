@@ -234,56 +234,7 @@
 
     .line 1627
     :pswitch_3
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "[commonRilRequestOp] commandId ="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/phone/PhoneInterfaceManager;->logDBG(Ljava/lang/String;)V
-
-    .line 1628
-    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->commInterface:Lcom/android/phone/PhoneInterfaceManager$CommInterface;
-
-    if-nez v0, :cond_0
-
-    .line 1629
-    new-instance v0, Lcom/android/phone/PhoneInterfaceManager$CommInterface;
-
-    invoke-direct {v0, p0}, Lcom/android/phone/PhoneInterfaceManager$CommInterface;-><init>(Lcom/android/phone/PhoneInterfaceManager;)V
-
-    iput-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->commInterface:Lcom/android/phone/PhoneInterfaceManager$CommInterface;
-
-    .line 1630
-    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->commInterface:Lcom/android/phone/PhoneInterfaceManager$CommInterface;
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
-
-    .line 1632
-    :cond_0
-    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->commInterface:Lcom/android/phone/PhoneInterfaceManager$CommInterface;
-
-    move v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move-object v5, p5
-
-    invoke-virtual/range {v0 .. v5}, Lcom/android/phone/PhoneInterfaceManager$CommInterface;->requestCPlusWComm(ILjava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)Z
-
-    move-result v6
+    const/4 v6, 0x0
 
     goto :goto_0
 
@@ -313,34 +264,6 @@
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 2945
-    return-void
-.end method
-
-.method private loge(Ljava/lang/String;)V
-    .locals 3
-    .parameter "msg"
-
-    .prologue
-    .line 1407
-    const-string v0, "PhoneInterfaceManager"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "[PhoneIntfMgr] "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1408
     return-void
 .end method
 
