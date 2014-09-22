@@ -68,7 +68,7 @@ vendor_remove_files := media/bootanimation-excepted.zip media/bootanimation-exce
 ##############################################################################
 # Vendor apks you want to use
 #-----------------------------------------------------------------------------
-vendor_saved_apps := Bluetooth CP_BluetoothSetting
+vendor_saved_apps := Bluetooth
 
 ##############################################################################
 # Apks build from current project root directory
