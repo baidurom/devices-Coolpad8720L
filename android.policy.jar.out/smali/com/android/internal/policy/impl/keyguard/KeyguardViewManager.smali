@@ -185,7 +185,7 @@
     invoke-virtual {p1, v1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 138
-    invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;->watchForCoolShowUpdate()V
+    #invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;->watchForCoolShowUpdate()V
 
     .line 139
     return-void
@@ -524,6 +524,8 @@
 
     move-result v5
 
+    const/4 v5, 0x0
+
     if-eqz v5, :cond_2
 
     .line 506
@@ -538,6 +540,8 @@
     invoke-virtual {p1, v5}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v5
+
+    const/4 v5, 0x0
 
     if-eqz v5, :cond_3
 
@@ -931,10 +935,10 @@
 
     .line 327
     :cond_8
-    invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;->getKeyguardBitmap()V
+    #invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;->getKeyguardBitmap()V
 
     .line 328
-    invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;->setKeyguardBackground()V
+    #invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;->setKeyguardBackground()V
 
     .line 331
     .end local v0           #lp:Landroid/view/WindowManager$LayoutParams;

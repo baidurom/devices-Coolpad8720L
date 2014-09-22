@@ -4068,30 +4068,32 @@
     invoke-virtual {v1, v2}, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;->registerCallback(Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitorCallback;)V
 
     .line 605
-    new-instance v1, Lcom/android/internal/policy/impl/keyguard/TouchProtectScreen;
+    #new-instance v1, Lcom/android/internal/policy/impl/keyguard/TouchProtectScreen;
 
-    iget-object v2, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;->mKeyguardViewManager:Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;
+    #iget-object v2, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;->mKeyguardViewManager:Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;
 
-    iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;->mContext:Landroid/content/Context;
+    #iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;->mContext:Landroid/content/Context;
 
-    invoke-direct {v1, p0, v2, v3}, Lcom/android/internal/policy/impl/keyguard/TouchProtectScreen;-><init>(Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;Landroid/content/Context;)V
+    #invoke-direct {v1, p0, v2, v3}, Lcom/android/internal/policy/impl/keyguard/TouchProtectScreen;-><init>(Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;->mTouchProtectScreen:Lcom/android/internal/policy/impl/keyguard/TouchProtectScreen;
+    #iput-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;->mTouchProtectScreen:Lcom/android/internal/policy/impl/keyguard/TouchProtectScreen;
 
     .line 606
-    iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;->mTouchProtectScreen:Lcom/android/internal/policy/impl/keyguard/TouchProtectScreen;
+    #iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;->mTouchProtectScreen:Lcom/android/internal/policy/impl/keyguard/TouchProtectScreen;
 
-    invoke-virtual {v1}, Lcom/android/internal/policy/impl/keyguard/TouchProtectScreen;->init()V
+    #invoke-virtual {v1}, Lcom/android/internal/policy/impl/keyguard/TouchProtectScreen;->init()V
 
     .line 607
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;->mUpdateMonitor:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
-    invoke-virtual {v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;->onSystemReady()V
+    #invoke-virtual {v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;->onSystemReady()V
 
     .line 611
     invoke-static {}, Lcom/yulong/android/server/systeminterface/util/SystemUtil;->getLockLevel()Ljava/lang/String;
 
     move-result-object v0
+
+    const/4 v0, 0x0
 
     .line 612
     .local v0, isDMLock:Ljava/lang/String;

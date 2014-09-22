@@ -273,11 +273,13 @@
     const/4 v2, 0x0
 
     .line 190
-    const-string v0, "content://com.yulong.android.provider.coolshow/wallpaperLanterInfo"
+    #const-string v0, "content://com.yulong.android.provider.coolshow/wallpaperLanterInfo"
 
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    #invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    move-result-object v0
+    #move-result-object v0
+
+    const/4 v0, 0x0
 
     sput-object v0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;->CONTENT_URI:Landroid/net/Uri;
 
@@ -4232,6 +4234,8 @@
 
     sget-object v1, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;->CONTENT_URI:Landroid/net/Uri;
 
+    if-eqz v1, :cond_baidu_0
+
     const/4 v2, 0x1
 
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;->mCoolShowContentObserver:Landroid/database/ContentObserver;
@@ -4239,6 +4243,7 @@
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 826
+    :cond_baidu_0
     return-void
 .end method
 

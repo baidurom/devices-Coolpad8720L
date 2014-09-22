@@ -153,7 +153,6 @@
         <item name="listDivider">@drawable/divider_horizontal_dark</item>
         <item name="listChoiceIndicatorSingle">@drawable/btn_radio</item>
         <item name="listChoiceIndicatorMultiple">@drawable/btn_check</item>
-        <item name="windowDisablePreview">true</item>
         <item name="windowSoftInputMode">stateUnspecified|adjustUnspecified</item>
         <item name="candidatesTextStyleSpans">@string/candidates_style</item>
         <item name="textColorSearchUrl">@color/search_url_text</item>
@@ -310,7 +309,6 @@
         <item name="windowFixedWidthMinor">0.0dip</item>
         <item name="windowFixedHeightMajor">0.0dip</item>
         <item name="keyboardViewStyle">@style/Widget.KeyboardView</item>
-        <item name="ylActionModeCustomViewEnabled">false</item>
     </style>
     <style name="Theme.NoTitleBar" parent="@style/Theme">
         <item name="windowNoTitle">true</item>
@@ -2274,7 +2272,6 @@
         <item name="horizontalScrollViewStyle">@style/Widget.DeviceDefault.HorizontalScrollView</item>
         <item name="datePickerStyle">@style/Widget.DeviceDefault.DatePicker</item>
         <item name="calendarViewStyle">@style/Widget.DeviceDefault.CalendarView</item>
-        <item name="textCursorDrawable">@drawable/yl_text_cursor_holo_dark</item>
         <item name="switchPreferenceStyle">@style/Preference.DeviceDefault.SwitchPreference</item>
         <item name="textSuggestionsWindowStyle">@style/Widget.DeviceDefault.TextSuggestionsPopupWindow</item>
         <item name="actionModeStyle">@style/Widget.DeviceDefault.ActionMode</item>
@@ -2296,7 +2293,6 @@
     <style name="Theme.DeviceDefault.Light" parent="@style/Theme.Holo.Light">
         <item name="textAppearance">@style/TextAppearance.DeviceDefault.Light</item>
         <item name="textAppearanceInverse">@style/TextAppearance.DeviceDefault.Light.Inverse</item>
-        <item name="textColorHintInverse">@color/yl_hint_foreground_holo_dark</item>
         <item name="textAppearanceLarge">@style/TextAppearance.DeviceDefault.Light.Large</item>
         <item name="textAppearanceMedium">@style/TextAppearance.DeviceDefault.Light.Medium</item>
         <item name="textAppearanceSmall">@style/TextAppearance.DeviceDefault.Light.Small</item>
@@ -2307,21 +2303,20 @@
         <item name="buttonStyleSmall">@style/Widget.DeviceDefault.Light.Button.Small</item>
         <item name="buttonStyleInset">@style/Widget.DeviceDefault.Light.Button.Inset</item>
         <item name="buttonStyleToggle">@style/Widget.DeviceDefault.Light.Button.Toggle</item>
-        <item name="windowContentOverlay">@null</item>
         <item name="windowTitleStyle">@style/WindowTitle.DeviceDefault</item>
         <item name="windowTitleBackgroundStyle">@style/WindowTitleBackground.DeviceDefault</item>
         <item name="alertDialogStyle">@style/AlertDialog.DeviceDefault.Light</item>
-        <item name="absListViewStyle">@style/Widget.DeviceDefault.Light.Yulong.AbsListView</item>
+        <item name="absListViewStyle">@style/Widget.DeviceDefault.Light.AbsListView</item>
         <item name="autoCompleteTextViewStyle">@style/Widget.DeviceDefault.Light.AutoCompleteTextView</item>
         <item name="checkboxStyle">@style/Widget.DeviceDefault.Light.CompoundButton.CheckBox</item>
         <item name="dropDownListViewStyle">@style/Widget.DeviceDefault.Light.ListView.DropDown</item>
         <item name="editTextStyle">@style/Widget.DeviceDefault.Light.EditText</item>
-        <item name="expandableListViewStyle">@style/Widget.DeviceDefault.Light.Yulong.ExpandableListView</item>
+        <item name="expandableListViewStyle">@style/Widget.DeviceDefault.Light.ExpandableListView</item>
         <item name="galleryStyle">@style/Widget.DeviceDefault.Light.Gallery</item>
         <item name="gridViewStyle">@style/Widget.DeviceDefault.Light.GridView</item>
         <item name="imageButtonStyle">@style/Widget.DeviceDefault.Light.ImageButton</item>
         <item name="imageWellStyle">@style/Widget.DeviceDefault.Light.ImageWell</item>
-        <item name="listViewStyle">@style/Widget.DeviceDefault.Light.Yulong.ListView</item>
+        <item name="listViewStyle">@style/Widget.DeviceDefault.Light.ListView</item>
         <item name="listViewWhiteStyle">@style/Widget.DeviceDefault.Light.ListView.White</item>
         <item name="popupWindowStyle">@style/Widget.DeviceDefault.Light.PopupWindow</item>
         <item name="progressBarStyle">@style/Widget.DeviceDefault.Light.ProgressBar</item>
@@ -2350,14 +2345,11 @@
         <item name="dialogPreferenceStyle">@style/Preference.DeviceDefault.DialogPreference</item>
         <item name="editTextPreferenceStyle">@style/Preference.DeviceDefault.DialogPreference.EditTextPreference</item>
         <item name="ringtonePreferenceStyle">@style/Preference.DeviceDefault.RingtonePreference</item>
-        <item name="textColorHint">@color/yl_hint_foreground_holo_light</item>
         <item name="windowAnimationStyle">@style/Animation.DeviceDefault.Activity</item>
         <item name="textAppearanceButton">@style/TextAppearance.DeviceDefault.Light.Widget.Button</item>
         <item name="listSeparatorTextViewStyle">@style/Widget.DeviceDefault.Light.TextView.ListSeparator</item>
         <item name="progressBarStyleSmallTitle">@style/Widget.DeviceDefault.Light.ProgressBar.Small.Title</item>
         <item name="ratingBarStyleIndicator">@style/Widget.DeviceDefault.Light.RatingBar.Indicator</item>
-        <item name="listDivider">@drawable/yl_list_divider_holo_light</item>
-        <item name="listChoiceIndicatorMultiple">@drawable/yl_btn_check_holo_light</item>
         <item name="progressBarStyleInverse">@style/Widget.DeviceDefault.Light.ProgressBar.Inverse</item>
         <item name="progressBarStyleSmallInverse">@style/Widget.DeviceDefault.Light.ProgressBar.Small.Inverse</item>
         <item name="progressBarStyleLargeInverse">@style/Widget.DeviceDefault.Light.ProgressBar.Large.Inverse</item>
@@ -2375,46 +2367,27 @@
         <item name="actionBarStyle">@style/Widget.DeviceDefault.Light.ActionBar</item>
         <item name="dropDownSpinnerStyle">@style/Widget.DeviceDefault.Light.Spinner.DropDown</item>
         <item name="actionDropDownStyle">@style/Widget.DeviceDefault.Light.Spinner.DropDown.ActionBar</item>
-        <item name="actionButtonStyle">@style/Widget.Holo.Light.Yulong.ActionButton</item>
-        <item name="actionModeBackground">@drawable/yl_cab_background_top_holo_light</item>
-        <item name="actionModeCloseDrawable">@drawable/yl_ic_cab_done_holo_lightl</item>
+        <item name="actionButtonStyle">@style/Widget.DeviceDefault.Light.ActionButton</item>
         <item name="actionBarTabStyle">@style/Widget.DeviceDefault.Light.ActionBar.TabView</item>
         <item name="actionBarTabBarStyle">@style/Widget.DeviceDefault.Light.ActionBar.TabBar</item>
         <item name="actionBarTabTextStyle">@style/Widget.DeviceDefault.Light.ActionBar.TabText</item>
         <item name="actionOverflowButtonStyle">@style/Widget.DeviceDefault.Light.ActionButton.Overflow</item>
-        <item name="actionModeCloseButtonStyle">@style/Widget.Holo.Light.Yulong.ActionButton.CloseMode</item>
+        <item name="actionModeCloseButtonStyle">@style/Widget.DeviceDefault.Light.ActionButton.CloseMode</item>
         <item name="listPopupWindowStyle">@style/Widget.DeviceDefault.Light.ListPopupWindow</item>
         <item name="popupMenuStyle">@style/Widget.DeviceDefault.Light.PopupMenu</item>
         <item name="textAppearanceLargePopupMenu">@style/TextAppearance.DeviceDefault.Light.Widget.PopupMenu.Large</item>
         <item name="textAppearanceSmallPopupMenu">@style/TextAppearance.DeviceDefault.Light.Widget.PopupMenu.Small</item>
         <item name="dialogTheme">@style/Theme.DeviceDefault.Light.Dialog</item>
         <item name="alertDialogTheme">@style/Theme.DeviceDefault.Light.Dialog.Alert</item>
-        <item name="homeAsUpIndicator">@drawable/yl_ic_ab_back_holo_light</item>
-        <item name="selectableItemBackground">@drawable/yl_item_background_holo_light</item>
-        <item name="actionModeCutDrawable">@drawable/yl_ic_menu_cut_holo_light</item>
-        <item name="actionModeCopyDrawable">@drawable/yl_ic_menu_copy_holo_light</item>
-        <item name="actionModePasteDrawable">@drawable/yl_ic_menu_paste_holo_light</item>
         <item name="borderlessButtonStyle">@style/Widget.DeviceDefault.Light.Button.Borderless</item>
         <item name="buttonBarStyle">@style/DeviceDefault.Light.ButtonBar</item>
         <item name="segmentedButtonStyle">@style/DeviceDefault.Light.SegmentedButton</item>
-        <item name="fastScrollThumbDrawable">@drawable/yl_scrollbar_handle_accelerated</item>
-        <item name="fastScrollPreviewBackgroundLeft">@drawable/menu_submenu_background</item>
-        <item name="fastScrollPreviewBackgroundRight">@drawable/menu_submenu_background</item>
-        <item name="fastScrollTrackDrawable">@null</item>
-        <item name="fastScrollOverlayPosition">floating</item>
-        <item name="editTextBackground">@drawable/yl_edit_text</item>
         <item name="horizontalScrollViewStyle">@style/Widget.DeviceDefault.Light.HorizontalScrollView</item>
-        <item name="fastScrollTextColor">@color/primary_text_dark</item>
         <item name="datePickerStyle">@style/Widget.DeviceDefault.Light.DatePicker</item>
         <item name="calendarViewStyle">@style/Widget.DeviceDefault.Light.CalendarView</item>
-        <item name="actionMenuTextAppearance">@style/TextAppearance.Holo.Light.Yulong.Widget.ActionBar.Menu</item>
-        <item name="actionMenuTextColor">@color/action_menu_text_color</item>
-        <item name="textCursorDrawable">@drawable/yl_text_cursor_holo_light</item>
         <item name="switchPreferenceStyle">@style/Preference.DeviceDefault.SwitchPreference</item>
         <item name="textSuggestionsWindowStyle">@style/Widget.DeviceDefault.Light.TextSuggestionsPopupWindow</item>
-        <item name="actionModeSelectAllDrawable">@drawable/yl_ic_menu_selectall_holo_light</item>
         <item name="actionModeStyle">@style/Widget.DeviceDefault.Light.ActionMode</item>
-        <item name="actionModeSplitBackground">@drawable/yl_ab_bottom_solid_light_holo</item>
         <item name="mediaRouteButtonStyle">@style/Widget.DeviceDefault.Light.MediaRouteButton</item>
         <item name="presentationTheme">@style/Theme.DeviceDefault.Light.Dialog.Presentation</item>
         <item name="checkedTextViewStyle">@style/Widget.DeviceDefault.Light.CheckedTextView</item>
@@ -2423,11 +2396,8 @@
         <item name="numberPickerStyle">@style/Widget.DeviceDefault.Light.NumberPicker</item>
         <item name="timePickerStyle">@style/Widget.DeviceDefault.Light.TimePicker</item>
         <item name="actionModePopupWindowStyle">@style/Widget.DeviceDefault.Light.PopupWindow.ActionMode</item>
-        <item name="preferenceFragmentStyle">@style/PreferenceFragment.DeviceDefault</item>
         <item name="searchDialogTheme">@style/Theme.DeviceDefault.Light.SearchBar</item>
-        <item name="switchStyle">@style/Widget.DeviceDefault.Light.CompoundButton.Switch</item>
         <item name="keyboardViewStyle">@style/Widget.DeviceDefault.KeyboardView</item>
-        <item name="ylActionModeCustomViewEnabled">true</item>
     </style>
     <style name="Theme.DeviceDefault.Light.NoActionBar" parent="@style/Theme.Holo.Light.NoActionBar" />
     <style name="Theme.DeviceDefault.Light.NoActionBar.Fullscreen" parent="@style/Theme.Holo.Light.NoActionBar.Fullscreen" />
@@ -2517,11 +2487,7 @@
     <style name="Widget.DeviceDefault.ActionButton.TextButton" parent="@style/Widget.Holo.ActionButton.TextButton" />
     <style name="Widget.DeviceDefault.ActionMode" parent="@style/Widget.Holo.ActionMode" />
     <style name="Widget.DeviceDefault.ActionButton.CloseMode" parent="@style/Widget.Holo.ActionButton.CloseMode" />
-    <style name="Widget.DeviceDefault.ActionBar" parent="@style/Widget.Holo.ActionBar">
-        <item name="background">@drawable/yl_cab_background_top_holo_light</item>
-        <item name="height">@dimen/action_bar_hight</item>
-        <item name="backgroundSplit">@drawable/yl_ab_bottom_solid_light_holo</item>
-    </style>
+    <style name="Widget.DeviceDefault.ActionBar" parent="@style/Widget.Holo.ActionBar" />
     <style name="Widget.DeviceDefault.Button.Borderless" parent="@style/Widget.Holo.Button.Borderless" />
     <style name="Widget.DeviceDefault.Tab" parent="@style/Widget.Holo.Tab" />
     <style name="Widget.DeviceDefault.CalendarView" parent="@style/Widget.Holo.CalendarView" />
@@ -2574,22 +2540,10 @@
     <style name="Widget.DeviceDefault.Light.Tab" parent="@style/Widget.Holo.Light.Tab" />
     <style name="Widget.DeviceDefault.Light.CalendarView" parent="@style/Widget.Holo.Light.CalendarView" />
     <style name="Widget.DeviceDefault.Light.ActionButton" parent="@style/Widget.Holo.Light.ActionButton" />
-    <style name="Widget.DeviceDefault.Light.ActionButton.Overflow" parent="@style/Widget.Holo.Light.ActionButton.Overflow">
-        <item name="src">@drawable/yl_ic_menu_moreoverflow_holo_light</item>
-    </style>
-    <style name="Widget.DeviceDefault.Light.ActionMode" parent="@style/Widget.Holo.Light.ActionMode">
-        <item name="height">@dimen/action_bar_hight</item>
-        <item name="titleTextStyle">@style/TextAppearance.Holo.Widget.ActionMode.Yulong.Title</item>
-        <item name="subtitleTextStyle">@style/TextAppearance.Holo.Widget.ActionMode.Yulong.Subtitle</item>
-    </style>
+    <style name="Widget.DeviceDefault.Light.ActionButton.Overflow" parent="@style/Widget.Holo.Light.ActionButton.Overflow" />
+    <style name="Widget.DeviceDefault.Light.ActionMode" parent="@style/Widget.Holo.Light.ActionMode" />
     <style name="Widget.DeviceDefault.Light.ActionButton.CloseMode" parent="@style/Widget.Holo.Light.ActionButton.CloseMode" />
-    <style name="Widget.DeviceDefault.Light.ActionBar" parent="@style/Widget.Holo.Light.ActionBar">
-        <item name="background">@drawable/yl_cab_background_top_holo_light</item>
-        <item name="height">@dimen/action_bar_hight</item>
-        <item name="titleTextStyle">@style/TextAppearance.Widget.ActionBar.Yulong.Title</item>
-        <item name="subtitleTextStyle">@style/TextAppearance.Widget.ActionBar.Yulong.Subtitle</item>
-        <item name="backgroundSplit">@drawable/yl_ab_bottom_solid_light_holo</item>
-    </style>
+    <style name="Widget.DeviceDefault.Light.ActionBar" parent="@style/Widget.Holo.Light.ActionBar" />
     <style name="Widget.DeviceDefault.Light.ActionBar.TabView" parent="@style/Widget.Holo.Light.ActionBar.TabView" />
     <style name="Widget.DeviceDefault.Light.ActionBar.TabText" parent="@style/Widget.Holo.Light.ActionBar.TabText" />
     <style name="Widget.DeviceDefault.Light.ActionBar.TabBar" parent="@style/Widget.Holo.Light.ActionBar.TabBar" />
@@ -3431,12 +3385,7 @@
     <style name="Widget.DeviceDefault.Light.ListView.White" parent="@style/Widget.Holo.Light.ListView.White" />
     <style name="Widget.DeviceDefault.Light.NumberPicker" parent="@style/Widget.Holo.Light.NumberPicker" />
     <style name="Widget.DeviceDefault.Light.Spinner.DropDown" parent="@style/Widget.Holo.Light.Spinner.DropDown" />
-    <style name="Widget.DeviceDefault.Light.TextView.ListSeparator" parent="@style/Widget.Holo.Light.TextView.ListSeparator">
-        <item name="textSize">@dimen/yl_list_separator_text_size</item>
-        <item name="textStyle">normal</item>
-        <item name="textColor">@color/yl_list_separator_text_color</item>
-        <item name="background">@drawable/yl_list_section_divider_holo_light</item>
-    </style>
+    <style name="Widget.DeviceDefault.Light.TextView.ListSeparator" parent="@style/Widget.Holo.Light.TextView.ListSeparator" />
     <style name="Widget.DeviceDefault.Light.TimePicker" parent="@style/Widget.Holo.Light.TimePicker" />
     <style name="Widget.DeviceDefault.Light.TextSuggestionsPopupWindow" parent="@style/Widget.Holo.Light.TextSuggestionsPopupWindow" />
     <style name="TextAppearance.DeviceDefault.Light" parent="@style/TextAppearance.Holo.Light" />
@@ -3453,9 +3402,7 @@
     <style name="TextAppearance.DeviceDefault.Light.Widget.PopupMenu.Large" parent="@style/TextAppearance.Holo.Light.Widget.PopupMenu.Large" />
     <style name="TextAppearance.DeviceDefault.Light.Widget.PopupMenu.Small" parent="@style/TextAppearance.Holo.Light.Widget.PopupMenu.Small" />
     <style name="Preference.DeviceDefault" parent="@style/Preference.Holo" />
-    <style name="Preference.DeviceDefault.Category" parent="@style/Preference.Holo.Category">
-        <item name="layout">@layout/yl_preference_category_holo</item>
-    </style>
+    <style name="Preference.DeviceDefault.Category" parent="@style/Preference.Holo.Category" />
     <style name="Preference.DeviceDefault.CheckBoxPreference" parent="@style/Preference.Holo.CheckBoxPreference" />
     <style name="Preference.DeviceDefault.DialogPreference" parent="@style/Preference.Holo.DialogPreference" />
     <style name="Preference.DeviceDefault.DialogPreference.EditTextPreference" parent="@style/Preference.Holo.DialogPreference.EditTextPreference" />
@@ -3643,22 +3590,7 @@
         <item name="windowTitleStyle">@style/DialogWindowTitle.DeviceDefault</item>
     </style>
     <style name="Theme.DeviceDefault.Light.Dialog.Alert" parent="@style/Theme.Holo.Light.Dialog.Alert">
-        <item name="textColorHintInverse">@color/yl_hint_foreground_holo_dark</item>
         <item name="windowTitleStyle">@style/DialogWindowTitle.DeviceDefault.Light</item>
-        <item name="textColorHint">@color/yl_hint_foreground_holo_light</item>
-        <item name="actionBarStyle">@style/Widget.DeviceDefault.Light.ActionBar</item>
-        <item name="actionButtonStyle">@style/Widget.Holo.Light.Yulong.ActionButton</item>
-        <item name="actionModeBackground">@drawable/yl_cab_background_top_holo_light</item>
-        <item name="actionModeCloseDrawable">@drawable/yl_ic_cab_done_holo_light</item>
-        <item name="actionModeCloseButtonStyle">@style/Widget.Holo.Light.Yulong.ActionButton.CloseMode</item>
-        <item name="selectableItemBackground">@drawable/yl_item_background_holo_light</item>
-        <item name="actionModeCutDrawable">@drawable/yl_ic_menu_cut_holo_light</item>
-        <item name="actionModeCopyDrawable">@drawable/yl_ic_menu_copy_holo_light</item>
-        <item name="actionModePasteDrawable">@drawable/yl_ic_menu_paste_holo_light</item>
-        <item name="actionModeSelectAllDrawable">@drawable/yl_ic_menu_selectall_holo_light</item>
-        <item name="actionModeStyle">@style/Widget.DeviceDefault.Light.ActionMode</item>
-        <item name="actionModeSplitBackground">@drawable/yl_ab_bottom_solid_light_holo</item>
-        <item name="ylActionModeCustomViewEnabled">true</item>
     </style>
     <style name="Theme.DeviceDefault.SearchBar" parent="@style/Theme.Holo.SearchBar" />
     <style name="Theme.DeviceDefault.Light.SearchBar" parent="@style/Theme.Holo.Light.SearchBar" />

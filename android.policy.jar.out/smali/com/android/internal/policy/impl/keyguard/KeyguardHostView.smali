@@ -1575,7 +1575,7 @@
 
     .line 1332
     :cond_1
-    invoke-virtual {p0, v4}, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;->addYLKeguardWidgetChild(Landroid/view/View;)V
+    #invoke-virtual {p0, v4}, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;->addYLKeguardWidgetChild(Landroid/view/View;)V
 
     .line 1333
     const-string v6, "222"
@@ -1605,21 +1605,21 @@
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1334
-    new-instance v5, Lcom/android/internal/policy/impl/keyguard/YLKeyguardWidgetFrame;
+    #new-instance v5, Lcom/android/internal/policy/impl/keyguard/YLKeyguardWidgetFrame;
 
-    iget-object v6, p0, Landroid/view/View;->mContext:Landroid/content/Context;
+    #iget-object v6, p0, Landroid/view/View;->mContext:Landroid/content/Context;
 
-    invoke-direct {v5, v6}, Lcom/android/internal/policy/impl/keyguard/YLKeyguardWidgetFrame;-><init>(Landroid/content/Context;)V
+    #invoke-direct {v5, v6}, Lcom/android/internal/policy/impl/keyguard/YLKeyguardWidgetFrame;-><init>(Landroid/content/Context;)V
 
     .line 1335
     .local v5, ttFramwLayout:Landroid/widget/FrameLayout;
     const/16 v6, 0xff
 
-    invoke-static {v6, v9, v9, v9}, Landroid/graphics/Color;->argb(IIII)I
+    #invoke-static {v6, v9, v9, v9}, Landroid/graphics/Color;->argb(IIII)I
 
-    move-result v6
+    #move-result v6
 
-    invoke-virtual {v5, v6}, Landroid/view/View;->setBackgroundColor(I)V
+    #invoke-virtual {v5, v6}, Landroid/view/View;->setBackgroundColor(I)V
 
     .line 1336
     const/4 v6, 0x0
@@ -1654,10 +1654,10 @@
 
     invoke-direct {v7, v10, v10}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    invoke-virtual {v5, v6, v7}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    #invoke-virtual {v5, v6, v7}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 1349
-    invoke-virtual {p0, v5}, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;->addYLKeguardWidgetChild(Landroid/view/View;)V
+    #invoke-virtual {p0, v5}, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;->addYLKeguardWidgetChild(Landroid/view/View;)V
 
     .line 1356
     :goto_0
@@ -1720,6 +1720,8 @@
     .line 1367
     sget-boolean v6, Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;->isFangdaoPattern:Z
 
+    const/4 v6, 0x0
+
     if-eqz v6, :cond_3
 
     .line 1368
@@ -1738,6 +1740,8 @@
     :cond_3
     sget-boolean v6, Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;->isRebootPassPattern:Z
 
+    const/4 v6, 0x0
+
     if-eqz v6, :cond_4
 
     .line 1373
@@ -1755,6 +1759,8 @@
     .line 1377
     :cond_4
     sget-boolean v6, Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;->isDmLock:Z
+
+    const/4 v6, 0x0
 
     if-eqz v6, :cond_5
 
