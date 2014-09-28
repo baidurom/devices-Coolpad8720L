@@ -2,10 +2,11 @@
 # Please use this file as the project Makefile reference
 
 ##############################################################################
-# This value defines which base this project should choose, only for baidu internal.
-# Support values: S710, JRD77SS, YINS, YIGN, I9250
+# The value decides which base device should choose for patchall and upgrade.
+# You can configure the property according to your device and the default value is base.
+# Support values: base, base_cm, and other devices in the future.
 #-----------------------------------------------------------------------------
-BAIDU_BASE_DEVICE := I9250
+#BASE := base
 
 ##############################################################################
 # Default DALVIK_VM_BUILD setting is 27
@@ -54,6 +55,12 @@ SIGN_OTA := true
 # use a prebuilt boot.img/recovery.img, if not, nothing to do
 #-----------------------------------------------------------------------------
 vendor_modify_images := boot
+
+##############################################################################
+# customize weather add assert in update-script of ota package
+# set false if you don't need this assert fuction
+#-----------------------------------------------------------------------------
+# recovery_ota_assert := false
 
 ##############################################################################
 # Directorys which you want to remove in vendor directory
