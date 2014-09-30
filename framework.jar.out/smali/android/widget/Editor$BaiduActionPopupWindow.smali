@@ -104,7 +104,7 @@
     iget-object v7, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v7}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v7}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v7
 
@@ -121,7 +121,7 @@
     iget-object v7, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v7}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v7}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v7
 
@@ -135,7 +135,7 @@
     iget-object v7, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v7}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v7}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v7
 
@@ -148,7 +148,7 @@
     iget-object v7, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v7}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v7}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v7
 
@@ -184,7 +184,7 @@
     iget-object v8, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v8}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v8}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v8
 
@@ -215,7 +215,7 @@
     iget-object v7, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v7}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v7}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v7
 
@@ -234,7 +234,7 @@
     iget-object v7, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v7}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v7}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v7
 
@@ -245,7 +245,7 @@
     iget-object v8, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v8}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v8}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v8
 
@@ -272,7 +272,7 @@
     iget-object v7, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v7}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v7}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v7
 
@@ -282,7 +282,7 @@
     iget-object v7, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v7}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v7}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v7
 
@@ -300,7 +300,7 @@
     iget-object v7, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v7}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v7}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v7
 
@@ -320,7 +320,7 @@
     iget-object v7, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v7}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v7}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v7
 
@@ -441,7 +441,7 @@
     move-object/from16 v20, v0
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v20
 
@@ -466,7 +466,7 @@
     move-object/from16 v20, v0
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v20
 
@@ -527,7 +527,7 @@
     move-object/from16 v21, v0
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static/range {v21 .. v21}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static/range {v21 .. v21}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v21
 
@@ -608,7 +608,7 @@
     move-object/from16 v20, v0
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v20
 
@@ -625,7 +625,7 @@
     move-object/from16 v20, v0
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v20
 
@@ -650,7 +650,7 @@
     move-object/from16 v20, v0
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v20
 
@@ -683,7 +683,7 @@
     move-object/from16 v20, v0
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v20
 
@@ -706,7 +706,7 @@
     move-object/from16 v20, v0
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v20
 
@@ -731,7 +731,7 @@
     move-object/from16 v20, v0
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v20
 
@@ -754,7 +754,7 @@
     move-object/from16 v20, v0
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v20
 
@@ -795,7 +795,7 @@
     move-object/from16 v20, v0
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v20
 
@@ -821,7 +821,7 @@
     move-object/from16 v20, v0
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v20
 
@@ -839,7 +839,7 @@
     move-object/from16 v20, v0
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v20
 
@@ -859,7 +859,7 @@
     move-object/from16 v0, v20
 
     #calls: Landroid/widget/Editor;->isPositionVisible(II)Z
-    invoke-static {v0, v6, v7}, Landroid/widget/Editor;->access$invoke-isPositionVisible-107bb8(Landroid/widget/Editor;II)Z
+    invoke-static {v0, v6, v7}, Landroid/widget/Editor;->access$2600(Landroid/widget/Editor;II)Z
 
     move-result v8
 
@@ -880,7 +880,7 @@
     move-object/from16 v20, v0
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v20
 
@@ -1011,7 +1011,7 @@
     move-object/from16 v20, v0
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v20
 
@@ -1034,7 +1034,7 @@
     move-object/from16 v20, v0
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v20
 
@@ -1057,7 +1057,7 @@
     move-object/from16 v20, v0
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v20
 
@@ -1128,7 +1128,7 @@
     move-object/from16 v20, v0
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static/range {v20 .. v20}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v20
 
@@ -1143,7 +1143,7 @@
     move-object/from16 v21, v0
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static/range {v21 .. v21}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static/range {v21 .. v21}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v21
 
@@ -1272,7 +1272,7 @@
     iget-object v7, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v7}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v7}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v7
 
@@ -1285,7 +1285,7 @@
     iget-object v7, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v7}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v7}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v7
 
@@ -1298,7 +1298,7 @@
     iget-object v7, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v7}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v7}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v7
 
@@ -1315,7 +1315,7 @@
     iget-object v7, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v7}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v7}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v7
 
@@ -1357,7 +1357,7 @@
     iget-object v7, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v7}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v7}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v7
 
@@ -1374,7 +1374,7 @@
     iget-object v7, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v7}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v7}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v7
 
@@ -1446,7 +1446,7 @@
     iget-object v1, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v1}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v1}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v1
 
@@ -1469,7 +1469,7 @@
     iget-object v1, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v1}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v1}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v1
 
@@ -1514,7 +1514,7 @@
     iget-object v3, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v3}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v3}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v3
 
@@ -1534,7 +1534,7 @@
     iget-object v3, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v3}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v3}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v3
 
@@ -1563,7 +1563,7 @@
     iget-object v3, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v3}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v3}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v3
 
@@ -1599,7 +1599,7 @@
     iget-object v3, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v3}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v3}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v3
 
@@ -1804,7 +1804,7 @@
     iget-object v1, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v1}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v1}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v1
 
@@ -1818,7 +1818,7 @@
     iget-object v1, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v1}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v1}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v1
 
@@ -1844,7 +1844,7 @@
     iget-object v1, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v1}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v1}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v1
 
@@ -1855,7 +1855,7 @@
     iget-object v2, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v2}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v2}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v2
 
@@ -1877,7 +1877,7 @@
     iget-object v1, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v1}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v1}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v1
 
@@ -1951,7 +1951,7 @@
     iget-object v8, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v8}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v8}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v8
 
@@ -1964,7 +1964,7 @@
     iget-object v8, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v8}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v8}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v8
 
@@ -1977,7 +1977,7 @@
     iget-object v8, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #calls: Landroid/widget/Editor;->isCursorInsideSuggestionSpan()Z
-    invoke-static {v8}, Landroid/widget/Editor;->access$invoke-isCursorInsideSuggestionSpan-11e2fd(Landroid/widget/Editor;)Z
+    invoke-static {v8}, Landroid/widget/Editor;->access$2400(Landroid/widget/Editor;)Z
 
     move-result v8
 
@@ -1991,7 +1991,7 @@
     iget-object v8, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v8}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v8}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v8
 
@@ -2271,7 +2271,7 @@
     iget-object v5, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v5}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v5}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v5
 
@@ -2341,7 +2341,7 @@
     iget-object v6, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v6}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v6}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v6
 
@@ -2366,7 +2366,7 @@
     move-result v2
 
     #calls: Landroid/widget/Editor;->isOffsetVisible(I)Z
-    invoke-static {v1, v2}, Landroid/widget/Editor;->access$invoke-isOffsetVisible-f99f2d(Landroid/widget/Editor;I)Z
+    invoke-static {v1, v2}, Landroid/widget/Editor;->access$1300(Landroid/widget/Editor;I)Z
 
     move-result v1
 
@@ -2398,7 +2398,7 @@
     iget-object v1, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
-    invoke-static {v1}, Landroid/widget/Editor;->access$iget-mTextView-e80fac(Landroid/widget/Editor;)Landroid/widget/TextView;
+    invoke-static {v1}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v1
 
@@ -2415,7 +2415,7 @@
     iget-object v1, p0, Landroid/widget/Editor$BaiduActionPopupWindow;->this$0:Landroid/widget/Editor;
 
     #calls: Landroid/widget/Editor;->getPositionListener()Landroid/widget/Editor$PositionListener;
-    invoke-static {v1}, Landroid/widget/Editor;->access$invoke-getPositionListener-445b32(Landroid/widget/Editor;)Landroid/widget/Editor$PositionListener;
+    invoke-static {v1}, Landroid/widget/Editor;->access$1200(Landroid/widget/Editor;)Landroid/widget/Editor$PositionListener;
 
     move-result-object v0
 

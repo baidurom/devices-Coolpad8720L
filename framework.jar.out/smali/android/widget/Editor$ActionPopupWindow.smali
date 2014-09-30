@@ -1291,12 +1291,16 @@
     .line 3295
     iget-object v8, p0, Landroid/widget/Editor$ActionPopupWindow;->mSelectionTextView:Landroid/widget/TextView;
 
+    if-eqz v8, :cond_baidu_0
+
     if-eqz v1, :cond_6
 
     move v5, v6
 
     :goto_5
     invoke-virtual {v8, v5}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_baidu_0
 
     .line 3296
     iget-object v8, p0, Landroid/widget/Editor$ActionPopupWindow;->mReplaceTextView:Landroid/widget/TextView;
@@ -1311,6 +1315,8 @@
     .line 3299
     iget-object v8, p0, Landroid/widget/Editor$ActionPopupWindow;->mClipBoardTextView:Landroid/widget/TextView;
 
+    if-eqz v8, :cond_baidu_1
+
     if-eqz v2, :cond_8
 
     move v5, v6
@@ -1318,8 +1324,12 @@
     :goto_7
     invoke-virtual {v8, v5}, Landroid/view/View;->setVisibility(I)V
 
+    :cond_baidu_1
+
     .line 3300
     iget-object v8, p0, Landroid/widget/Editor$ActionPopupWindow;->mInputMethodTextView:Landroid/widget/TextView;
+
+    if-eqz v8, :cond_baidu_2
 
     if-eqz v3, :cond_9
 
@@ -1327,6 +1337,8 @@
 
     :goto_8
     invoke-virtual {v8, v5}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_baidu_2
 
     .line 3303
     if-nez v0, :cond_a
@@ -1340,7 +1352,11 @@
     .line 3305
     iget-object v5, p0, Landroid/widget/Editor$PinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
+    if-eqz v5, :cond_baidu_3
+
     invoke-virtual {v5, v7}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_baidu_3
 
     .line 3312
     :goto_9
@@ -1412,7 +1428,11 @@
     :cond_a
     iget-object v5, p0, Landroid/widget/Editor$PinnedPopupWindow;->mContentView:Landroid/view/ViewGroup;
 
+    if-eqz v5, :cond_baidu_4
+
     invoke-virtual {v5, v6}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_baidu_4
 
     .line 3311
     invoke-super {p0}, Landroid/widget/Editor$PinnedPopupWindow;->show()V
