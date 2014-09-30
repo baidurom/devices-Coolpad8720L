@@ -4655,7 +4655,9 @@
     :cond_0
     const-string v3, "yulong_screen_off_timeout_with_charger"
 
-    invoke-static {v2, v3, v7, v10}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+    iget v6, p0, Lcom/android/server/power/PowerManagerService;->mScreenOffTimeoutSetting:I
+
+    invoke-static {v2, v3, v6, v10}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v3
 
