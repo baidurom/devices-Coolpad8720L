@@ -1,219 +1,159 @@
 .method public getScAddress(I)Ljava/lang/String;
-    .locals 9
+    .locals 5
     .parameter "slotId"
 
     .prologue
-    const/4 v5, 0x0
+    const/4 v4, 0x0
 
     .line 625
     :try_start_0
-    new-instance v6, Lcom/android/internal/telephony/BaiduExtITelephonyProxy;
+    new-instance v0, Lcom/android/internal/telephony/BaiduExtITelephonyProxy;
 
-    invoke-direct {v6}, Lcom/android/internal/telephony/BaiduExtITelephonyProxy;-><init>()V
+    invoke-direct {v0}, Lcom/android/internal/telephony/BaiduExtITelephonyProxy;-><init>()V
 
-    const-string v7, "phone"
+    const-string v1, "phone"
 
-    invoke-static {v7}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+    invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
-    move-result-object v7
+    move-result-object v1
 
-    invoke-virtual {v6, v7}, Lcom/android/internal/telephony/BaiduExtITelephonyProxy;->getScAddress(Landroid/os/IBinder;)Ljava/lang/String;
-
-    move-result-object v4
-
-    move-object v2, v4
-
-    .line 626
-    .local v4, scAddressStr:Ljava/lang/String;
-    const-string v6, "BaiduTelephonyManager"
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v8, "getScAddress scAddressStr"
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_baidu_0
-
-    .line 627
-    invoke-static {v4}, Lcom/android/internal/telephony/IccUtils;->hexStringToBytes(Ljava/lang/String;)[B
+    invoke-virtual {v0, v1}, Lcom/android/internal/telephony/BaiduExtITelephonyProxy;->getScAddress(Landroid/os/IBinder;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 628
-    .local v3, scAddressPdu:[B
-    const/4 v6, 0x1
+    .line 626
+    .local v3, scAddressStr:Ljava/lang/String;
+    const-string v0, "BaiduTelephonyManager"
 
-    const/16 v7, 0x8
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-static {v3, v6, v7}, Landroid/telephony/PhoneNumberUtils;->calledPartyBCDToString([BII)Ljava/lang/String;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v2
+    const-string v2, "getScAddress scAddressStr "
 
-    .line 630
-    .local v2, scAddress:Ljava/lang/String;
-    const-string v6, "BaiduTelephonyManager"
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v8, "scAddress by calledPartyBCDToString"
+    move-result-object v1
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v1
 
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 637
-    .end local v2           #scAddress:Ljava/lang/String;
-    .end local v3           #scAddressPdu:[B
-    .end local v4           #scAddressStr:Ljava/lang/String;
+    .line 638
+    .end local v3           #scAddressStr:Ljava/lang/String;
     :goto_0
-    :goto_baidu_0
-    return-object v2
+    return-object v3
 
-    .line 632
+    .line 633
     :catch_0
     move-exception v0
 
-    .line 633
+    .line 634
     .local v0, e1:Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    move-object v2, v5
-
-    .line 634
-    goto :goto_0
+    move-object v3, v4
 
     .line 635
+    goto :goto_0
+
+    .line 636
     .end local v0           #e1:Landroid/os/RemoteException;
     :catch_1
     move-exception v1
 
-    .line 636
+    .line 637
     .local v1, e2:Ljava/lang/NullPointerException;
     invoke-virtual {v1}, Ljava/lang/NullPointerException;->printStackTrace()V
 
-    move-object v2, v5
+    move-object v3, v4
 
-    .line 637
+    .line 638
     goto :goto_0
 .end method
 
 .method public setScAddress(Ljava/lang/String;I)Z
-    .locals 7
+    .locals 4
     .parameter "address"
     .parameter "slotId"
 
     .prologue
     const/4 v3, 0x0
 
-    .line 651
+    .line 652
     :try_start_0
-    move-object v2, p1
-
-    goto :goto_baidu_0
-
-    invoke-static {p1}, Landroid/telephony/PhoneNumberUtils;->networkPortionToCalledPartyBCDWithLength(Ljava/lang/String;)[B
-
-    move-result-object v4
-
-    invoke-static {v4}, Lcom/android/internal/telephony/IccUtils;->bytesToHexString([B)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 654
-    .local v2, encodedScAddress:Ljava/lang/String;
-    :goto_baidu_0
-    const-string v4, "BaiduTelephonyManager"
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "setScAddress encodedScAddress"
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 655
-    new-instance v4, Lcom/android/internal/telephony/BaiduExtITelephonyProxy;
+    const-string v0, "BaiduTelephonyManager"
 
-    invoke-direct {v4}, Lcom/android/internal/telephony/BaiduExtITelephonyProxy;-><init>()V
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v5, "phone"
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v5}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+    const-string v2, "setScAddress scAddressStr "
 
-    move-result-object v5
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v5, v2}, Lcom/android/internal/telephony/BaiduExtITelephonyProxy;->setScAddress(Landroid/os/IBinder;Ljava/lang/String;)V
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 656
+    new-instance v0, Lcom/android/internal/telephony/BaiduExtITelephonyProxy;
+
+    invoke-direct {v0}, Lcom/android/internal/telephony/BaiduExtITelephonyProxy;-><init>()V
+
+    const-string v1, "phone"
+
+    invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, p1}, Lcom/android/internal/telephony/BaiduExtITelephonyProxy;->setScAddress(Landroid/os/IBinder;Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 656
+    .line 657
     const/4 v3, 0x1
 
-    .line 662
-    .end local v2           #encodedScAddress:Ljava/lang/String;
+    .line 663
     :goto_0
     return v3
 
-    .line 657
+    .line 658
     :catch_0
     move-exception v0
 
-    .line 658
+    .line 659
     .local v0, e1:Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 660
+    .line 661
     .end local v0           #e1:Landroid/os/RemoteException;
     :catch_1
     move-exception v1
 
-    .line 661
+    .line 662
     .local v1, e2:Ljava/lang/NullPointerException;
     invoke-virtual {v1}, Ljava/lang/NullPointerException;->printStackTrace()V
 

@@ -14701,14 +14701,12 @@
 
     invoke-virtual {p0, v10}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 1083
     invoke-static {}, Lcom/yulong/android/modemservice/CPPhoneProperties;->isOverseaProduct()Z
 
     move-result v10
 
     if-eqz v10, :cond_13
 
-    .line 1084
     iget-object v10, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mPhone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
     invoke-virtual {v10}, Lcom/android/internal/telephony/gsm/GSMPhone;->getPhoneId()I
@@ -14844,6 +14842,10 @@
     .line 1118
     const-string v10, "spn"
 
+    invoke-virtual {p0, v8}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->updatePlmnOrSpnDisplay(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
     invoke-virtual {v2, v10, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 1119
@@ -14853,6 +14855,10 @@
 
     .line 1120
     const-string v10, "plmn"
+
+    invoke-virtual {p0, v4}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->updatePlmnOrSpnDisplay(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
 
     invoke-virtual {v2, v10, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 

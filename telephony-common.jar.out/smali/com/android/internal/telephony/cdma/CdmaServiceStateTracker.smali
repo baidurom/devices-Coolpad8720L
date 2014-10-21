@@ -13417,49 +13417,45 @@
 
     invoke-virtual {p0, v5}, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 944
     iget-object v5, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
     const-string v7, "cdma.operator.alpha"
 
     invoke-virtual {v5, v7, v3}, Lcom/android/internal/telephony/cdma/CDMAPhone;->setSystemProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 946
     new-instance v0, Landroid/content/Intent;
 
     const-string v5, "android.provider.Telephony.SPN_STRINGS_UPDATED"
 
     invoke-direct {v0, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 947
     .local v0, intent:Landroid/content/Intent;
     const/high16 v5, 0x2000
 
     invoke-virtual {v0, v5}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 948
     const-string v5, "showSpn"
 
     invoke-virtual {v0, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 949
     const-string v5, "spn"
 
     const-string v6, ""
 
     invoke-virtual {v0, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 950
     const-string v5, "showPlmn"
 
     invoke-virtual {v0, v5, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 951
     const-string v5, "plmn"
+
+    invoke-virtual {p0, v3}, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->updatePlmnOrSpnDisplay(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
 
     invoke-virtual {v0, v5, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 953
     iget-object v5, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->mPhone:Lcom/android/internal/telephony/cdma/CDMAPhone;
 
     invoke-virtual {v5}, Lcom/android/internal/telephony/PhoneBase;->getContext()Landroid/content/Context;
