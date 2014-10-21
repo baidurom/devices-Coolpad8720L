@@ -170,7 +170,7 @@
 
     const/4 v3, 0x0
 
-    const v4, 0x10102c8
+    const v4, #android:attr@textSelectHandleWindowStyle#t
 
     invoke-direct {v1, v2, v3, v4}, Landroid/widget/PopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -1045,7 +1045,14 @@
     .line 3716
     invoke-virtual {p0, v2, v3}, Landroid/widget/Editor$HandleView;->updatePosition(FF)V
 
-    invoke-static {p0}, Landroid/widget/Editor$BaiduEditorInjector;->update(Landroid/widget/Editor$HandleView;)V
+    iget-object v11, p0, Landroid/widget/Editor$HandleView;->this$0:Landroid/widget/Editor;
+
+    #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
+    invoke-static {v11}, Landroid/widget/Editor;->access$600(Landroid/widget/Editor;)Landroid/widget/TextView;
+
+    move-result-object v11
+
+    invoke-static {v11, p0}, Landroid/widget/Editor$BaiduEditorInjector;->update(Landroid/widget/TextView;Landroid/widget/Editor$HandleView;)V
 
     .line 3717
     iget-object v11, p0, Landroid/widget/Editor$HandleView;->mVelocityTracker:Landroid/view/VelocityTracker;

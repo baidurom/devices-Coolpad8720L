@@ -18,6 +18,7 @@
         Landroid/widget/Editor$SelectionStartHandleView;,
         Landroid/widget/Editor$InsertionHandleView;,
         Landroid/widget/Editor$HandleView;,
+        Landroid/widget/Editor$BaiduClipboardPopupWindow;,
         Landroid/widget/Editor$BaiduActionPopupWindow;,
         Landroid/widget/Editor$ActionPopupWindow;,
         Landroid/widget/Editor$SelectionActionModeCallback;,
@@ -176,40 +177,30 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 202
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 142
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/widget/Editor;->mInputType:I
 
-    .line 150
     iput-boolean v1, p0, Landroid/widget/Editor;->mCursorVisible:Z
 
-    .line 167
     iput-boolean v1, p0, Landroid/widget/Editor;->mShowSoftInputOnFocus:Z
 
-    .line 175
     const/4 v0, 0x2
 
     new-array v0, v0, [Landroid/graphics/drawable/Drawable;
 
     iput-object v0, p0, Landroid/widget/Editor;->mCursorDrawable:[Landroid/graphics/drawable/Drawable;
 
-    .line 200
     new-instance v0, Landroid/widget/Editor$UserDictionaryListener;
 
     invoke-direct {v0}, Landroid/widget/Editor$UserDictionaryListener;-><init>()V
 
     iput-object v0, p0, Landroid/widget/Editor;->mUserDictionaryListener:Landroid/widget/Editor$UserDictionaryListener;
 
-    .line 203
     iput-object p1, p0, Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
 
-    invoke-static {p0}, Landroid/widget/Editor$BaiduEditorInjector;->enableMagnifier(Landroid/widget/Editor;)V
-
-    .line 204
     return-void
 .end method
 
@@ -520,7 +511,7 @@
 
     move-result-object v1
 
-    const v2, 0x105004c
+    const v2, #android:dimen@textview_error_popup_default_width#t
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2360,7 +2351,7 @@
 
     move-result-object v2
 
-    const v3, 0x10900c5
+    const v3, #android:layout@text_drag_thumbnail#t
 
     const/4 v4, 0x0
 
@@ -3759,7 +3750,7 @@
 
     .line 282
     .local v1, inflater:Landroid/view/LayoutInflater;
-    const v4, 0x10900cd
+    const v4, #android:layout@textview_hint#t
 
     const/4 v5, 0x0
 

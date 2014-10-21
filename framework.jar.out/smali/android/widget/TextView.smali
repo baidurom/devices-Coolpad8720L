@@ -37,15 +37,15 @@
 
 .field private static final EMS:I = 0x1
 
-.field static final ID_COPY:I = 0x1020021
+.field static final ID_COPY:I = #android:id@copy#t
 
-.field static final ID_CUT:I = 0x1020020
+.field static final ID_CUT:I = #android:id@cut#t
 
-.field static final ID_PASTE:I = 0x1020022
+.field static final ID_PASTE:I = #android:id@paste#t
 
-.field private static final ID_SELECTION_MODE:I = 0x102002d
+.field private static final ID_SELECTION_MODE:I = #android:id@selectTextMode#t
 
-.field static final ID_SELECT_ALL:I = 0x102001f
+.field static final ID_SELECT_ALL:I = #android:id@selectAll#t
 
 .field static LAST_CUT_OR_COPY_TIME:J = 0x0L
 
@@ -328,7 +328,7 @@
     .line 280
     new-array v1, v4, [I
 
-    const v2, 0x101034d
+    const v2, #android:attr@state_multiline#t
 
     aput v2, v1, v3
 
@@ -378,12 +378,10 @@
     .parameter "attrs"
 
     .prologue
-    .line 751
-    const v0, 0x1010084
+    const v0, #android:attr@textViewStyle#t
 
     invoke-direct {p0, p1, p2, v0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 752
     return-void
 .end method
 
@@ -4129,7 +4127,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$600(Landroid/widget/TextView;)Landroid/content/Context;
+.method static synthetic access$1100(Landroid/widget/TextView;)Landroid/content/Context;
     .locals 1
     .parameter "x0"
 
@@ -18855,23 +18853,19 @@
     :goto_1
     if-ge v1, v2, :cond_2
 
-    .line 5099
     aget v4, v0, v1
 
-    const v5, 0x10100a7
+    const v5, #android:attr@state_pressed#t
 
     if-ne v4, v5, :cond_1
 
-    .line 5100
     add-int/lit8 v4, v2, -0x1
 
     new-array v3, v4, [I
 
-    .line 5101
     .local v3, nonPressedState:[I
     invoke-static {v0, v6, v3, v6, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 5102
     add-int/lit8 v4, v1, 0x1
 
     sub-int v5, v2, v1
@@ -21318,8 +21312,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 8238
-    const v1, 0x102001f
+    const v1, #android:id@selectAll#t
 
     invoke-virtual {p0, v1}, Landroid/widget/TextView;->onTextContextMenuItem(I)Z
 
@@ -21335,8 +21328,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 8243
-    const v1, 0x1020020
+    const v1, #android:id@cut#t
 
     invoke-virtual {p0, v1}, Landroid/widget/TextView;->onTextContextMenuItem(I)Z
 
@@ -21352,8 +21344,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 8248
-    const v1, 0x1020021
+    const v1, #android:id@copy#t
 
     invoke-virtual {p0, v1}, Landroid/widget/TextView;->onTextContextMenuItem(I)Z
 
@@ -21369,8 +21360,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 8253
-    const v1, 0x1020022
+    const v1, #android:id@paste#t
 
     invoke-virtual {p0, v1}, Landroid/widget/TextView;->onTextContextMenuItem(I)Z
 
@@ -23643,13 +23633,11 @@
 
     goto :goto_0
 
-    .line 8618
     :sswitch_2
-    invoke-direct {p0, v1, v0}, Landroid/widget/TextView;->paste(II)V
+    invoke-direct {p0, v1, v0}, Landroid/widget/TextView;->pasteBaidu(II)V
 
     goto :goto_0
 
-    .line 8622
     :sswitch_3
     invoke-virtual {p0, v1, v0}, Landroid/widget/TextView;->getTransformedText(II)Ljava/lang/CharSequence;
 
@@ -23711,11 +23699,11 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x102001f -> :sswitch_1
-        0x1020020 -> :sswitch_3
-        0x1020021 -> :sswitch_4
-        0x1020022 -> :sswitch_2
-        0x102002d -> :sswitch_0
+        #android:id@selectAll#t -> :sswitch_1
+        #android:id@cut#t -> :sswitch_3
+        #android:id@copy#t -> :sswitch_4
+        #android:id@paste#t -> :sswitch_2
+        #android:id@selectTextMode#t -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -24587,8 +24575,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 8458
-    const v3, 0x1020021
+    const v3, #android:id@copy#t
 
     invoke-virtual {p0, v3}, Landroid/widget/TextView;->onTextContextMenuItem(I)Z
 
@@ -24624,8 +24611,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 8466
-    const v3, 0x1020022
+    const v3, #android:id@paste#t
 
     invoke-virtual {p0, v3}, Landroid/widget/TextView;->onTextContextMenuItem(I)Z
 
@@ -24661,8 +24647,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 8474
-    const v3, 0x1020020
+    const v3, #android:id@cut#t
 
     invoke-virtual {p0, v3}, Landroid/widget/TextView;->onTextContextMenuItem(I)Z
 
@@ -27148,7 +27133,7 @@
 
     move-result-object v1
 
-    const v2, 0x1080376
+    const v2, #android:drawable@indicator_input_error#t
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -30924,4 +30909,158 @@
     .line 7237
     :cond_0
     return v0
+.end method
+
+.method private pasteBaidu(II)V
+    .locals 7
+    .parameter "min"
+    .parameter "max"
+
+    .prologue
+    invoke-virtual {p0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
+
+    move-result-object v5
+
+    const-string v6, "clipboard"
+
+    invoke-virtual {v5, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/content/ClipboardManager;
+
+    .local v1, clipboard:Landroid/content/ClipboardManager;
+    invoke-virtual {v1}, Landroid/content/ClipboardManager;->getPrimaryClip()Landroid/content/ClipData;
+
+    move-result-object v0
+
+    .local v0, clip:Landroid/content/ClipData;
+    if-eqz v0, :cond_1
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v0, v5}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
+
+    move-result-object v5
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Landroid/content/ClipData$Item;->coerceToStyledText(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object v4
+
+    .local v4, paste:Ljava/lang/CharSequence;
+    if-eqz v4, :cond_0
+
+    invoke-virtual {p0, p1, p2, v4}, Landroid/widget/TextView;->prepareSpacesAroundPaste(IILjava/lang/CharSequence;)J
+
+    move-result-wide v2
+
+    .local v2, minMax:J
+    invoke-static {v2, v3}, Landroid/text/TextUtils;->unpackRangeStartFromLong(J)I
+
+    move-result p1
+
+    invoke-static {v2, v3}, Landroid/text/TextUtils;->unpackRangeEndFromLong(J)I
+
+    move-result p2
+
+    iget-object v5, p0, Landroid/widget/TextView;->mText:Ljava/lang/CharSequence;
+
+    check-cast v5, Landroid/text/Spannable;
+
+    invoke-static {v5, p2}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
+
+    iget-object v5, p0, Landroid/widget/TextView;->mText:Ljava/lang/CharSequence;
+
+    check-cast v5, Landroid/text/Editable;
+
+    invoke-interface {v5, p1, p2, v4}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
+
+    .end local v2           #minMax:J
+    :cond_0
+    invoke-virtual {p0}, Landroid/widget/TextView;->stopSelectionActionMode()V
+
+    const-wide/16 v5, 0x0
+
+    sput-wide v5, Landroid/widget/TextView;->LAST_CUT_OR_COPY_TIME:J
+
+    .end local v4           #paste:Ljava/lang/CharSequence;
+    :cond_1
+    return-void
+.end method
+
+.method pasteBaidu(Ljava/lang/CharSequence;)V
+    .locals 6
+    .parameter "charSequence"
+
+    .prologue
+    const/4 v5, 0x0
+
+    const/4 v1, 0x0
+
+    .local v1, min:I
+    iget-object v4, p0, Landroid/widget/TextView;->mText:Ljava/lang/CharSequence;
+
+    invoke-interface {v4}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
+
+    .local v0, max:I
+    invoke-virtual {p0}, Landroid/widget/TextView;->isFocused()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getSelectionStart()I
+
+    move-result v3
+
+    .local v3, selStart:I
+    invoke-virtual {p0}, Landroid/widget/TextView;->getSelectionEnd()I
+
+    move-result v2
+
+    .local v2, selEnd:I
+    invoke-static {v3, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v4
+
+    invoke-static {v5, v4}, Ljava/lang/Math;->max(II)I
+
+    move-result v1
+
+    invoke-static {v3, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v4
+
+    invoke-static {v5, v4}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    .end local v2           #selEnd:I
+    .end local v3           #selStart:I
+    :cond_0
+    iget-object v4, p0, Landroid/widget/TextView;->mText:Ljava/lang/CharSequence;
+
+    check-cast v4, Landroid/text/Spannable;
+
+    invoke-static {v4, v0}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
+
+    iget-object v4, p0, Landroid/widget/TextView;->mText:Ljava/lang/CharSequence;
+
+    check-cast v4, Landroid/text/Editable;
+
+    invoke-interface {v4, v1, v0, p1}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->stopSelectionActionMode()V
+
+    const-wide/16 v4, 0x0
+
+    sput-wide v4, Landroid/widget/TextView;->LAST_CUT_OR_COPY_TIME:J
+
+    return-void
 .end method
