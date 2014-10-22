@@ -66,8 +66,6 @@ system/bin/uptime|system/bin/toolbox
 system/bin/vmstat|system/bin/toolbox
 system/bin/watchprops|system/bin/toolbox
 system/bin/wipe|system/bin/toolbox
-system/etc/firmware/mrvl/bt_init_cfg.conf|/data/misc/wireless/bt_init_cfg.conf
-system/etc/firmware/mrvl/wifi_init_cfg.conf|/data/misc/wireless/wifi_init_cfg.conf
 system/fonts/DroidSans-Bold.ttf|system/fonts/Roboto-Bold.ttf
 system/fonts/DroidSans.ttf|system/fonts/Roboto-Regular.ttf
 system/lib/libGLESv3.so|system/lib/libGLESv2.so
