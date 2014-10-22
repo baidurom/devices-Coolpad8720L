@@ -455,10 +455,12 @@ system/etc/fallback_fonts.xml 0 0 644
 system/etc/FileMonitorService.conf 0 0 644
 system/etc/firmware 0 0 755
 system/etc/firmware/mrvl 0 0 755
+system/etc/firmware/mrvl/bt_init_cfg.conf 0 0 644
 system/etc/firmware/mrvl/SD8777.bin 0 0 644
 system/etc/firmware/mrvl/sd8777_uapsta.bin 0 0 644
 system/etc/firmware/mrvl/sd8787_uapsta.bin 0 0 644
 system/etc/firmware/mrvl/wifi_cal_data.conf 0 0 644
+system/etc/firmware/mrvl/wifi_init_cfg.conf 0 0 644
 system/etc/fmhal.cfg 0 0 644
 system/etc/focaltech_0_51_8720L_20131112.ini 0 0 644
 system/etc/focaltech_0_80_8720L_20131112.ini 0 0 644
