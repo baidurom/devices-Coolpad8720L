@@ -12773,6 +12773,8 @@
 
     move-result v0
 
+    const/16 v0, 0x64
+
     const/16 v1, 0x64
 
     if-ne v0, v1, :cond_0
