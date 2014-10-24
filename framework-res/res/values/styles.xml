@@ -1688,7 +1688,7 @@
     </style>
     <style name="Widget.Holo.ListPopupWindow" parent="@style/Widget.ListPopupWindow">
         <item name="dropDownSelector">@drawable/list_selector_holo_dark</item>
-        <item name="popupBackground">@drawable/menu_panel_holo_dark</item>
+        <item name="popupBackground">@drawable/menu_dropdown_panel_holo_dark</item>
         <item name="dropDownWidth">wrap_content</item>
         <item name="dropDownHorizontalOffset">0.0dip</item>
         <item name="dropDownVerticalOffset">0.0dip</item>
@@ -1824,7 +1824,7 @@
     <style name="Widget.Holo.Light.TextView.SpinnerItem" parent="@style/Widget.Holo.TextView.SpinnerItem" />
     <style name="Widget.Holo.Light.ListPopupWindow" parent="@style/Widget.ListPopupWindow">
         <item name="dropDownSelector">@drawable/list_selector_holo_light</item>
-        <item name="popupBackground">@drawable/menu_panel_holo_light</item>
+        <item name="popupBackground">@drawable/menu_dropdown_panel_holo_light</item>
         <item name="dropDownWidth">wrap_content</item>
         <item name="dropDownHorizontalOffset">0.0dip</item>
         <item name="dropDownVerticalOffset">0.0dip</item>
