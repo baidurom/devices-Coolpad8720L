@@ -687,7 +687,7 @@
     .restart local v1       #ctsFlag:Ljava/lang/String;
     .restart local v2       #unicode:Ljava/lang/String;
     :cond_1
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     goto :goto_0
 
