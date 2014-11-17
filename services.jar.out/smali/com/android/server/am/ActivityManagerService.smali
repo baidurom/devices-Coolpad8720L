@@ -5333,7 +5333,9 @@
 
     move-object/from16 v2, v48
 
-    invoke-static {v0, v1, v2, v4}, Lcom/baidu/security/bm/BroadcastManagerService;->filterBroadcastReceiver(Ljava/util/List;Ljava/util/List;Landroid/content/Intent;Ljava/util/ArrayList;)I
+    move/from16 v6, p14
+
+    invoke-static {v0, v1, v2, v4, v6}, Lcom/baidu/security/bm/BroadcastManagerService;->filterBroadcastReceiver(Ljava/util/List;Ljava/util/List;Landroid/content/Intent;Ljava/util/ArrayList;I)I
 
     invoke-virtual/range {v48 .. v48}, Landroid/content/Intent;->getFlags()I
 
@@ -65570,7 +65572,7 @@
 
     move-result-object v2
 
-    const v3, 0x10900a7
+    const v3, #android:layout@safe_mode#t
 
     const/4 v4, 0x0
 
@@ -69476,9 +69478,9 @@
 
     iget-object v3, v0, Lcom/android/server/am/ActivityManagerService;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
 
-    const v4, 0x10a0053
+    const v4, #android:anim@screen_user_exit#t
 
-    const v5, 0x10a0052
+    const v5, #android:anim@screen_user_enter#t
 
     invoke-virtual {v3, v4, v5}, Lcom/android/server/wm/WindowManagerService;->startFreezingScreen(II)V
 
@@ -71164,7 +71166,7 @@
 
     move-result-object v3
 
-    const v4, 0x104035c
+    const v4, #android:string@factorytest_not_system#t
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -71184,7 +71186,7 @@
 
     move-result-object v3
 
-    const v4, 0x104035d
+    const v4, #android:string@factorytest_no_action#t
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
