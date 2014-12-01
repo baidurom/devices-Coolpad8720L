@@ -19,8 +19,6 @@
 
 .field private mExternalStorageAndroidData:Ljava/io/File;
 
-.field private mSecondaryStorage:Ljava/io/File;
-
 .field private mExternalStorageAndroidMedia:Ljava/io/File;
 
 .field private mExternalStorageAndroidObb:Ljava/io/File;
@@ -34,15 +32,11 @@
     .parameter "userId"
 
     .prologue
-    .line 361
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 400
     invoke-virtual {p0, p1}, Landroid/os/Environment$UserEnvironment;->UserEnvironmentUpdate(I)V
 
-    invoke-direct {p0}, Landroid/os/Environment$UserEnvironment;->initSecondaryStorage()V
 
-    .line 401
     return-void
 .end method
 
@@ -514,51 +508,31 @@
     return-object v0
 .end method
 
-.method private initSecondaryStorage()V
+.method public getSecondaryExternalStorageDirectory()Ljava/io/File;
     .locals 3
 
     .prologue
-    const-string v1, "SECONDARY_STORAGE"
-
-    invoke-static {v1}, Ljava/lang/System;->getenv(Ljava/lang/String;)Ljava/lang/String;
+    #calls: Landroid/os/Environment;->getSecondaryVolume()Landroid/os/storage/StorageVolume;
+    invoke-static {}, Landroid/os/Environment;->access$invoke-getSecondaryVolume-32cf99()Landroid/os/storage/StorageVolume;
 
     move-result-object v0
 
-    .local v0, rawSecondaryStorage:Ljava/lang/String;
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
+    .local v0, SecondaryVolume:Landroid/os/storage/StorageVolume;
+    if-eqz v0, :cond_0
 
     new-instance v1, Ljava/io/File;
 
-    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Landroid/os/storage/StorageVolume;->getPath()Ljava/lang/String;
 
-    iput-object v1, p0, Landroid/os/Environment$UserEnvironment;->mSecondaryStorage:Ljava/io/File;
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     :goto_0
-    return-void
+    return-object v1
 
     :cond_0
-    const-string v1, "Environment"
-
-    const-string v2, "SECONDARY_STORAGE undefined; return null"
-
-    invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
     const/4 v1, 0x0
 
-    iput-object v1, p0, Landroid/os/Environment$UserEnvironment;->mSecondaryStorage:Ljava/io/File;
-
     goto :goto_0
-.end method
-
-.method public getSecondaryExternalStorageDirectory()Ljava/io/File;
-    .locals 1
-
-    .prologue
-    iget-object v0, p0, Landroid/os/Environment$UserEnvironment;->mSecondaryStorage:Ljava/io/File;
-
-    return-object v0
 .end method
