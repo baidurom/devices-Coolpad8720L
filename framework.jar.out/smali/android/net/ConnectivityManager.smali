@@ -1671,9 +1671,11 @@
     .prologue
     .line 897
     :try_start_0
-    invoke-direct {p0, p1}, Landroid/net/ConnectivityManager;->csCheckMobileData(Z)Z
+    #invoke-direct {p0, p1}, Landroid/net/ConnectivityManager;->csCheckMobileData(Z)Z
 
-    move-result v0
+    #move-result v0
+
+    const/4 v0, 0x1
 
     if-nez v0, :cond_0
 

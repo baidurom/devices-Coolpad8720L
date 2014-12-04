@@ -4,7 +4,7 @@
      .parameter "number"
  
      .prologue
-     invoke-virtual {p0,p2}, Lcom/android/phone/PhoneInterfaceManager;->call(Ljava/lang/String;)V
+     invoke-virtual {p0, p2}, Lcom/android/phone/PhoneInterfaceManager;->call(Ljava/lang/String;)V
 
      return-void
 .end method
@@ -67,7 +67,8 @@
     .parameter "phoneId"
 
     .prologue
-    
+    invoke-virtual {p0, p1, p2}, Lcom/android/phone/PhoneInterfaceManager;->call(Ljava/lang/String;Ljava/lang/String;)V
+
     return-void
 .end method
 
@@ -273,6 +274,8 @@
     .parameter "arg1"
 
     .prologue
+    invoke-virtual {p0, p1}, Lcom/android/phone/PhoneInterfaceManager;->dial(Ljava/lang/String;)V
+
     .line 1645
     return-void
 .end method
@@ -284,7 +287,26 @@
 
     .prologue
     .line 1673
-    const/4 v0, 0x0
+    invoke-virtual {p0, p1}, Lcom/android/phone/PhoneInterfaceManager;->disableApnType(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public disableDataConnectivity()Z
+    .locals 1
+
+    .prologue
+    .line 1145
+    invoke-direct {p0}, Lcom/android/phone/PhoneInterfaceManager;->enforceModifyPermission()V
+
+    .line 1146
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->disableDataConnectivity()Z
+
+    move-result v0
 
     return v0
 .end method
@@ -295,9 +317,35 @@
 
     .prologue
     .line 1678
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->disableDataConnectivity()Z
+
+    move-result v0
 
     return v0
+.end method
+
+.method public disableLocationUpdates()V
+    .locals 3
+
+    .prologue
+    .line 1244
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mApp:Lcom/android/phone/PhoneApp;
+
+    .line 1245
+    const-string v1, "android.permission.CONTROL_LOCATION_UPDATES"
+
+    const/4 v2, 0x0
+
+    .line 1244
+    invoke-virtual {v0, v1, v2}, Lcom/android/phone/PhoneApp;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1246
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->disableLocationUpdates()V
+
+    .line 1247
+    return-void
 .end method
 
 .method public disableDualLocationUpdates(I)V
@@ -305,21 +353,27 @@
     .parameter "arg0"
 
     .prologue
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->disableLocationUpdates()V
+
     .line 1684
     return-void
 .end method
 
 .method public disableDualLocationUpdatesBySlotId(I)V
-    .locals 0
-    .parameter "arg0"
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
+    .locals 1
+    .parameter "mSlotId"
 
     .prologue
-    .line 3291
+    .line 1110
+    add-int/lit8 v0, p1, -0x1
+
+    invoke-static {v0}, Lcom/android/internal/telephony/PhoneFactory;->getPhoneIdBySlotId(I)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/android/phone/PhoneInterfaceManager;->disableDualLocationUpdates(I)V
+
+    .line 1111
     return-void
 .end method
 
@@ -345,7 +399,9 @@
 
     .prologue
     .line 1702
-    const/4 v0, 0x0
+    invoke-virtual {p0, p1}, Lcom/android/phone/PhoneInterfaceManager;->enableApnType(Ljava/lang/String;)I
+
+    move-result v0
 
     return v0
 .end method
@@ -356,9 +412,52 @@
 
     .prologue
     .line 1707
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->enableDataConnectivity()Z
+
+    move-result v0
 
     return v0
+.end method
+
+.method public enableDataConnectivity()Z
+    .locals 1
+
+    .prologue
+    .line 1102
+    invoke-direct {p0}, Lcom/android/phone/PhoneInterfaceManager;->enforceModifyPermission()V
+
+    .line 1103
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->enableDataConnectivity()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public enableLocationUpdates()V
+    .locals 3
+
+    .prologue
+    .line 1237
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mApp:Lcom/android/phone/PhoneApp;
+
+    .line 1238
+    const-string v1, "android.permission.CONTROL_LOCATION_UPDATES"
+
+    const/4 v2, 0x0
+
+    .line 1237
+    invoke-virtual {v0, v1, v2}, Lcom/android/phone/PhoneApp;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1239
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->enableLocationUpdates()V
+
+    .line 1240
+    return-void
 .end method
 
 .method public enableDualLocationUpdates(I)V
@@ -366,21 +465,27 @@
     .parameter "arg0"
 
     .prologue
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->enableLocationUpdates()V
+
     .line 1713
     return-void
 .end method
 
 .method public enableDualLocationUpdatesBySlotId(I)V
-    .locals 0
-    .parameter "arg0"
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
+    .locals 1
+    .parameter "mSlotId"
 
     .prologue
-    .line 3297
+    .line 1085
+    add-int/lit8 v0, p1, -0x1
+
+    invoke-static {v0}, Lcom/android/internal/telephony/PhoneFactory;->getPhoneIdBySlotId(I)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/android/phone/PhoneInterfaceManager;->enableDualLocationUpdates(I)V
+
+    .line 1086
     return-void
 .end method
 
@@ -406,7 +511,9 @@
 
     .prologue
     .line 1729
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->endCall()Z
+
+    move-result v0
 
     return v0
 .end method
@@ -556,6 +663,134 @@
     goto :goto_0
 .end method
 
+.method public getDualActivePhoneType(I)I
+    .locals 1
+    .parameter "mPhoneId"
+
+    .prologue
+    .line 2046
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->getActivePhoneType()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getDualActivePhoneTypeBySlotId(I)I
+    .locals 1
+    .parameter "mSlotId"
+
+    .prologue
+    .line 1226
+    add-int/lit8 v0, p1, -0x1
+
+    invoke-static {v0}, Lcom/android/internal/telephony/PhoneFactory;->getPhoneIdBySlotId(I)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/android/phone/PhoneInterfaceManager;->getDualActivePhoneType(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getDualCallState(I)I
+    .locals 1
+    .parameter "arg0"
+
+    .prologue
+    .line 2055
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->getCallState()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getDualCallStateBySlotId(I)I
+    .locals 1
+    .parameter "mSlotId"
+
+    .prologue
+    .line 973
+    add-int/lit8 v0, p1, -0x1
+
+    invoke-static {v0}, Lcom/android/internal/telephony/PhoneFactory;->getPhoneIdBySlotId(I)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/android/phone/PhoneInterfaceManager;->getDualCallState(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getDualCellLocation(I)Landroid/os/Bundle;
+    .locals 1
+    .parameter "arg0"
+
+    .prologue
+    .line 2060
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->getCellLocation()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getDualCellLocationBySlotId(I)Landroid/os/Bundle;
+    .locals 1
+    .parameter "mSlotId"
+
+    .prologue
+    .line 1060
+    add-int/lit8 v0, p1, -0x1
+
+    invoke-static {v0}, Lcom/android/internal/telephony/PhoneFactory;->getPhoneIdBySlotId(I)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/android/phone/PhoneInterfaceManager;->getDualCellLocation(I)Landroid/os/Bundle;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getDualDataActivity(I)I
+    .locals 1
+    .parameter "arg0"
+
+    .prologue
+    .line 2065
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->getDataActivity()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getDualDataActivityBySlotId(I)I
+    .locals 1
+    .parameter "mSlotId"
+
+    .prologue
+    .line 1031
+    add-int/lit8 v0, p1, -0x1
+
+    invoke-static {v0}, Lcom/android/internal/telephony/PhoneFactory;->getPhoneIdBySlotId(I)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/android/phone/PhoneInterfaceManager;->getDualDataActivity(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public getDataNetworkType()I
     .locals 1
 
@@ -574,118 +809,6 @@
     return v0
 .end method
 
-.method public getDualActivePhoneType(I)I
-    .locals 1
-    .parameter "mPhoneId"
-
-    .prologue
-    .line 2046
-    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
-
-    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public getDualActivePhoneTypeBySlotId(I)I
-    .locals 1
-    .parameter "arg0"
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    .prologue
-    .line 3302
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public getDualCallState(I)I
-    .locals 1
-    .parameter "arg0"
-
-    .prologue
-    .line 2055
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public getDualCallStateBySlotId(I)I
-    .locals 1
-    .parameter "arg0"
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    .prologue
-    .line 3308
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public getDualCellLocation(I)Landroid/os/Bundle;
-    .locals 1
-    .parameter "arg0"
-
-    .prologue
-    .line 2060
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public getDualCellLocationBySlotId(I)Landroid/os/Bundle;
-    .locals 1
-    .parameter "arg0"
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    .prologue
-    .line 3314
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public getDualDataActivity(I)I
-    .locals 1
-    .parameter "arg0"
-
-    .prologue
-    .line 2065
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public getDualDataActivityBySlotId(I)I
-    .locals 1
-    .parameter "arg0"
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    .prologue
-    .line 3320
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
 .method public getDualDataNetworkType(I)I
     .locals 1
     .parameter "arg0"
@@ -697,23 +820,28 @@
 
     .prologue
     .line 3375
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->getDataNetworkType()I
+
+    move-result v0
 
     return v0
 .end method
 
 .method public getDualDataNetworkTypeBySlotId(I)I
     .locals 1
-    .parameter "arg0"
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
+    .parameter "mSlotId"
 
     .prologue
-    .line 3381
-    const/4 v0, 0x0
+    .line 2353
+    add-int/lit8 v0, p1, -0x1
+
+    invoke-static {v0}, Lcom/android/internal/telephony/PhoneFactory;->getPhoneIdBySlotId(I)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/android/phone/PhoneInterfaceManager;->getDualDataNetworkType(I)I
+
+    move-result v0
 
     return v0
 .end method
@@ -724,23 +852,28 @@
 
     .prologue
     .line 2070
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->getDataState()I
+
+    move-result v0
 
     return v0
 .end method
 
 .method public getDualDataStateBySlotId(I)I
     .locals 1
-    .parameter "arg0"
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
+    .parameter "mSlotId"
 
     .prologue
-    .line 3326
-    const/4 v0, 0x0
+    .line 1002
+    add-int/lit8 v0, p1, -0x1
+
+    invoke-static {v0}, Lcom/android/internal/telephony/PhoneFactory;->getPhoneIdBySlotId(I)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/android/phone/PhoneInterfaceManager;->getDualDataState(I)I
+
+    move-result v0
 
     return v0
 .end method
@@ -817,16 +950,33 @@
 
 .method public getDualNetworkTypeBySlotId(I)I
     .locals 1
-    .parameter "arg0"
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
+    .parameter "mSlotId"
 
     .prologue
-    .line 3332
-    const/4 v0, 0x0
+    .line 1319
+    add-int/lit8 v0, p1, -0x1
+
+    invoke-static {v0}, Lcom/android/internal/telephony/PhoneFactory;->getPhoneIdBySlotId(I)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/android/phone/PhoneInterfaceManager;->getDualNetworkType(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getPbTotalParamOnIcc()I
+    .locals 1
+
+    .prologue
+    .line 2050
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getPbTotalParamOnIcc()I
+
+    move-result v0
 
     return v0
 .end method
@@ -837,23 +987,42 @@
 
     .prologue
     .line 2080
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->getPbTotalParamOnIcc()I
+
+    move-result v0
 
     return v0
 .end method
 
 .method public getDualPbTotalParamOnIccBySlotId(I)I
     .locals 1
-    .parameter "arg0"
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
+    .parameter "mSlotId"
 
     .prologue
-    .line 3338
-    const/4 v0, 0x0
+    .line 1407
+    add-int/lit8 v0, p1, -0x1
+
+    invoke-static {v0}, Lcom/android/internal/telephony/PhoneFactory;->getPhoneIdBySlotId(I)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/android/phone/PhoneInterfaceManager;->getDualPbTotalParamOnIcc(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getSmsTotalParamOnIcc()I
+    .locals 1
+
+    .prologue
+    .line 2107
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getSmsTotalParamOnIcc()I
+
+    move-result v0
 
     return v0
 .end method
@@ -864,7 +1033,9 @@
 
     .prologue
     .line 2085
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->getSmsTotalParamOnIcc()I
+
+    move-result v0
 
     return v0
 .end method
@@ -875,23 +1046,28 @@
 
     .prologue
     .line 2090
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->getVoiceMessageCount()I
+
+    move-result v0
 
     return v0
 .end method
 
 .method public getDualVoiceMessageCountBySlotId(I)I
     .locals 1
-    .parameter "arg0"
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
+    .parameter "mSlotId"
 
     .prologue
-    .line 3344
-    const/4 v0, 0x0
+    .line 1290
+    add-int/lit8 v0, p1, -0x1
+
+    invoke-static {v0}, Lcom/android/internal/telephony/PhoneFactory;->getPhoneIdBySlotId(I)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/android/phone/PhoneInterfaceManager;->getDualVoiceMessageCount(I)I
+
+    move-result v0
 
     return v0
 .end method
@@ -907,23 +1083,28 @@
 
     .prologue
     .line 3387
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->getVoiceNetworkType()I
+
+    move-result v0
 
     return v0
 .end method
 
 .method public getDualVoiceNetworkTypeBySlotId(I)I
     .locals 1
-    .parameter "arg0"
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
+    .parameter "mSlotId"
 
     .prologue
-    .line 3393
-    const/4 v0, 0x0
+    .line 2369
+    add-int/lit8 v0, p1, -0x1
+
+    invoke-static {v0}, Lcom/android/internal/telephony/PhoneFactory;->getPhoneIdBySlotId(I)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/android/phone/PhoneInterfaceManager;->getDualVoiceNetworkType(I)I
+
+    move-result v0
 
     return v0
 .end method
@@ -1035,7 +1216,9 @@
 
     .prologue
     .line 2112
-    const/4 v0, 0x0
+    invoke-virtual {p0, p1}, Lcom/android/phone/PhoneInterfaceManager;->handlePinMmi(Ljava/lang/String;)Z
+
+    move-result v0
 
     return v0
 .end method
@@ -1061,16 +1244,33 @@
 
 .method public hasDualIccCardBySlotId(I)Z
     .locals 1
-    .parameter "arg0"
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
+    .parameter "mSlotId"
 
     .prologue
-    .line 3350
-    const/4 v0, 0x0
+    .line 1349
+    add-int/lit8 v0, p1, -0x1
+
+    invoke-static {v0}, Lcom/android/internal/telephony/PhoneFactory;->getPhoneIdBySlotId(I)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/android/phone/PhoneInterfaceManager;->hasDualIccCard(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public isDataConnectivityPossible()Z
+    .locals 1
+
+    .prologue
+    .line 1154
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->isDataConnectivityPossible()Z
+
+    move-result v0
 
     return v0
 .end method
@@ -1081,7 +1281,9 @@
 
     .prologue
     .line 2121
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->isDataConnectivityPossible()Z
+
+    move-result v0
 
     return v0
 .end method
@@ -1092,7 +1294,9 @@
 
     .prologue
     .line 2126
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->isIdle()Z
+
+    move-result v0
 
     return v0
 .end method
@@ -1103,7 +1307,9 @@
 
     .prologue
     .line 2131
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->isOffhook()Z
+
+    move-result v0
 
     return v0
 .end method
@@ -1114,7 +1320,9 @@
 
     .prologue
     .line 2136
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->isRadioOn()Z
+
+    move-result v0
 
     return v0
 .end method
@@ -1125,7 +1333,9 @@
 
     .prologue
     .line 2141
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->isRinging()Z
+
+    move-result v0
 
     return v0
 .end method
@@ -1136,7 +1346,9 @@
 
     .prologue
     .line 2146
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->isSimPinEnabled()Z
+
+    move-result v0
 
     return v0
 .end method
@@ -1334,6 +1546,8 @@
     .end annotation
 
     .prologue
+    invoke-virtual {p0, p1}, Lcom/android/phone/PhoneInterfaceManager;->setCellInfoListRate(I)V
+
     .line 3401
     return-void
 .end method
@@ -1345,7 +1559,9 @@
 
     .prologue
     .line 2160
-    const/4 v0, 0x0
+    invoke-virtual {p0, p1}, Lcom/android/phone/PhoneInterfaceManager;->setRadio(Z)Z
+
+    move-result v0
 
     return v0
 .end method
@@ -1362,7 +1578,9 @@
 
     .prologue
     .line 3407
-    const/4 v0, 0x0
+    invoke-virtual {p0, p1}, Lcom/android/phone/PhoneInterfaceManager;->setRadioPower(Z)Z
+
+    move-result v0
 
     return v0
 .end method
@@ -1585,17 +1803,20 @@
 
 .method public setRasConnectFunctionBySlotId(II)Z
     .locals 1
-    .parameter "arg0"
-    .parameter "arg1"
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
+    .parameter "mSlotId"
+    .parameter "func"
 
     .prologue
-    .line 3362
-    const/4 v0, 0x0
+    .line 1459
+    add-int/lit8 v0, p1, -0x1
+
+    invoke-static {v0}, Lcom/android/internal/telephony/PhoneFactory;->getPhoneIdBySlotId(I)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0, p2}, Lcom/android/phone/PhoneInterfaceManager;->setRasConnectFunction(II)Z
+
+    move-result v0
 
     return v0
 .end method
@@ -1628,6 +1849,8 @@
     .parameter "arg0"
 
     .prologue
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->silenceRinger()V
+
     .line 2198
     return-void
 .end method
@@ -1664,7 +1887,9 @@
 
     .prologue
     .line 2202
-    const/4 v0, 0x0
+    invoke-virtual {p0, p1}, Lcom/android/phone/PhoneInterfaceManager;->supplyPin(Ljava/lang/String;)Z
+
+    move-result v0
 
     return v0
 .end method
@@ -1819,6 +2044,8 @@
     .parameter "arg0"
 
     .prologue
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->toggleRadioOnOff()V
+
     .line 2382
     return-void
 .end method
@@ -1828,6 +2055,35 @@
     .parameter "arg0"
 
     .prologue
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->updateServiceLocation()V
+
     .line 2939
     return-void
+.end method
+
+.method public updateServiceLocationOnSubscription(I)V
+    .locals 0
+    .parameter "subscription"
+
+    .prologue
+    .line 1963
+    invoke-virtual {p0}, Lcom/android/phone/PhoneInterfaceManager;->updateServiceLocation()V
+
+    .line 1964
+    return-void
+.end method
+
+.method public getLteOnCdmaMode()I
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 2066
+    const/4 v0, 0x0
+
+    return v0
 .end method
