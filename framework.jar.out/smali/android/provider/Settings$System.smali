@@ -28,6 +28,8 @@
 
 .field public static final ADVANCED_SETTINGS_DEFAULT:I = 0x0
 
+.field public static final AGENDA_ALERT:Ljava/lang/String; = "agenda_alert"
+
 .field public static final AIRPLANE_MODE_ON:Ljava/lang/String; = "airplane_mode_on"
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation

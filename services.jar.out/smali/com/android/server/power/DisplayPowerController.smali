@@ -13,7 +13,7 @@
 
 
 # static fields
-.field private static final BRIGHTENING_LIGHT_DEBOUNCE:J = 0xfa0L
+.field private static final BRIGHTENING_LIGHT_DEBOUNCE:J = 0x5dcL
 
 .field private static final BRIGHTENING_LIGHT_HYSTERESIS:F = 0.1f
 
@@ -21,7 +21,7 @@
 
 .field private static final BRIGHTNESS_RAMP_RATE_SLOW:I = 0x28
 
-.field private static final DARKENING_LIGHT_DEBOUNCE:J = 0x1f40L
+.field private static final DARKENING_LIGHT_DEBOUNCE:J = 0x7d0L
 
 .field private static final DARKENING_LIGHT_HYSTERESIS:F = 0.2f
 
@@ -3022,7 +3022,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "updateAmbientLux: Possibly brightened, waiting for 4000 ms: brighteningLuxThreshold="
+    const-string v6, "updateAmbientLux: Possibly brightened, waiting for 1500 ms: brighteningLuxThreshold="
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3078,7 +3078,7 @@
     :cond_4
     iget-wide v4, p0, Lcom/android/server/power/DisplayPowerController;->mDebounceLuxTime:J
 
-    const-wide/16 v6, 0xfa0
+    const-wide/16 v6, 0x5dc
 
     add-long v2, v4, v6
 
@@ -3219,7 +3219,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "updateAmbientLux: Possibly darkened, waiting for 8000 ms: darkeningLuxThreshold="
+    const-string v6, "updateAmbientLux: Possibly darkened, waiting for 2000 ms: darkeningLuxThreshold="
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3275,7 +3275,7 @@
     :cond_8
     iget-wide v4, p0, Lcom/android/server/power/DisplayPowerController;->mDebounceLuxTime:J
 
-    const-wide/16 v6, 0x1f40
+    const-wide/16 v6, 0x7d0
 
     add-long v2, v4, v6
 
