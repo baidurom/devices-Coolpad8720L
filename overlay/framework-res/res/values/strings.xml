@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="config_customCameraPackage">com.android.gallery3d</string>
+    <string name="config_customFmRadioPackage">com.marvell.fmradio</string>
+</resources>
