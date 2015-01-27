@@ -177,6 +177,8 @@
     .line 370
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->bootanimCust()V
 
+    invoke-static/range {p0 .. p0}, Lcom/android/server/power/ShutdownThread$BaiduInjector;->showBaiduShutdownOrRebootProgressDialog(Landroid/content/Context;)V
+
     .line 375
     sget-object v1, Lcom/android/server/power/ShutdownThread;->sInstance:Lcom/android/server/power/ShutdownThread;
 
@@ -619,7 +621,7 @@
 
     move-result-object v2
 
-    const v3, 0x10e0018
+    const v3, #android:integer@config_longPressOnPowerBehavior#t
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -674,19 +676,19 @@
 
     invoke-direct {v2, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x1040583
+    const v3, #android:string@global_action_restart_title#t
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v2
 
-    const v3, 0x1040584
+    const v3, #android:string@global_action_restart_message#t
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v2
 
-    const v3, 0x1040013
+    const v3, #android:string@yes#t
 
     new-instance v4, Lcom/android/server/power/ShutdownThread$3;
 
@@ -696,7 +698,7 @@
 
     move-result-object v2
 
-    const v3, 0x1040009
+    const v3, #android:string@no#t
 
     new-instance v4, Lcom/android/server/power/ShutdownThread$2;
 
@@ -987,7 +989,7 @@
 
     move-result-object v3
 
-    const v4, 0x10e0018
+    const v4, #android:integer@config_longPressOnPowerBehavior#t
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -999,7 +1001,7 @@
 
     if-eqz v3, :cond_2
 
-    const v2, 0x10400e8
+    const v2, #android:string@reboot_safemode_confirm#t
 
     .line 192
     .local v2, resourceId:I
@@ -1055,7 +1057,7 @@
 
     if-eqz v3, :cond_4
 
-    const v3, 0x10400e7
+    const v3, #android:string@reboot_safemode_title#t
 
     :goto_2
     invoke-virtual {v4, v3}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
@@ -1066,7 +1068,7 @@
 
     move-result-object v3
 
-    const v4, 0x1040013
+    const v4, #android:string@yes#t
 
     new-instance v5, Lcom/android/server/power/ShutdownThread$1;
 
@@ -1076,7 +1078,7 @@
 
     move-result-object v3
 
-    const v4, 0x1040009
+    const v4, #android:string@no#t
 
     const/4 v5, 0x0
 
@@ -1089,8 +1091,6 @@
     move-result-object v3
 
     sput-object v3, Lcom/android/server/power/ShutdownThread;->sConfirmDialog:Landroid/app/AlertDialog;
-
-    invoke-static {p0}, Lcom/android/server/power/ShutdownThread$BaiduInjector;->createRebootDialogBaidu(Landroid/content/Context;)V
 
     .line 211
     sget-object v3, Lcom/android/server/power/ShutdownThread;->sConfirmDialog:Landroid/app/AlertDialog;
@@ -1116,7 +1116,7 @@
     .line 214
     sget-object v3, Lcom/android/server/power/ShutdownThread;->sConfirmDialog:Landroid/app/AlertDialog;
 
-    invoke-virtual {v3}, Landroid/app/Dialog;->show()V
+    invoke-static/range {p0 .. p0}, Lcom/android/server/power/ShutdownThread$BaiduInjector;->showBaiduShutdownOrRebootDialog(Landroid/content/Context;)V
 
     goto/16 :goto_0
 
@@ -1141,12 +1141,12 @@
 
     if-ne v1, v3, :cond_3
 
-    const v2, 0x10400e6
+    const v2, #android:string@shutdown_confirm_question#t
 
     goto :goto_1
 
     :cond_3
-    const v2, 0x10400e5
+    const v2, #android:string@shutdown_confirm#t
 
     goto :goto_1
 
@@ -1154,7 +1154,7 @@
     .restart local v0       #closer:Lcom/android/server/power/ShutdownThread$CloseDialogReceiver;
     .restart local v2       #resourceId:I
     :cond_4
-    const v3, 0x10400e0
+    const v3, #android:string@power_off#t
 
     goto :goto_2
 
