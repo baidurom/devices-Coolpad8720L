@@ -153,6 +153,18 @@ override_property += \
 override_property += \
     ro.call.record=1
 
+# The property "ro.baidu.default_write.settable" decide whether support storage switch.
+# The default value is false.
+# The property "ro.baidu.mountpoint.settable" decide whether support the physical storage switch.
+# The default value is false.
+# In general, only a few devices support the physical storage switch, most devices support the logical storage switch.
+# The property "persist.sys.baidu.default_write" decide the default storage.
+# The default value is first_storage, meaning the internal storage. The other value is secondary_storage, meaning the external storage.
+# You should configure these properties according to your device.
+override_property += \
+    ro.baidu.default_write.settable=true \
+    persist.sys.baidu.default_write=first_storage
+
 ##############################################################################
 # The value decides which property you will remove from the build.prop.
 # The default value is nothing.
