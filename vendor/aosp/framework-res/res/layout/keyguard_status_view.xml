@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.internal.policy.impl.keyguard.KeyguardWidgetFrame android:gravity="center_horizontal" android:id="@id/keyguard_status_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_maxHeight="@dimen/keyguard_security_height" android:layout_maxWidth="@dimen/keyguard_security_width"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.internal.policy.impl.keyguard.KeyguardStatusView android:gravity="top|center" android:orientation="vertical" android:id="@id/keyguard_status_view_face_palm" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/keyguard_accessibility_status">
+        <LinearLayout android:layout_gravity="top|center" android:orientation="vertical" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.android.internal.policy.impl.keyguard.ClockView android:layout_gravity="center_horizontal" android:id="@id/clock_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip">
+                <TextView android:textAppearance="?textAppearanceMedium" android:textSize="@dimen/kg_status_clock_font_size" android:textColor="#ffffffff" android:ellipsize="none" android:id="@id/clock_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:shadowColor="#c0000000" android:shadowDx="0.0" android:shadowDy="0.0" android:shadowRadius="3.0" />
+                <TextView android:textAppearance="?textAppearanceMedium" android:textSize="28.0px" android:ellipsize="none" android:id="@id/am_pm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:singleLine="true" android:shadowColor="#c0000000" android:shadowDx="0.0" android:shadowDy="0.0" android:shadowRadius="3.0" android:layout_toRightOf="@id/clock_text" android:layout_alignBaseline="@id/clock_text" />
+            </com.android.internal.policy.impl.keyguard.ClockView>
+            <include layout="@layout/keyguard_status_area" />
+            <include android:id="@id/keyguard_status_message_area" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" layout="@layout/keyguard_message_area" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="top|center" android:orientation="vertical" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_column="0" android:layout_row="0">
+            <include layout="@layout/yl_unlock_widget_double_date_time" />
+        </LinearLayout>
+    </com.android.internal.policy.impl.keyguard.KeyguardStatusView>
+</com.android.internal.policy.impl.keyguard.KeyguardWidgetFrame>

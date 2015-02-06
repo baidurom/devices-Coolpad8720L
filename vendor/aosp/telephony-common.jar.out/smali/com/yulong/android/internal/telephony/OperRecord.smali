@@ -1,0 +1,2438 @@
+.class Lcom/yulong/android/internal/telephony/OperRecord;
+.super Ljava/lang/Object;
+.source "OperRecord.java"
+
+
+# static fields
+.field static iddToMcc:[[I
+
+
+# instance fields
+.field public accode:Ljava/lang/String;
+
+.field public countryCode:Ljava/lang/String;
+
+.field public countryName:Ljava/lang/String;
+
+.field public mcc:Ljava/lang/String;
+
+.field public ndd:Ljava/lang/String;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
+
+    .prologue
+    const/4 v3, 0x3
+
+    .line 46
+    const/16 v0, 0x9e
+
+    new-array v0, v0, [[I
+
+    const/4 v1, 0x0
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_0
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x1
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_1
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x2
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_2
+
+    aput-object v2, v0, v1
+
+    new-array v1, v3, [I
+
+    fill-array-data v1, :array_3
+
+    aput-object v1, v0, v3
+
+    const/4 v1, 0x4
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_4
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x5
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_5
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x6
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_6
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x7
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_7
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x8
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_8
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x9
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_9
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xa
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_a
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xb
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_b
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xc
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_c
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xd
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_d
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xe
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_e
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xf
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_f
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x10
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_10
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x11
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_11
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x12
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_12
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x13
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_13
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x14
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_14
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x15
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_15
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x16
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_16
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x17
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_17
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x18
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_18
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x19
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_19
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x1a
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_1a
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x1b
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_1b
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x1c
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_1c
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x1d
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_1d
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x1e
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_1e
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x1f
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_1f
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x20
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_20
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x21
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_21
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x22
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_22
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x23
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_23
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x24
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_24
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x25
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_25
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x26
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_26
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x27
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_27
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x28
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_28
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x29
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_29
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x2a
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_2a
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x2b
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_2b
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x2c
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_2c
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x2d
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_2d
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x2e
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_2e
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x2f
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_2f
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x30
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_30
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x31
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_31
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x32
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_32
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x33
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_33
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x34
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_34
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x35
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_35
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x36
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_36
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x37
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_37
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x38
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_38
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x39
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_39
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x3a
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_3a
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x3b
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_3b
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x3c
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_3c
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x3d
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_3d
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x3e
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_3e
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x3f
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_3f
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x40
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_40
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x41
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_41
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x42
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_42
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x43
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_43
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x44
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_44
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x45
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_45
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x46
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_46
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x47
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_47
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x48
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_48
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x49
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_49
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x4a
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_4a
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x4b
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_4b
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x4c
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_4c
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x4d
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_4d
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x4e
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_4e
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x4f
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_4f
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x50
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_50
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x51
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_51
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x52
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_52
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x53
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_53
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x54
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_54
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x55
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_55
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x56
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_56
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x57
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_57
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x58
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_58
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x59
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_59
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x5a
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_5a
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x5b
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_5b
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x5c
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_5c
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x5d
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_5d
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x5e
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_5e
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x5f
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_5f
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x60
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_60
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x61
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_61
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x62
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_62
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x63
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_63
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x64
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_64
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x65
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_65
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x66
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_66
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x67
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_67
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x68
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_68
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x69
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_69
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x6a
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_6a
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x6b
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_6b
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x6c
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_6c
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x6d
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_6d
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x6e
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_6e
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x6f
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_6f
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x70
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_70
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x71
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_71
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x72
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_72
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x73
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_73
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x74
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_74
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x75
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_75
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x76
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_76
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x77
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_77
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x78
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_78
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x79
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_79
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x7a
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_7a
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x7b
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_7b
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x7c
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_7c
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x7d
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_7d
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x7e
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_7e
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x7f
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_7f
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x80
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_80
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x81
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_81
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x82
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_82
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x83
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_83
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x84
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_84
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x85
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_85
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x86
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_86
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x87
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_87
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x88
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_88
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x89
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_89
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x8a
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_8a
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x8b
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_8b
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x8c
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_8c
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x8d
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_8d
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x8e
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_8e
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x8f
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_8f
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x90
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_90
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x91
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_91
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x92
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_92
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x93
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_93
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x94
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_94
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x95
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_95
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x96
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_96
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x97
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_97
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x98
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_98
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x99
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_99
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x9a
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_9a
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x9b
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_9b
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x9c
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_9c
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x9d
+
+    new-array v2, v3, [I
+
+    fill-array-data v2, :array_9d
+
+    aput-object v2, v0, v1
+
+    sput-object v0, Lcom/yulong/android/internal/telephony/OperRecord;->iddToMcc:[[I
+
+    return-void
+
+    nop
+
+    :array_0
+    .array-data 0x4
+        0x80t 0x3at 0x0t 0x0t
+        0xfft 0x3at 0x0t 0x0t
+        0x9ct 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_1
+    .array-data 0x4
+        0x60t 0x20t 0x0t 0x0t
+        0x7ft 0x20t 0x0t 0x0t
+        0x5bt 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_2
+    .array-data 0x4
+        0x4t 0x10t 0x0t 0x0t
+        0x4t 0x10t 0x0t 0x0t
+        0x20t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_3
+    .array-data 0x4
+        0x20t 0x25t 0x0t 0x0t
+        0x3ft 0x25t 0x0t 0x0t
+        0x77t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_4
+    .array-data 0x4
+        0x80t 0x7dt 0x0t 0x0t
+        0xfft 0x7dt 0x0t 0x0t
+        0xd2t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_5
+    .array-data 0x4
+        0x42t 0x3et 0x0t 0x0t
+        0x49t 0x3et 0x0t 0x0t
+        0x1bt 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_6
+    .array-data 0x4
+        0xb0t 0x25t 0x0t 0x0t
+        0xbft 0x25t 0x0t 0x0t
+        0x6bt 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_7
+    .array-data 0x4
+        0x0t 0x1et 0x0t 0x0t
+        0x7ft 0x1et 0x0t 0x0t
+        0xf9t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_8
+    .array-data 0x4
+        0x80t 0x20t 0x0t 0x0t
+        0xfft 0x20t 0x0t 0x0t
+        0xf9t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_9
+    .array-data 0x4
+        0x80t 0x59t 0x0t 0x0t
+        0xfft 0x59t 0x0t 0x0t
+        0xe8t 0x0t 0x0t 0x0t
+    .end array-data
+
+    :array_a
+    .array-data 0x4
+        0x4at 0x3et 0x0t 0x0t
+        0x51t 0x3et 0x0t 0x0t
+        0x90t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_b
+    .array-data 0x4
+        0x90t 0x1ft 0x0t 0x0t
+        0x9ft 0x1ft 0x0t 0x0t
+        0x6ct 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_c
+    .array-data 0x4
+        0xa0t 0x34t 0x0t 0x0t
+        0xbft 0x34t 0x0t 0x0t
+        0xd6t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_d
+    .array-data 0x4
+        0xe0t 0x1ft 0x0t 0x0t
+        0xeft 0x1ft 0x0t 0x0t
+        0x56t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_e
+    .array-data 0x4
+        0x52t 0x3et 0x0t 0x0t
+        0x59t 0x3et 0x0t 0x0t
+        0x1t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_f
+    .array-data 0x4
+        0x80t 0x7ft 0x0t 0x0t
+        0x89t 0x7ft 0x0t 0x0t
+        0xbet 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_10
+    .array-data 0x4
+        0x80t 0x23t 0x0t 0x0t
+        0x9ft 0x23t 0x0t 0x0t
+        0x68t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_11
+    .array-data 0x4
+        0xa0t 0x1ft 0x0t 0x0t
+        0xaft 0x1ft 0x0t 0x0t
+        0x5et 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_12
+    .array-data 0x4
+        0xc0t 0x27t 0x0t 0x0t
+        0xdft 0x27t 0x0t 0x0t
+        0x8ct 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_13
+    .array-data 0x4
+        0x80t 0x7ct 0x0t 0x0t
+        0x7ft 0x7dt 0x0t 0x0t
+        0xd4t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_14
+    .array-data 0x4
+        0xb0t 0x1ft 0x0t 0x0t
+        0xbft 0x1ft 0x0t 0x0t
+        0x5ct 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_15
+    .array-data 0x4
+        0xe0t 0x3ct 0x0t 0x0t
+        0xfft 0x3ct 0x0t 0x0t
+        0x1ct 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_16
+    .array-data 0x4
+        0xe0t 0x26t 0x0t 0x0t
+        0xfft 0x26t 0x0t 0x0t
+        0x82t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_17
+    .array-data 0x4
+        0x60t 0x2bt 0x0t 0x0t
+        0x7ft 0x2bt 0x0t 0x0t
+        0xc8t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_18
+    .array-data 0x4
+        0x80t 0x24t 0x0t 0x0t
+        0x9ft 0x24t 0x0t 0x0t
+        0x70t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_19
+    .array-data 0x4
+        0x0t 0x40t 0x0t 0x0t
+        0xfft 0x47t 0x0t 0x0t
+        0x2et 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_1a
+    .array-data 0x4
+        0xc0t 0x1ft 0x0t 0x0t
+        0xcft 0x1ft 0x0t 0x0t
+        0x5at 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_1b
+    .array-data 0x4
+        0x0t 0x7ct 0x0t 0x0t
+        0xat 0x7ct 0x0t 0x0t
+        0xdat 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_1c
+    .array-data 0x4
+        0x41t 0x7ct 0x0t 0x0t
+        0x4ct 0x7ct 0x0t 0x0t
+        0xdat 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_1d
+    .array-data 0x4
+        0x61t 0x7ct 0x0t 0x0t
+        0x6et 0x7ct 0x0t 0x0t
+        0xdat 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_1e
+    .array-data 0x4
+        0x0t 0x35t 0x0t 0x0t
+        0xfft 0x37t 0x0t 0x0t
+        0xcct 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_1f
+    .array-data 0x4
+        0x0t 0x64t 0x0t 0x0t
+        0xfft 0x65t 0x0t 0x0t
+        0xcct 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_20
+    .array-data 0x4
+        0x0t 0x35t 0x0t 0x0t
+        0xfft 0x37t 0x0t 0x0t
+        0xcct 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_21
+    .array-data 0x4
+        0x0t 0x64t 0x0t 0x0t
+        0xfft 0x65t 0x0t 0x0t
+        0xcct 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_22
+    .array-data 0x4
+        0x0t 0x35t 0x0t 0x0t
+        0xfft 0x37t 0x0t 0x0t
+        0xcct 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_23
+    .array-data 0x4
+        0x0t 0x64t 0x0t 0x0t
+        0xfft 0x65t 0x0t 0x0t
+        0xcct 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_24
+    .array-data 0x4
+        0x80t 0x7bt 0x0t 0x0t
+        0xfft 0x7bt 0x0t 0x0t
+        0xdct 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_25
+    .array-data 0x4
+        0x0t 0x23t 0x0t 0x0t
+        0x1ft 0x23t 0x0t 0x0t
+        0x64t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_26
+    .array-data 0x4
+        0x1ct 0x57t 0x0t 0x0t
+        0x1ct 0x57t 0x0t 0x0t
+        0x85t 0x3t 0x0t 0x0t
+    .end array-data
+
+    :array_27
+    .array-data 0x4
+        0x60t 0x5ft 0x0t 0x0t
+        0x7ft 0x5ft 0x0t 0x0t
+        0x12t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_28
+    .array-data 0x4
+        0x0t 0x3ft 0x0t 0x0t
+        0x7ft 0x3ft 0x0t 0x0t
+        0xe6t 0x0t 0x0t 0x0t
+    .end array-data
+
+    :array_29
+    .array-data 0x4
+        0x0t 0x58t 0x0t 0x0t
+        0xft 0x58t 0x0t 0x0t
+        0xeet 0x0t 0x0t 0x0t
+    .end array-data
+
+    :array_2a
+    .array-data 0x4
+        0x80t 0x22t 0x0t 0x0t
+        0x8ft 0x22t 0x0t 0x0t
+        0x72t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_2b
+    .array-data 0x4
+        0x40t 0x7at 0x0t 0x0t
+        0x5ft 0x7at 0x0t 0x0t
+        0xe4t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_2c
+    .array-data 0x4
+        0x20t 0x20t 0x0t 0x0t
+        0x3ft 0x20t 0x0t 0x0t
+        0x5at 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_2d
+    .array-data 0x4
+        0xc0t 0x7ft 0x0t 0x0t
+        0xdft 0x7ft 0x0t 0x0t
+        0xc2t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_2e
+    .array-data 0x4
+        0x78t 0x2at 0x0t 0x0t
+        0x7ft 0x2at 0x0t 0x0t
+        0xf8t 0x0t 0x0t 0x0t
+    .end array-data
+
+    :array_2f
+    .array-data 0x4
+        0x20t 0x26t 0x0t 0x0t
+        0x3ft 0x26t 0x0t 0x0t
+        0x7ct 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_30
+    .array-data 0x4
+        0xd0t 0x2at 0x0t 0x0t
+        0xdft 0x2at 0x0t 0x0t
+        0x1et 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_31
+    .array-data 0x4
+        0x80t 0x5ft 0x0t 0x0t
+        0x83t 0x5ft 0x0t 0x0t
+        0xf4t 0x0t 0x0t 0x0t
+    .end array-data
+
+    :array_32
+    .array-data 0x4
+        0x60t 0x21t 0x0t 0x0t
+        0x7ft 0x21t 0x0t 0x0t
+        0x5ft 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_33
+    .array-data 0x4
+        0x5at 0x3et 0x0t 0x0t
+        0x61t 0x3et 0x0t 0x0t
+        0x1at 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_34
+    .array-data 0x4
+        0x0t 0x24t 0x0t 0x0t
+        0x1ft 0x24t 0x0t 0x0t
+        0x6ct 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_35
+    .array-data 0x4
+        0xe0t 0x25t 0x0t 0x0t
+        0xeft 0x25t 0x0t 0x0t
+        0x17t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_36
+    .array-data 0x4
+        0xa0t 0x7ft 0x0t 0x0t
+        0xbft 0x7ft 0x0t 0x0t
+        0xc0t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_37
+    .array-data 0x4
+        0x60t 0x7ft 0x0t 0x0t
+        0x7ft 0x7ft 0x0t 0x0t
+        0x74t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_38
+    .array-data 0x4
+        0xe0t 0x7ft 0x0t 0x0t
+        0xfft 0x7ft 0x0t 0x0t
+        0xc4t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_39
+    .array-data 0x4
+        0x90t 0x29t 0x0t 0x0t
+        0x9ft 0x29t 0x0t 0x0t
+        0xc6t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_3a
+    .array-data 0x4
+        0x60t 0x5ft 0x0t 0x0t
+        0x7ft 0x5ft 0x0t 0x0t
+        0x12t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_3b
+    .array-data 0x4
+        0x80t 0x38t 0x0t 0x0t
+        0xfft 0x39t 0x0t 0x0t
+        0x94t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_3c
+    .array-data 0x4
+        0x0t 0x29t 0x0t 0x0t
+        0x7ft 0x29t 0x0t 0x0t
+        0xfet 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_3d
+    .array-data 0x4
+        0x60t 0x3ct 0x0t 0x0t
+        0x7ft 0x3ct 0x0t 0x0t
+        0xa2t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_3e
+    .array-data 0x4
+        0x40t 0x5ft 0x0t 0x0t
+        0x43t 0x5ft 0x0t 0x0t
+        0x10t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_3f
+    .array-data 0x4
+        0x0t 0x21t 0x0t 0x0t
+        0x1ft 0x21t 0x0t 0x0t
+        0xa9t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_40
+    .array-data 0x4
+        0xf0t 0x1ft 0x0t 0x0t
+        0xfft 0x1ft 0x0t 0x0t
+        0x52t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_41
+    .array-data 0x4
+        0x0t 0x30t 0x0t 0x0t
+        0xfft 0x33t 0x0t 0x0t
+        0xb8t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_42
+    .array-data 0x4
+        0xe0t 0x22t 0x0t 0x0t
+        0xeft 0x22t 0x0t 0x0t
+        0x91t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_43
+    .array-data 0x4
+        0x80t 0x26t 0x0t 0x0t
+        0x9ft 0x26t 0x0t 0x0t
+        0x7ft 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_44
+    .array-data 0x4
+        0x80t 0x8t 0x0t 0x0t
+        0xfft 0x8t 0x0t 0x0t
+        0xc2t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_45
+    .array-data 0x4
+        0x30t 0x2ct 0x0t 0x0t
+        0x3ft 0x2ct 0x0t 0x0t
+        0xa3t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_46
+    .array-data 0x4
+        0x2et 0x54t 0x0t 0x0t
+        0x3et 0x54t 0x0t 0x0t
+        0xb5t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_47
+    .array-data 0x4
+        0x80t 0x34t 0x0t 0x0t
+        0x9ft 0x34t 0x0t 0x0t
+        0xc9t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_48
+    .array-data 0x4
+        0x20t 0x2at 0x0t 0x0t
+        0x21t 0x2at 0x0t 0x0t
+        0xf7t 0x0t 0x0t 0x0t
+    .end array-data
+
+    :array_49
+    .array-data 0x4
+        0x20t 0x2ct 0x0t 0x0t
+        0x2ft 0x2ct 0x0t 0x0t
+        0xc7t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_4a
+    .array-data 0x4
+        0x40t 0x27t 0x0t 0x0t
+        0x5ft 0x27t 0x0t 0x0t
+        0x86t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_4b
+    .array-data 0x4
+        0x80t 0x28t 0x0t 0x0t
+        0xfft 0x28t 0x0t 0x0t
+        0xf6t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_4c
+    .array-data 0x4
+        0x40t 0x22t 0x0t 0x0t
+        0x5ft 0x22t 0x0t 0x0t
+        0x62t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_4d
+    .array-data 0x4
+        0x20t 0x22t 0x0t 0x0t
+        0x3ft 0x22t 0x0t 0x0t
+        0x61t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_4e
+    .array-data 0x4
+        0xa0t 0x23t 0x0t 0x0t
+        0xbft 0x23t 0x0t 0x0t
+        0x69t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_4f
+    .array-data 0x4
+        0x0t 0x60t 0x0t 0x0t
+        0xf3t 0x61t 0x0t 0x0t
+        0x4et 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_50
+    .array-data 0x4
+        0xct 0x62t 0x0t 0x0t
+        0x24t 0x62t 0x0t 0x0t
+        0x4et 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_51
+    .array-data 0x4
+        0x32t 0x3et 0x0t 0x0t
+        0x41t 0x3et 0x0t 0x0t
+        0x3t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_52
+    .array-data 0x4
+        0xa0t 0x3ct 0x0t 0x0t
+        0xbft 0x3ct 0x0t 0x0t
+        0xact 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_53
+    .array-data 0x4
+        0x40t 0x20t 0x0t 0x0t
+        0x5ft 0x20t 0x0t 0x0t
+        0x5ct 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_54
+    .array-data 0x4
+        0x0t 0x27t 0x0t 0x0t
+        0x1ft 0x27t 0x0t 0x0t
+        0x7at 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_55
+    .array-data 0x4
+        0x80t 0x3bt 0x0t 0x0t
+        0xfft 0x3bt 0x0t 0x0t
+        0x9et 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_56
+    .array-data 0x4
+        0x80t 0x27t 0x0t 0x0t
+        0x9ft 0x27t 0x0t 0x0t
+        0x89t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_57
+    .array-data 0x4
+        0xc0t 0x3ct 0x0t 0x0t
+        0xdft 0x3ct 0x0t 0x0t
+        0xadt 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_58
+    .array-data 0x4
+        0xa0t 0x7at 0x0t 0x0t
+        0xaft 0x7at 0x0t 0x0t
+        0x6at 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_59
+    .array-data 0x4
+        0x80t 0x21t 0x0t 0x0t
+        0xfft 0x21t 0x0t 0x0t
+        0x12t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_5a
+    .array-data 0x4
+        0x0t 0x7ft 0x0t 0x0t
+        0x1ft 0x7ft 0x0t 0x0t
+        0xc6t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_5b
+    .array-data 0x4
+        0x40t 0x23t 0x0t 0x0t
+        0x5ft 0x23t 0x0t 0x0t
+        0x66t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_5c
+    .array-data 0x4
+        0x20t 0x24t 0x0t 0x0t
+        0x3ft 0x24t 0x0t 0x0t
+        0x6dt 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_5d
+    .array-data 0x4
+        0xd0t 0x25t 0x0t 0x0t
+        0xdft 0x25t 0x0t 0x0t
+        0x16t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_5e
+    .array-data 0x4
+        0x0t 0x57t 0x0t 0x0t
+        0x7ft 0x57t 0x0t 0x0t
+        0xf2t 0x0t 0x0t 0x0t
+    .end array-data
+
+    :array_5f
+    .array-data 0x4
+        0x50t 0x2ct 0x0t 0x0t
+        0x5ft 0x2ct 0x0t 0x0t
+        0xa6t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_60
+    .array-data 0x4
+        0x0t 0x3at 0x0t 0x0t
+        0x7ft 0x3at 0x0t 0x0t
+        0x9at 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_61
+    .array-data 0x4
+        0x40t 0x7ft 0x0t 0x0t
+        0x5ft 0x7ft 0x0t 0x0t
+        0xcat 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_62
+    .array-data 0x4
+        0x80t 0x7et 0x0t 0x0t
+        0xfft 0x7et 0x0t 0x0t
+        0xcct 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_63
+    .array-data 0x4
+        0x80t 0x29t 0x0t 0x0t
+        0x8ft 0x29t 0x0t 0x0t
+        0x3t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_64
+    .array-data 0x4
+        0xa0t 0x29t 0x0t 0x0t
+        0xfft 0x29t 0x0t 0x0t
+        0x3t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_65
+    .array-data 0x4
+        0x80t 0x3ft 0x0t 0x0t
+        0xfft 0x3ft 0x0t 0x0t
+        0x4t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_66
+    .array-data 0x4
+        0x0t 0x5ft 0x0t 0x0t
+        0x1ft 0x5ft 0x0t 0x0t
+        0xct 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_67
+    .array-data 0x4
+        0x1t 0x0t 0x0t 0x0t
+        0x7ft 0x8t 0x0t 0x0t
+        0x4at 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_68
+    .array-data 0x4
+        0x0t 0x9t 0x0t 0x0t
+        0xfft 0x1dt 0x0t 0x0t
+        0x4at 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_69
+    .array-data 0x4
+        0x80t 0x3et 0x0t 0x0t
+        0xfft 0x3et 0x0t 0x0t
+        0xe2t 0x0t 0x0t 0x0t
+    .end array-data
+
+    :array_6a
+    .array-data 0x4
+        0x80t 0x2ct 0x0t 0x0t
+        0x22t 0x2dt 0x0t 0x0t
+        0xfat 0x0t 0x0t 0x0t
+    .end array-data
+
+    :array_6b
+    .array-data 0x4
+        0x24t 0x2dt 0x0t 0x0t
+        0x4ft 0x2dt 0x0t 0x0t
+        0xfat 0x0t 0x0t 0x0t
+    .end array-data
+
+    :array_6c
+    .array-data 0x4
+        0x51t 0x2dt 0x0t 0x0t
+        0xfft 0x2ft 0x0t 0x0t
+        0xfat 0x0t 0x0t 0x0t
+    .end array-data
+
+    :array_6d
+    .array-data 0x4
+        0x0t 0x26t 0x0t 0x0t
+        0x1ft 0x26t 0x0t 0x0t
+        0x7bt 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_6e
+    .array-data 0x4
+        0x80t 0x3ct 0x0t 0x0t
+        0x9ft 0x3ct 0x0t 0x0t
+        0xa4t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_6f
+    .array-data 0x4
+        0x0t 0x22t 0x0t 0x0t
+        0x1ft 0x22t 0x0t 0x0t
+        0x60t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_70
+    .array-data 0x4
+        0xe0t 0x23t 0x0t 0x0t
+        0xfft 0x23t 0x0t 0x0t
+        0x6bt 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_71
+    .array-data 0x4
+        0x0t 0x28t 0x0t 0x0t
+        0x7ft 0x28t 0x0t 0x0t
+        0x8ft 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_72
+    .array-data 0x4
+        0x0t 0x3bt 0x0t 0x0t
+        0x7ft 0x3bt 0x0t 0x0t
+        0x9dt 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_73
+    .array-data 0x4
+        0x60t 0x1ft 0x0t 0x0t
+        0x6ft 0x1ft 0x0t 0x0t
+        0x64t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_74
+    .array-data 0x4
+        0x4at 0x1ft 0x0t 0x0t
+        0x4bt 0x1ft 0x0t 0x0t
+        0x66t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_75
+    .array-data 0x4
+        0x50t 0x1ft 0x0t 0x0t
+        0x5ft 0x1ft 0x0t 0x0t
+        0x66t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_76
+    .array-data 0x4
+        0x60t 0x25t 0x0t 0x0t
+        0x7ft 0x25t 0x0t 0x0t
+        0x7at 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_77
+    .array-data 0x4
+        0xa0t 0x79t 0x0t 0x0t
+        0xbft 0x79t 0x0t 0x0t
+        0xeat 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_78
+    .array-data 0x4
+        0x80t 0x57t 0x0t 0x0t
+        0x83t 0x57t 0x0t 0x0t
+        0xf0t 0x0t 0x0t 0x0t
+    .end array-data
+
+    :array_79
+    .array-data 0x4
+        0xc0t 0x34t 0x0t 0x0t
+        0xdft 0x34t 0x0t 0x0t
+        0xd2t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_7a
+    .array-data 0x4
+        0x68t 0x2at 0x0t 0x0t
+        0x77t 0x2at 0x0t 0x0t
+        0xb4t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_7b
+    .array-data 0x4
+        0xa0t 0x26t 0x0t 0x0t
+        0xbft 0x26t 0x0t 0x0t
+        0x80t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_7c
+    .array-data 0x4
+        0x0t 0x20t 0x0t 0x0t
+        0x1ft 0x20t 0x0t 0x0t
+        0x8t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_7d
+    .array-data 0x4
+        0x60t 0x23t 0x0t 0x0t
+        0x7ft 0x23t 0x0t 0x0t
+        0x67t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_7e
+    .array-data 0x4
+        0x60t 0x26t 0x0t 0x0t
+        0x7ft 0x26t 0x0t 0x0t
+        0x76t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_7f
+    .array-data 0x4
+        0x30t 0x2at 0x0t 0x0t
+        0x3ft 0x2at 0x0t 0x0t
+        0x78t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_80
+    .array-data 0x4
+        0x62t 0x3et 0x0t 0x0t
+        0x69t 0x3et 0x0t 0x0t
+        0xb6t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_81
+    .array-data 0x4
+        0xc0t 0x26t 0x0t 0x0t
+        0xdft 0x26t 0x0t 0x0t
+        0x81t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_82
+    .array-data 0x4
+        0x22t 0x3et 0x0t 0x0t
+        0x31t 0x3et 0x0t 0x0t
+        0xfft 0x0t 0x0t 0x0t
+    .end array-data
+
+    :array_83
+    .array-data 0x4
+        0xc0t 0x79t 0x0t 0x0t
+        0xdft 0x79t 0x0t 0x0t
+        0xect 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_84
+    .array-data 0x4
+        0x1t 0x0t 0x0t 0x0t
+        0x7ft 0x8t 0x0t 0x0t
+        0x4ct 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_85
+    .array-data 0x4
+        0x0t 0x9t 0x0t 0x0t
+        0xfft 0x1dt 0x0t 0x0t
+        0x4ct 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_86
+    .array-data 0x4
+        0x1t 0x0t 0x0t 0x0t
+        0x7ft 0x8t 0x0t 0x0t
+        0x36t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_87
+    .array-data 0x4
+        0x1t 0x0t 0x0t 0x0t
+        0x7ft 0x8t 0x0t 0x0t
+        0x37t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_88
+    .array-data 0x4
+        0x1t 0x0t 0x0t 0x0t
+        0x7ft 0x8t 0x0t 0x0t
+        0x38t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_89
+    .array-data 0x4
+        0x1t 0x0t 0x0t 0x0t
+        0x7ft 0x8t 0x0t 0x0t
+        0x39t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_8a
+    .array-data 0x4
+        0x1t 0x0t 0x0t 0x0t
+        0x7ft 0x8t 0x0t 0x0t
+        0x3at 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_8b
+    .array-data 0x4
+        0x1t 0x0t 0x0t 0x0t
+        0x7ft 0x8t 0x0t 0x0t
+        0x3bt 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_8c
+    .array-data 0x4
+        0x1t 0x0t 0x0t 0x0t
+        0x7ft 0x8t 0x0t 0x0t
+        0x3ct 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_8d
+    .array-data 0x4
+        0x0t 0x9t 0x0t 0x0t
+        0xfft 0x1dt 0x0t 0x0t
+        0x36t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_8e
+    .array-data 0x4
+        0x0t 0x9t 0x0t 0x0t
+        0xfft 0x1dt 0x0t 0x0t
+        0x37t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_8f
+    .array-data 0x4
+        0x0t 0x9t 0x0t 0x0t
+        0xfft 0x1dt 0x0t 0x0t
+        0x38t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_90
+    .array-data 0x4
+        0x0t 0x9t 0x0t 0x0t
+        0xfft 0x1dt 0x0t 0x0t
+        0x39t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_91
+    .array-data 0x4
+        0x0t 0x9t 0x0t 0x0t
+        0xfft 0x1dt 0x0t 0x0t
+        0x3at 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_92
+    .array-data 0x4
+        0x0t 0x9t 0x0t 0x0t
+        0xfft 0x1dt 0x0t 0x0t
+        0x3bt 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_93
+    .array-data 0x4
+        0x0t 0x9t 0x0t 0x0t
+        0xfft 0x1dt 0x0t 0x0t
+        0x3ct 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_94
+    .array-data 0x4
+        0x50t 0x2at 0x0t 0x0t
+        0x67t 0x2at 0x0t 0x0t
+        0xb2t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_95
+    .array-data 0x4
+        0x23t 0x2dt 0x0t 0x0t
+        0x23t 0x2dt 0x0t 0x0t
+        0xb2t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_96
+    .array-data 0x4
+        0x50t 0x2dt 0x0t 0x0t
+        0x50t 0x2dt 0x0t 0x0t
+        0xb2t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_97
+    .array-data 0x4
+        0x0t 0x7bt 0x0t 0x0t
+        0x7ft 0x7bt 0x0t 0x0t
+        0xdet 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_98
+    .array-data 0x4
+        0x0t 0x34t 0x0t 0x0t
+        0x7ft 0x34t 0x0t 0x0t
+        0xc4t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_99
+    .array-data 0x4
+        0x40t 0x2ct 0x0t 0x0t
+        0x4ft 0x2ct 0x0t 0x0t
+        0xa5t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_9a
+    .array-data 0x4
+        0x60t 0x2ct 0x0t 0x0t
+        0x6ft 0x2ct 0x0t 0x0t
+        0xa5t 0x1t 0x0t 0x0t
+    .end array-data
+
+    :array_9b
+    .array-data 0x4
+        0x0t 0x25t 0x0t 0x0t
+        0x1ft 0x25t 0x0t 0x0t
+        0x76t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_9c
+    .array-data 0x4
+        0x20t 0x27t 0x0t 0x0t
+        0x3ft 0x27t 0x0t 0x0t
+        0x85t 0x2t 0x0t 0x0t
+    .end array-data
+
+    :array_9d
+    .array-data 0x4
+        0x60t 0x27t 0x0t 0x0t
+        0x7ft 0x27t 0x0t 0x0t
+        0x88t 0x2t 0x0t 0x0t
+    .end array-data
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+    .parameter "mccString"
+    .parameter "countryName"
+    .parameter "accode"
+    .parameter "countryCode"
+    .parameter "ndd"
+
+    .prologue
+    .line 32
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 33
+    iput-object p1, p0, Lcom/yulong/android/internal/telephony/OperRecord;->mcc:Ljava/lang/String;
+
+    .line 34
+    iput-object p2, p0, Lcom/yulong/android/internal/telephony/OperRecord;->countryName:Ljava/lang/String;
+
+    .line 35
+    iput-object p3, p0, Lcom/yulong/android/internal/telephony/OperRecord;->accode:Ljava/lang/String;
+
+    .line 36
+    iput-object p4, p0, Lcom/yulong/android/internal/telephony/OperRecord;->countryCode:Ljava/lang/String;
+
+    .line 37
+    iput-object p5, p0, Lcom/yulong/android/internal/telephony/OperRecord;->ndd:Ljava/lang/String;
+
+    .line 38
+    return-void
+.end method
