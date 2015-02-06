@@ -165,6 +165,12 @@ override_property += \
     ro.baidu.default_write.settable=true \
     persist.sys.baidu.default_write=first_storage
 
+# The property decide the asec volume for your device.
+# The default value is 0, meaning the asec volume is the primary volume. The other value is 1, meaning the asec volume is the external sdcard.
+# You should configure the property according to your device.
+override_property += \
+    ro.baidu.asec.type=1
+
 ##############################################################################
 # The value decides which property you will remove from the build.prop.
 # The default value is nothing.
